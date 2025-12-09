@@ -1,0 +1,65 @@
+// Responsive Mixins
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-tablet + 1) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $breakpoint-wide) {
+    @content;
+  }
+}
+
+// Flexbox Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Theme Mixin
+@mixin themed {
+  &[data-theme='light'] {
+    --color-primary: #{$color-primary-light};
+    --color-secondary: #{$color-secondary-light};
+    --color-background: #{$color-background-light};
+    --color-surface: #{$color-surface-light};
+    --color-surface-hover: #{$color-surface-hover-light};
+    --color-text-primary: #{$color-text-primary-light};
+    --color-text-secondary: #{$color-text-secondary-light};
+  }
+
+  &[data-theme='dark'] {
+    --color-primary: #{$color-primary-dark};
+    --color-secondary: #{$color-secondary-dark};
+    --color-background: #{$color-background-dark};
+    --color-surface: #{$color-surface-dark};
+    --color-surface-hover: #{$color-surface-hover-dark};
+    --color-text-primary: #{$color-text-primary-dark};
+    --color-text-secondary: #{$color-text-secondary-dark};
+  }
+}

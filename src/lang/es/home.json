@@ -1,0 +1,13 @@
+{
+  "home.title": "Hola, soy",
+  "home.name": "David Yepes",
+  "home.subtitle": "Desarrollador Móvil | Experto en React Native & iOS",
+  "home.description": "Apasionado por crear experiencias móviles excepcionales. Especializado en construir aplicaciones escalables y de alto rendimiento.",
+  "home.viewProjects": "Ver Mi Trabajo",
+  "home.contactMe": "Contáctame",
+  "home.skills.title": "Habilidades Técnicas",
+  "home.skills.react": "React Native",
+  "home.skills.ios": "Desarrollo iOS",
+  "home.skills.typescript": "TypeScript",
+  "home.skills.firebase": "Firebase"
+}

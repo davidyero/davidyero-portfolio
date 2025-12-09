@@ -1,0 +1,79 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.footer {
+  background-color: var(--color-background);
+  border-top: 1px solid rgba(100, 116, 139, 0.1);
+  padding: $spacing-2xl $spacing-xl;
+
+  @include mobile {
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    @include flex-center;
+    gap: $spacing-2xl;
+    margin-bottom: $spacing-xl;
+    justify-content: center;
+
+    @include mobile {
+      gap: $spacing-lg;
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__link {
+    color: var(--color-text-secondary);
+    font-size: $font-size-md;
+    font-weight: 500;
+    transition: color $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    @include mobile {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__social {
+    @include flex-center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    justify-content: center;
+
+    @include mobile {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__social-icon {
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+    transition: all $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary);
+      transform: scale(1.2);
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: $font-size-sm;
+    color: var(--color-text-secondary);
+    margin: 0;
+
+    @include mobile {
+      font-size: $font-size-xs;
+    }
+  }
+}

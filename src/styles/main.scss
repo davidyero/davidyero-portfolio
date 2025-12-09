@@ -1,0 +1,23 @@
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+
+// Layout
+// @import 'layout/header';
+// @import 'layout/footer';
+
+// Components
+// Components styles will be imported here when needed
+
+// Pages
+// Page specific styles will be imported here when needed
+
+// Themes
+@import 'themes/theme';
+
+// Vendors
+// Third party libraries styles will be imported here when needed

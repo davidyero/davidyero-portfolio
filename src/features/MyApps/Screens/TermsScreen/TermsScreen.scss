@@ -1,0 +1,115 @@
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/abstracts/mixins';
+
+.terms-screen {
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: var(--color-background);
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacing-2xl * 2 $spacing-2xl;
+
+    @include mobile {
+      padding: $spacing-xl $spacing-lg;
+    }
+  }
+
+  &__header {
+    margin-bottom: $spacing-2xl;
+    text-align: center;
+
+    @include mobile {
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0 0 $spacing-md 0;
+
+    @include mobile {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__app-name {
+    font-size: $font-size-xl;
+    color: var(--color-text-secondary);
+    margin: 0 0 $spacing-lg 0;
+  }
+
+  &__last-updated {
+    font-size: $font-size-sm;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  &__actions {
+    @include flex-center;
+    gap: $spacing-md;
+    justify-content: center;
+    margin-top: $spacing-lg;
+  }
+
+  &__content {
+    background-color: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    border-radius: $border-radius-lg;
+    padding: $spacing-2xl;
+
+    @include mobile {
+      padding: $spacing-xl;
+    }
+  }
+
+  &__section {
+    margin-bottom: $spacing-2xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__section-title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 $spacing-md 0;
+  }
+
+  &__section-content {
+    font-size: $font-size-md;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin: 0;
+
+    p {
+      margin: 0 0 $spacing-md 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: $spacing-xl;
+      margin: $spacing-md 0;
+
+      li {
+        margin-bottom: $spacing-sm;
+      }
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    padding: $spacing-2xl * 2;
+    color: var(--color-text-secondary);
+    font-size: $font-size-lg;
+  }
+}

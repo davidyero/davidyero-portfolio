@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomeScreen } from './features/Home/Screens/HomeScreen/HomeScreen';
+import { AboutScreen } from './features/AboutMe/Screens/AboutScreen/AboutScreen';
+import { MyAppsScreen } from './features/MyApps/Screens/MyAppsScreen/MyAppsScreen';
+import { AppLandingScreen } from './features/MyApps/Screens/AppLandingScreen/AppLandingScreen';
+import { ChangelogScreen } from './features/MyApps/Screens/ChangelogScreen/ChangelogScreen';
+import { TermsScreen } from './features/MyApps/Screens/TermsScreen/TermsScreen';
+import './styles/main.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/apps" element={<MyAppsScreen />} />
+        <Route path="/apps/:slug" element={<AppLandingScreen />} />
+        <Route path="/apps/:slug/changelog" element={<ChangelogScreen />} />
+        <Route path="/apps/:slug/terms" element={<TermsScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

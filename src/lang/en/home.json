@@ -1,0 +1,13 @@
+{
+  "home.title": "Hello, I'm",
+  "home.name": "David Yepes",
+  "home.subtitle": "Mobile Developer | React Native & iOS Expert",
+  "home.description": "Passionate about creating exceptional mobile experiences. Specialized in building performant and scalable applications.",
+  "home.viewProjects": "View My Work",
+  "home.contactMe": "Contact Me",
+  "home.skills.title": "Technical Skills",
+  "home.skills.react": "React Native",
+  "home.skills.ios": "iOS Development",
+  "home.skills.typescript": "TypeScript",
+  "home.skills.firebase": "Firebase"
+}
