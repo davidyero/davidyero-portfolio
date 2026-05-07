@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../../../../components/Header/Header';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { HomeScreenProps } from './HomeScreen.types';
 import './HomeScreen.scss';
 
 export const HomeScreen: React.FC<HomeScreenProps> = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Header />
@@ -25,10 +28,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
               Especializado en React, TypeScript y Node.js.
             </p>
             <div className="home-screen__cta">
-              <SuperButton variant="primary" size="large">
+              <SuperButton variant="primary" size="large" onClick={() => navigate('/apps')}>
                 Ver Proyectos
               </SuperButton>
-              <SuperButton variant="outline" size="large">
+              <SuperButton variant="outline" size="large" onClick={() => navigate('/about')}>
                 Contactar
               </SuperButton>
             </div>

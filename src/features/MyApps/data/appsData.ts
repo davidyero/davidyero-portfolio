@@ -5,6 +5,7 @@ import HolidayIcon from '../../../assets/icons/apps/HolidayIcon.png';
 import TaskMasterIcon from '../../../assets/icons/apps/TaskMasterIcon.png';
 import PronostigolIcon from '../../../assets/icons/apps/PronostigolIcon.png';
 import SimuladorIcon from '../../../assets/icons/apps/SimuladorIcon.png';
+import SuperLineUpIcon from '../../../assets/icons/apps/SuperLineUp.png';
 
 export const appsData: App[] = [
   {
@@ -727,6 +728,128 @@ export const appsData: App[] = [
           {
             title: '10. Contact',
             content: '<p>For technical support or to report issues, contact us at: support@pronostigol.com</p>',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: '7',
+    name: 'SuperLineUp',
+    slug: 'superlineup',
+    description:
+      'Crea alineaciones de fútbol increíbles en segundos. Equipo (11) o partido completo (22), formaciones clásicas, drag & drop y personalización total.',
+    icon: '⚽',
+    logo: SuperLineUpIcon,
+    iconBgColor: '#86efac',
+    fullDescription:
+      '¡Bienvenido a SuperLineUp! Crea alineaciones de fútbol increíbles en segundos: equipo (11) o partido completo (22), más de 7 formaciones clásicas, drag & drop fluido, camisetas, césped y estadio personalizables, guarda y comparte como imagen, 100% sin conexión. Arma tu alineación, muestra tu táctica y comparte tu pasión.',
+    features: [
+      'Diseña alineaciones de un equipo (11) o de un partido completo (22)',
+      'Elige entre múltiples formaciones tácticas (4-4-2, 4-3-3, 3-5-2 y más)',
+      'Personaliza camisetas, césped, estadio y tribunas',
+      'Mueve jugadores con drag & drop fluido',
+      'Exporta la alineación como imagen lista para redes sociales',
+      'Funciona 100% sin conexión',
+    ],
+    appStoreUrl: '#',
+    playStoreUrl: '#',
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '6 de Mayo, 2026',
+        type: 'new',
+        changes: [
+          'Lanzamiento inicial de SuperLineUp.',
+          'Diseño de alineaciones para equipo (11) y partido completo (22).',
+          'Más de 7 formaciones clásicas disponibles (4-4-2, 4-3-3, 3-5-2 y más).',
+          'Personalización de camisetas, césped, estadio y tribunas.',
+          'Drag & drop fluido para reposicionar jugadores.',
+          'Exportación de la alineación como imagen para compartir.',
+          'Funcionamiento 100% sin conexión.',
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: '6 de Mayo, 2026',
+        sections: [
+          {
+            title: '1. Aceptación de los Términos',
+            content: '<p>Al descargar, instalar o usar SuperLineUp ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con estos términos, no uses la Aplicación.</p>',
+          },
+          {
+            title: '2. Naturaleza del Servicio',
+            content: '<p>SuperLineUp es una aplicación de entretenimiento que te permite diseñar alineaciones de fútbol con fines recreativos y creativos. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines personales, educativos o de entretenimiento</li><li>No usar la Aplicación para actividades ilegales o no autorizadas</li><li>No intentar modificar, descompilar o realizar ingeniería inversa sobre la Aplicación</li></ul>',
+          },
+          {
+            title: '3. Funcionamiento Sin Conexión y Privacidad',
+            content: '<p>SuperLineUp funciona 100% sin conexión y todos los datos (alineaciones, configuraciones, personalizaciones) se almacenan localmente en tu dispositivo. No recopilamos, transmitimos ni almacenamos información personal en servidores externos. Eres responsable de respaldar tus alineaciones si así lo deseas.</p>',
+          },
+          {
+            title: '4. Contenido Generado por el Usuario',
+            content: '<p>Las alineaciones, imágenes exportadas y demás contenido que generes con la Aplicación son de tu propiedad. Eres responsable del uso que hagas de dicho contenido al compartirlo en redes sociales u otros medios, incluyendo el cumplimiento de las normas de las plataformas en las que lo publiques.</p>',
+          },
+          {
+            title: '5. Marcas y Equipos',
+            content: '<p>SuperLineUp no está afiliado, asociado, autorizado, respaldado ni oficialmente conectado con ningún club, liga, federación, jugador o entidad deportiva real. Cualquier referencia a equipos, formaciones o estilos visuales tiene fines exclusivamente ilustrativos y de personalización por parte del usuario. Las marcas y logotipos pertenecen a sus respectivos propietarios.</p>',
+          },
+          {
+            title: '6. Propiedad Intelectual',
+            content: '<p>Todos los derechos de propiedad intelectual sobre la Aplicación, incluyendo su código, diseño, gráficos e interfaz, son propiedad de SuperLineUp o de sus licenciantes. No puedes copiar, modificar, distribuir ni explotar comercialmente la Aplicación o sus componentes sin nuestro consentimiento previo por escrito.</p>',
+          },
+          {
+            title: '7. Limitación de Responsabilidad',
+            content: '<p>SuperLineUp se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de:</p><ul><li>Pérdida de datos almacenados localmente en el dispositivo</li><li>Errores, interrupciones o incompatibilidades con determinados dispositivos</li><li>Daños derivados del uso o imposibilidad de uso de la Aplicación</li><li>Uso indebido del contenido exportado por parte del usuario o de terceros</li></ul>',
+          },
+          {
+            title: '8. Modificaciones',
+            content: '<p>Nos reservamos el derecho de modificar estos Términos y Condiciones, así como las características de la Aplicación, en cualquier momento. Las modificaciones entrarán en vigor desde su publicación en la Aplicación o en la tienda correspondiente.</p>',
+          },
+          {
+            title: '9. Contacto',
+            content: '<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@superlineup.com</p>',
+          },
+        ],
+      },
+      en: {
+        lastUpdated: 'May 6, 2026',
+        sections: [
+          {
+            title: '1. Acceptance of Terms',
+            content: '<p>By downloading, installing, or using SuperLineUp ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with these terms, do not use the Application.</p>',
+          },
+          {
+            title: '2. Nature of Service',
+            content: '<p>SuperLineUp is an entertainment application that lets you design soccer line-ups for recreational and creative purposes. You agree to:</p><ul><li>Use the Application only for personal, educational, or entertainment purposes</li><li>Not use the Application for illegal or unauthorized activities</li><li>Not attempt to modify, decompile, or reverse engineer the Application</li></ul>',
+          },
+          {
+            title: '3. Offline Operation and Privacy',
+            content: '<p>SuperLineUp runs 100% offline and all data (line-ups, settings, customizations) is stored locally on your device. We do not collect, transmit, or store personal information on external servers. You are responsible for backing up your line-ups if you wish to do so.</p>',
+          },
+          {
+            title: '4. User-Generated Content',
+            content: '<p>The line-ups, exported images, and any other content you generate with the Application are your property. You are responsible for how you use such content when sharing it on social media or other channels, including complying with the rules of the platforms where you publish it.</p>',
+          },
+          {
+            title: '5. Trademarks and Teams',
+            content: '<p>SuperLineUp is not affiliated, associated, authorized, endorsed by, or in any way officially connected with any real club, league, federation, player, or sports entity. Any reference to teams, formations, or visual styles is for purely illustrative and user-customization purposes. All trademarks and logos belong to their respective owners.</p>',
+          },
+          {
+            title: '6. Intellectual Property',
+            content: '<p>All intellectual property rights to the Application, including its code, design, graphics, and interface, are owned by SuperLineUp or its licensors. You may not copy, modify, distribute, or commercially exploit the Application or its components without our prior written consent.</p>',
+          },
+          {
+            title: '7. Limitation of Liability',
+            content: '<p>SuperLineUp is provided "as is" and "as available", without warranties of any kind. We are not responsible for:</p><ul><li>Loss of data stored locally on the device</li><li>Errors, interruptions, or incompatibilities with certain devices</li><li>Damages arising from use of or inability to use the Application</li><li>Misuse of exported content by the user or third parties</li></ul>',
+          },
+          {
+            title: '8. Modifications',
+            content: '<p>We reserve the right to modify these Terms and Conditions, as well as the features of the Application, at any time. Modifications will take effect upon publication in the Application or the relevant store.</p>',
+          },
+          {
+            title: '9. Contact',
+            content: '<p>If you have questions about these Terms and Conditions, contact us at: support@superlineup.com</p>',
           },
         ],
       },
