@@ -39,4 +39,5 @@ export interface App {
   screenshots?: string[];
   changelog?: ChangelogEntry[];
   termsAndConditions?: TermsAndConditions;
+  privacyPolicy?: TermsAndConditions;
 }

@@ -4,6 +4,7 @@
   "apps.landing.backToApps": "Volver a Apps",
   "apps.landing.viewChangelog": "Ver Changelog",
   "apps.landing.viewTerms": "Ver Términos",
+  "apps.landing.viewPrivacy": "Ver Política de Privacidad",
   "apps.landing.screenshots": "Capturas de Pantalla",
   "apps.landing.features": "Características",
   "apps.landing.appStore": "Consíguelo en el App Store",
@@ -20,5 +21,10 @@
   "apps.terms.backToApps": "Volver a Apps",
   "apps.terms.goToApp": "Ir a la App",
   "apps.terms.notAvailable": "No hay términos y condiciones disponibles para esta aplicación",
+  "apps.privacy.title": "Política de Privacidad",
+  "apps.privacy.lastUpdated": "Última actualización",
+  "apps.privacy.backToApps": "Volver a Apps",
+  "apps.privacy.goToApp": "Ir a la App",
+  "apps.privacy.notAvailable": "No hay política de privacidad disponible para esta aplicación",
   "apps.notFound": "App no encontrada"
 }

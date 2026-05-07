@@ -4,6 +4,7 @@
   "apps.landing.backToApps": "Back to Apps",
   "apps.landing.viewChangelog": "View Changelog",
   "apps.landing.viewTerms": "View Terms",
+  "apps.landing.viewPrivacy": "View Privacy Policy",
   "apps.landing.screenshots": "Screenshots",
   "apps.landing.features": "Features",
   "apps.landing.appStore": "Get it on the App Store",
@@ -20,5 +21,10 @@
   "apps.terms.backToApps": "Back to Apps",
   "apps.terms.goToApp": "Go to App",
   "apps.terms.notAvailable": "Terms and Conditions are not available for this application",
+  "apps.privacy.title": "Privacy Policy",
+  "apps.privacy.lastUpdated": "Last updated",
+  "apps.privacy.backToApps": "Back to Apps",
+  "apps.privacy.goToApp": "Go to App",
+  "apps.privacy.notAvailable": "Privacy Policy is not available for this application",
   "apps.notFound": "App not found"
 }

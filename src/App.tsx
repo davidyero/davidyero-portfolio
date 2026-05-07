@@ -6,6 +6,7 @@ import { MyAppsScreen } from './features/MyApps/Screens/MyAppsScreen/MyAppsScree
 import { AppLandingScreen } from './features/MyApps/Screens/AppLandingScreen/AppLandingScreen';
 import { ChangelogScreen } from './features/MyApps/Screens/ChangelogScreen/ChangelogScreen';
 import { TermsScreen } from './features/MyApps/Screens/TermsScreen/TermsScreen';
+import { PrivacyScreen } from './features/MyApps/Screens/PrivacyScreen/PrivacyScreen';
 import './styles/main.scss';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/apps/:slug" element={<AppLandingScreen />} />
         <Route path="/apps/:slug/changelog" element={<ChangelogScreen />} />
         <Route path="/apps/:slug/terms" element={<TermsScreen />} />
+        <Route path="/apps/:slug/privacy" element={<PrivacyScreen />} />
         <Route path="/about" element={<AboutScreen />} />
       </Routes>
     </BrowserRouter>

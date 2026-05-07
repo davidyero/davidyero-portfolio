@@ -104,6 +104,14 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
                   {t('apps.landing.viewTerms')}
                 </SuperButton>
               )}
+              {app.privacyPolicy && (
+                <SuperButton
+                  variant="secondary"
+                  onClick={() => navigate(`/apps/${slug}/privacy`)}
+                >
+                  {t('apps.landing.viewPrivacy')}
+                </SuperButton>
+              )}
             </div>
           </div>
         </section>
