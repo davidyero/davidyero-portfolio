@@ -1,13 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Sparkles, TrendingUp, Wrench } from 'lucide-react';
 import { ChangelogItemProps } from './ChangelogItem.types';
 import './ChangelogItem.scss';
 
-const typeTone: Record<string, string> = {
-  new: 'new',
-  improvement: 'improvement',
-  fix: 'fix',
-};
+const typeIcon = {
+  new: Sparkles,
+  improvement: TrendingUp,
+  fix: Wrench,
+} as const;
 
 export const ChangelogItem: React.FC<ChangelogItemProps> = ({
   version,
@@ -16,6 +17,7 @@ export const ChangelogItem: React.FC<ChangelogItemProps> = ({
   changes,
 }) => {
   const { t } = useTranslation();
+  const Icon = typeIcon[type];
 
   return (
     <div className="changelog-item">
@@ -23,7 +25,8 @@ export const ChangelogItem: React.FC<ChangelogItemProps> = ({
       <div className="changelog-item__body">
         <div className="changelog-item__head">
           <h3 className="changelog-item__version">v{version}</h3>
-          <span className={`changelog-item__tag changelog-item__tag--${typeTone[type]}`}>
+          <span className={`changelog-item__tag changelog-item__tag--${type}`}>
+            <Icon size={12} />
             {t(`apps.changelog.type.${type}`)}
           </span>
           <span className="changelog-item__date">{date}</span>

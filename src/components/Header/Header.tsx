@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
+import { paths } from '../../shared/paths';
 import { HeaderProps } from './Header.types';
 import './Header.scss';
 
@@ -11,9 +13,9 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { key: 'common.nav.home', path: '/' },
-  { key: 'common.nav.apps', path: '/apps' },
-  { key: 'common.nav.about', path: '/about' },
+  { key: 'common.nav.home', path: paths.home },
+  { key: 'common.nav.apps', path: paths.apps },
+  { key: 'common.nav.about', path: paths.aboutMe },
 ];
 
 export const Header: React.FC<HeaderProps> = () => {
@@ -75,7 +77,7 @@ export const Header: React.FC<HeaderProps> = () => {
               onClick={toggleTheme}
               aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
             >
-              {isDark ? '🌙' : '☀️'}
+              {isDark ? <Moon size={18} /> : <Sun size={18} />}
             </button>
           </div>
         </nav>

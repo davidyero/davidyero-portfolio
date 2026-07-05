@@ -10,5 +10,9 @@
   "about.exp.frontend.role": "Frontend Engineer",
   "about.exp.frontend.desc": "Interfaces React/TypeScript a escala, design tokens y sistema de componentes reutilizable.",
   "about.exp.freelance.role": "Desarrollador",
-  "about.exp.freelance.desc": "Apps web y mobile para clientes, del prototipo al App Store."
+  "about.exp.freelance.desc": "Apps web y mobile para clientes, del prototipo al App Store.",
+  "about.ai.eyebrow": "// ia · claude",
+  "about.ai.title": "Construyendo con IA y Claude",
+  "about.ai.description": "Experiencia construyendo con IA y Claude: flujos agénticos, prompt engineering, la API de Anthropic, skills a medida e integraciones MCP. Entrego más rápido apoyándome en Claude en diseño, código y automatización.",
+  "about.ai.chips": "Flujos agénticos · Prompt engineering · API de Anthropic · Skills a medida · MCP"
 }

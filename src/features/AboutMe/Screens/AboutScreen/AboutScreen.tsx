@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Bot } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { experienceTimeline } from '../../config/experience';
 import { AboutScreenProps } from './AboutScreen.types';
@@ -23,7 +24,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('about.linkedin')}
+{t('about.linkedin')}
             </a>
             <a
               className="about__link"
@@ -31,7 +32,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t('about.github')}
+{t('about.github')}
             </a>
           </div>
 
@@ -39,6 +40,26 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
         </aside>
 
         <section className="about__experience">
+          <div className="about__ai">
+            <div className="about__ai-head">
+              <span className="about__ai-icon"><Bot size={20} /></span>
+              <div>
+                <span className="mono-eyebrow">{t('about.ai.eyebrow')}</span>
+                <h2 className="about__ai-title">{t('about.ai.title')}</h2>
+              </div>
+            </div>
+            <p className="about__ai-description">{t('about.ai.description')}</p>
+            <div className="about__ai-chips">
+              {String(t('about.ai.chips'))
+                .split(' · ')
+                .map((chip: string) => (
+                  <span key={chip} className="about__ai-chip">
+                    {chip}
+                  </span>
+                ))}
+            </div>
+          </div>
+
           <span className="mono-eyebrow">{t('about.eyebrow')}</span>
           <div className="about__timeline">
             {experienceTimeline.map((exp) => (

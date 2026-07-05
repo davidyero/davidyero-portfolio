@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { paths } from '../../shared/paths';
 import { FooterProps } from './Footer.types';
 import { APP_VERSION } from '../../shared/appVersion';
 import './Footer.scss';
@@ -20,13 +21,13 @@ export const Footer: React.FC<FooterProps> = () => {
           </button>
 
           <nav className="footer__nav">
-            <button className="footer__link" onClick={() => navigate('/')}>
+            <button className="footer__link" onClick={() => navigate(paths.home)}>
               {t('common.nav.home')}
             </button>
-            <button className="footer__link" onClick={() => navigate('/apps')}>
+            <button className="footer__link" onClick={() => navigate(paths.apps)}>
               {t('common.nav.apps')}
             </button>
-            <button className="footer__link" onClick={() => navigate('/about')}>
+            <button className="footer__link" onClick={() => navigate(paths.aboutMe)}>
               {t('common.nav.about')}
             </button>
           </nav>
@@ -37,6 +38,7 @@ export const Footer: React.FC<FooterProps> = () => {
               href="https://github.com/davidyero"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
             >
               GitHub
             </a>
@@ -45,6 +47,7 @@ export const Footer: React.FC<FooterProps> = () => {
               href="https://www.linkedin.com/in/davidyero"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
               LinkedIn
             </a>

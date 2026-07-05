@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { AppCard } from '../../Components/AppCard/AppCard';
 import { useMyAppsScreen } from './useMyAppsScreen';
+import { paths } from '../../../../shared/paths';
 import { MyAppsScreenProps } from './MyAppsScreen.types';
 import './MyAppsScreen.scss';
 
@@ -39,7 +40,7 @@ export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
         {apps.length > 0 ? (
           <div className="catalog__grid">
             {apps.map((app) => (
-              <AppCard key={app.id} app={app} onClick={() => navigate(`/apps/${app.slug}`)} />
+              <AppCard key={app.id} app={app} onClick={() => navigate(paths.app(app.slug))} />
             ))}
           </div>
         ) : (

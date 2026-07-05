@@ -56,11 +56,35 @@
     max-width: 60ch;
   }
 
+  &__landing-cta {
+    margin-bottom: $space-5;
+  }
+
+  &__stack {
+    margin-bottom: $space-6;
+  }
+
+  &__stack-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-top: $space-3;
+  }
+
+  &__stack-chip {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+    padding: 6px 12px;
+    background: var(--surface-0);
+    border-radius: $radius-pill;
+  }
+
   &__ctas {
     display: flex;
     flex-direction: column;
     gap: $space-4;
-    margin-bottom: $space-5;
+    margin-bottom: $space-6;
   }
 
   &__stores {
@@ -126,9 +150,10 @@
   }
 
   &__feature-icon {
+    display: inline-flex;
+    align-items: center;
     color: var(--mauve);
-    font-size: 1rem;
-    line-height: 1.6;
+    margin-top: 2px;
   }
 
   &__feature-text {

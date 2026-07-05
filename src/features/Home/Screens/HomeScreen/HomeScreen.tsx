@@ -5,8 +5,10 @@ import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../../../MyApps/Components/AppIcon/AppIcon';
+import { ArrowRight, Bot } from 'lucide-react';
 import { featuredApps, platformLabels } from '../../../MyApps/data/registry';
 import { useExperience } from '../../../../shared/useExperience';
+import { paths } from '../../../../shared/paths';
 import { HomeScreenProps } from './HomeScreen.types';
 import './HomeScreen.scss';
 
@@ -41,10 +43,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
             </div>
 
             <div className="home__cta">
-              <SuperButton variant="primary" size="large" onClick={() => navigate('/apps')}>
-                {t('home.hero.ctaApps')} →
+              <SuperButton variant="primary" size="large" onClick={() => navigate(paths.apps)}>
+                {t('home.hero.ctaApps')} <ArrowRight size={18} />
               </SuperButton>
-              <SuperButton variant="outline" size="large" onClick={() => navigate('/about')}>
+              <SuperButton variant="outline" size="large" onClick={() => navigate(paths.aboutMe)}>
                 {t('home.hero.ctaContact')}
               </SuperButton>
             </div>
@@ -57,7 +59,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
                 <button
                   key={app.slug}
                   className="home__featured-item"
-                  onClick={() => navigate(`/apps/${app.slug}`)}
+                  onClick={() => navigate(paths.app(app.slug))}
                 >
                   <AppIcon app={app} size="md" />
                   <div className="home__featured-info">
@@ -92,6 +94,26 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
               <span className="home__stat-label">{t('home.experience.days')}</span>
             </div>
             <p className="home__experience-note">{t('home.experience.headline')}</p>
+          </div>
+        </section>
+
+        <section className="home__ai">
+          <div className="home__ai-head">
+            <span className="home__ai-icon"><Bot size={20} /></span>
+            <div>
+              <span className="mono-eyebrow">{t('home.ai.eyebrow')}</span>
+              <h2 className="home__ai-title">{t('home.ai.title')}</h2>
+            </div>
+          </div>
+          <p className="home__ai-description">{t('home.ai.description')}</p>
+          <div className="home__ai-chips">
+            {String(t('home.ai.chips'))
+              .split(' · ')
+              .map((chip: string) => (
+                <span key={chip} className="home__ai-chip">
+                  {chip}
+                </span>
+              ))}
           </div>
         </section>
       </div>

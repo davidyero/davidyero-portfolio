@@ -1,11 +1,19 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ArrowUpRight, Sparkles, Rocket } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
-import { getAppBySlug, resolveAppCtas, platformLabels } from '../../data/registry';
+import {
+  getAppBySlug,
+  getAppKind,
+  kindI18nKey,
+  resolveAppCtas,
+  platformLabels,
+} from '../../data/registry';
+import { paths } from '../../../../shared/paths';
 import { AppLandingScreenProps } from './AppLandingScreen.types';
 import appStoreEN from '../../../../assets/images/stores/appStoreEN.svg';
 import appStoreES from '../../../../assets/images/stores/appStoreES.svg';
@@ -31,7 +39,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
       <PageLayout>
         <div className="detail container">
           <p className="detail__empty">{t('apps.notFound')}</p>
-          <SuperButton variant="outline" onClick={() => navigate('/apps')}>
+          <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.detail.back')}
           </SuperButton>
         </div>
@@ -40,6 +48,8 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   }
 
   const cta = resolveAppCtas(app);
+  const kind = getAppKind(app);
+  const tech = app.tech ?? [];
   const metaBits = [
     ...app.platforms.map((p) => platformLabels[p]),
     app.version ? `v${app.version}` : null,
@@ -49,7 +59,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   return (
     <PageLayout>
       <div className="detail container">
-        <button className="detail__back" onClick={() => navigate('/apps')}>
+        <button className="detail__back" onClick={() => navigate(paths.apps)}>
           ‹ {t('apps.detail.back')}
         </button>
 
@@ -58,6 +68,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           <div className="detail__hero-info">
             <div className="detail__title-row">
               <h1 className="detail__title">{app.name}</h1>
+              <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
               <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
             </div>
             {app.tagline && <p className="detail__tagline">{app.tagline}</p>}
@@ -67,17 +78,20 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
 
         <p className="detail__description">{app.fullDescription ?? app.description}</p>
 
+        {/* Immersive landing entry point */}
+        <div className="detail__landing-cta">
+          <SuperButton variant="primary" onClick={() => navigate(paths.appLanding(app.slug))}>
+            <Rocket size={16} /> {t('apps.detail.viewLanding')}
+          </SuperButton>
+        </div>
+
         {/* Adaptive CTAs */}
         <div className="detail__ctas">
           {(cta.showAppStore || cta.showGooglePlay) && (
             <div className="detail__stores">
               {cta.showAppStore && (
                 <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={appStoreImg}
-                    alt={t('apps.detail.appStore')}
-                    className="detail__store-badge"
-                  />
+                  <img src={appStoreImg} alt={t('apps.detail.appStore')} className="detail__store-badge" />
                 </a>
               )}
               {cta.showGooglePlay && (
@@ -96,7 +110,9 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             <div className="detail__web-ctas">
               {cta.showWeb && (
                 <a href={app.webUrl} target="_blank" rel="noopener noreferrer">
-                  <SuperButton variant="primary">{t('apps.detail.openApp')} ↗</SuperButton>
+                  <SuperButton variant="primary">
+                    {t('apps.detail.openApp')} <ArrowUpRight size={16} />
+                  </SuperButton>
                 </a>
               )}
               {cta.showRepo && (
@@ -112,32 +128,32 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           )}
         </div>
 
+        {/* Tech stack */}
+        {tech.length > 0 && (
+          <div className="detail__stack">
+            <span className="mono-eyebrow">{t('apps.detail.stack')}</span>
+            <div className="detail__stack-chips">
+              {tech.map((item) => (
+                <span key={item} className="detail__stack-chip">{item}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Conditional document buttons */}
         <div className="detail__docs">
           {app.changelog && app.changelog.length > 0 && (
-            <SuperButton
-              variant="secondary"
-              size="small"
-              onClick={() => navigate(`/apps/${app.slug}/changelog`)}
-            >
+            <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appChangelog(app.slug))}>
               {t('apps.detail.changelog')}
             </SuperButton>
           )}
           {app.termsAndConditions && (
-            <SuperButton
-              variant="secondary"
-              size="small"
-              onClick={() => navigate(`/apps/${app.slug}/terms`)}
-            >
+            <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appTerms(app.slug))}>
               {t('apps.detail.terms')}
             </SuperButton>
           )}
           {app.privacyPolicy && (
-            <SuperButton
-              variant="secondary"
-              size="small"
-              onClick={() => navigate(`/apps/${app.slug}/privacy`)}
-            >
+            <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appPrivacy(app.slug))}>
               {t('apps.detail.privacy')}
             </SuperButton>
           )}
@@ -150,7 +166,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             <div className="detail__features-grid">
               {app.features.map((feature, index) => (
                 <div key={index} className="detail__feature">
-                  <span className="detail__feature-icon">✦</span>
+                  <span className="detail__feature-icon"><Sparkles size={16} /></span>
                   <p className="detail__feature-text">{feature}</p>
                 </div>
               ))}
@@ -164,12 +180,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             <span className="mono-eyebrow">{t('apps.detail.screenshots')}</span>
             <div className="detail__screenshots-row">
               {app.screenshots.map((shot, index) => (
-                <img
-                  key={index}
-                  src={shot}
-                  alt={`${app.name} ${index + 1}`}
-                  className="detail__screenshot"
-                />
+                <img key={index} src={shot} alt={`${app.name} ${index + 1}`} className="detail__screenshot" />
               ))}
             </div>
           </section>

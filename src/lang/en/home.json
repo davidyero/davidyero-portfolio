@@ -10,5 +10,9 @@
   "home.experience.headline": "Shipping software since October 2, 2018",
   "home.experience.years": "years",
   "home.experience.months": "months",
-  "home.experience.days": "days"
+  "home.experience.days": "days",
+  "home.ai.eyebrow": "// ai · claude",
+  "home.ai.title": "I build with AI & Claude",
+  "home.ai.description": "Experienced building with AI and Claude: agentic workflows, prompt engineering, the Anthropic API, custom skills and MCP integrations. I ship faster by pairing with Claude across design, code and automation.",
+  "home.ai.chips": "Agentic workflows · Prompt engineering · Anthropic API · Custom skills · MCP"
 }

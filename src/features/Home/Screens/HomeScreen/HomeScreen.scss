@@ -179,4 +179,63 @@
       border-left: none;
     }
   }
+
+  // ---- AI / Claude block ----
+  &__ai {
+    @include card;
+    background:
+      radial-gradient(600px 240px at 100% 0%, var(--gradient-soft), transparent 70%),
+      var(--surface);
+    padding: $space-6;
+    margin-top: $space-6;
+  }
+
+  &__ai-head {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-3;
+    margin-bottom: $space-4;
+  }
+
+  &__ai-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: $radius-md;
+    background: var(--gradient);
+    color: var(--on-accent);
+    box-shadow: var(--shadow-md);
+  }
+
+  &__ai-title {
+    font-size: $fs-h2;
+    margin-top: 2px;
+  }
+
+  &__ai-description {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+    line-height: 1.7;
+    max-width: 62ch;
+    margin-bottom: $space-5;
+  }
+
+  &__ai-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+
+  &__ai-chip {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--text);
+    padding: 7px 14px;
+    border: 1px solid var(--border-strong);
+    border-radius: $radius-pill;
+    background: var(--surface-0);
+  }
 }

@@ -46,11 +46,13 @@ export interface App {
 export type AppPlatform = 'ios' | 'android' | 'web';
 export type AppStatus = 'live' | 'beta' | 'soon';
 export type AppCategory = 'sports' | 'productivity' | 'utility' | 'entertainment';
+export type AppKind = 'web' | 'mobile' | 'both';
 
 export interface AppMeta {
   platforms: AppPlatform[];
   status: AppStatus;
   category: AppCategory;
+  tech?: string[]; // stack chips, e.g. ['React Native', 'Expo', 'TypeScript']
   tagline?: string;
   version?: string;
   featured?: boolean;

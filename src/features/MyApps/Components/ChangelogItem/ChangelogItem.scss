@@ -52,6 +52,9 @@
   }
 
   &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     font-family: $font-mono;
     font-size: $fs-tiny;
     font-weight: 600;

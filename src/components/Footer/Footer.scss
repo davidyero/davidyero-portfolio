@@ -58,6 +58,9 @@
   &__social { display: flex; gap: $space-4; }
 
   &__social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: $font-mono;
     font-size: $fs-small;
     color: var(--subtext);

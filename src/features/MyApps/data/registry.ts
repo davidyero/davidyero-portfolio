@@ -1,6 +1,7 @@
 import {
   App,
   AppCategory,
+  AppKind,
   AppMeta,
   AppPlatform,
   EnrichedApp,
@@ -43,6 +44,20 @@ export const hasMobile = (app: EnrichedApp): boolean =>
   app.platforms.includes('ios') || app.platforms.includes('android');
 
 export const hasWeb = (app: EnrichedApp): boolean => app.platforms.includes('web');
+
+// Web / Mobile / Both — derived from platforms, never stored twice.
+export const getAppKind = (app: EnrichedApp): AppKind => {
+  const web = hasWeb(app);
+  const mobile = hasMobile(app);
+  if (web && mobile) return 'both';
+  return web ? 'web' : 'mobile';
+};
+
+export const kindI18nKey: Record<AppKind, string> = {
+  web: 'apps.kind.web',
+  mobile: 'apps.kind.mobile',
+  both: 'apps.kind.both',
+};
 
 export interface AppCtaState {
   showAppStore: boolean;

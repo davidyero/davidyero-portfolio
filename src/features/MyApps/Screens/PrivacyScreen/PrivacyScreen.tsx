@@ -5,6 +5,7 @@ import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
 import { getAppBySlug } from '../../data/registry';
+import { paths } from '../../../../shared/paths';
 import { PrivacyScreenProps } from './PrivacyScreen.types';
 
 export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
@@ -22,7 +23,7 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
           <p style={{ fontFamily: 'var(--mono)', color: 'var(--muted)', margin: '2rem 0' }}>
             {app ? t('apps.legal.notAvailable') : t('apps.notFound')}
           </p>
-          <SuperButton variant="outline" onClick={() => navigate('/apps')}>
+          <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.legal.backToApps')}
           </SuperButton>
         </div>
@@ -39,8 +40,8 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
         subtitle={t('apps.legal.privacySubtitle', { app: app.name })}
         lastUpdated={data.lastUpdated}
         sections={data.sections}
-        onBack={() => navigate('/apps')}
-        onGoToApp={() => navigate(`/apps/${slug}`)}
+        onBack={() => navigate(paths.apps)}
+        onGoToApp={() => navigate(paths.app(slug ?? ''))}
       />
     </PageLayout>
   );

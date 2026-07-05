@@ -10,5 +10,9 @@
   "home.experience.headline": "Enviando software desde el 2 de octubre de 2018",
   "home.experience.years": "años",
   "home.experience.months": "meses",
-  "home.experience.days": "días"
+  "home.experience.days": "días",
+  "home.ai.eyebrow": "// ia · claude",
+  "home.ai.title": "Construyo con IA y Claude",
+  "home.ai.description": "Experiencia construyendo con IA y Claude: flujos agénticos, prompt engineering, la API de Anthropic, skills a medida e integraciones MCP. Entrego más rápido apoyándome en Claude en diseño, código y automatización.",
+  "home.ai.chips": "Flujos agénticos · Prompt engineering · API de Anthropic · Skills a medida · MCP"
 }

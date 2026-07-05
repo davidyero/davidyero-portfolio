@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Search } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
-import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { ChangelogItem } from '../../Components/ChangelogItem/ChangelogItem';
 import { getAppBySlug } from '../../data/registry';
+import { paths } from '../../../../shared/paths';
 import { ChangelogScreenProps } from './ChangelogScreen.types';
 import './ChangelogScreen.scss';
 
@@ -33,7 +34,7 @@ export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
   return (
     <PageLayout>
       <div className="changelog container">
-        <button className="changelog__back" onClick={() => navigate(`/apps/${slug}`)}>
+        <button className="changelog__back" onClick={() => navigate(paths.app(slug ?? ''))}>
           ‹ {t('apps.detail.back')}
         </button>
 
@@ -44,7 +45,7 @@ export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
             <p className="changelog__subtitle">{t('apps.changelog.subtitle')}</p>
           </div>
           <div className="changelog__search">
-            <span className="changelog__search-icon">⌕</span>
+            <Search size={16} className="changelog__search-icon" />
             <input
               type="text"
               className="changelog__search-input"

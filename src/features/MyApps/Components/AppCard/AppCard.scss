@@ -27,6 +27,29 @@
     margin-bottom: $space-1;
   }
 
+  &__badges {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-1;
+  }
+
+  &__tech-chip {
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    color: var(--subtext);
+    padding: 3px 8px;
+    background: var(--surface-0);
+    border-radius: $radius-pill;
+  }
+
   &__name {
     font-family: $font-sans;
     font-size: $fs-h3;
