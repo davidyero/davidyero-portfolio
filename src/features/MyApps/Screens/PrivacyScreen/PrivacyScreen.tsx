@@ -1,91 +1,47 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Header } from '../../../../components/Header/Header';
+import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
+import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
+import { getAppBySlug } from '../../data/registry';
 import { PrivacyScreenProps } from './PrivacyScreen.types';
-import { appsData } from '../../data/appsData';
-import './PrivacyScreen.scss';
 
 export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const app = appsData.find((a) => a.slug === slug);
+  const app = getAppBySlug(slug);
+  const lang = (i18n.language?.startsWith('es') ? 'es' : 'en') as 'en' | 'es';
 
-  if (!app) {
+  if (!app || !app.privacyPolicy) {
     return (
-      <>
-        <Header />
-        <div className="privacy-screen">
-          <div className="privacy-screen__container">
-            <p className="privacy-screen__empty">{t('apps.notFound')}</p>
-          </div>
+      <PageLayout>
+        <div className="legal container">
+          <p style={{ fontFamily: 'var(--mono)', color: 'var(--muted)', margin: '2rem 0' }}>
+            {app ? t('apps.legal.notAvailable') : t('apps.notFound')}
+          </p>
+          <SuperButton variant="outline" onClick={() => navigate('/apps')}>
+            ‹ {t('apps.legal.backToApps')}
+          </SuperButton>
         </div>
-      </>
+      </PageLayout>
     );
   }
 
-  if (!app.privacyPolicy) {
-    return (
-      <>
-        <Header />
-        <div className="privacy-screen">
-          <div className="privacy-screen__container">
-            <p className="privacy-screen__empty">
-              {t('apps.privacy.notAvailable')}
-            </p>
-            <div className="privacy-screen__actions">
-              <SuperButton variant="primary" onClick={() => navigate(`/apps/${slug}`)}>
-                {t('apps.privacy.goToApp')}
-              </SuperButton>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  const currentLang = i18n.language as 'en' | 'es';
-  const privacyData = app.privacyPolicy[currentLang];
+  const data = app.privacyPolicy[lang];
 
   return (
-    <>
-      <Header />
-      <div className="privacy-screen">
-        <div className="privacy-screen__container">
-          <div className="privacy-screen__header">
-            <h1 className="privacy-screen__title">{t('apps.privacy.title')}</h1>
-            <p className="privacy-screen__app-name">{app.name}</p>
-            {privacyData.lastUpdated && (
-              <p className="privacy-screen__last-updated">
-                {t('apps.privacy.lastUpdated')}: {privacyData.lastUpdated}
-              </p>
-            )}
-            <div className="privacy-screen__actions">
-              <SuperButton variant="outline" onClick={() => navigate('/apps')}>
-                {t('apps.privacy.backToApps')}
-              </SuperButton>
-              <SuperButton variant="primary" onClick={() => navigate(`/apps/${slug}`)}>
-                {t('apps.privacy.goToApp')}
-              </SuperButton>
-            </div>
-          </div>
-
-          <div className="privacy-screen__content">
-            {privacyData.sections.map((section, index) => (
-              <div key={index} className="privacy-screen__section">
-                <h2 className="privacy-screen__section-title">{section.title}</h2>
-                <div
-                  className="privacy-screen__section-content"
-                  dangerouslySetInnerHTML={{ __html: section.content }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
+    <PageLayout>
+      <LegalDoc
+        title={t('apps.legal.privacy.title')}
+        subtitle={t('apps.legal.privacySubtitle', { app: app.name })}
+        lastUpdated={data.lastUpdated}
+        sections={data.sections}
+        onBack={() => navigate('/apps')}
+        onGoToApp={() => navigate(`/apps/${slug}`)}
+      />
+    </PageLayout>
   );
 };

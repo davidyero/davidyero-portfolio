@@ -1,73 +1,100 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Header } from '../../../../components/Header/Header';
+import { useTranslation } from 'react-i18next';
+import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
+import { Badge } from '../../../../components/Badge/Badge';
+import { AppIcon } from '../../../MyApps/Components/AppIcon/AppIcon';
+import { featuredApps, platformLabels } from '../../../MyApps/data/registry';
+import { useExperience } from '../../../../shared/useExperience';
 import { HomeScreenProps } from './HomeScreen.types';
 import './HomeScreen.scss';
 
+const STACK = ['React', 'TypeScript', 'Node', 'React Native', 'Postgres'];
+
+const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
+  status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
+
 export const HomeScreen: React.FC<HomeScreenProps> = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const exp = useExperience();
 
   return (
-    <>
-      <Header />
-      <div className="home-screen">
-        <section className="home-screen__hero">
-          <div className="home-screen__hero-content">
-            <div className="home-screen__avatar">
-              <div className="home-screen__avatar-placeholder">DY</div>
-            </div>
-            <h1 className="home-screen__title">
-              Hola, soy <span className="home-screen__highlight">David Yepes</span>
+    <PageLayout>
+      <div className="home container">
+        <section className="home__hero">
+          <div className="home__hero-main">
+            <span className="mono-eyebrow home__prompt">{t('home.hero.eyebrow')}</span>
+            <h1 className="home__title">
+              {t('home.hero.titlePre')}
+              <span className="home__title-accent">{t('home.hero.titleAccent')}</span>
             </h1>
-            <h2 className="home-screen__subtitle">
-              Desarrollador Full Stack
-            </h2>
-            <p className="home-screen__description">
-              Apasionado por crear experiencias web increíbles con tecnologías modernas.
-              Especializado en React, TypeScript y Node.js.
-            </p>
-            <div className="home-screen__cta">
+            <p className="home__description">{t('home.hero.description')}</p>
+
+            <div className="home__chips">
+              {STACK.map((tech) => (
+                <span key={tech} className="home__chip">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="home__cta">
               <SuperButton variant="primary" size="large" onClick={() => navigate('/apps')}>
-                Ver Proyectos
+                {t('home.hero.ctaApps')} →
               </SuperButton>
               <SuperButton variant="outline" size="large" onClick={() => navigate('/about')}>
-                Contactar
+                {t('home.hero.ctaContact')}
               </SuperButton>
             </div>
           </div>
+
+          <aside className="home__featured">
+            <span className="mono-eyebrow">{t('home.featured.eyebrow')}</span>
+            <div className="home__featured-list">
+              {featuredApps.map((app) => (
+                <button
+                  key={app.slug}
+                  className="home__featured-item"
+                  onClick={() => navigate(`/apps/${app.slug}`)}
+                >
+                  <AppIcon app={app} size="md" />
+                  <div className="home__featured-info">
+                    <span className="home__featured-name">{app.name}</span>
+                    <span className="home__featured-meta">
+                      {app.platforms.map((p) => platformLabels[p]).join(' · ')} ·{' '}
+                      {t(`apps.category.${app.category}`)}
+                    </span>
+                  </div>
+                  <Badge tone={statusTone(app.status)} size="sm">
+                    {t(`apps.status.${app.status}`)}
+                  </Badge>
+                </button>
+              ))}
+            </div>
+          </aside>
         </section>
 
-        <section className="home-screen__skills">
-          <h3 className="home-screen__section-title">Tecnologías</h3>
-          <div className="home-screen__skills-grid">
-            <div className="home-screen__skill-card">
-              <div className="home-screen__skill-icon">⚛️</div>
-              <h4>React</h4>
+        <section className="home__experience">
+          <span className="mono-eyebrow">{t('home.experience.eyebrow')}</span>
+          <div className="home__experience-row">
+            <div className="home__stat">
+              <span className="home__stat-value">{exp.years}</span>
+              <span className="home__stat-label">{t('home.experience.years')}</span>
             </div>
-            <div className="home-screen__skill-card">
-              <div className="home-screen__skill-icon">📘</div>
-              <h4>TypeScript</h4>
+            <div className="home__stat">
+              <span className="home__stat-value">{exp.months}</span>
+              <span className="home__stat-label">{t('home.experience.months')}</span>
             </div>
-            <div className="home-screen__skill-card">
-              <div className="home-screen__skill-icon">🟢</div>
-              <h4>Node.js</h4>
+            <div className="home__stat">
+              <span className="home__stat-value">{exp.days}</span>
+              <span className="home__stat-label">{t('home.experience.days')}</span>
             </div>
-            <div className="home-screen__skill-card">
-              <div className="home-screen__skill-icon">🎨</div>
-              <h4>Sass</h4>
-            </div>
-            <div className="home-screen__skill-card">
-              <div className="home-screen__skill-icon">📱</div>
-              <h4>React Native</h4>
-            </div>
-            <div className="home-screen__skill-card">
-              <div className="home-screen__skill-icon">🚀</div>
-              <h4>Next.js</h4>
-            </div>
+            <p className="home__experience-note">{t('home.experience.headline')}</p>
           </div>
         </section>
       </div>
-    </>
+    </PageLayout>
   );
 };

@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,13 +10,17 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: $font-family-primary;
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
+  font-family: $font-mono;
+  font-size: $fs-body;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
   transition: background-color $transition-normal, color $transition-normal;
+  min-height: 100vh;
 }
 
 a {
@@ -27,9 +33,17 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  color: inherit;
 }
 
-ul, ol {
+input,
+textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
@@ -38,3 +52,19 @@ img {
   height: auto;
   display: block;
 }
+
+::selection {
+  background: var(--gradient-soft);
+  color: var(--text);
+}
+
+// Custom scrollbar
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--surface-1);
+  border-radius: $radius-pill;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--overlay); background-clip: content-box; }

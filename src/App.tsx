@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HomeScreen } from './features/Home/Screens/HomeScreen/HomeScreen';
 import { AboutScreen } from './features/AboutMe/Screens/AboutScreen/AboutScreen';
 import { MyAppsScreen } from './features/MyApps/Screens/MyAppsScreen/MyAppsScreen';
@@ -20,6 +20,7 @@ function App() {
         <Route path="/apps/:slug/terms" element={<TermsScreen />} />
         <Route path="/apps/:slug/privacy" element={<PrivacyScreen />} />
         <Route path="/about" element={<AboutScreen />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );

@@ -2,82 +2,94 @@
 @import '../../styles/abstracts/mixins';
 
 .super-button {
-  padding: $spacing-md $spacing-lg;
-  border-radius: $border-radius-md;
-  font-size: $font-size-md;
-  font-weight: 500;
-  transition: all $transition-normal;
-  cursor: pointer;
-  border: 2px solid transparent;
-  @include flex-center;
-  gap: $spacing-sm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-5;
+  border-radius: $radius-md;
+  font-family: $font-sans;
+  font-size: $fs-body;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: transform $transition-fast, box-shadow $transition-fast,
+    background-color $transition-fast, border-color $transition-fast,
+    filter $transition-fast;
 
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
 
-  &:not(:disabled):hover {
-    transform: translateY(-2px);
-    box-shadow: $shadow-md;
-  }
-
   &:not(:disabled):active {
-    transform: translateY(0);
+    transform: translateY(1px);
   }
 
-  // Variants
+  // ---- Variants ----
   &--primary {
-    background-color: var(--color-primary);
-    color: white;
+    background: var(--gradient);
+    color: var(--on-accent);
+    box-shadow: var(--shadow-md);
 
     &:not(:disabled):hover {
-      filter: brightness(1.1);
+      transform: translateY(-2px);
+      filter: brightness(1.05);
     }
   }
 
   &--secondary {
-    background-color: var(--color-secondary);
-    color: white;
+    background: var(--surface-0);
+    color: var(--text);
+    border-color: var(--border);
 
     &:not(:disabled):hover {
-      filter: brightness(1.1);
+      background: var(--surface-hover);
+      border-color: var(--border-strong);
     }
   }
 
   &--outline {
-    background-color: transparent;
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border-strong);
 
     &:not(:disabled):hover {
-      background-color: var(--color-primary);
-      color: white;
+      border-color: var(--accent);
+      color: var(--accent);
     }
   }
 
-  // Sizes
+  &--ghost {
+    background: transparent;
+    color: var(--subtext);
+
+    &:not(:disabled):hover {
+      color: var(--text);
+      background: var(--surface-0);
+    }
+  }
+
+  // ---- Sizes ----
   &--small {
-    padding: $spacing-sm $spacing-md;
-    font-size: $font-size-sm;
+    padding: $space-2 $space-3;
+    font-size: $fs-small;
   }
 
   &--medium {
-    padding: $spacing-md $spacing-lg;
-    font-size: $font-size-md;
+    padding: $space-3 $space-5;
   }
 
   &--large {
-    padding: $spacing-lg $spacing-xl;
-    font-size: $font-size-lg;
+    padding: $space-4 $space-6;
+    font-size: $fs-h3;
   }
 
-  // Full Width
   &--full-width {
     width: 100%;
   }
 
-  // Loading
   &--loading {
     position: relative;
 
@@ -88,17 +100,15 @@
 
   &__loader {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-top-color: white;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: currentColor;
     border-radius: 50%;
-    animation: spin 0.6s linear infinite;
+    animation: super-spin 0.6s linear infinite;
   }
+}
 
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+@keyframes super-spin {
+  to { transform: rotate(360deg); }
 }

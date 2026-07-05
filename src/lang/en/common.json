@@ -1,7 +1,7 @@
 {
-  "common.header.apps": "Apps",
-  "common.header.about": "About Me",
-  "common.footer.rights": "All rights reserved",
-  "common.footer.madeWith": "Made with",
-  "common.footer.by": "by"
+  "common.nav.home": "Home",
+  "common.nav.apps": "Apps",
+  "common.nav.about": "About",
+  "common.footer.builtBy": "Built by",
+  "common.footer.version": "App version"
 }

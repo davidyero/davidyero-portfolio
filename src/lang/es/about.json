@@ -1,13 +1,14 @@
 {
-  "about.hero.title": "Sobre Mí",
-  "about.hero.subtitle": "Desarrollador móvil apasionado por crear experiencias de usuario excepcionales",
-  "about.section.title": "Quién Soy",
-  "about.section.description": "Soy un desarrollador móvil con experiencia en React Native y desarrollo iOS. Me encanta transformar ideas en aplicaciones elegantes y de alto rendimiento que los usuarios disfrutan.",
-  "about.experience.title": "Experiencia Profesional",
-  "about.experience.company": "Empresa",
-  "about.experience.role": "Rol",
-  "about.experience.period": "Período",
-  "about.skills.title": "Habilidades Técnicas",
-  "about.projects.title": "Proyectos Destacados",
-  "about.projects.viewMore": "Ver Más"
+  "about.eyebrow": "// experiencia",
+  "about.role": "Desarrollador Full Stack · @Davidyero",
+  "about.bio": "Construyo producto de punta a punta: del diseño y la arquitectura al deploy. Ecosistema propio con design system, i18n y apps infinitas.",
+  "about.linkedin": "LinkedIn",
+  "about.github": "GitHub",
+  "about.now": "Ahora",
+  "about.exp.fullstack.role": "Desarrollador Full Stack",
+  "about.exp.fullstack.desc": "Ecosistema de apps propias con Vertical Slice, design system, backend por dominios y publicación automatizada.",
+  "about.exp.frontend.role": "Frontend Engineer",
+  "about.exp.frontend.desc": "Interfaces React/TypeScript a escala, design tokens y sistema de componentes reutilizable.",
+  "about.exp.freelance.role": "Desarrollador",
+  "about.exp.freelance.desc": "Apps web y mobile para clientes, del prototipo al App Store."
 }

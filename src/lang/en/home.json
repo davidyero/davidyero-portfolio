@@ -1,13 +1,14 @@
 {
-  "home.title": "Hello, I'm",
-  "home.name": "David Yepes",
-  "home.subtitle": "Mobile Developer | React Native & iOS Expert",
-  "home.description": "Passionate about creating exceptional mobile experiences. Specialized in building performant and scalable applications.",
-  "home.viewProjects": "View My Work",
-  "home.contactMe": "Contact Me",
-  "home.skills.title": "Technical Skills",
-  "home.skills.react": "React Native",
-  "home.skills.ios": "iOS Development",
-  "home.skills.typescript": "TypeScript",
-  "home.skills.firebase": "Firebase"
+  "home.hero.eyebrow": "$ whoami",
+  "home.hero.titlePre": "Full Stack Developer who ",
+  "home.hero.titleAccent": "ships product",
+  "home.hero.description": "I build and publish my own apps — mobile and web — from a single studio. Less template, more real product.",
+  "home.hero.ctaApps": "View apps",
+  "home.hero.ctaContact": "Contact",
+  "home.featured.eyebrow": "// featured apps",
+  "home.experience.eyebrow": "// experience",
+  "home.experience.headline": "Shipping software since October 2, 2018",
+  "home.experience.years": "years",
+  "home.experience.months": "months",
+  "home.experience.days": "days"
 }

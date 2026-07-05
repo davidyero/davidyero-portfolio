@@ -1,99 +1,75 @@
 @import '../../../../styles/abstracts/variables';
 @import '../../../../styles/abstracts/mixins';
 
-.changelog-screen {
-  min-height: 100vh;
-  padding-top: 80px;
-  background-color: var(--color-background);
+.changelog {
+  padding-top: $space-6;
+  padding-bottom: $space-8;
+  max-width: 820px;
 
-  &__container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: $spacing-2xl * 2 $spacing-2xl;
-
-    @include mobile {
-      padding: $spacing-xl $spacing-lg;
-    }
+  &__back {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+    margin-bottom: $space-6;
+    transition: color $transition-fast;
+    &:hover { color: var(--text); }
   }
 
   &__header {
-    margin-bottom: $spacing-2xl;
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    margin-bottom: $space-8;
 
-    @include mobile {
-      margin-bottom: $spacing-xl;
+    @include from-md {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
     }
   }
 
-  &__title {
-    font-size: $font-size-3xl;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    margin: 0 0 $spacing-md 0;
-
-    @include mobile {
-      font-size: $font-size-2xl;
-    }
-  }
+  &__title { font-size: $fs-h1; margin: $space-2 0; }
 
   &__subtitle {
-    font-size: $font-size-md;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin: 0 0 $spacing-lg 0;
-  }
-
-  &__actions {
-    @include flex-center;
-    gap: $spacing-md;
-    justify-content: flex-start;
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--muted);
+    margin: 0;
   }
 
   &__search {
-    position: relative;
-    flex: 1;
-    max-width: 400px;
-
-    @include mobile {
-      max-width: 100%;
-    }
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    padding: 0 $space-3;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: $radius-md;
+    min-width: 240px;
   }
 
-  &__search-icon {
-    position: absolute;
-    left: $spacing-md;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-text-secondary);
-  }
+  &__search-icon { color: var(--muted); font-size: 1rem; }
 
   &__search-input {
-    width: 100%;
-    padding: $spacing-sm $spacing-md $spacing-sm $spacing-2xl + $spacing-md;
-    background-color: rgba(30, 41, 59, 0.5);
-    border: 1px solid rgba(100, 116, 139, 0.2);
-    border-radius: $border-radius-md;
-    color: var(--color-text-primary);
-    font-size: $font-size-md;
-    transition: all $transition-normal;
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    padding: $space-3 0;
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--text);
 
-    &:focus {
-      outline: none;
-      border-color: var(--color-primary);
-    }
-
-    &::placeholder {
-      color: var(--color-text-secondary);
-    }
+    &::placeholder { color: var(--muted); }
   }
 
   &__timeline {
-    margin-top: $spacing-2xl;
+    padding-top: $space-2;
   }
 
   &__empty {
-    text-align: center;
-    padding: $spacing-2xl * 2;
-    color: var(--color-text-secondary);
-    font-size: $font-size-lg;
+    font-family: $font-mono;
+    color: var(--muted);
+    padding: $space-8 0;
   }
 }

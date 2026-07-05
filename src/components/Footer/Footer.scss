@@ -2,78 +2,92 @@
 @import '../../styles/abstracts/mixins';
 
 .footer {
-  background-color: var(--color-background);
-  border-top: 1px solid rgba(100, 116, 139, 0.1);
-  padding: $spacing-2xl $spacing-xl;
+  border-top: 1px solid var(--border);
+  background: var(--bg-mantle);
+  margin-top: $space-16;
 
-  @include mobile {
-    padding: $spacing-xl $spacing-lg;
-  }
-
-  &__container {
-    max-width: 1200px;
+  &__inner {
+    max-width: $container-max;
     margin: 0 auto;
+    padding: $space-8 $space-6;
+
+    @include mobile { padding: $space-6 $space-4; }
   }
 
-  &__nav {
-    @include flex-center;
-    gap: $spacing-2xl;
-    margin-bottom: $spacing-xl;
-    justify-content: center;
-
-    @include mobile {
-      gap: $spacing-lg;
-      margin-bottom: $spacing-lg;
-    }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-5;
+    padding-bottom: $space-6;
+    border-bottom: 1px solid var(--border);
   }
+
+  &__brand { display: flex; align-items: center; gap: $space-3; }
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: $radius-sm;
+    background: var(--gradient);
+    color: var(--on-accent);
+    font-family: $font-sans;
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+
+  &__brand-name {
+    font-family: $font-sans;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  &__nav { display: flex; gap: $space-6; flex-wrap: wrap; }
 
   &__link {
-    color: var(--color-text-secondary);
-    font-size: $font-size-md;
-    font-weight: 500;
+    font-family: $font-sans;
+    font-size: $fs-body;
+    color: var(--subtext);
     transition: color $transition-fast;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--color-primary);
-    }
-
-    @include mobile {
-      font-size: $font-size-sm;
-    }
+    &:hover { color: var(--text); }
   }
 
-  &__social {
-    @include flex-center;
-    gap: $spacing-lg;
-    margin-bottom: $spacing-xl;
-    justify-content: center;
+  &__social { display: flex; gap: $space-4; }
 
-    @include mobile {
-      margin-bottom: $spacing-lg;
-    }
+  &__social-link {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+    transition: color $transition-fast;
+    &:hover { color: var(--accent); }
   }
 
-  &__social-icon {
-    font-size: 1.5rem;
-    color: var(--color-text-secondary);
-    transition: all $transition-fast;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--color-primary);
-      transform: scale(1.2);
-    }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-3;
+    padding-top: $space-5;
   }
 
   &__copyright {
-    text-align: center;
-    font-size: $font-size-sm;
-    color: var(--color-text-secondary);
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--muted);
     margin: 0;
+  }
 
-    @include mobile {
-      font-size: $font-size-xs;
-    }
+  &__version {
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    font-weight: 600;
+    color: var(--subtext);
+    padding: 4px 10px;
+    border: 1px solid var(--border-strong);
+    border-radius: $radius-pill;
   }
 }

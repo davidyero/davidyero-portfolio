@@ -41,3 +41,23 @@ export interface App {
   termsAndConditions?: TermsAndConditions;
   privacyPolicy?: TermsAndConditions;
 }
+
+// ---- App hub metadata (registry layer) ----
+export type AppPlatform = 'ios' | 'android' | 'web';
+export type AppStatus = 'live' | 'beta' | 'soon';
+export type AppCategory = 'sports' | 'productivity' | 'utility' | 'entertainment';
+
+export interface AppMeta {
+  platforms: AppPlatform[];
+  status: AppStatus;
+  category: AppCategory;
+  tagline?: string;
+  version?: string;
+  featured?: boolean;
+  webUrl?: string;
+  repoUrl?: string;
+  accent?: string; // CSS gradient used behind the app icon
+}
+
+// An app enriched with its hub metadata. Screens consume this shape.
+export interface EnrichedApp extends App, AppMeta {}

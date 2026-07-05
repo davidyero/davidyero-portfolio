@@ -1,8 +1,6 @@
+import { EnrichedApp } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
+
 export interface AppCardProps {
-  name: string;
-  description: string;
-  icon: string;
-  logo?: string;
-  iconBgColor?: string;
+  app: EnrichedApp;
   onClick?: () => void;
 }

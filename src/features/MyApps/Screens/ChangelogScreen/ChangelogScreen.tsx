@@ -1,84 +1,76 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Header } from '../../../../components/Header/Header';
+import { useTranslation } from 'react-i18next';
+import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { ChangelogItem } from '../../Components/ChangelogItem/ChangelogItem';
+import { getAppBySlug } from '../../data/registry';
 import { ChangelogScreenProps } from './ChangelogScreen.types';
-import { appsData } from '../../data/appsData';
 import './ChangelogScreen.scss';
 
 export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
 
-  const app = appsData.find((a) => a.slug === slug);
+  const app = getAppBySlug(slug);
 
   if (!app) {
     return (
-      <>
-        <Header />
-        <div className="changelog-screen">
-          <div className="changelog-screen__container">
-            <p className="changelog-screen__empty">App no encontrada</p>
-          </div>
+      <PageLayout>
+        <div className="changelog container">
+          <p className="changelog__empty">{t('apps.notFound')}</p>
         </div>
-      </>
+      </PageLayout>
     );
   }
 
-  const filteredChangelog = app.changelog?.filter((entry) =>
+  const filtered = (app.changelog ?? []).filter((entry) =>
     entry.version.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <>
-      <Header />
-      <div className="changelog-screen">
-        <div className="changelog-screen__container">
-          <div className="changelog-screen__header">
-            <h1 className="changelog-screen__title">Changelog de {app.name}</h1>
-            <p className="changelog-screen__subtitle">
-              Historial de versiones y actualizaciones.
-            </p>
-            <div className="changelog-screen__actions">
-              <div className="changelog-screen__search">
-                <span className="changelog-screen__search-icon">🔍</span>
-                <input
-                  type="text"
-                  className="changelog-screen__search-input"
-                  placeholder="Filtrar por versión..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-              <SuperButton variant="primary" onClick={() => navigate(`/apps/${slug}`)}>
-                Volver a Apps
-              </SuperButton>
-            </div>
-          </div>
+    <PageLayout>
+      <div className="changelog container">
+        <button className="changelog__back" onClick={() => navigate(`/apps/${slug}`)}>
+          ‹ {t('apps.detail.back')}
+        </button>
 
-          {filteredChangelog && filteredChangelog.length > 0 ? (
-            <div className="changelog-screen__timeline">
-              {filteredChangelog.map((entry, index) => (
-                <ChangelogItem
-                  key={index}
-                  version={entry.version}
-                  date={entry.date}
-                  type={entry.type}
-                  changes={entry.changes}
-                />
-              ))}
-            </div>
-          ) : (
-            <p className="changelog-screen__empty">
-              {searchTerm
-                ? 'No se encontraron versiones que coincidan con tu búsqueda'
-                : 'No hay entradas de changelog disponibles'}
-            </p>
-          )}
+        <div className="changelog__header">
+          <div>
+            <span className="mono-eyebrow">{t('apps.changelog.eyebrow')}</span>
+            <h1 className="changelog__title">{t('apps.changelog.title', { app: app.name })}</h1>
+            <p className="changelog__subtitle">{t('apps.changelog.subtitle')}</p>
+          </div>
+          <div className="changelog__search">
+            <span className="changelog__search-icon">⌕</span>
+            <input
+              type="text"
+              className="changelog__search-input"
+              placeholder={t('apps.changelog.search')}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
         </div>
+
+        {filtered.length > 0 ? (
+          <div className="changelog__timeline">
+            {filtered.map((entry, index) => (
+              <ChangelogItem
+                key={index}
+                version={entry.version}
+                date={entry.date}
+                type={entry.type}
+                changes={entry.changes}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="changelog__empty">{t('apps.changelog.empty')}</p>
+        )}
       </div>
-    </>
+    </PageLayout>
   );
 };

@@ -1,39 +1,31 @@
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--color-text-primary);
+  font-family: $font-sans;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
-h1 {
-  font-size: $font-size-3xl;
-
-  @include mobile {
-    font-size: $font-size-2xl;
-  }
-}
-
-h2 {
-  font-size: $font-size-2xl;
-
-  @include mobile {
-    font-size: $font-size-xl;
-  }
-}
-
-h3 {
-  font-size: $font-size-xl;
-}
-
-h4 {
-  font-size: $font-size-lg;
-}
+h1 { font-size: $fs-h1; }
+h2 { font-size: $fs-h2; }
+h3 { font-size: $fs-h3; font-weight: 600; }
+h4 { font-size: $fs-body; font-weight: 600; }
 
 p {
-  font-size: $font-size-md;
-  line-height: 1.6;
-  color: var(--color-text-secondary);
+  font-family: $font-mono;
+  font-size: $fs-body;
+  line-height: 1.65;
+  color: var(--subtext);
 }
 
-code {
-  font-family: $font-family-code;
+code, pre {
+  font-family: $font-mono;
+}
+
+// Terminal-style eyebrow label, e.g. "// apps destacadas" or "$ whoami"
+.mono-eyebrow {
+  font-family: $font-mono;
+  font-size: $fs-small;
+  color: var(--muted);
+  letter-spacing: 0.02em;
 }

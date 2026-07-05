@@ -1,60 +1,116 @@
-// Colors - Light Mode
-$color-primary-light: #2563eb;
-$color-secondary-light: #8b5cf6;
-$color-background-light: #ffffff;
-$color-surface-light: #f8fafc;
-$color-surface-hover-light: #e2e8f0;
-$color-text-primary-light: #1e293b;
-$color-text-secondary-light: #64748b;
+// ============================================================
+//  Design tokens · Catppuccin (Mocha dark / Latte light)
+//  Non-color scales live here as SCSS vars; semantic colors are
+//  exposed as CSS custom properties per theme (see _mixins.scss).
+// ============================================================
 
-// Colors - Dark Mode
-$color-primary-dark: #3b82f6;
-$color-secondary-dark: #a78bfa;
-$color-background-dark: #0a0e1a;
-$color-surface-dark: #151b2e;
-$color-surface-hover-dark: #1e2640;
-$color-text-primary-dark: #f1f5f9;
-$color-text-secondary-dark: #94a3b8;
+// ---- Catppuccin Mocha (dark) ----
+$mocha-base:     #1e1e2e;
+$mocha-mantle:   #181825;
+$mocha-crust:    #11111b;
+$mocha-surface0: #313244;
+$mocha-surface1: #45475a;
+$mocha-surface2: #585b70;
+$mocha-overlay0: #6c7086;
+$mocha-overlay1: #7f849c;
+$mocha-text:     #cdd6f4;
+$mocha-subtext:  #a6adc8;
+$mocha-muted:    #7f849c;
+$mocha-blue:     #89b4fa;
+$mocha-lavender: #b4befe;
+$mocha-mauve:    #cba6f7;
+$mocha-green:    #a6e3a1;
+$mocha-yellow:   #f9e2af;
+$mocha-red:      #f38ba8;
 
-// Spacing
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
+// ---- Catppuccin Latte (light) ----
+$latte-base:     #eff1f5;
+$latte-mantle:   #e6e9ef;
+$latte-crust:    #dce0e8;
+$latte-surface0: #ccd0da;
+$latte-surface1: #bcc0cc;
+$latte-surface2: #acb0be;
+$latte-overlay0: #9ca0b0;
+$latte-overlay1: #8c8fa1;
+$latte-text:     #4c4f69;
+$latte-subtext:  #6c6f85;
+$latte-muted:    #8c8fa1;
+$latte-blue:     #1e66f5;
+$latte-lavender: #7287fd;
+$latte-mauve:    #8839ef;
+$latte-green:    #40a02b;
+$latte-yellow:   #df8e1d;
+$latte-red:      #d20f39;
+
+// ---- Spacing scale (4 · 8 · 12 · 16 · 20 · 24 · 32 · 44) ----
+$space-1: 0.25rem;  // 4
+$space-2: 0.5rem;   // 8
+$space-3: 0.75rem;  // 12
+$space-4: 1rem;     // 16
+$space-5: 1.25rem;  // 20
+$space-6: 1.5rem;   // 24
+$space-8: 2rem;     // 32
+$space-11: 2.75rem; // 44
+$space-16: 4rem;    // 64
+
+// Legacy aliases (kept so older partials keep compiling)
+$spacing-xs: $space-1;
+$spacing-sm: $space-2;
+$spacing-md: $space-4;
+$spacing-lg: $space-6;
+$spacing-xl: $space-8;
 $spacing-2xl: 3rem;
 
-// Breakpoints
-$breakpoint-mobile: 480px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
-$breakpoint-wide: 1280px;
+// ---- Radius ----
+$radius-xs: 7px;
+$radius-sm: 9px;
+$radius-md: 11px;
+$radius-lg: 14px;
+$radius-xl: 16px;
+$radius-pill: 999px;
 
-// Typography
-$font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-$font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+$border-radius-sm: $radius-xs;
+$border-radius-md: $radius-md;
+$border-radius-lg: $radius-xl;
 
-$font-size-xs: 0.75rem;
-$font-size-sm: 0.875rem;
-$font-size-md: 1rem;
-$font-size-lg: 1.125rem;
+// ---- Typography ----
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+$font-family-primary: $font-mono;
+$font-family-code: $font-mono;
+
+$fs-tiny: 0.6875rem;  // 11
+$fs-small: 0.8125rem; // 13
+$fs-body: 0.9375rem;  // 15
+$fs-h3: 1.125rem;     // 18
+$fs-h2: 1.5rem;       // 24
+$fs-h1: 2.125rem;     // 34
+$fs-display: 3.25rem; // 52
+
+// Legacy aliases
+$font-size-xs: $fs-tiny;
+$font-size-sm: $fs-small;
+$font-size-md: $fs-body;
+$font-size-lg: $fs-h3;
 $font-size-xl: 1.25rem;
-$font-size-2xl: 1.5rem;
+$font-size-2xl: $fs-h2;
 $font-size-3xl: 2rem;
 
-// Transitions
-$transition-fast: 150ms ease-in-out;
-$transition-normal: 250ms ease-in-out;
-$transition-slow: 350ms ease-in-out;
+// ---- Breakpoints (0 / 480 / 720 / 1100 / 1480) ----
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 720px;
+$breakpoint-desktop: 1100px;
+$breakpoint-wide: 1480px;
 
-// Shadows
-$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+// ---- Transitions ----
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 350ms ease;
 
-// Border Radius
-$border-radius-sm: 0.25rem;
-$border-radius-md: 0.5rem;
-$border-radius-lg: 1rem;
+// ---- Elevation ----
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.22);
+$shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.30);
+
+// ---- Layout ----
+$container-max: 1200px;

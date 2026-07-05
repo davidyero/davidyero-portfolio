@@ -1,13 +1,14 @@
 {
-  "home.title": "Hola, soy",
-  "home.name": "David Yepes",
-  "home.subtitle": "Desarrollador Móvil | Experto en React Native & iOS",
-  "home.description": "Apasionado por crear experiencias móviles excepcionales. Especializado en construir aplicaciones escalables y de alto rendimiento.",
-  "home.viewProjects": "Ver Mi Trabajo",
-  "home.contactMe": "Contáctame",
-  "home.skills.title": "Habilidades Técnicas",
-  "home.skills.react": "React Native",
-  "home.skills.ios": "Desarrollo iOS",
-  "home.skills.typescript": "TypeScript",
-  "home.skills.firebase": "Firebase"
+  "home.hero.eyebrow": "$ whoami",
+  "home.hero.titlePre": "Desarrollador Full Stack que ",
+  "home.hero.titleAccent": "envía producto",
+  "home.hero.description": "Construyo y publico apps propias — mobile y web — desde un mismo studio. Menos plantilla, más producto real.",
+  "home.hero.ctaApps": "Ver apps",
+  "home.hero.ctaContact": "Contactar",
+  "home.featured.eyebrow": "// apps destacadas",
+  "home.experience.eyebrow": "// experiencia",
+  "home.experience.headline": "Enviando software desde el 2 de octubre de 2018",
+  "home.experience.years": "años",
+  "home.experience.months": "meses",
+  "home.experience.days": "días"
 }

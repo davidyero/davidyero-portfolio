@@ -1,21 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../../shared/useTheme';
 import { HeaderProps } from './Header.types';
-import { ReactComponent as UsaFlag } from '../../assets/svg/flags/usa-flag.svg';
-import { ReactComponent as SpainFlag } from '../../assets/svg/flags/spain-flag.svg';
 import './Header.scss';
 
-interface Language {
-  code: string;
-  name: string;
-  flag: React.FC<React.SVGProps<SVGSVGElement>>;
+interface NavItem {
+  key: string;
+  path: string;
 }
 
-const languages: Language[] = [
-  { code: 'en', name: 'English', flag: UsaFlag },
-  { code: 'es', name: 'Español', flag: SpainFlag },
+const navItems: NavItem[] = [
+  { key: 'common.nav.home', path: '/' },
+  { key: 'common.nav.apps', path: '/apps' },
+  { key: 'common.nav.about', path: '/about' },
 ];
 
 export const Header: React.FC<HeaderProps> = () => {
@@ -23,82 +21,75 @@ export const Header: React.FC<HeaderProps> = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const isActive = (path: string): boolean =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
 
-  const handleLanguageChange = (langCode: string) => {
-    i18n.changeLanguage(langCode);
-    setIsLangDropdownOpen(false);
+  const go = (path: string) => {
+    navigate(path);
+    setMenuOpen(false);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsLangDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const setLang = (lng: 'en' | 'es') => i18n.changeLanguage(lng);
+  const currentLang = i18n.language?.startsWith('es') ? 'es' : 'en';
 
   return (
     <header className="header">
-      <div className="header__container">
-        <div className="header__logo" onClick={() => navigate('/')}>
-          Portfolio
-        </div>
-        <nav className="header__nav">
-          <button
-            className={`header__link ${location.pathname === '/apps' ? 'header__link--active' : ''}`}
-            onClick={() => navigate('/apps')}
-          >
-            {t('common.header.apps')}
-          </button>
-          <button
-            className={`header__link ${location.pathname === '/about' ? 'header__link--active' : ''}`}
-            onClick={() => navigate('/about')}
-          >
-            {t('common.header.about')}
-          </button>
+      <div className="header__inner">
+        <button className="header__brand" onClick={() => go('/')} aria-label="David Yepes">
+          <span className="header__logo">DY</span>
+          <span className="header__brand-name">David Yepes</span>
+        </button>
 
-          <div className="header__lang-dropdown" ref={dropdownRef}>
+        <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
+          {navItems.map((item) => (
             <button
-              className="header__lang-toggle"
-              onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+              key={item.path}
+              className={`header__link ${isActive(item.path) ? 'header__link--active' : ''}`}
+              onClick={() => go(item.path)}
             >
-              <currentLanguage.flag className="header__flag" />
-              <span className="header__lang-name">{currentLanguage.name}</span>
-              <span className={`header__dropdown-arrow ${isLangDropdownOpen ? 'header__dropdown-arrow--open' : ''}`}>
-                ▼
-              </span>
+              {t(item.key)}
             </button>
+          ))}
 
-            {isLangDropdownOpen && (
-              <div className="header__lang-menu">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    className={`header__lang-option ${lang.code === i18n.language ? 'header__lang-option--active' : ''}`}
-                    onClick={() => handleLanguageChange(lang.code)}
-                  >
-                    <lang.flag className="header__flag" />
-                    <span className="header__lang-option-name">{lang.name}</span>
-                    {lang.code === i18n.language && (
-                      <span className="header__lang-option-check">✓</span>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
+          <div className="header__controls">
+            <div className="header__lang" role="group" aria-label="Language">
+              <button
+                className={`header__lang-btn ${currentLang === 'en' ? 'header__lang-btn--active' : ''}`}
+                onClick={() => setLang('en')}
+              >
+                EN
+              </button>
+              <span className="header__lang-sep">/</span>
+              <button
+                className={`header__lang-btn ${currentLang === 'es' ? 'header__lang-btn--active' : ''}`}
+                onClick={() => setLang('es')}
+              >
+                ES
+              </button>
+            </div>
+
+            <button
+              className="header__theme"
+              onClick={toggleTheme}
+              aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+            >
+              {isDark ? '🌙' : '☀️'}
+            </button>
           </div>
-
-          <button className="header__theme-toggle" onClick={toggleTheme}>
-            {isDark ? '☀️' : '🌙'}
-          </button>
         </nav>
+
+        <button
+          className="header__burger"
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={`header__burger-line ${menuOpen ? 'is-open-1' : ''}`} />
+          <span className={`header__burger-line ${menuOpen ? 'is-open-2' : ''}`} />
+          <span className={`header__burger-line ${menuOpen ? 'is-open-3' : ''}`} />
+        </button>
       </div>
     </header>
   );

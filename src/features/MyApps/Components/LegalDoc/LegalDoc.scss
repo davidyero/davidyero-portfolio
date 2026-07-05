@@ -1,0 +1,97 @@
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/abstracts/mixins';
+
+.legal {
+  padding-top: $space-6;
+  padding-bottom: $space-8;
+  max-width: 780px;
+
+  &__topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $space-6;
+  }
+
+  &__nav {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+    transition: color $transition-fast;
+    &:hover { color: var(--text); }
+  }
+
+  &__header {
+    margin-bottom: $space-6;
+  }
+
+  &__title { font-size: $fs-h1; margin-bottom: $space-2; }
+
+  &__subtitle {
+    font-family: $font-mono;
+    color: var(--subtext);
+    margin: 0 0 $space-1;
+  }
+
+  &__updated {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  &__card {
+    @include card;
+    background: var(--surface);
+    padding: $space-8;
+
+    @include mobile { padding: $space-5; }
+  }
+
+  &__section {
+    padding-bottom: $space-6;
+    margin-bottom: $space-6;
+    border-bottom: 1px solid var(--border);
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__section-title {
+    font-family: $font-sans;
+    font-size: $fs-h3;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: $space-3;
+  }
+
+  &__section-content {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+    line-height: 1.7;
+
+    p { color: var(--subtext); font-size: $fs-small; margin-bottom: $space-3; &:last-child { margin-bottom: 0; } }
+
+    ul {
+      list-style: none;
+      margin: $space-3 0;
+      padding: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: $space-4;
+      margin-bottom: $space-2;
+
+      &::before {
+        content: '—';
+        position: absolute;
+        left: 0;
+        color: var(--overlay);
+      }
+    }
+  }
+}

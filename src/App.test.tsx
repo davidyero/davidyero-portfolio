@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import './i18n';
 
-test('renders learn react link', () => {
+test('renders the brand in the header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const brand = screen.getAllByText(/David Yepes/i)[0];
+  expect(brand).toBeInTheDocument();
 });

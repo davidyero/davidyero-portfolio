@@ -6,181 +6,179 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: $spacing-lg $spacing-2xl;
-  background-color: var(--color-background);
-  border-bottom: 1px solid rgba(100, 116, 139, 0.1);
   z-index: 1000;
-  transition: all $transition-normal;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
 
-  @include mobile {
-    padding: $spacing-md $spacing-lg;
+  &__inner {
+    max-width: $container-max;
+    margin: 0 auto;
+    height: 84px;
+    padding: 0 $space-6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      height: 72px;
+      padding: 0 $space-4;
+    }
   }
 
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    @include flex-between;
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
   }
 
   &__logo {
-    font-size: $font-size-xl;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: $radius-md;
+    background: var(--gradient);
+    color: var(--on-accent);
+    font-family: $font-sans;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: -0.03em;
+    box-shadow: var(--shadow-md);
+  }
+
+  &__brand-name {
+    font-family: $font-sans;
     font-weight: 700;
-    color: var(--color-text-primary);
-    cursor: pointer;
+    font-size: $fs-h3;
+    color: var(--text);
+
+    @include mobile {
+      font-size: $fs-body;
+    }
   }
 
   &__nav {
-    @include flex-center;
-    gap: $spacing-xl;
+    display: flex;
+    align-items: center;
+    gap: $space-6;
 
-    @include mobile {
-      gap: $spacing-md;
+    @include tablet {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: $space-2;
+      padding: $space-4;
+      background: var(--bg-mantle);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-140%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform $transition-normal, opacity $transition-normal;
+    }
+
+    &--open {
+      @include tablet {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 
   &__link {
-    color: var(--color-text-secondary);
-    font-size: $font-size-md;
+    font-family: $font-sans;
     font-weight: 500;
+    font-size: $fs-body;
+    color: var(--subtext);
+    padding: $space-2 0;
     transition: color $transition-fast;
-    cursor: pointer;
 
-    &:hover {
-      color: var(--color-primary);
-    }
+    &:hover { color: var(--text); }
 
-    &--active {
-      color: var(--color-primary);
-    }
+    &--active { color: var(--text); font-weight: 600; }
 
-    @include mobile {
-      font-size: $font-size-sm;
+    @include tablet {
+      padding: $space-3;
+      border-radius: $radius-md;
+      &--active { background: var(--surface-0); }
     }
   }
 
-  &__lang-dropdown {
-    position: relative;
-  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
 
-  &__lang-toggle {
-    padding: $spacing-sm $spacing-md;
-    background-color: var(--color-surface);
-    border-radius: $border-radius-md;
-    cursor: pointer;
-    transition: all $transition-fast;
-    @include flex-center;
-    gap: $spacing-sm;
-    min-width: 120px;
-
-    &:hover {
-      background-color: var(--color-surface-hover);
-    }
-
-    @include mobile {
-      min-width: auto;
+    @include tablet {
+      margin-top: $space-2;
+      padding-top: $space-3;
+      border-top: 1px solid var(--border);
+      justify-content: space-between;
     }
   }
 
-  &__lang-name {
-    color: var(--color-text-primary);
-    font-size: $font-size-sm;
-    font-weight: 500;
-
-    @include mobile {
-      display: none;
-    }
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: $radius-md;
   }
 
-  &__dropdown-arrow {
-    font-size: 10px;
-    color: var(--color-text-secondary);
-    transition: transform $transition-fast;
+  &__lang-btn {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color $transition-fast;
 
-    &--open {
-      transform: rotate(180deg);
-    }
-
-    @include mobile {
-      display: none;
-    }
+    &:hover { color: var(--subtext); }
+    &--active { color: var(--text); }
   }
 
-  &__lang-menu {
-    position: absolute;
-    top: calc(100% + $spacing-xs);
-    right: 0;
-    background-color: var(--color-surface);
-    border: 1px solid rgba(100, 116, 139, 0.1);
-    border-radius: $border-radius-md;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
-    overflow: hidden;
-    z-index: 1001;
-    animation: slideDown 0.2s ease-out;
+  &__lang-sep { color: var(--muted); }
 
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  &__theme {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: $radius-md;
+    border: 1px solid var(--border-strong);
+    font-size: 1rem;
+    transition: background-color $transition-fast, transform $transition-fast;
+
+    &:hover { background: var(--surface-0); transform: translateY(-1px); }
   }
 
-  &__lang-option {
-    width: 100%;
-    padding: $spacing-md;
-    @include flex-center;
-    justify-content: flex-start;
-    gap: $spacing-sm;
-    cursor: pointer;
-    transition: background-color $transition-fast;
-    border: none;
-    background-color: transparent;
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
 
-    &:hover {
-      background-color: var(--color-surface-hover);
-    }
-
-    &--active {
-      background-color: rgba(59, 130, 246, 0.1);
-    }
+    @include tablet { display: flex; }
   }
 
-  &__lang-option-name {
-    flex: 1;
-    text-align: left;
-    color: var(--color-text-primary);
-    font-size: $font-size-sm;
-    font-weight: 500;
-  }
+  &__burger-line {
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text);
+    transition: transform $transition-fast, opacity $transition-fast;
 
-  &__lang-option-check {
-    color: var(--color-primary);
-    font-weight: 700;
-    font-size: $font-size-md;
-  }
-
-  &__flag {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-
-  &__theme-toggle {
-    padding: $spacing-sm;
-    background-color: var(--color-surface);
-    border-radius: $border-radius-md;
-    cursor: pointer;
-    transition: all $transition-fast;
-    @include flex-center;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    &.is-open-1 { transform: translateY(7px) rotate(45deg); }
+    &.is-open-2 { opacity: 0; }
+    &.is-open-3 { transform: translateY(-7px) rotate(-45deg); }
   }
 }

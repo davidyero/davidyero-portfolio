@@ -1,0 +1,22 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(1100px 520px at 82% -8%, var(--gradient-soft), transparent 62%),
+    var(--bg);
+}
+
+.page__main {
+  flex: 1;
+  width: 100%;
+  // room for the fixed header
+  padding-top: 84px;
+
+  @include mobile {
+    padding-top: 72px;
+  }
+}

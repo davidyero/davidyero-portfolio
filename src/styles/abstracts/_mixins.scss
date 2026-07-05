@@ -1,65 +1,107 @@
-// Responsive Mixins
-@mixin mobile {
-  @media (max-width: $breakpoint-mobile) {
-    @content;
-  }
+// ---- Responsive mixins (mobile-first: min-width) ----
+@mixin from-sm { @media (min-width: 481px) { @content; } }
+@mixin from-md { @media (min-width: 721px) { @content; } }
+@mixin from-lg { @media (min-width: 1101px) { @content; } }
+@mixin from-xl { @media (min-width: 1481px) { @content; } }
+
+// Legacy max-width helpers
+@mixin mobile { @media (max-width: $breakpoint-mobile) { @content; } }
+@mixin tablet { @media (max-width: $breakpoint-tablet) { @content; } }
+@mixin desktop { @media (min-width: $breakpoint-tablet + 1) { @content; } }
+@mixin wide { @media (min-width: $breakpoint-wide) { @content; } }
+
+// ---- Flexbox helpers ----
+@mixin flex-center { display: flex; justify-content: center; align-items: center; }
+@mixin flex-between { display: flex; justify-content: space-between; align-items: center; }
+@mixin flex-column { display: flex; flex-direction: column; }
+
+// ---- Surface card ----
+@mixin card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-xl;
 }
 
-@mixin tablet {
-  @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: $breakpoint-tablet + 1) {
-    @content;
-  }
-}
-
-@mixin wide {
-  @media (min-width: $breakpoint-wide) {
-    @content;
-  }
-}
-
-// Flexbox Mixins
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-// Theme Mixin
+// ---- Theme mapping: semantic CSS custom properties ----
 @mixin themed {
-  &[data-theme='light'] {
-    --color-primary: #{$color-primary-light};
-    --color-secondary: #{$color-secondary-light};
-    --color-background: #{$color-background-light};
-    --color-surface: #{$color-surface-light};
-    --color-surface-hover: #{$color-surface-hover-light};
-    --color-text-primary: #{$color-text-primary-light};
-    --color-text-secondary: #{$color-text-secondary-light};
+  &[data-theme='dark'] {
+    color-scheme: dark;
+    --bg:        #{$mocha-base};
+    --bg-mantle: #{$mocha-mantle};
+    --bg-crust:  #{$mocha-crust};
+    --surface:   #{$mocha-mantle};
+    --surface-0: #{$mocha-surface0};
+    --surface-1: #{$mocha-surface1};
+    --surface-hover: #{$mocha-surface0};
+    --overlay:   #{$mocha-overlay0};
+    --border:    #{rgba($mocha-surface0, 0.7)};
+    --border-strong: #{$mocha-surface1};
+
+    --text:      #{$mocha-text};
+    --subtext:   #{$mocha-subtext};
+    --muted:     #{$mocha-muted};
+
+    --blue:      #{$mocha-blue};
+    --lavender:  #{$mocha-lavender};
+    --mauve:     #{$mocha-mauve};
+    --green:     #{$mocha-green};
+    --yellow:    #{$mocha-yellow};
+    --red:       #{$mocha-red};
+
+    --accent:    #{$mocha-blue};
+    --gradient:  linear-gradient(135deg, #{$mocha-blue} 0%, #{$mocha-mauve} 100%);
+    --gradient-soft: linear-gradient(135deg, #{rgba($mocha-blue, 0.18)} 0%, #{rgba($mocha-mauve, 0.18)} 100%);
+    --on-accent: #{$mocha-crust};
+
+    // Semantic tints for badges
+    --live-bg:   #{rgba($mocha-green, 0.16)};
+    --live-fg:   #{$mocha-green};
+    --beta-bg:   #{rgba($mocha-yellow, 0.16)};
+    --beta-fg:   #{$mocha-yellow};
+    --soon-bg:   #{rgba($mocha-lavender, 0.16)};
+    --soon-fg:   #{$mocha-lavender};
+
+    --shadow-md: #{$shadow-md};
+    --shadow-lg: #{$shadow-lg};
   }
 
-  &[data-theme='dark'] {
-    --color-primary: #{$color-primary-dark};
-    --color-secondary: #{$color-secondary-dark};
-    --color-background: #{$color-background-dark};
-    --color-surface: #{$color-surface-dark};
-    --color-surface-hover: #{$color-surface-hover-dark};
-    --color-text-primary: #{$color-text-primary-dark};
-    --color-text-secondary: #{$color-text-secondary-dark};
+  &[data-theme='light'] {
+    color-scheme: light;
+    --bg:        #{$latte-base};
+    --bg-mantle: #{$latte-mantle};
+    --bg-crust:  #{$latte-crust};
+    --surface:   #ffffff;
+    --surface-0: #{$latte-surface0};
+    --surface-1: #{$latte-surface1};
+    --surface-hover: #{$latte-mantle};
+    --overlay:   #{$latte-overlay0};
+    --border:    #{rgba($latte-surface1, 0.7)};
+    --border-strong: #{$latte-surface1};
+
+    --text:      #{$latte-text};
+    --subtext:   #{$latte-subtext};
+    --muted:     #{$latte-muted};
+
+    --blue:      #{$latte-blue};
+    --lavender:  #{$latte-lavender};
+    --mauve:     #{$latte-mauve};
+    --green:     #{$latte-green};
+    --yellow:    #{$latte-yellow};
+    --red:       #{$latte-red};
+
+    --accent:    #{$latte-blue};
+    --gradient:  linear-gradient(135deg, #{$latte-blue} 0%, #{$latte-mauve} 100%);
+    --gradient-soft: linear-gradient(135deg, #{rgba($latte-blue, 0.12)} 0%, #{rgba($latte-mauve, 0.12)} 100%);
+    --on-accent: #ffffff;
+
+    --live-bg:   #{rgba($latte-green, 0.14)};
+    --live-fg:   #{$latte-green};
+    --beta-bg:   #{rgba($latte-yellow, 0.16)};
+    --beta-fg:   #{$latte-yellow};
+    --soon-bg:   #{rgba($latte-lavender, 0.16)};
+    --soon-fg:   #{$latte-lavender};
+
+    --shadow-md: 0 8px 24px rgba(60, 66, 90, 0.10);
+    --shadow-lg: 0 18px 48px rgba(60, 66, 90, 0.14);
   }
 }
