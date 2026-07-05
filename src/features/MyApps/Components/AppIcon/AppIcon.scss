@@ -15,8 +15,19 @@
 
   &__emoji { font-size: 1.4em; }
 
-  &--sm { width: 40px; height: 40px; border-radius: $radius-sm; }
-  &--md { width: 48px; height: 48px; }
-  &--lg { width: 72px; height: 72px; border-radius: $radius-lg; }
-  &--xl { width: 104px; height: 104px; border-radius: $radius-xl; }
+  &__initials {
+    font-family: $font-sans;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: rgba(17, 17, 27, 0.82);
+  }
+
+  &--sm { width: 40px; height: 40px; border-radius: $radius-sm;
+    .app-icon__initials { font-size: 15px; } }
+  &--md { width: 48px; height: 48px;
+    .app-icon__initials { font-size: 18px; } }
+  &--lg { width: 72px; height: 72px; border-radius: $radius-lg;
+    .app-icon__initials { font-size: 27px; } }
+  &--xl { width: 104px; height: 104px; border-radius: $radius-xl;
+    .app-icon__initials { font-size: 40px; } }
 }

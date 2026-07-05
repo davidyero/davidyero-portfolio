@@ -5,17 +5,22 @@
   padding-top: $space-8;
   padding-bottom: $space-8;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: $space-8;
 
-  @include from-lg {
-    grid-template-columns: 320px 1fr;
-    gap: $space-11;
+  @include from-fold {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: $space-8;
     align-items: start;
   }
 
+  @include from-lg {
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: $space-11;
+  }
+
   &__profile {
-    @include from-lg {
+    @include from-fold {
       position: sticky;
       top: 108px;
     }

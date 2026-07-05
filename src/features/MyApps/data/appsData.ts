@@ -559,7 +559,7 @@ export const appsData: App[] = [
       'Resultados en tiempo real',
     ],
     appStoreUrl: '',
-    playStoreUrl: '',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mundialsimulator',
     changelog: [
       {
         version: '3.0.0',
@@ -1168,8 +1168,8 @@ export const appsData: App[] = [
       'Exporta la alineación como imagen lista para redes sociales',
       'Funciona 100% sin conexión',
     ],
-    appStoreUrl: '#',
-    playStoreUrl: '#',
+    appStoreUrl: '',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.davidyero.superlineup',
     changelog: [
       {
         version: '1.0.0',
@@ -1338,5 +1338,49 @@ export const appsData: App[] = [
         ],
       },
     },
+  },
+  {
+    id: '8',
+    name: 'Football Cup Simulator',
+    slug: 'football-cup-simulator',
+    description: 'Simula torneos de copa de fútbol y vive cada ronda hasta la final.',
+    icon: '',
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.davidyero.footballcupsimulator',
+  },
+  {
+    id: '9',
+    name: 'Greta',
+    slug: 'greta',
+    description: 'Plataforma para conectar personas con fundaciones y rescatistas de animales.',
+    icon: '',
+  },
+  {
+    id: '10',
+    name: 'ChamiApp',
+    slug: 'chamiapp',
+    description: 'Quiniela del Mundial 2026 para competir con amigos.',
+    icon: '',
+  },
+  {
+    id: '11',
+    name: 'My Link Hub',
+    slug: 'my-link-hub',
+    description: 'Tu portafolio profesional y todos tus enlaces en un solo link.',
+    icon: '',
+  },
+  {
+    id: '12',
+    name: 'Equilibra',
+    slug: 'equilibra',
+    description: 'Gastos compartidos, sin discusiones.',
+    icon: '',
+  },
+  {
+    id: '13',
+    name: 'Mis Pagos',
+    slug: 'mis-pagos',
+    description: 'Lleva el control de tus pagos y suscripciones en un solo lugar.',
+    icon: '',
   },
 ];

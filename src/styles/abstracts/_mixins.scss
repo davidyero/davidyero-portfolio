@@ -1,6 +1,9 @@
 // ---- Responsive mixins (mobile-first: min-width) ----
+// Tiers: mobile (<481) · sm phones/tablets · md tablets · fold (Z Fold 7 open,
+// ~820–1100, near-square) · lg desktop · xl wide.
 @mixin from-sm { @media (min-width: 481px) { @content; } }
 @mixin from-md { @media (min-width: 721px) { @content; } }
+@mixin from-fold { @media (min-width: 860px) { @content; } }
 @mixin from-lg { @media (min-width: 1101px) { @content; } }
 @mixin from-xl { @media (min-width: 1481px) { @content; } }
 

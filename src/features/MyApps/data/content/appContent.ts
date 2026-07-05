@@ -265,6 +265,79 @@ export const appContentEs: AppContentMap = {
       },
     ],
   },
+  'football-cup-simulator': {
+    tagline: 'Simula torneos de copa y llega hasta la final.',
+    description:
+      'Football Cup Simulator te deja crear y simular torneos de copa de fútbol: sorteos, fase de grupos, eliminatorias y una gran final. Ajusta los equipos, sigue el bracket y vive cada ronda.',
+    features: [
+      'Simula torneos de copa completos, de la fase de grupos a la final',
+      'Sorteo y bracket de eliminatorias automático',
+      'Elige y ajusta los equipos participantes',
+      'Sigue resultados y estadísticas ronda a ronda',
+      'Rápido y fácil de usar',
+    ],
+    changelog: [],
+  },
+  greta: {
+    tagline: 'Cada huella encuentra su hogar.',
+    description:
+      'Greta es una plataforma que conecta a las personas con fundaciones y rescatistas de animales. Descubre mascotas en adopción, comparte casos y apoya a las organizaciones de bienestar animal.',
+    features: [
+      'Explora mascotas en adopción cerca de ti',
+      'Conecta con fundaciones y rescatistas',
+      'Comparte y difunde casos de rescate',
+      'Apoya el bienestar animal',
+    ],
+    changelog: [],
+  },
+  chamiapp: {
+    tagline: 'La quiniela del Mundial 2026 con tus amigos.',
+    description:
+      'ChamiApp es la quiniela del Mundial 2026: predice los resultados de cada partido, compite con tus amigos en grupos privados y sube en la tabla de posiciones.',
+    features: [
+      'Predice los resultados de cada partido del Mundial',
+      'Crea grupos privados y compite con amigos',
+      'Tabla de posiciones en tiempo real',
+      'Sistema de puntos por acierto',
+    ],
+    changelog: [],
+  },
+  'my-link-hub': {
+    tagline: 'Tu portafolio profesional en un solo link.',
+    description:
+      'My Link Hub reúne tu portafolio, tus redes y todos tus enlaces en una sola página compartible. Ideal para mostrar tu presencia profesional con un único link.',
+    features: [
+      'Reúne todos tus enlaces en una sola página',
+      'Página pública y compartible',
+      'Personaliza tu perfil profesional',
+      'Comparte con un único link',
+    ],
+    changelog: [],
+  },
+  equilibra: {
+    tagline: 'Gastos compartidos, sin discusiones.',
+    description:
+      'Equilibra te ayuda a dividir gastos entre amigos, roommates o viajes. Registra quién pagó qué, calcula automáticamente los saldos y salda cuentas sin discusiones.',
+    features: [
+      'Registra gastos compartidos en grupo',
+      'Cálculo automático de saldos y deudas',
+      'Divide por partes iguales o personalizadas',
+      'Salda cuentas de forma clara',
+    ],
+    changelog: [],
+  },
+  'mis-pagos': {
+    tagline: 'Tus pagos y suscripciones, bajo control.',
+    description:
+      'Mis Pagos te ayuda a llevar el control de tus pagos recurrentes y suscripciones. Registra montos y fechas, y no vuelvas a olvidar un vencimiento.',
+    features: [
+      'Registra tus pagos y suscripciones',
+      'Recordatorios de próximos vencimientos',
+      'Visualiza tus gastos recurrentes',
+      'Todo en un solo lugar',
+    ],
+    changelog: [],
+  },
 };
 
 export const appContentEn: AppContentMap = {
@@ -518,5 +591,78 @@ export const appContentEn: AppContentMap = {
         ],
       },
     ],
+  },
+  'football-cup-simulator': {
+    tagline: 'Simulate cup tournaments all the way to the final.',
+    description:
+      'Football Cup Simulator lets you create and simulate football cup tournaments: draws, group stages, knockout rounds and a grand final. Tweak the teams, follow the bracket and live every round.',
+    features: [
+      'Simulate full cup tournaments, from the group stage to the final',
+      'Automatic draw and knockout bracket',
+      'Pick and adjust the participating teams',
+      'Follow results and statistics round by round',
+      'Fast and easy to use',
+    ],
+    changelog: [],
+  },
+  greta: {
+    tagline: 'Every paw finds its home.',
+    description:
+      'Greta is a platform that connects people with animal foundations and rescuers. Discover pets up for adoption, share cases and support animal welfare organizations.',
+    features: [
+      'Browse pets up for adoption near you',
+      'Connect with foundations and rescuers',
+      'Share and spread rescue cases',
+      'Support animal welfare',
+    ],
+    changelog: [],
+  },
+  chamiapp: {
+    tagline: 'The 2026 World Cup pool with your friends.',
+    description:
+      'ChamiApp is the 2026 World Cup prediction pool: predict every match result, compete with your friends in private groups and climb the leaderboard.',
+    features: [
+      'Predict the result of every World Cup match',
+      'Create private groups and compete with friends',
+      'Real-time leaderboard',
+      'Points system for correct picks',
+    ],
+    changelog: [],
+  },
+  'my-link-hub': {
+    tagline: 'Your professional portfolio in a single link.',
+    description:
+      'My Link Hub brings your portfolio, socials and all your links together on one shareable page. Perfect for showing your professional presence with a single link.',
+    features: [
+      'Gather all your links on a single page',
+      'Public, shareable page',
+      'Customize your professional profile',
+      'Share with one link',
+    ],
+    changelog: [],
+  },
+  equilibra: {
+    tagline: 'Shared expenses, without arguments.',
+    description:
+      'Equilibra helps you split expenses among friends, roommates or trips. Log who paid what, automatically compute balances and settle up without arguments.',
+    features: [
+      'Track shared group expenses',
+      'Automatic balance and debt calculation',
+      'Split evenly or with custom shares',
+      'Settle up clearly',
+    ],
+    changelog: [],
+  },
+  'mis-pagos': {
+    tagline: 'Your payments and subscriptions, under control.',
+    description:
+      'Mis Pagos helps you keep track of your recurring payments and subscriptions. Log amounts and dates, and never miss a due date again.',
+    features: [
+      'Track your payments and subscriptions',
+      'Reminders for upcoming due dates',
+      'See your recurring expenses at a glance',
+      'Everything in one place',
+    ],
+    changelog: [],
   },
 };

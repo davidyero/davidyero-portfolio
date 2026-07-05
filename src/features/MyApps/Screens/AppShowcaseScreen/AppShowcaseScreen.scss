@@ -37,10 +37,89 @@
     &:hover { color: var(--text); }
   }
 
+  // ---- Mobile device frame ----
+  &__phone {
+    position: relative;
+    width: 190px;
+    height: 300px;
+    border-radius: 34px;
+    background: var(--bg-crust);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    place-items: center;
+    padding: 8px;
+  }
+
+  &__phone-notch {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 6px;
+    border-radius: $radius-pill;
+    background: var(--surface-1);
+    z-index: 1;
+  }
+
+  &__phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 27px;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(120% 70% at 50% 0%, var(--gradient-soft), transparent 70%),
+      var(--bg-mantle);
+  }
+
+  // ---- Web browser frame ----
+  &__browser {
+    width: min(460px, 100%);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &__browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 15px;
+    background: var(--surface-0);
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--overlay);
+
+    &:nth-child(1) { background: #f38ba8; }
+    &:nth-child(2) { background: #f9e2af; }
+    &:nth-child(3) { background: #a6e3a1; }
+  }
+
+  &__url {
+    margin-left: 10px;
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+  }
+
+  &__browser-body {
+    height: 210px;
+    display: grid;
+    place-items: center;
+  }
+
   &__badges {
     display: flex;
     gap: $space-2;
-    margin: $space-4 0 $space-3;
+    margin: $space-5 0 $space-3;
   }
 
   &__title {
@@ -139,10 +218,10 @@
 
   &__features {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: $space-3;
 
-    @include from-sm { grid-template-columns: repeat(2, 1fr); }
+    @include from-sm { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
   &__feature {

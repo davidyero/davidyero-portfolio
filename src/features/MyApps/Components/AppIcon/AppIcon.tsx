@@ -7,6 +7,15 @@ interface AppIconProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
+// Initials fallback (no emoji) for apps without a logo image.
+const getInitials = (name: string): string => {
+  const words = name.trim().split(/\s+/);
+  if (words.length >= 2) {
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+  return name.slice(0, 2).toUpperCase();
+};
+
 export const AppIcon: React.FC<AppIconProps> = ({ app, size = 'md' }) => {
   return (
     <div
@@ -16,7 +25,7 @@ export const AppIcon: React.FC<AppIconProps> = ({ app, size = 'md' }) => {
       {app.logo ? (
         <img src={app.logo} alt={`${app.name}`} className="app-icon__img" />
       ) : (
-        <span className="app-icon__emoji">{app.icon}</span>
+        <span className="app-icon__initials">{getInitials(app.name)}</span>
       )}
     </div>
   );

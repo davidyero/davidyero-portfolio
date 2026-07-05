@@ -49,8 +49,18 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
 
   const cta = resolveAppCtas(app);
   const kind = getAppKind(app);
+  const isWeb = kind === 'web';
   const content = getAppContent(app.slug, i18n.language);
   const features = content?.features ?? [];
+
+  let webDomain = '';
+  if (app.webUrl) {
+    try {
+      webDomain = new URL(app.webUrl).hostname.replace(/^www\./, '');
+    } catch {
+      webDomain = '';
+    }
+  }
 
   return (
     <PageLayout>
@@ -64,7 +74,31 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
             <button className="showcase__back" onClick={() => navigate(paths.app(app.slug))}>
               ‹ {app.name}
             </button>
-            <AppIcon app={app} size="xl" />
+
+            {isWeb ? (
+              <div className="showcase__browser">
+                <div className="showcase__browser-bar">
+                  <span className="showcase__dot" />
+                  <span className="showcase__dot" />
+                  <span className="showcase__dot" />
+                  <span className="showcase__url">{webDomain || 'web app'}</span>
+                </div>
+                <div
+                  className="showcase__browser-body"
+                  style={{ background: app.accent ?? 'var(--gradient)' }}
+                >
+                  <AppIcon app={app} size="xl" />
+                </div>
+              </div>
+            ) : (
+              <div className="showcase__phone">
+                <span className="showcase__phone-notch" />
+                <div className="showcase__phone-screen">
+                  <AppIcon app={app} size="xl" />
+                </div>
+              </div>
+            )}
+
             <div className="showcase__badges">
               <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
               <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
