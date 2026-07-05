@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../AppIcon/AppIcon';
-import { getAppKind, kindI18nKey, platformLabels } from '../../data/registry';
+import { getAppContent, getAppKind, kindI18nKey, platformLabels } from '../../data/registry';
 import { AppCardProps } from './AppCard.types';
 import './AppCard.scss';
 
@@ -10,7 +10,8 @@ const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
   status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
 
 export const AppCard: React.FC<AppCardProps> = ({ app, onClick }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const content = getAppContent(app.slug, i18n.language);
   const kind = getAppKind(app);
   const tech = (app.tech ?? []).slice(0, 3);
 
@@ -25,7 +26,7 @@ export const AppCard: React.FC<AppCardProps> = ({ app, onClick }) => {
       </div>
 
       <h3 className="app-card__name">{app.name}</h3>
-      <p className="app-card__tagline">{app.tagline ?? app.description}</p>
+      <p className="app-card__tagline">{content?.tagline ?? ''}</p>
 
       {tech.length > 0 && (
         <div className="app-card__tech">

@@ -8,6 +8,7 @@ import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
 import {
   getAppBySlug,
+  getAppContent,
   getAppKind,
   kindI18nKey,
   resolveAppCtas,
@@ -48,6 +49,8 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
 
   const cta = resolveAppCtas(app);
   const kind = getAppKind(app);
+  const content = getAppContent(app.slug, i18n.language);
+  const features = content?.features ?? [];
 
   return (
     <PageLayout>
@@ -67,17 +70,27 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
               <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
             </div>
             <h1 className="showcase__title">{app.name}</h1>
-            {app.tagline && <p className="showcase__tagline">{app.tagline}</p>}
+            {content?.tagline && <p className="showcase__tagline">{content.tagline}</p>}
 
             <div className="showcase__cta">
               {cta.showAppStore && (
-                <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer">
-                  <img src={appStoreImg} alt={t('apps.detail.appStore')} className="showcase__store" />
+                <a
+                  href={app.appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="store-badge"
+                >
+                  <img src={appStoreImg} alt={t('apps.detail.appStore')} />
                 </a>
               )}
               {cta.showGooglePlay && (
-                <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer">
-                  <img src={googlePlayImg} alt={t('apps.detail.googlePlay')} className="showcase__store" />
+                <a
+                  href={app.playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="store-badge store-badge--play"
+                >
+                  <img src={googlePlayImg} alt={t('apps.detail.googlePlay')} />
                 </a>
               )}
               {cta.showWeb && (
@@ -95,7 +108,7 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
         </section>
 
         <div className="showcase__body container">
-          <p className="showcase__description">{app.fullDescription ?? app.description}</p>
+          <p className="showcase__description">{content?.description ?? ''}</p>
 
           {app.tech && app.tech.length > 0 && (
             <div className="showcase__tech">
@@ -118,11 +131,11 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
           )}
 
           {/* Features */}
-          {app.features && app.features.length > 0 && (
+          {features.length > 0 && (
             <section className="showcase__section">
               <h2 className="showcase__section-title">{t('apps.showcase.featuresTitle')}</h2>
               <div className="showcase__features">
-                {app.features.map((feature, index) => (
+                {features.map((feature, index) => (
                   <div key={index} className="showcase__feature">
                     <span className="showcase__feature-icon"><Sparkles size={18} /></span>
                     <p className="showcase__feature-text">{feature}</p>

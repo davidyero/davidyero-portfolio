@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Search } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { ChangelogItem } from '../../Components/ChangelogItem/ChangelogItem';
-import { getAppBySlug } from '../../data/registry';
+import { getAppBySlug, getAppContent } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
 import { ChangelogScreenProps } from './ChangelogScreen.types';
 import './ChangelogScreen.scss';
@@ -12,10 +12,11 @@ import './ChangelogScreen.scss';
 export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
 
   const app = getAppBySlug(slug);
+  const content = app ? getAppContent(app.slug, i18n.language) : undefined;
 
   if (!app) {
     return (
@@ -27,7 +28,7 @@ export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
     );
   }
 
-  const filtered = (app.changelog ?? []).filter((entry) =>
+  const filtered = (content?.changelog ?? []).filter((entry) =>
     entry.version.toLowerCase().includes(searchTerm.toLowerCase())
   );
 

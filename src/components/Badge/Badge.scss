@@ -28,6 +28,12 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-weight: 600;
+    transform-origin: center;
+    animation: badge-live-pulse 2.4s ease-in-out infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
   }
 
   &--beta {
@@ -55,5 +61,16 @@
   &--accent {
     background: var(--gradient-soft);
     color: var(--text);
+  }
+}
+
+// Subtle "live" heartbeat: badge grows and shrinks just a little.
+@keyframes badge-live-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
   }
 }

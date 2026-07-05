@@ -53,7 +53,6 @@ export interface AppMeta {
   status: AppStatus;
   category: AppCategory;
   tech?: string[]; // stack chips, e.g. ['React Native', 'Expo', 'TypeScript']
-  tagline?: string;
   version?: string;
   featured?: boolean;
   webUrl?: string;

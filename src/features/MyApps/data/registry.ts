@@ -8,6 +8,7 @@ import {
 } from '../Screens/MyAppsScreen/MyAppsScreen.types';
 import { appsData } from './appsData';
 import { appsMeta } from './appsMeta';
+import { AppLocalizedContent, appContentEn, appContentEs } from './content/appContent';
 
 const FALLBACK_META: AppMeta = {
   platforms: ['ios', 'android'],
@@ -26,6 +27,19 @@ export const appsRegistry: EnrichedApp[] = appsData.map(enrich);
 
 export const getAppBySlug = (slug?: string): EnrichedApp | undefined =>
   slug ? appsRegistry.find((a) => a.slug === slug) : undefined;
+
+const normalizeLang = (lang?: string): 'en' | 'es' =>
+  lang && lang.startsWith('es') ? 'es' : 'en';
+
+// Localized human-facing content (tagline, description, features, changelog)
+// for the current language, with a graceful fallback so nothing renders blank.
+export const getAppContent = (
+  slug: string,
+  lang?: string
+): AppLocalizedContent | undefined => {
+  const map = normalizeLang(lang) === 'es' ? appContentEs : appContentEn;
+  return map[slug] ?? appContentEs[slug] ?? appContentEn[slug];
+};
 
 export const featuredApps: EnrichedApp[] = appsRegistry.filter((a) => a.featured);
 

@@ -8,6 +8,7 @@ import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
 import {
   getAppBySlug,
+  getAppContent,
   getAppKind,
   kindI18nKey,
   resolveAppCtas,
@@ -50,6 +51,9 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   const cta = resolveAppCtas(app);
   const kind = getAppKind(app);
   const tech = app.tech ?? [];
+  const content = getAppContent(app.slug, i18n.language);
+  const features = content?.features ?? [];
+  const hasChangelog = (content?.changelog?.length ?? 0) > 0;
   const metaBits = [
     ...app.platforms.map((p) => platformLabels[p]),
     app.version ? `v${app.version}` : null,
@@ -71,12 +75,12 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
               <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
               <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
             </div>
-            {app.tagline && <p className="detail__tagline">{app.tagline}</p>}
+            {content?.tagline && <p className="detail__tagline">{content.tagline}</p>}
             <p className="detail__meta">{metaBits.join(' · ')}</p>
           </div>
         </section>
 
-        <p className="detail__description">{app.fullDescription ?? app.description}</p>
+        <p className="detail__description">{content?.description ?? ''}</p>
 
         {/* Immersive landing entry point */}
         <div className="detail__landing-cta">
@@ -90,17 +94,23 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           {(cta.showAppStore || cta.showGooglePlay) && (
             <div className="detail__stores">
               {cta.showAppStore && (
-                <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer">
-                  <img src={appStoreImg} alt={t('apps.detail.appStore')} className="detail__store-badge" />
+                <a
+                  href={app.appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="store-badge"
+                >
+                  <img src={appStoreImg} alt={t('apps.detail.appStore')} />
                 </a>
               )}
               {cta.showGooglePlay && (
-                <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={googlePlayImg}
-                    alt={t('apps.detail.googlePlay')}
-                    className="detail__store-badge detail__store-badge--play"
-                  />
+                <a
+                  href={app.playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="store-badge store-badge--play"
+                >
+                  <img src={googlePlayImg} alt={t('apps.detail.googlePlay')} />
                 </a>
               )}
             </div>
@@ -142,7 +152,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
 
         {/* Conditional document buttons */}
         <div className="detail__docs">
-          {app.changelog && app.changelog.length > 0 && (
+          {hasChangelog && (
             <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appChangelog(app.slug))}>
               {t('apps.detail.changelog')}
             </SuperButton>
@@ -160,11 +170,11 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
         </div>
 
         {/* Features */}
-        {app.features && app.features.length > 0 && (
+        {features.length > 0 && (
           <section className="detail__features">
             <span className="mono-eyebrow">{t('apps.detail.features')}</span>
             <div className="detail__features-grid">
-              {app.features.map((feature, index) => (
+              {features.map((feature, index) => (
                 <div key={index} className="detail__feature">
                   <span className="detail__feature-icon"><Sparkles size={16} /></span>
                   <p className="detail__feature-text">{feature}</p>
