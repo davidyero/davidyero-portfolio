@@ -6,6 +6,10 @@ import TaskMasterIcon from '../../../assets/icons/apps/TaskMasterIcon.png';
 import PronostigolIcon from '../../../assets/icons/apps/PronostigolIcon.png';
 import SimuladorIcon from '../../../assets/icons/apps/SimuladorIcon.png';
 import SuperLineUpIcon from '../../../assets/icons/apps/SuperLineUp.png';
+import GretaIcon from '../../../assets/icons/apps/GretaIcon.png';
+import MyLinkHubIcon from '../../../assets/icons/apps/MyLinkHubIcon.png';
+import EquilibraIcon from '../../../assets/icons/apps/EquilibraIcon.png';
+import FootballCupIcon from '../../../assets/icons/apps/FootballCupIcon.png';
 
 export const appsData: App[] = [
   {
@@ -1345,6 +1349,7 @@ export const appsData: App[] = [
     slug: 'football-cup-simulator',
     description: 'Simula torneos de copa de fútbol y vive cada ronda hasta la final.',
     icon: '',
+    logo: FootballCupIcon,
     playStoreUrl:
       'https://play.google.com/store/apps/details?id=com.davidyero.footballcupsimulator',
   },
@@ -1354,6 +1359,7 @@ export const appsData: App[] = [
     slug: 'greta',
     description: 'Plataforma para conectar personas con fundaciones y rescatistas de animales.',
     icon: '',
+    logo: GretaIcon,
   },
   {
     id: '10',
@@ -1368,6 +1374,7 @@ export const appsData: App[] = [
     slug: 'my-link-hub',
     description: 'Tu portafolio profesional y todos tus enlaces en un solo link.',
     icon: '',
+    logo: MyLinkHubIcon,
   },
   {
     id: '12',
@@ -1375,6 +1382,7 @@ export const appsData: App[] = [
     slug: 'equilibra',
     description: 'Gastos compartidos, sin discusiones.',
     icon: '',
+    logo: EquilibraIcon,
   },
   {
     id: '13',
