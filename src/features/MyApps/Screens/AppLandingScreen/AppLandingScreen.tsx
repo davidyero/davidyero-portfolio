@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, Sparkles, Rocket } from 'lucide-react';
+import { ArrowUpRight, Sparkles, Rocket, History, FileText, ShieldCheck } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { Badge } from '../../../../components/Badge/Badge';
@@ -82,13 +82,6 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
 
         <p className="detail__description">{content?.description ?? ''}</p>
 
-        {/* Immersive landing entry point */}
-        <div className="detail__landing-cta">
-          <SuperButton variant="primary" onClick={() => navigate(paths.appLanding(app.slug))}>
-            <Rocket size={16} /> {t('apps.detail.viewLanding')}
-          </SuperButton>
-        </div>
-
         {/* Adaptive CTAs */}
         <div className="detail__ctas">
           {(cta.showAppStore || cta.showGooglePlay) && (
@@ -150,22 +143,41 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           </div>
         )}
 
-        {/* Conditional document buttons */}
-        <div className="detail__docs">
+        {/* Explore: landing + docs — one consistent, evident button group */}
+        <div className="detail__nav">
+          <button
+            className="detail__nav-btn"
+            onClick={() => navigate(paths.appLanding(app.slug))}
+          >
+            <Rocket size={17} />
+            {t('apps.detail.viewLanding')}
+          </button>
           {hasChangelog && (
-            <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appChangelog(app.slug))}>
+            <button
+              className="detail__nav-btn"
+              onClick={() => navigate(paths.appChangelog(app.slug))}
+            >
+              <History size={17} />
               {t('apps.detail.changelog')}
-            </SuperButton>
+            </button>
           )}
           {app.termsAndConditions && (
-            <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appTerms(app.slug))}>
+            <button
+              className="detail__nav-btn"
+              onClick={() => navigate(paths.appTerms(app.slug))}
+            >
+              <FileText size={17} />
               {t('apps.detail.terms')}
-            </SuperButton>
+            </button>
           )}
           {app.privacyPolicy && (
-            <SuperButton variant="secondary" size="small" onClick={() => navigate(paths.appPrivacy(app.slug))}>
+            <button
+              className="detail__nav-btn"
+              onClick={() => navigate(paths.appPrivacy(app.slug))}
+            >
+              <ShieldCheck size={17} />
               {t('apps.detail.privacy')}
-            </SuperButton>
+            </button>
           )}
         </div>
 

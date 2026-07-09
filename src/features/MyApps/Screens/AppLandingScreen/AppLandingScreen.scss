@@ -56,10 +56,6 @@
     max-width: 60ch;
   }
 
-  &__landing-cta {
-    margin-bottom: $space-5;
-  }
-
   &__stack {
     margin-bottom: $space-6;
   }
@@ -120,13 +116,42 @@
     width: fit-content;
   }
 
-  &__docs {
+  // Explore group: View landing · Changelog · Terms · Privacy — one style
+  &__nav {
     display: flex;
     flex-wrap: wrap;
-    gap: $space-2;
+    gap: $space-3;
     padding-bottom: $space-8;
     border-bottom: 1px solid var(--border);
     margin-bottom: $space-8;
+  }
+
+  &__nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-3 $space-5;
+    font-family: $font-sans;
+    font-weight: 600;
+    font-size: $fs-body;
+    color: var(--text);
+    background: var(--surface-0);
+    border: 1px solid var(--border-strong);
+    border-radius: $radius-md;
+    transition: transform $transition-fast, border-color $transition-fast,
+      background-color $transition-fast, box-shadow $transition-fast;
+
+    svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: var(--surface-hover);
+      box-shadow: var(--shadow-md);
+    }
   }
 
   &__features { margin-bottom: $space-8; }
