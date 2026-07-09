@@ -10,6 +10,7 @@ import GretaIcon from '../../../assets/icons/apps/GretaIcon.png';
 import MyLinkHubIcon from '../../../assets/icons/apps/MyLinkHubIcon.png';
 import EquilibraIcon from '../../../assets/icons/apps/EquilibraIcon.png';
 import FootballCupIcon from '../../../assets/icons/apps/FootballCupIcon.png';
+import HabitFlowIcon from '../../../assets/icons/apps/HabitFlowIcon.png';
 
 export const appsData: App[] = [
   {
@@ -1390,5 +1391,248 @@ export const appsData: App[] = [
     slug: 'mis-pagos',
     description: 'Lleva el control de tus pagos y suscripciones en un solo lugar.',
     icon: '',
+  },
+  {
+    id: '14',
+    name: 'HabitFlow',
+    slug: 'habitflow',
+    description:
+      'Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones. Tus datos viven en tu dispositivo.',
+    icon: '',
+    logo: HabitFlowIcon,
+    fullDescription:
+      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Todos tus datos de hábitos se guardan en tu dispositivo; una cuenta opcional solo administra tu plan.',
+    features: [
+      'Rastrea hábitos binarios, de cantidad o de abandono',
+      'Rachas visuales estilo grilla de contribuciones',
+      'Recordatorios con notificaciones locales',
+      'Tema oscuro y claro con acentos de color por hábito',
+      'Tus datos de hábitos se quedan en tu dispositivo',
+      'Exporta o elimina todos tus datos cuando quieras',
+    ],
+    appStoreUrl: '',
+    playStoreUrl: '',
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '8 de julio de 2026',
+        type: 'new',
+        changes: ['Lanzamiento inicial de HabitFlow.'],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: '8 de julio de 2026',
+        sections: [
+          {
+            title: '1. Aceptación de los Términos',
+            content:
+              '<p>Al descargar, instalar o usar HabitFlow ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con ellos, no uses la Aplicación.</p>',
+          },
+          {
+            title: '2. Descripción del Servicio',
+            content:
+              '<p>HabitFlow es una aplicación para crear y seguir hábitos personales. La Aplicación es local-first: tus hábitos y check-ins se almacenan en tu dispositivo. De forma opcional puedes crear una cuenta para administrar tu plan (gratuito, lite o pro).</p>',
+          },
+          {
+            title: '3. Uso Aceptable',
+            content:
+              '<p>Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines personales y legales</li><li>No intentar modificar, descompilar ni realizar ingeniería inversa sobre la Aplicación</li><li>No interferir con el funcionamiento de la Aplicación ni con la seguridad de otros usuarios</li></ul>',
+          },
+          {
+            title: '4. Cuentas',
+            content:
+              '<p>La cuenta es opcional y solo se usa para administrar tu plan. Eres responsable de mantener la confidencialidad de tus credenciales y de toda actividad realizada bajo tu cuenta. Puedes eliminar tu cuenta en cualquier momento desde la Aplicación.</p>',
+          },
+          {
+            title: '5. Suscripciones y Planes de Pago',
+            content:
+              '<p>HabitFlow ofrece un plan gratuito y planes de pago (Lite y Pro) que desbloquean funciones adicionales. Las suscripciones se contratan y se cobran a través de la tienda de aplicaciones correspondiente (App Store de Apple o Google Play), sujetas a sus términos. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda. Las suscripciones se renuevan automáticamente salvo que las canceles antes del final del período.</p>',
+          },
+          {
+            title: '6. Publicidad',
+            content:
+              '<p>La versión gratuita muestra anuncios a través de Google AdMob. Los planes de pago pueden eliminar los anuncios. El uso de la publicidad se rige también por la Política de Privacidad.</p>',
+          },
+          {
+            title: '7. Propiedad Intelectual',
+            content:
+              '<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. El contenido que registras (hábitos, notas) es tuyo; nosotros no reclamamos ningún derecho sobre él.</p>',
+          },
+          {
+            title: '8. Limitación de Responsabilidad',
+            content:
+              '<p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de la pérdida de datos almacenados localmente, de errores o incompatibilidades con determinados dispositivos, ni de daños derivados del uso o imposibilidad de uso de la Aplicación. Te recomendamos exportar tus datos periódicamente.</p>',
+          },
+          {
+            title: '9. Modificaciones',
+            content:
+              '<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>',
+          },
+          {
+            title: '10. Contacto',
+            content:
+              '<p>Si tienes preguntas sobre estos Términos, contáctanos en: support@davidyero.com</p>',
+          },
+        ],
+      },
+      en: {
+        lastUpdated: 'July 8, 2026',
+        sections: [
+          {
+            title: '1. Acceptance of Terms',
+            content:
+              '<p>By downloading, installing, or using HabitFlow ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with them, do not use the Application.</p>',
+          },
+          {
+            title: '2. Description of the Service',
+            content:
+              '<p>HabitFlow is an app for creating and tracking personal habits. The Application is local-first: your habits and check-ins are stored on your device. Optionally, you may create an account to manage your plan (free, lite, or pro).</p>',
+          },
+          {
+            title: '3. Acceptable Use',
+            content:
+              '<p>You agree to:</p><ul><li>Use the Application only for personal and lawful purposes</li><li>Not attempt to modify, decompile, or reverse engineer the Application</li><li>Not interfere with the operation of the Application or the security of other users</li></ul>',
+          },
+          {
+            title: '4. Accounts',
+            content:
+              '<p>An account is optional and is used solely to manage your plan. You are responsible for keeping your credentials confidential and for all activity under your account. You can delete your account at any time from within the Application.</p>',
+          },
+          {
+            title: '5. Subscriptions and Paid Plans',
+            content:
+              '<p>HabitFlow offers a free plan and paid plans (Lite and Pro) that unlock additional features. Subscriptions are purchased and billed through the relevant app store (Apple App Store or Google Play), subject to their terms. Renewal, cancellation, and refunds are managed from your store account. Subscriptions renew automatically unless canceled before the end of the period.</p>',
+          },
+          {
+            title: '6. Advertising',
+            content:
+              '<p>The free version shows ads through Google AdMob. Paid plans may remove ads. Advertising is also governed by the Privacy Policy.</p>',
+          },
+          {
+            title: '7. Intellectual Property',
+            content:
+              '<p>All rights to the Application, including its code, design, and interface, belong to its author. The content you record (habits, notes) is yours; we claim no rights over it.</p>',
+          },
+          {
+            title: '8. Limitation of Liability',
+            content:
+              '<p>The Application is provided "as is" and "as available", without warranties of any kind. We are not responsible for loss of locally stored data, errors or incompatibilities with certain devices, or damages arising from use of or inability to use the Application. We recommend exporting your data periodically.</p>',
+          },
+          {
+            title: '9. Modifications',
+            content:
+              '<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>',
+          },
+          {
+            title: '10. Contact',
+            content:
+              '<p>If you have questions about these Terms, contact us at: support@davidyero.com</p>',
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: '8 de julio de 2026',
+        sections: [
+          {
+            title: '1. Introducción',
+            content:
+              '<p>Esta Política de Privacidad describe cómo HabitFlow maneja tu información. HabitFlow está diseñado como una aplicación local-first: tus datos de hábitos permanecen en tu dispositivo.</p>',
+          },
+          {
+            title: '2. Tus Datos de Hábitos se Guardan Solo en tu Dispositivo',
+            content:
+              '<p>Todos tus hábitos, check-ins, notas, estados de ánimo y estadísticas se almacenan únicamente de forma local en tu dispositivo. <strong>No enviamos, sincronizamos ni almacenamos estos datos en nuestros servidores.</strong> Si desinstalas la Aplicación, estos datos se eliminan de tu dispositivo.</p>',
+          },
+          {
+            title: '3. Cuenta Opcional',
+            content:
+              '<p>Puedes usar la Aplicación sin crear una cuenta. Si decides crear una, guardamos en nuestro backend tu correo electrónico y una versión cifrada de tu contraseña con un único propósito: administrar tu plan (gratuito, lite o pro). <strong>La cuenta no sincroniza ni respalda tus datos de hábitos</strong>; esos datos nunca salen de tu dispositivo.</p>',
+          },
+          {
+            title: '4. Publicidad (Google AdMob)',
+            content:
+              '<p>La versión gratuita muestra anuncios a través de Google AdMob. AdMob puede usar identificadores del dispositivo o de publicidad para mostrar anuncios. En los dispositivos que lo requieren, la Aplicación te solicitará tu consentimiento de seguimiento antes de habilitar publicidad personalizada; puedes rechazarlo. Consulta la política de privacidad de Google para más detalles sobre el tratamiento que hace de estos datos.</p>',
+          },
+          {
+            title: '5. Notificaciones Locales',
+            content:
+              '<p>La Aplicación usa notificaciones locales en tu dispositivo para enviarte recordatorios de tus hábitos. Estas notificaciones se generan en el dispositivo y no implican el envío de tus datos a nuestros servidores.</p>',
+          },
+          {
+            title: '6. No Vendemos tus Datos',
+            content:
+              '<p>No vendemos ni alquilamos tu información personal a terceros.</p>',
+          },
+          {
+            title: '7. Tus Derechos y Control',
+            content:
+              '<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar todos tus datos de hábitos</li><li>Eliminar tus datos de hábitos</li><li>Eliminar tu cuenta y la información asociada a tu plan</li></ul>',
+          },
+          {
+            title: '8. Cambios en esta Política',
+            content:
+              '<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>',
+          },
+          {
+            title: '9. Contacto',
+            content:
+              '<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: support@davidyero.com</p>',
+          },
+        ],
+      },
+      en: {
+        lastUpdated: 'July 8, 2026',
+        sections: [
+          {
+            title: '1. Introduction',
+            content:
+              '<p>This Privacy Policy describes how HabitFlow handles your information. HabitFlow is designed as a local-first app: your habit data stays on your device.</p>',
+          },
+          {
+            title: '2. Your Habit Data Is Stored Only on Your Device',
+            content:
+              '<p>All your habits, check-ins, notes, moods, and statistics are stored only locally on your device. <strong>We do not send, sync, or store this data on our servers.</strong> If you uninstall the Application, this data is deleted from your device.</p>',
+          },
+          {
+            title: '3. Optional Account',
+            content:
+              '<p>You can use the Application without creating an account. If you choose to create one, we store on our backend your email address and an encrypted version of your password for a single purpose: to manage your plan (free, lite, or pro). <strong>The account does not sync or back up your habit data</strong>; that data never leaves your device.</p>',
+          },
+          {
+            title: '4. Advertising (Google AdMob)',
+            content:
+              '<p>The free version shows ads through Google AdMob. AdMob may use device or advertising identifiers to serve ads. On devices that require it, the Application will ask for your tracking consent before enabling personalized ads; you may decline. See Google’s privacy policy for more detail on how it processes this data.</p>',
+          },
+          {
+            title: '5. Local Notifications',
+            content:
+              '<p>The Application uses local notifications on your device to send you habit reminders. These notifications are generated on the device and do not involve sending your data to our servers.</p>',
+          },
+          {
+            title: '6. We Do Not Sell Your Data',
+            content:
+              '<p>We do not sell or rent your personal information to third parties.</p>',
+          },
+          {
+            title: '7. Your Rights and Control',
+            content:
+              '<p>You are in control of your data. From within the Application you can:</p><ul><li>Export all your habit data</li><li>Delete your habit data</li><li>Delete your account and the information associated with your plan</li></ul>',
+          },
+          {
+            title: '8. Changes to This Policy',
+            content:
+              '<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>',
+          },
+          {
+            title: '9. Contact',
+            content:
+              '<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>',
+          },
+        ],
+      },
+    },
   },
 ];

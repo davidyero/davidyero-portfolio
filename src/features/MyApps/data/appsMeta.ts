@@ -108,4 +108,12 @@ export const appsMeta: Record<string, AppMeta> = {
     webUrl: 'https://mis-pagos-web.pages.dev/',
     accent: 'linear-gradient(135deg, #f9e2af 0%, #fab387 100%)',
   },
+  habitflow: {
+    platforms: ['ios', 'android'],
+    status: 'soon',
+    category: 'productivity',
+    tech: ['React Native', 'TypeScript'],
+    version: '1.0.0',
+    accent: 'linear-gradient(135deg, #f5c2a7 0%, #fab387 100%)',
+  },
 };

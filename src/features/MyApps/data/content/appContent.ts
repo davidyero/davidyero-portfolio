@@ -338,6 +338,27 @@ export const appContentEs: AppContentMap = {
     ],
     changelog: [],
   },
+  habitflow: {
+    tagline: 'Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones.',
+    description:
+      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Tus datos de hábitos se guardan en tu dispositivo; una cuenta opcional solo administra tu plan.',
+    features: [
+      'Rastrea hábitos binarios, de cantidad o de abandono',
+      'Rachas visuales estilo grilla de contribuciones',
+      'Recordatorios con notificaciones locales',
+      'Tema oscuro y claro con acentos de color por hábito',
+      'Tus datos de hábitos se quedan en tu dispositivo',
+      'Exporta o elimina todos tus datos cuando quieras',
+    ],
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '8 de julio de 2026',
+        type: 'new',
+        changes: ['Lanzamiento inicial de HabitFlow.'],
+      },
+    ],
+  },
 };
 
 export const appContentEn: AppContentMap = {
@@ -664,5 +685,26 @@ export const appContentEn: AppContentMap = {
       'Everything in one place',
     ],
     changelog: [],
+  },
+  habitflow: {
+    tagline: 'Minimalist habit tracker with contribution-style streak grids.',
+    description:
+      'HabitFlow is a minimalist, local-first habit tracker. Create habits, log your daily check-ins, and watch your streaks build up on contribution-style intensity grids. Your habit data stays on your device; an optional account only manages your plan.',
+    features: [
+      'Track binary, quantity, or quit habits',
+      'Visual contribution-style streak grids',
+      'Reminders via local notifications',
+      'Dark and light themes with per-habit color accents',
+      'Your habit data stays on your device',
+      'Export or delete all your data anytime',
+    ],
+    changelog: [
+      {
+        version: '1.0.0',
+        date: 'July 8, 2026',
+        type: 'new',
+        changes: ['Initial release of HabitFlow.'],
+      },
+    ],
   },
 };
