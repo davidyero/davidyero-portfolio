@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# David Yepes · Portfolio & App Hub
+
+Portfolio personal + hub de lanzamiento de apps (mobile y web) de David Yepes
+(@Davidyero). React + TypeScript, SCSS con tokens Catppuccin (dark/light),
+i18n EN/ES y arquitectura data-driven para publicar apps sin tocar UI.
+
+## 📱 ¿Quieres agregar una app?
+
+**Lee [`ADDING_A_NEW_APP.md`](./ADDING_A_NEW_APP.md)** — guía paso a paso.
+Resumen: editas 3 archivos de datos y despliegas; no se crean vistas ni se toca
+el router.
+
+| Archivo | Qué pones |
+|---------|-----------|
+| `src/features/MyApps/data/appsData.ts` | Datos base: nombre, slug, icono, links de tienda, legales |
+| `src/features/MyApps/data/appsMeta.ts` | Metadatos: plataformas, estado, categoría, stack, links web |
+| `src/features/MyApps/data/content/appContent.ts` | Texto bilingüe EN+ES: tagline, descripción, features, changelog |
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
