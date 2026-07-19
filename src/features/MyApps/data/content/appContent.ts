@@ -359,6 +359,27 @@ export const appContentEs: AppContentMap = {
       },
     ],
   },
+  'trainflow-ai': {
+    tagline: 'Convierte los planes de entrenamiento que genera la IA en una app clara y legible.',
+    description:
+      'TrainFlow AI es la capa de presentación para planes de entrenamiento generados por IA (ChatGPT, Claude, Gemini…). Pide un plan en JSON o CSV, impórtalo y la app lo muestra con una interfaz editorial clara. Tus planes viven en tu dispositivo; con Lite o Pro se respaldan en la nube.',
+    features: [
+      'Importa planes de IA en JSON o CSV con parsing tolerante',
+      'Interfaz editorial clara para seguir tu rutina día a día',
+      'Planes ilimitados y copia en la nube con Lite/Pro',
+      'Exporta a PDF o imagen y compártelos',
+      'Inicia sesión con Google o entra como invitado',
+      'Tema oscuro y claro · Español e inglés',
+    ],
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '19 de julio de 2026',
+        type: 'new',
+        changes: ['Lanzamiento inicial de TrainFlow AI.'],
+      },
+    ],
+  },
 };
 
 export const appContentEn: AppContentMap = {

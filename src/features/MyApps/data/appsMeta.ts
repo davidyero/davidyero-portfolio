@@ -116,4 +116,12 @@ export const appsMeta: Record<string, AppMeta> = {
     version: '1.0.0',
     accent: 'linear-gradient(135deg, #f5c2a7 0%, #fab387 100%)',
   },
+  'trainflow-ai': {
+    platforms: ['ios', 'android'],
+    status: 'beta',
+    category: 'sports',
+    tech: ['React Native', 'TypeScript', 'RevenueCat'],
+    version: '1.0.0',
+    accent: 'linear-gradient(135deg, #e07a5f 0%, #f2a488 100%)',
+  },
 };

@@ -9,6 +9,7 @@ import SuperLineUpIcon from '../../../assets/icons/apps/SuperLineUp.png';
 import GretaIcon from '../../../assets/icons/apps/GretaIcon.png';
 import MyLinkHubIcon from '../../../assets/icons/apps/MyLinkHubIcon.png';
 import EquilibraIcon from '../../../assets/icons/apps/EquilibraIcon.png';
+import TrainFlowAIIcon from '../../../assets/icons/apps/TrainFlowAIIcon.png';
 import FootballCupIcon from '../../../assets/icons/apps/FootballCupIcon.png';
 import HabitFlowIcon from '../../../assets/icons/apps/HabitFlowIcon.png';
 
@@ -1630,6 +1631,269 @@ export const appsData: App[] = [
             title: '9. Contact',
             content:
               '<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: '15',
+    name: 'TrainFlow AI',
+    slug: 'trainflow-ai',
+    description:
+      'Convierte los planes de entrenamiento que genera la IA en una app clara y legible. Tus planes viven en tu dispositivo.',
+    icon: '',
+    logo: TrainFlowAIIcon,
+    fullDescription:
+      'TrainFlow AI es la capa de presentación para planes de entrenamiento generados por inteligencia artificial (ChatGPT, Claude, Gemini…). Pides un plan en JSON o CSV, lo importas, y la app lo muestra con una interfaz editorial clara. Tus planes se guardan en tu dispositivo; con Lite o Pro se respaldan en la nube. Inicia sesión con Google o entra como invitado.',
+    features: [
+      'Importa planes de IA en JSON o CSV con parsing tolerante',
+      'Interfaz editorial clara para seguir tu rutina día a día',
+      'Planes ilimitados y copia en la nube con Lite/Pro',
+      'Exporta a PDF o imagen y compártelos',
+      'Inicia sesión con Google o entra como invitado',
+      'Tema oscuro y claro · Español e inglés',
+    ],
+    appStoreUrl: '',
+    playStoreUrl: '',
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '19 de julio de 2026',
+        type: 'new',
+        changes: ['Lanzamiento inicial de TrainFlow AI.'],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: '19 de julio de 2026',
+        sections: [
+          {
+            title: '1. Aceptación de los Términos',
+            content:
+              '<p>Al descargar, instalar o usar TrainFlow AI ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con ellos, no uses la Aplicación.</p>',
+          },
+          {
+            title: '2. Descripción del Servicio',
+            content:
+              '<p>TrainFlow AI es una capa de presentación para planes de entrenamiento generados por inteligencia artificial de terceros (como ChatGPT, Claude o Gemini). Tú generas o proporcionas un plan en formato JSON o CSV, lo importas, y la Aplicación lo muestra de forma clara y legible. La Aplicación no genera los planes ni presta un servicio de asesoría.</p>',
+          },
+          {
+            title: '3. No es Asesoría Médica ni Profesional',
+            content:
+              '<p><strong>Importante:</strong> los planes de entrenamiento provienen de fuentes de IA de terceros o de ti, no de TrainFlow AI. La Aplicación no proporciona asesoría médica, de salud, nutricional ni de acondicionamiento físico. Consulta a un profesional de la salud calificado antes de iniciar cualquier programa de entrenamiento. Usas los planes bajo tu propia responsabilidad y riesgo.</p>',
+          },
+          {
+            title: '4. Cuentas',
+            content:
+              '<p>Puedes usar la Aplicación como invitado o iniciar sesión con Google. La cuenta se usa para identificarte, administrar tu plan y, en los planes de pago, respaldar tus planes en la nube. Eres responsable de la seguridad de tu cuenta de Google. Puedes eliminar tu cuenta y sus datos en cualquier momento desde la Aplicación.</p>',
+          },
+          {
+            title: '5. Suscripciones y Planes de Pago',
+            content:
+              '<p>TrainFlow AI ofrece un plan gratuito y planes de pago (Lite y Pro) que desbloquean funciones adicionales. Las suscripciones se contratan y se cobran a través de la tienda correspondiente (App Store de Apple o Google Play) y se gestionan con RevenueCat, sujetas a sus términos. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda. Las suscripciones se renuevan automáticamente salvo que las canceles antes del final del período.</p>',
+          },
+          {
+            title: '6. Publicidad',
+            content:
+              '<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob. El plan Pro elimina los anuncios. El uso de la publicidad se rige también por la Política de Privacidad.</p>',
+          },
+          {
+            title: '7. Propiedad Intelectual',
+            content:
+              '<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. El contenido que importas (tus planes de entrenamiento) es tuyo; no reclamamos ningún derecho sobre él.</p>',
+          },
+          {
+            title: '8. Limitación de Responsabilidad',
+            content:
+              '<p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de lesiones o daños derivados de seguir un plan de entrenamiento, de la pérdida de datos almacenados localmente, de errores de importación ni de incompatibilidades con determinados dispositivos. Te recomendamos exportar tus planes periódicamente.</p>',
+          },
+          {
+            title: '9. Modificaciones',
+            content:
+              '<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>',
+          },
+          {
+            title: '10. Contacto',
+            content:
+              '<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>',
+          },
+        ],
+      },
+      en: {
+        lastUpdated: 'July 19, 2026',
+        sections: [
+          {
+            title: '1. Acceptance of Terms',
+            content:
+              '<p>By downloading, installing, or using TrainFlow AI ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with them, do not use the Application.</p>',
+          },
+          {
+            title: '2. Description of the Service',
+            content:
+              '<p>TrainFlow AI is a presentation layer for training plans generated by third-party artificial intelligence (such as ChatGPT, Claude, or Gemini). You generate or provide a plan in JSON or CSV format, import it, and the Application displays it in a clean, readable way. The Application does not generate the plans and does not provide advisory services.</p>',
+          },
+          {
+            title: '3. Not Medical or Professional Advice',
+            content:
+              '<p><strong>Important:</strong> training plans come from third-party AI sources or from you, not from TrainFlow AI. The Application does not provide medical, health, nutritional, or fitness advice. Consult a qualified health professional before starting any training program. You use the plans at your own responsibility and risk.</p>',
+          },
+          {
+            title: '4. Accounts',
+            content:
+              '<p>You can use the Application as a guest or sign in with Google. The account is used to identify you, manage your plan, and — on paid plans — back up your plans to the cloud. You are responsible for the security of your Google account. You can delete your account and its data at any time from within the Application.</p>',
+          },
+          {
+            title: '5. Subscriptions and Paid Plans',
+            content:
+              '<p>TrainFlow AI offers a free plan and paid plans (Lite and Pro) that unlock additional features. Subscriptions are purchased and billed through the relevant app store (Apple App Store or Google Play) and managed with RevenueCat, subject to their terms. Renewal, cancellation, and refunds are managed from your store account. Subscriptions renew automatically unless canceled before the end of the period.</p>',
+          },
+          {
+            title: '6. Advertising',
+            content:
+              '<p>The Free and Lite plans show ads through Google AdMob. The Pro plan removes ads. Advertising is also governed by the Privacy Policy.</p>',
+          },
+          {
+            title: '7. Intellectual Property',
+            content:
+              '<p>All rights to the Application, including its code, design, and interface, belong to its author. The content you import (your training plans) is yours; we claim no rights over it.</p>',
+          },
+          {
+            title: '8. Limitation of Liability',
+            content:
+              '<p>The Application is provided "as is" and "as available", without warranties of any kind. We are not responsible for injury or damages arising from following a training plan, loss of locally stored data, import errors, or incompatibilities with certain devices. We recommend exporting your plans periodically.</p>',
+          },
+          {
+            title: '9. Modifications',
+            content:
+              '<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>',
+          },
+          {
+            title: '10. Contact',
+            content:
+              '<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>',
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: '19 de julio de 2026',
+        sections: [
+          {
+            title: '1. Introducción',
+            content:
+              '<p>Esta Política de Privacidad describe cómo TrainFlow AI maneja tu información. TrainFlow AI está diseñado para que tus planes de entrenamiento vivan en tu dispositivo; solo los planes de pago los respaldan en la nube.</p>',
+          },
+          {
+            title: '2. Tus Planes se Guardan en tu Dispositivo',
+            content:
+              '<p>Tus planes de entrenamiento y tu progreso se almacenan de forma local en tu dispositivo. Si usas un plan de pago (Lite o Pro) se activa la copia en la nube (ver la sección de Copia en la Nube). <strong>Si desinstalas la Aplicación, los datos locales se eliminan de tu dispositivo.</strong></p>',
+          },
+          {
+            title: '3. Cuenta e Inicio de Sesión',
+            content:
+              '<p>Puedes usar la Aplicación como invitado; en ese caso usamos un identificador anónimo de dispositivo que no te identifica como persona. Si inicias sesión con Google, guardamos en nuestro backend tu correo electrónico, nombre y foto de perfil de Google, con el fin de identificarte y administrar tu plan. Puedes eliminar tu cuenta y la información asociada en cualquier momento desde la Aplicación.</p>',
+          },
+          {
+            title: '4. Copia en la Nube (planes de pago)',
+            content:
+              '<p>Si tienes un plan Lite o Pro, tus planes de entrenamiento se respaldan en nuestros servidores para poder sincronizarlos entre tus dispositivos. <strong>El plan Gratuito no sube ningún plan a la nube.</strong> Puedes eliminar esta copia eliminando tu cuenta desde la Aplicación.</p>',
+          },
+          {
+            title: '5. Suscripciones (RevenueCat)',
+            content:
+              '<p>Usamos RevenueCat para gestionar las compras dentro de la Aplicación. RevenueCat procesa un identificador de usuario y el estado de tu suscripción para determinar tu plan. No recibimos los datos de tu tarjeta: los pagos los procesa la tienda (Apple o Google).</p>',
+          },
+          {
+            title: '6. Publicidad (Google AdMob)',
+            content:
+              '<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob, que puede usar identificadores del dispositivo o de publicidad. En los dispositivos que lo requieren, la Aplicación te solicitará tu consentimiento antes de habilitar publicidad personalizada; puedes rechazarlo. Consulta la política de privacidad de Google para más detalles.</p>',
+          },
+          {
+            title: '7. Sugerencias y Soporte',
+            content:
+              '<p>Si nos envías una sugerencia o solicitud desde la Aplicación, recibimos tu mensaje y, si has iniciado sesión, tu nombre y correo, en davidyero@davidyero.com para poder responderte.</p>',
+          },
+          {
+            title: '8. No Vendemos tus Datos',
+            content:
+              '<p>No vendemos ni alquilamos tu información personal a terceros.</p>',
+          },
+          {
+            title: '9. Tus Derechos y Control',
+            content:
+              '<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar tus planes de entrenamiento a PDF o imagen</li><li>Eliminar tus planes</li><li>Eliminar tu cuenta y toda la información asociada, incluida la copia en la nube</li></ul>',
+          },
+          {
+            title: '10. Cambios en esta Política',
+            content:
+              '<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>',
+          },
+          {
+            title: '11. Contacto',
+            content:
+              '<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>',
+          },
+        ],
+      },
+      en: {
+        lastUpdated: 'July 19, 2026',
+        sections: [
+          {
+            title: '1. Introduction',
+            content:
+              '<p>This Privacy Policy describes how TrainFlow AI handles your information. TrainFlow AI is designed so your training plans live on your device; only paid plans back them up to the cloud.</p>',
+          },
+          {
+            title: '2. Your Plans Are Stored on Your Device',
+            content:
+              '<p>Your training plans and progress are stored locally on your device. If you use a paid plan (Lite or Pro), cloud backup is enabled (see the Cloud Backup section). <strong>If you uninstall the Application, local data is deleted from your device.</strong></p>',
+          },
+          {
+            title: '3. Account and Sign-In',
+            content:
+              '<p>You can use the Application as a guest; in that case we use an anonymous device identifier that does not identify you as a person. If you sign in with Google, we store on our backend your email address, name, and Google profile picture, in order to identify you and manage your plan. You can delete your account and associated information at any time from within the Application.</p>',
+          },
+          {
+            title: '4. Cloud Backup (paid plans)',
+            content:
+              '<p>If you have a Lite or Pro plan, your training plans are backed up to our servers so they can sync across your devices. <strong>The Free plan does not upload any plan to the cloud.</strong> You can delete this backup by deleting your account from within the Application.</p>',
+          },
+          {
+            title: '5. Subscriptions (RevenueCat)',
+            content:
+              '<p>We use RevenueCat to manage in-app purchases. RevenueCat processes a user identifier and your subscription status to determine your plan. We do not receive your card details: payments are processed by the store (Apple or Google).</p>',
+          },
+          {
+            title: '6. Advertising (Google AdMob)',
+            content:
+              '<p>The Free and Lite plans show ads through Google AdMob, which may use device or advertising identifiers. On devices that require it, the Application will ask for your consent before enabling personalized ads; you may decline. See Google’s privacy policy for more detail.</p>',
+          },
+          {
+            title: '7. Suggestions and Support',
+            content:
+              '<p>If you send us a suggestion or request from within the Application, we receive your message and, if you are signed in, your name and email, at davidyero@davidyero.com so we can respond.</p>',
+          },
+          {
+            title: '8. We Do Not Sell Your Data',
+            content:
+              '<p>We do not sell or rent your personal information to third parties.</p>',
+          },
+          {
+            title: '9. Your Rights and Control',
+            content:
+              '<p>You are in control of your data. From within the Application you can:</p><ul><li>Export your training plans to PDF or image</li><li>Delete your plans</li><li>Delete your account and all associated information, including the cloud backup</li></ul>',
+          },
+          {
+            title: '10. Changes to This Policy',
+            content:
+              '<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>',
+          },
+          {
+            title: '11. Contact',
+            content:
+              '<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>',
           },
         ],
       },
