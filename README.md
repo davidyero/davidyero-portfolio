@@ -16,6 +16,13 @@ el router.
 | `src/features/MyApps/data/appsMeta.ts` | Metadatos: plataformas, estado, categoría, stack, links web |
 | `src/features/MyApps/data/content/appContent.ts` | Texto bilingüe EN+ES: tagline, descripción, features, changelog |
 
+## 🚀 ¿Vas a publicar una app en las tiendas?
+
+**Lee [`DEPLOYING_TO_STORES.md`](./DEPLOYING_TO_STORES.md)** — guía informativa de
+despliegue en **Google Play** (y App Store, próximamente): firma/keystore, build del
+AAB, ficha de tienda, prueba interna y producción. Solo despliegue en tienda, no cubre
+monetización.
+
 ---
 
 ## Getting Started with Create React App
