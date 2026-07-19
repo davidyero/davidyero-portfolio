@@ -341,14 +341,14 @@ export const appContentEs: AppContentMap = {
   habitflow: {
     tagline: 'Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones.',
     description:
-      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Tus datos de hábitos se guardan en tu dispositivo; una cuenta opcional solo administra tu plan.',
+      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Úsalo como invitado con tus datos en el dispositivo, o crea una cuenta; con Lite o Pro tus hábitos se sincronizan en la nube.',
     features: [
       'Rastrea hábitos binarios, de cantidad o de abandono',
       'Rachas visuales estilo grilla de contribuciones',
       'Recordatorios con notificaciones locales',
       'Tema oscuro y claro con acentos de color por hábito',
-      'Tus datos de hábitos se quedan en tu dispositivo',
-      'Exporta o elimina todos tus datos cuando quieras',
+      'Sincronización opcional en la nube con Lite o Pro',
+      'Exporta, importa o elimina todos tus datos cuando quieras',
     ],
     changelog: [
       {
@@ -710,14 +710,14 @@ export const appContentEn: AppContentMap = {
   habitflow: {
     tagline: 'Minimalist habit tracker with contribution-style streak grids.',
     description:
-      'HabitFlow is a minimalist, local-first habit tracker. Create habits, log your daily check-ins, and watch your streaks build up on contribution-style intensity grids. Your habit data stays on your device; an optional account only manages your plan.',
+      'HabitFlow is a minimalist, local-first habit tracker. Create habits, log your daily check-ins, and watch your streaks build up on contribution-style intensity grids. Use it as a guest with your data on-device, or create an account; with Lite or Pro your habits sync to the cloud.',
     features: [
       'Track binary, quantity, or quit habits',
       'Visual contribution-style streak grids',
       'Reminders via local notifications',
       'Dark and light themes with per-habit color accents',
-      'Your habit data stays on your device',
-      'Export or delete all your data anytime',
+      'Optional cloud sync with Lite or Pro',
+      'Export, import, or delete all your data anytime',
     ],
     changelog: [
       {
