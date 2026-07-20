@@ -124,4 +124,12 @@ export const appsMeta: Record<string, AppMeta> = {
     version: '1.0.0',
     accent: 'linear-gradient(135deg, #e07a5f 0%, #f2a488 100%)',
   },
+  'cop-moneda-colombiana': {
+    platforms: ['android', 'ios'],
+    status: 'soon',
+    category: 'utility',
+    tech: ['React Native', 'TypeScript', 'AdMob'],
+    version: '0.1.0',
+    accent: 'linear-gradient(135deg, #f9e2af 0%, #89b4fa 100%)',
+  },
 };

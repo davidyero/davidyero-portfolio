@@ -380,6 +380,26 @@ export const appContentEs: AppContentMap = {
       },
     ],
   },
+  'cop-moneda-colombiana': {
+    tagline: 'El dólar y todas las monedas del mundo, en pesos.',
+    description:
+      'Consulta las tasas de cambio de más de 160 monedas frente al peso colombiano, actualizadas cada día. Busca, filtra por región, guarda favoritas y convierte cualquier monto. Sin cuenta y con datos que funcionan sin conexión.',
+    features: [
+      'Más de 160 monedas frente al peso colombiano',
+      'Conversor rápido entre dos monedas',
+      'Favoritas y filtros por región',
+      'Detalle e histórico por moneda',
+      'Recordatorio diario y modo sin conexión',
+    ],
+    changelog: [
+      {
+        version: '0.1.0',
+        date: '20 de julio de 2026',
+        type: 'new',
+        changes: ['Lanzamiento inicial de COP Moneda Colombiana.'],
+      },
+    ],
+  },
 };
 
 export const appContentEn: AppContentMap = {
@@ -725,6 +745,26 @@ export const appContentEn: AppContentMap = {
         date: 'July 8, 2026',
         type: 'new',
         changes: ['Initial release of HabitFlow.'],
+      },
+    ],
+  },
+  'cop-moneda-colombiana': {
+    tagline: 'The dollar and every world currency, in pesos.',
+    description:
+      'Check exchange rates for 160+ currencies against the Colombian peso, updated daily. Search, filter by region, save favorites and convert any amount. No account, and data that works offline.',
+    features: [
+      '160+ currencies against the Colombian peso',
+      'Quick converter between two currencies',
+      'Favorites and filters by region',
+      'Detail and history per currency',
+      'Daily reminder and offline mode',
+    ],
+    changelog: [
+      {
+        version: '0.1.0',
+        date: 'July 20, 2026',
+        type: 'new',
+        changes: ['Initial release of COP Moneda Colombiana.'],
       },
     ],
   },
