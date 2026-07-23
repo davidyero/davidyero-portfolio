@@ -1175,7 +1175,7 @@ export const appsData: App[] = [
       'Exporta la alineación como imagen lista para redes sociales',
       'Funciona 100% sin conexión',
     ],
-    appStoreUrl: '',
+    appStoreUrl: 'https://apps.apple.com/us/app/superlineup-11/id6764713164',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.davidyero.superlineup',
     changelog: [
       {
@@ -1353,6 +1353,7 @@ export const appsData: App[] = [
     description: 'Simula torneos de copa de fútbol y vive cada ronda hasta la final.',
     icon: '',
     logo: FootballCupIcon,
+    appStoreUrl: 'https://apps.apple.com/us/app/football-tournament-simulator/id6756631490',
     playStoreUrl:
       'https://play.google.com/store/apps/details?id=com.davidyero.footballcupsimulator',
   },
