@@ -266,17 +266,27 @@ export const appContentEs: AppContentMap = {
     ],
   },
   'football-cup-simulator': {
-    tagline: 'Simula torneos de copa y llega hasta la final.',
+    tagline: 'Tus pronósticos, fase por fase, hasta el campeón.',
     description:
-      'Football Cup Simulator te deja crear y simular torneos de copa de fútbol: sorteos, fase de grupos, eliminatorias y una gran final. Ajusta los equipos, sigue el bracket y vive cada ronda.',
+      'Football Cup Simulator es un simulador de ligas y copas de fútbol donde tú decides cada resultado. Rellena la fase de grupos, avanza por las eliminatorias y corona a tu campeón en competencias reales como el Mundial 2026, la Copa América, la Champions League, la Libertadores, LaLiga, la Premier League, la Liga MX o el Brasileirão. También puedes montar torneos a medida con tus propios equipos, comparar predicciones y compartirlas.',
     features: [
-      'Simula torneos de copa completos, de la fase de grupos a la final',
-      'Sorteo y bracket de eliminatorias automático',
-      'Elige y ajusta los equipos participantes',
-      'Sigue resultados y estadísticas ronda a ronda',
-      'Rápido y fácil de usar',
+      'Pronostica competencias reales: Mundial 2026, Copa América, Champions, Libertadores y más',
+      'Ligas completas: LaLiga, Premier League, Liga MX, Brasileirão y otras',
+      'Avanza fase por fase: grupos, eliminatorias y final',
+      'Crea torneos personalizados con tus propios equipos',
+      'Compara tus predicciones y compártelas con quien quieras',
     ],
-    changelog: [],
+    changelog: [
+      {
+        version: '4.0.1',
+        date: '19 de julio de 2026',
+        type: 'new',
+        changes: [
+          'Catálogo de competencias remoto: se añaden competencias nuevas sin actualizar la app.',
+          'Respaldo en la nube de tus predicciones para usuarios Pro.',
+        ],
+      },
+    ],
   },
   greta: {
     tagline: 'Cada huella encuentra su hogar.',
@@ -655,17 +665,27 @@ export const appContentEn: AppContentMap = {
     ],
   },
   'football-cup-simulator': {
-    tagline: 'Simulate cup tournaments all the way to the final.',
+    tagline: 'Your predictions, round by round, all the way to the title.',
     description:
-      'Football Cup Simulator lets you create and simulate football cup tournaments: draws, group stages, knockout rounds and a grand final. Tweak the teams, follow the bracket and live every round.',
+      'Football Cup Simulator is a football league and cup simulator where every result is yours to call. Fill in the group stage, work through the knockouts and crown your champion across real competitions such as the 2026 World Cup, the Copa América, the Champions League, the Copa Libertadores, LaLiga, the Premier League, Liga MX and the Brasileirão. You can also build custom tournaments with your own teams, compare predictions and share them.',
     features: [
-      'Simulate full cup tournaments, from the group stage to the final',
-      'Automatic draw and knockout bracket',
-      'Pick and adjust the participating teams',
-      'Follow results and statistics round by round',
-      'Fast and easy to use',
+      'Predict real competitions: 2026 World Cup, Copa América, Champions League, Libertadores and more',
+      'Full leagues: LaLiga, Premier League, Liga MX, Brasileirão and others',
+      'Progress round by round: groups, knockouts and the final',
+      'Build custom tournaments with your own teams',
+      'Compare your predictions and share them with anyone',
     ],
-    changelog: [],
+    changelog: [
+      {
+        version: '4.0.1',
+        date: 'July 19, 2026',
+        type: 'new',
+        changes: [
+          'Remote competition catalogue: new competitions are added without updating the app.',
+          'Cloud backup for your predictions, available to Pro users.',
+        ],
+      },
+    ],
   },
   greta: {
     tagline: 'Every paw finds its home.',

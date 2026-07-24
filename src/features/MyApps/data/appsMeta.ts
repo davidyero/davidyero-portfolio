@@ -65,7 +65,8 @@ export const appsMeta: Record<string, AppMeta> = {
     platforms: ['android'],
     status: 'live',
     category: 'sports',
-    tech: ['React Native', 'TypeScript'],
+    tech: ['React Native', 'TypeScript', 'Zustand'],
+    version: '4.0.1',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #89b4fa 100%)',
   },
   greta: {
