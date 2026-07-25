@@ -410,6 +410,29 @@ export const appContentEs: AppContentMap = {
       },
     ],
   },
+  'player-radar': {
+    tagline: 'Tu radar de jugadores de fútbol: síguelos y no te pierdas ni un partido.',
+    description:
+      'Player Radar es la app para los que viven el fútbol siguiendo jugadores. Sigue a tus futbolistas favoritos, arma tu propia selección y consulta de un vistazo los partidos del día. Cada jugador tiene su ficha completa: club actual, selección nacional, trayectoria y partidos. Gratis con anuncios; con Pro quitas los anuncios, sigues jugadores sin límite, ves el historial completo y sincronizas tus preferencias en la nube. Los datos provienen de proveedores deportivos (API-Football).',
+    features: [
+      'Sigue a tus jugadores favoritos y arma tu selección',
+      'Partidos del día de los jugadores que sigues',
+      'Ficha completa: club, selección nacional, trayectoria y partidos',
+      'Explora jugadores por país',
+      'Pro: sin anuncios, seguimiento ilimitado e historial completo',
+      'Sincronización en la nube de tus preferencias con Pro',
+      'Inicia sesión con correo, Google o Apple, o entra como invitado',
+      'Tema oscuro y claro · Español e inglés',
+    ],
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '25 de julio de 2026',
+        type: 'new',
+        changes: ['Lanzamiento inicial de Player Radar.'],
+      },
+    ],
+  },
 };
 
 export const appContentEn: AppContentMap = {
@@ -785,6 +808,29 @@ export const appContentEn: AppContentMap = {
         date: 'July 20, 2026',
         type: 'new',
         changes: ['Initial release of COP Moneda Colombiana.'],
+      },
+    ],
+  },
+  'player-radar': {
+    tagline: 'Your football player radar: follow them and never miss a match.',
+    description:
+      'Player Radar is the app for fans who live football by following players. Follow your favorite footballers, build your own selection, and check the day’s matches at a glance. Every player has a full profile: current club, national team, career, and matches. Free with ads; with Pro you remove ads, follow unlimited players, see the full match history, and sync your preferences to the cloud. Data comes from sports providers (API-Football).',
+    features: [
+      'Follow your favorite players and build your selection',
+      'Today’s matches for the players you follow',
+      'Full profile: club, national team, career, and matches',
+      'Explore players by country',
+      'Pro: no ads, unlimited follows, and full history',
+      'Cloud sync of your preferences with Pro',
+      'Sign in with email, Google, or Apple, or continue as a guest',
+      'Light and dark mode · English & Spanish',
+    ],
+    changelog: [
+      {
+        version: '1.0.0',
+        date: 'July 25, 2026',
+        type: 'new',
+        changes: ['Initial release of Player Radar.'],
       },
     ],
   },
