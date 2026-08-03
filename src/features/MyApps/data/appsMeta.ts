@@ -29,14 +29,6 @@ export const appsMeta: Record<string, AppMeta> = {
     version: '1.5.0',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #94e2d5 100%)',
   },
-  'simulador-de-mundial': {
-    platforms: ['ios', 'android'],
-    status: 'live',
-    category: 'sports',
-    tech: ['React Native', 'TypeScript'],
-    version: '3.0.0',
-    accent: 'linear-gradient(135deg, #f9e2af 0%, #fab387 100%)',
-  },
   taskmaster: {
     platforms: ['ios', 'android'],
     status: 'live',

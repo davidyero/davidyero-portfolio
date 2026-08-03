@@ -110,40 +110,6 @@ export const appContentEs: AppContentMap = {
       },
     ],
   },
-  'simulador-de-mundial': {
-    tagline: 'Simula el camino de tu selección hacia la gloria.',
-    description:
-      'Crea el camino de tu selección hacia la gloria en el Mundial de Fútbol con nuestro Simulador de Mundial. Predice resultados, analiza estadísticas y vive la emoción del torneo desde tu dispositivo móvil.',
-    features: [
-      'Simula partidos completos del mundial',
-      'Estadísticas detalladas de equipos y jugadores',
-      'Crea tus propias predicciones',
-      'Compite con amigos',
-      'Resultados en tiempo real',
-    ],
-    changelog: [
-      {
-        version: '3.0.0',
-        date: '1 de diciembre de 2023',
-        type: 'new',
-        changes: [
-          'Actualización para el Mundial 2026',
-          'Nuevos modos de juego',
-          'IA mejorada para simulaciones más realistas',
-        ],
-      },
-      {
-        version: '2.5.0',
-        date: '15 de junio de 2023',
-        type: 'improvement',
-        changes: [
-          'Optimización de rendimiento',
-          'Corrección de errores en las simulaciones',
-          'Nuevas estadísticas de jugadores',
-        ],
-      },
-    ],
-  },
   taskmaster: {
     tagline: 'Tu productividad, organizada en un solo lugar.',
     description:
@@ -528,40 +494,6 @@ export const appContentEn: AppContentMap = {
           'Added holidays from 50 new countries',
           'New feature to share festivities',
           'Home screen widget',
-        ],
-      },
-    ],
-  },
-  'simulador-de-mundial': {
-    tagline: "Simulate your team's road to glory.",
-    description:
-      "Create your national team's road to glory at the Football World Cup with our World Cup Simulator. Predict results, analyze statistics and live the excitement of the tournament from your mobile device.",
-    features: [
-      'Simulate full World Cup matches',
-      'Detailed team and player statistics',
-      'Create your own predictions',
-      'Compete with friends',
-      'Real-time results',
-    ],
-    changelog: [
-      {
-        version: '3.0.0',
-        date: 'December 1, 2023',
-        type: 'new',
-        changes: [
-          'Update for the 2026 World Cup',
-          'New game modes',
-          'Improved AI for more realistic simulations',
-        ],
-      },
-      {
-        version: '2.5.0',
-        date: 'June 15, 2023',
-        type: 'improvement',
-        changes: [
-          'Performance optimization',
-          'Bug fixes in simulations',
-          'New player statistics',
         ],
       },
     ],
