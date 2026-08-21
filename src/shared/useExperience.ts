@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-// David started his developer career on October 2nd, 2018.
-export const CAREER_START = new Date(2018, 9, 2); // month is 0-indexed → 9 = October
+// David started his developer career on October 2nd, 2017.
+export const CAREER_START = new Date(2017, 9, 2); // month is 0-indexed → 9 = October
 
 export interface ExperienceBreakdown {
   years: number;

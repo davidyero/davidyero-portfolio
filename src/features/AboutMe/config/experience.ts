@@ -29,7 +29,7 @@ export const experienceTimeline: ExperienceEntry[] = [
     id: 'freelance',
     roleKey: 'about.exp.freelance.role',
     org: 'Freelance',
-    from: '2018',
+    from: '2017',
     to: '2021',
     descKey: 'about.exp.freelance.desc',
   },
