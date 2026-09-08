@@ -45,6 +45,8 @@
   "apps.legal.privacy.title": "Política de Privacidad",
   "apps.legal.termsSubtitle": "{{app}} · Términos de servicio",
   "apps.legal.privacySubtitle": "{{app}} · Política de Privacidad",
+  "apps.legal.deleteAccount.title": "Eliminación de cuenta",
+  "apps.legal.deleteAccountSubtitle": "{{app}} · Eliminación de cuenta",
   "apps.legal.lastUpdated": "Última actualización",
   "apps.legal.backToApps": "Volver a apps",
   "apps.legal.goToApp": "Ir a la app",

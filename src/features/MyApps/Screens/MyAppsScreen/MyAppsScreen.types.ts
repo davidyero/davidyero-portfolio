@@ -40,6 +40,7 @@ export interface App {
   changelog?: ChangelogEntry[];
   termsAndConditions?: TermsAndConditions;
   privacyPolicy?: TermsAndConditions;
+  accountDeletion?: TermsAndConditions;
 }
 
 // ---- App hub metadata (registry layer) ----

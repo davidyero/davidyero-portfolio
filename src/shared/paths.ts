@@ -9,4 +9,5 @@ export const paths = {
   appChangelog: (slug: string) => `/app/${slug}/changelog`,
   appTerms: (slug: string) => `/app/${slug}/terms`,
   appPrivacy: (slug: string) => `/app/${slug}/privacy`,
+  appDeleteAccount: (slug: string) => `/app/${slug}/delete-account`,
 } as const;

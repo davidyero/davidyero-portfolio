@@ -45,6 +45,8 @@
   "apps.legal.privacy.title": "Privacy Policy",
   "apps.legal.termsSubtitle": "{{app}} · Terms of Service",
   "apps.legal.privacySubtitle": "{{app}} · Privacy Policy",
+  "apps.legal.deleteAccount.title": "Account Deletion",
+  "apps.legal.deleteAccountSubtitle": "{{app}} · Account Deletion",
   "apps.legal.lastUpdated": "Last updated",
   "apps.legal.backToApps": "Back to apps",
   "apps.legal.goToApp": "Go to app",

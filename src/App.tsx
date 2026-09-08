@@ -8,6 +8,7 @@ import { AppShowcaseScreen } from './features/MyApps/Screens/AppShowcaseScreen/A
 import { ChangelogScreen } from './features/MyApps/Screens/ChangelogScreen/ChangelogScreen';
 import { TermsScreen } from './features/MyApps/Screens/TermsScreen/TermsScreen';
 import { PrivacyScreen } from './features/MyApps/Screens/PrivacyScreen/PrivacyScreen';
+import { DeleteAccountScreen } from './features/MyApps/Screens/DeleteAccountScreen/DeleteAccountScreen';
 import './styles/main.scss';
 
 // Keeps legacy /apps/:slug[...] links alive (store legal links, old shares)
@@ -29,6 +30,7 @@ function App() {
         <Route path="/app/:slug/changelog" element={<ChangelogScreen />} />
         <Route path="/app/:slug/terms" element={<TermsScreen />} />
         <Route path="/app/:slug/privacy" element={<PrivacyScreen />} />
+        <Route path="/app/:slug/delete-account" element={<DeleteAccountScreen />} />
         <Route path="/about-me" element={<AboutScreen />} />
 
         {/* Legacy → canonical redirects (keep old URLs working) */}
@@ -37,6 +39,10 @@ function App() {
         <Route path="/apps/:slug/changelog" element={<LegacyAppRedirect suffix="/changelog" />} />
         <Route path="/apps/:slug/terms" element={<LegacyAppRedirect suffix="/terms" />} />
         <Route path="/apps/:slug/privacy" element={<LegacyAppRedirect suffix="/privacy" />} />
+        <Route
+          path="/apps/:slug/delete-account"
+          element={<LegacyAppRedirect suffix="/delete-account" />}
+        />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

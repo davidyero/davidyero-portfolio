@@ -1186,6 +1186,88 @@ export const appsData: App[] = [
     appStoreUrl: 'https://apps.apple.com/us/app/football-tournament-simulator/id6756631490',
     playStoreUrl:
       'https://play.google.com/store/apps/details?id=com.davidyero.footballcupsimulator',
+    accountDeletion: {
+      es: {
+        lastUpdated: '8 de septiembre de 2026',
+        sections: [
+          {
+            title: '1. De qué aplicación hablamos',
+            content:
+              '<p>Esta página explica cómo eliminar tu cuenta de <strong>Football Cup Simulator</strong>, desarrollada por David Yepes (@Davidyero) y publicada en Google Play con el identificador <code>com.davidyero.footballcupsimulator</code>.</p><p>La cuenta es opcional: puedes usar la app sin registrarte. Estas instrucciones aplican solo si creaste una.</p>',
+          },
+          {
+            title: '2. Eliminar tu cuenta desde la app',
+            content:
+              '<p>Es la vía más rápida y el borrado es inmediato:</p><ol><li>Abre Football Cup Simulator.</li><li>Ve a la pestaña <strong>Perfil</strong>.</li><li>Entra en <strong>Cuenta</strong>.</li><li>Pulsa <strong>Eliminar cuenta</strong>.</li><li>Confirma en el aviso <strong>¿Eliminar cuenta?</strong>.</li></ol><p>La cuenta y sus datos se borran en ese momento. La acción no se puede deshacer.</p>',
+          },
+          {
+            title: '3. Pedir la eliminación sin instalar la app',
+            content:
+              '<p>Si ya desinstalaste la aplicación, escríbenos a <strong>support@davidyero.com</strong> <em>desde la misma dirección de correo con la que te registraste</em>, con el asunto <strong>Eliminar cuenta - Football Cup Simulator</strong>.</p><p>Usamos esa dirección para verificar que la cuenta es tuya. Procesamos la solicitud en un plazo máximo de <strong>30 días</strong> y te confirmamos por correo cuando esté hecha.</p>',
+          },
+          {
+            title: '4. Qué datos se eliminan',
+            content:
+              '<p>Al eliminar la cuenta se borran de forma permanente de nuestros servidores:</p><ul><li>Los datos de la cuenta: correo electrónico, nombre, nombre de usuario y la versión cifrada de la contraseña.</li><li>Tus predicciones y torneos sincronizados en la nube.</li><li>Los podios que hayas elegido.</li><li>El historial de compras registrado en nuestro servidor.</li><li>Las peticiones de competencias que hayas enviado.</li></ul><p>Los torneos que tengas guardados únicamente en el teléfono no están en nuestros servidores: desaparecen al desinstalar la app.</p>',
+          },
+          {
+            title: '5. Qué se conserva y durante cuánto tiempo',
+            content:
+              '<p><strong>Registro del dispositivo para notificaciones.</strong> Guardamos un identificador de instalación y el token de notificaciones para poder enviar avisos. Al eliminar la cuenta, ese registro <strong>se desvincula de tu identidad</strong> y deja de estar asociado a ninguna persona. Se elimina cuando desinstalas la app, cuando desactivas los avisos en Ajustes, o automáticamente cuando el token deja de estar activo.</p><p><strong>Copias de seguridad.</strong> Nuestras copias de seguridad cifradas de la base de datos pueden conservar una copia de los datos hasta <strong>30 días</strong> desde el borrado, tras los cuales se sobrescriben.</p>',
+          },
+          {
+            title: '6. Tu suscripción no se cancela sola',
+            content:
+              '<p>Eliminar la cuenta <strong>no cancela</strong> una suscripción activa. Las suscripciones las gestiona la tienda, así que debes cancelarla tú desde <strong>Google Play &gt; Pagos y suscripciones &gt; Suscripciones</strong> (o desde Ajustes &gt; Apple ID &gt; Suscripciones en iOS). Cancela antes de borrar la cuenta para no seguir pagando.</p>',
+          },
+          {
+            title: '7. Contacto',
+            content:
+              '<p>Cualquier duda sobre la eliminación de tu cuenta o de tus datos: <strong>support@davidyero.com</strong>.</p>',
+          },
+        ],
+      },
+      en: {
+        lastUpdated: 'September 8, 2026',
+        sections: [
+          {
+            title: '1. Which app this is about',
+            content:
+              '<p>This page explains how to delete your <strong>Football Cup Simulator</strong> account. The app is developed by David Yepes (@Davidyero) and published on Google Play under the identifier <code>com.davidyero.footballcupsimulator</code>.</p><p>An account is optional: you can use the app without signing up. These instructions only apply if you created one.</p>',
+          },
+          {
+            title: '2. Delete your account from the app',
+            content:
+              '<p>This is the fastest route and the deletion is immediate:</p><ol><li>Open Football Cup Simulator.</li><li>Go to the <strong>Profile</strong> tab.</li><li>Open <strong>Account</strong>.</li><li>Tap <strong>Delete account</strong>.</li><li>Confirm on the <strong>Delete account?</strong> prompt.</li></ol><p>Your account and its data are erased right then. The action cannot be undone.</p>',
+          },
+          {
+            title: '3. Request deletion without installing the app',
+            content:
+              '<p>If you already uninstalled the app, email us at <strong>support@davidyero.com</strong> <em>from the same address you signed up with</em>, using the subject <strong>Delete account - Football Cup Simulator</strong>.</p><p>We use that address to verify the account is yours. We process the request within <strong>30 days</strong> and confirm by email once it is done.</p>',
+          },
+          {
+            title: '4. What data is deleted',
+            content:
+              '<p>Deleting your account permanently removes the following from our servers:</p><ul><li>Account data: email address, name, username and the encrypted version of your password.</li><li>Your predictions and tournaments synced to the cloud.</li><li>The podiums you picked.</li><li>The purchase history recorded on our server.</li><li>Any competition requests you sent us.</li></ul><p>Tournaments saved only on your phone never reach our servers: they disappear when you uninstall the app.</p>',
+          },
+          {
+            title: '5. What is kept, and for how long',
+            content:
+              '<p><strong>Device record for notifications.</strong> We store an installation identifier and a notification token so we can deliver alerts. When you delete your account that record is <strong>unlinked from your identity</strong> and is no longer associated with any person. It is removed when you uninstall the app, when you turn alerts off in Settings, or automatically once the token goes inactive.</p><p><strong>Backups.</strong> Our encrypted database backups may retain a copy of the data for up to <strong>30 days</strong> after deletion, after which they are overwritten.</p>',
+          },
+          {
+            title: '6. Your subscription is not cancelled automatically',
+            content:
+              '<p>Deleting your account does <strong>not</strong> cancel an active subscription. Subscriptions are handled by the store, so you must cancel it yourself under <strong>Google Play &gt; Payments and subscriptions &gt; Subscriptions</strong> (or Settings &gt; Apple ID &gt; Subscriptions on iOS). Cancel before deleting your account so you are not charged again.</p>',
+          },
+          {
+            title: '7. Contact',
+            content:
+              '<p>Any questions about deleting your account or your data: <strong>support@davidyero.com</strong>.</p>',
+          },
+        ],
+      },
+    },
   },
   {
     id: '9',
