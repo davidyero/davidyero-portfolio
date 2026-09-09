@@ -98,9 +98,9 @@
     border-radius: 50%;
     background: var(--overlay);
 
-    &:nth-child(1) { background: #f38ba8; }
-    &:nth-child(2) { background: #f9e2af; }
-    &:nth-child(3) { background: #a6e3a1; }
+    &:nth-child(1) { background: var(--red); }
+    &:nth-child(2) { background: var(--yellow); }
+    &:nth-child(3) { background: var(--green); }
   }
 
   &__url {

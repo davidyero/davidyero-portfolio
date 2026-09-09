@@ -26,19 +26,6 @@
 
   &__brand { display: flex; align-items: center; gap: $space-3; }
 
-  &__logo {
-    width: 32px;
-    height: 32px;
-    display: grid;
-    place-items: center;
-    border-radius: $radius-sm;
-    background: var(--gradient);
-    color: var(--on-accent);
-    font-family: $font-sans;
-    font-weight: 800;
-    font-size: 0.8rem;
-  }
-
   &__brand-name {
     font-family: $font-sans;
     font-weight: 700;

@@ -1,46 +1,51 @@
 // ============================================================
-//  Design tokens · Catppuccin (Mocha dark / Latte light)
+//  Design tokens · DavidyeroDev (kit verde militar)
 //  Non-color scales live here as SCSS vars; semantic colors are
 //  exposed as CSS custom properties per theme (see _mixins.scss).
 // ============================================================
 
-// ---- Catppuccin Mocha (dark) ----
-$mocha-base:     #1e1e2e;
-$mocha-mantle:   #181825;
-$mocha-crust:    #11111b;
-$mocha-surface0: #313244;
-$mocha-surface1: #45475a;
-$mocha-surface2: #585b70;
-$mocha-overlay0: #6c7086;
-$mocha-overlay1: #7f849c;
-$mocha-text:     #cdd6f4;
-$mocha-subtext:  #a6adc8;
-$mocha-muted:    #7f849c;
-$mocha-blue:     #89b4fa;
-$mocha-lavender: #b4befe;
-$mocha-mauve:    #cba6f7;
-$mocha-green:    #a6e3a1;
-$mocha-yellow:   #f9e2af;
-$mocha-red:      #f38ba8;
+// ---- Brand palette (the five kit colors, single source of truth) ----
+$brand-olive:      #4b5320; // verde militar · marca, primario sobre fondo claro
+$brand-olive-lite: #8a9a3d; // verde claro   · marca sobre fondo oscuro
+$brand-ink:        #201e1d; // tinta         · texto y wordmark
+$brand-bone:       #f3f2f2; // hueso         · fondo y tarjeta
+$brand-white:      #ffffff; // blanco        · marca invertida
 
-// ---- Catppuccin Latte (light) ----
-$latte-base:     #eff1f5;
-$latte-mantle:   #e6e9ef;
-$latte-crust:    #dce0e8;
-$latte-surface0: #ccd0da;
-$latte-surface1: #bcc0cc;
-$latte-surface2: #acb0be;
-$latte-overlay0: #9ca0b0;
-$latte-overlay1: #8c8fa1;
-$latte-text:     #4c4f69;
-$latte-subtext:  #6c6f85;
-$latte-muted:    #8c8fa1;
-$latte-blue:     #1e66f5;
-$latte-lavender: #7287fd;
-$latte-mauve:    #8839ef;
-$latte-green:    #40a02b;
-$latte-yellow:   #df8e1d;
-$latte-red:      #d20f39;
+// Tints derived from the two brand greens. They exist so gradient *text*
+// stays legible on both grounds: on ink only greens lighter than
+// $brand-olive-lite clear 4.5:1, and on bone only greens darker than it do.
+$brand-olive-glow: lighten($brand-olive-lite, 14%); // 2nd gradient stop, dark theme
+$brand-olive-mid:  darken($brand-olive-lite, 13%);  // 2nd gradient stop, light theme
+
+// ---- Dark theme ramp (grounded on tinta) ----
+$dark-base:     $brand-ink;
+$dark-mantle:   #1a1817;
+$dark-crust:    #131211;
+$dark-surface0: #2e2b29;
+$dark-surface1: #403c38;
+$dark-surface2: #514c47;
+$dark-overlay0: #6e6962;
+$dark-text:     $brand-bone;
+$dark-subtext:  #c6c2bb;
+$dark-muted:    #8d887f;
+$dark-accent:   $brand-olive-lite;
+$dark-amber:    #d2ab4e;
+$dark-red:      #cb7f6d;
+
+// ---- Light theme ramp (grounded on hueso) ----
+$light-base:     $brand-bone;
+$light-mantle:   #e8e6e4;
+$light-crust:    #dcd9d6;
+$light-surface0: #d8d5d1;
+$light-surface1: #c3bfba;
+$light-surface2: #aba69f;
+$light-overlay0: #8d887f;
+$light-text:     $brand-ink;
+$light-subtext:  #4c4844;
+$light-muted:    #6f6a64;
+$light-accent:   $brand-olive;
+$light-amber:    #85631a;
+$light-red:      #9d4636;
 
 // ---- Spacing scale (4 · 8 · 12 · 16 · 20 · 24 · 32 · 44) ----
 $space-1: 0.25rem;  // 4

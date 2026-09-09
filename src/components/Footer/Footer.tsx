@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { paths } from '../../shared/paths';
+import { BrandMark } from '../BrandMark/BrandMark';
 import { FooterProps } from './Footer.types';
 import { APP_VERSION } from '../../shared/appVersion';
 import './Footer.scss';
@@ -16,7 +17,7 @@ export const Footer: React.FC<FooterProps> = () => {
       <div className="footer__inner">
         <div className="footer__top">
           <button className="footer__brand" onClick={() => navigate('/')}>
-            <span className="footer__logo">DY</span>
+            <BrandMark size="small" />
             <span className="footer__brand-name">David Yepes</span>
           </button>
 

@@ -26,19 +26,9 @@
     }
   }
 
+  // Sizing and elevation come from BrandMark--large; only the spacing
+  // to the name below belongs to this screen.
   &__avatar {
-    width: 128px;
-    height: 128px;
-    display: grid;
-    place-items: center;
-    border-radius: $radius-xl;
-    background: var(--gradient);
-    color: var(--on-accent);
-    font-family: $font-sans;
-    font-weight: 800;
-    font-size: 2.75rem;
-    letter-spacing: -0.04em;
-    box-shadow: var(--shadow-lg);
     margin-bottom: $space-5;
   }
 
