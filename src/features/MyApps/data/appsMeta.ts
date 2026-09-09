@@ -61,12 +61,13 @@ export const appsMeta: Record<string, AppMeta> = {
     version: '4.0.1',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #89b4fa 100%)',
   },
-  greta: {
+  'encuentra-tu-mascota': {
     platforms: ['web'],
     status: 'live',
     category: 'utility',
-    tech: ['React', 'TypeScript', 'Node'],
-    webUrl: 'https://greta-web-dyx.pages.dev/auth/login',
+    tech: ['React', 'TypeScript', 'Vite', 'Node'],
+    version: '0.7.0',
+    webUrl: 'https://www.encuentra-tu-mascota.com/',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #f9e2af 100%)',
   },
   chamiapp: {
@@ -85,21 +86,23 @@ export const appsMeta: Record<string, AppMeta> = {
     webUrl: 'https://www.my-link-hub.com',
     accent: 'linear-gradient(135deg, #89b4fa 0%, #b4befe 100%)',
   },
-  equilibra: {
+  splitio: {
     platforms: ['web'],
     status: 'live',
     category: 'utility',
-    tech: ['React', 'TypeScript'],
-    webUrl: 'https://equilibra-web.pages.dev/login',
-    accent: 'linear-gradient(135deg, #94e2d5 0%, #a6e3a1 100%)',
+    tech: ['React', 'TypeScript', 'Vite', 'Node'],
+    version: '0.10.2',
+    webUrl: 'https://www.splitio.net/',
+    accent: 'linear-gradient(135deg, #8b7cf6 0%, #74c7ec 100%)',
   },
   'mis-pagos': {
     platforms: ['web'],
     status: 'live',
     category: 'utility',
-    tech: ['React', 'TypeScript'],
-    webUrl: 'https://mis-pagos-web.pages.dev/',
-    accent: 'linear-gradient(135deg, #f9e2af 0%, #fab387 100%)',
+    tech: ['Next.js', 'React', 'TypeScript', 'Node'],
+    version: '0.1.50',
+    webUrl: 'https://www.mispagos.co/',
+    accent: 'linear-gradient(135deg, #cba6f7 0%, #f38ba8 100%)',
   },
   habitflow: {
     platforms: ['ios', 'android'],
@@ -132,5 +135,14 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['React Native', 'TypeScript', 'RevenueCat'],
     version: '1.0.0',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #74c7ec 100%)',
+  },
+  'agenda-pilates': {
+    platforms: ['web'],
+    status: 'beta',
+    category: 'productivity',
+    tech: ['React', 'TypeScript', 'Vite', 'React Native', 'Node'],
+    version: '0.99.35',
+    webUrl: 'https://www.agendapilates.com/landing',
+    accent: 'linear-gradient(135deg, #a6e3a1 0%, #f5c2a7 100%)',
   },
 };

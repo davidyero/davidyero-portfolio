@@ -25,8 +25,18 @@ const enrich = (app: App): EnrichedApp => ({
 // Central registry: every screen reads apps from here.
 export const appsRegistry: EnrichedApp[] = appsData.map(enrich);
 
-export const getAppBySlug = (slug?: string): EnrichedApp | undefined =>
-  slug ? appsRegistry.find((a) => a.slug === slug) : undefined;
+// Slugs an app used to be published under, so links already out in the wild
+// (shares, store legal pages) keep resolving after a rename.
+const slugAliases: Record<string, string> = {
+  greta: 'encuentra-tu-mascota',
+  equilibra: 'splitio',
+};
+
+export const getAppBySlug = (slug?: string): EnrichedApp | undefined => {
+  if (!slug) return undefined;
+  const canonical = slugAliases[slug] ?? slug;
+  return appsRegistry.find((a) => a.slug === canonical);
+};
 
 const normalizeLang = (lang?: string): 'en' | 'es' =>
   lang && lang.startsWith('es') ? 'es' : 'en';

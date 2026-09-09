@@ -5,15 +5,17 @@ import HolidayIcon from '../../../assets/icons/apps/HolidayIcon.png';
 import TaskMasterIcon from '../../../assets/icons/apps/TaskMasterIcon.png';
 import PronostigolIcon from '../../../assets/icons/apps/PronostigolIcon.png';
 import SuperLineUpIcon from '../../../assets/icons/apps/SuperLineUp.png';
-import GretaIcon from '../../../assets/icons/apps/GretaIcon.png';
+import EncuentraTuMascotaIcon from '../../../assets/icons/apps/EncuentraTuMascotaIcon.png';
 import MyLinkHubIcon from '../../../assets/icons/apps/MyLinkHubIcon.png';
-import EquilibraIcon from '../../../assets/icons/apps/EquilibraIcon.png';
+import SplitioIcon from '../../../assets/icons/apps/SplitioIcon.png';
 import TrainFlowAIIcon from '../../../assets/icons/apps/TrainFlowAIIcon.png';
 import FootballCupIcon from '../../../assets/icons/apps/FootballCupIcon.png';
 import HabitFlowIcon from '../../../assets/icons/apps/HabitFlowIcon.png';
 import CopMonedaColombianaIcon from '../../../assets/icons/apps/CopMonedaColombianaIcon.png';
 
 import PlayerRadarIcon from '../../../assets/icons/apps/PlayerRadarIcon.png';
+import MisPagosIcon from '../../../assets/icons/apps/MisPagosIcon.png';
+import AgendaPilatesIcon from '../../../assets/icons/apps/AgendaPilatesIcon.png';
 
 export const appsData: App[] = [
   {
@@ -1525,11 +1527,12 @@ export const appsData: App[] = [
   },
   {
     id: '9',
-    name: 'Greta',
-    slug: 'greta',
-    description: 'Plataforma para conectar personas con fundaciones y rescatistas de animales.',
+    name: 'Encuentra a tu mascota',
+    slug: 'encuentra-tu-mascota',
+    description:
+      'Reportes de mascotas perdidas y encontradas en Colombia. Gratis, sin publicidad.',
     icon: '',
-    logo: GretaIcon,
+    logo: EncuentraTuMascotaIcon,
   },
   {
     id: '10',
@@ -1548,18 +1551,21 @@ export const appsData: App[] = [
   },
   {
     id: '12',
-    name: 'Equilibra',
-    slug: 'equilibra',
-    description: 'Gastos compartidos, sin discusiones.',
+    name: 'Splitio',
+    slug: 'splitio',
+    description:
+      'Gastos compartidos por grupo: reparte cada gasto y calcula quién debe cuánto a quién, mes a mes.',
     icon: '',
-    logo: EquilibraIcon,
+    logo: SplitioIcon,
   },
   {
     id: '13',
     name: 'Mis Pagos',
     slug: 'mis-pagos',
-    description: 'Lleva el control de tus pagos y suscripciones en un solo lugar.',
+    description:
+      'Todos tus medios de cobro digitales de Colombia y tus redes, en un solo link.',
     icon: '',
+    logo: MisPagosIcon,
   },
   {
     id: '14',
@@ -2585,5 +2591,14 @@ export const appsData: App[] = [
         ],
       },
     },
+  },
+  {
+    id: '18',
+    name: 'Agenda Pilates',
+    slug: 'agenda-pilates',
+    description:
+      'Los estudios de pilates gestionan sus clases y planes, y sus alumnos reservan desde la web o el móvil.',
+    icon: '',
+    logo: AgendaPilatesIcon,
   },
 ];
