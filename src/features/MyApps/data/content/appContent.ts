@@ -254,15 +254,16 @@ export const appContentEs: AppContentMap = {
       },
     ],
   },
-  greta: {
+  'encuentra-tu-mascota': {
     tagline: 'Cada huella encuentra su hogar.',
     description:
-      'Greta es una plataforma que conecta a las personas con fundaciones y rescatistas de animales. Descubre mascotas en adopción, comparte casos y apoya a las organizaciones de bienestar animal.',
+      'Web pública para publicar y buscar reportes de mascotas perdidas y encontradas en Colombia. Cualquiera puede publicar un reporte con fotos y datos de contacto, sin crear cuenta. Es gratis, sin publicidad y sin monetización: también reúne mascotas en adopción, fundaciones y cuentas de ayuda animal.',
     features: [
-      'Explora mascotas en adopción cerca de ti',
-      'Conecta con fundaciones y rescatistas',
-      'Comparte y difunde casos de rescate',
-      'Apoya el bienestar animal',
+      'Publica un reporte de mascota perdida o encontrada, con fotos',
+      'Busca y filtra reportes por zona, especie y estado',
+      'Contacta directamente a quien publicó el reporte',
+      'Sección de adopciones y de fundaciones que ayudan',
+      'Instalable como app (PWA), en español e inglés',
     ],
     changelog: [],
   },
@@ -290,27 +291,30 @@ export const appContentEs: AppContentMap = {
     ],
     changelog: [],
   },
-  equilibra: {
+  splitio: {
     tagline: 'Gastos compartidos, sin discusiones.',
     description:
-      'Equilibra te ayuda a dividir gastos entre amigos, roommates o viajes. Registra quién pagó qué, calcula automáticamente los saldos y salda cuentas sin discusiones.',
+      'Splitio lleva las cuentas de un grupo que convive o viaja junto: cada mes registras los ingresos de cada miembro y los gastos comunes, y la app reparte cada gasto y dice quién debe cuánto a quién. Si un mes queda deuda sin saldar, se arrastra al siguiente y ves desde cuándo.',
     features: [
-      'Registra gastos compartidos en grupo',
-      'Cálculo automático de saldos y deudas',
-      'Divide por partes iguales o personalizadas',
-      'Salda cuentas de forma clara',
+      'Grupos con periodos mensuales de ingresos y gastos',
+      'Reparte por partes iguales, por porcentaje o proporcional al ingreso',
+      'Balance claro de quién debe cuánto a quién',
+      'Arrastre de deuda pendiente de un mes al siguiente',
+      'Categorías propias del grupo con emoji y color',
+      'Tema claro y oscuro · Español e inglés',
     ],
     changelog: [],
   },
   'mis-pagos': {
-    tagline: 'Tus pagos y suscripciones, bajo control.',
+    tagline: 'Todos tus medios de cobro, en un solo link.',
     description:
-      'Mis Pagos te ayuda a llevar el control de tus pagos recurrentes y suscripciones. Registra montos y fechas, y no vuelvas a olvidar un vencimiento.',
+      'Mis Pagos es un "linktree" especializado en medios de pago digitales de Colombia: reúne Nequi, Daviplata, Bancolombia, PayPal, ePayco y tus redes sociales en una página pública que compartes con un único link (mispagos.co/tu-usuario). No es una pasarela: no procesa dinero, solo muestra tus datos de cobro para que te paguen sin explicarlos uno por uno.',
     features: [
-      'Registra tus pagos y suscripciones',
-      'Recordatorios de próximos vencimientos',
-      'Visualiza tus gastos recurrentes',
-      'Todo en un solo lugar',
+      'Página pública propia en mispagos.co/tu-usuario',
+      'Centraliza tus medios de cobro y tus redes sociales',
+      'Dos estilos visuales (vibrante y minimalista) en claro y oscuro',
+      'Analítica de visitas y clics en el plan Pro',
+      'Colaboradores con roles para gestionar la página en equipo',
     ],
     changelog: [],
   },
@@ -398,6 +402,20 @@ export const appContentEs: AppContentMap = {
         changes: ['Lanzamiento inicial de Player Radar.'],
       },
     ],
+  },
+  'agenda-pilates': {
+    tagline: 'El estudio de pilates y sus alumnos, en la misma agenda.',
+    description:
+      'Agenda Pilates conecta a los estudios de pilates con sus alumnos. Cada estudio publica su horario de clases, define sus planes por tiempo y controla el cupo de cada sesión; el alumno reserva, ve sus clases y sabe cuánto le queda de plan. Es multi-tenant: la navegación y los permisos cambian según el rol y el plan, con web y app móvil sobre el mismo backend.',
+    features: [
+      'Horario de clases por estudio, con cupos y lista de espera',
+      'Reserva y cancelación de clases desde la web o el móvil',
+      'Planes por tiempo: el alumno ve su vigencia y sus clases restantes',
+      'Roles separados para estudio, instructor y alumno',
+      'Notificaciones push de recordatorio de clase',
+      'Tema claro y oscuro · Español e inglés',
+    ],
+    changelog: [],
   },
 };
 
@@ -642,15 +660,16 @@ export const appContentEn: AppContentMap = {
       },
     ],
   },
-  greta: {
+  'encuentra-tu-mascota': {
     tagline: 'Every paw finds its home.',
     description:
-      'Greta is a platform that connects people with animal foundations and rescuers. Discover pets up for adoption, share cases and support animal welfare organizations.',
+      'A public website to post and search reports of lost and found pets in Colombia. Anyone can publish a report with photos and contact details, no account needed. It is free, ad-free and never monetized: it also gathers pets up for adoption, foundations and animal-help accounts.',
     features: [
-      'Browse pets up for adoption near you',
-      'Connect with foundations and rescuers',
-      'Share and spread rescue cases',
-      'Support animal welfare',
+      'Post a lost or found pet report, with photos',
+      'Search and filter reports by area, species and status',
+      'Contact whoever published the report directly',
+      'Adoptions section and foundations that help',
+      'Installable as an app (PWA), in Spanish and English',
     ],
     changelog: [],
   },
@@ -678,27 +697,30 @@ export const appContentEn: AppContentMap = {
     ],
     changelog: [],
   },
-  equilibra: {
+  splitio: {
     tagline: 'Shared expenses, without arguments.',
     description:
-      'Equilibra helps you split expenses among friends, roommates or trips. Log who paid what, automatically compute balances and settle up without arguments.',
+      'Splitio keeps the books for a group that lives or travels together: every month you log each member’s income and the shared expenses, and the app splits each expense and tells you who owes whom. If a month ends with unsettled debt, it carries over to the next one and you can see since when.',
     features: [
-      'Track shared group expenses',
-      'Automatic balance and debt calculation',
-      'Split evenly or with custom shares',
-      'Settle up clearly',
+      'Groups with monthly periods of income and expenses',
+      'Split evenly, by percentage or proportionally to income',
+      'A clear balance of who owes whom',
+      'Unsettled debt carried over to the next month',
+      'Per-group categories with emoji and color',
+      'Light and dark mode · English & Spanish',
     ],
     changelog: [],
   },
   'mis-pagos': {
-    tagline: 'Your payments and subscriptions, under control.',
+    tagline: 'All your payment methods, in a single link.',
     description:
-      'Mis Pagos helps you keep track of your recurring payments and subscriptions. Log amounts and dates, and never miss a due date again.',
+      'Mis Pagos is a "linktree" specialized in Colombian digital payment methods: it gathers Nequi, Daviplata, Bancolombia, PayPal, ePayco and your social networks on a public page you share with a single link (mispagos.co/your-username). It is not a payment gateway: it never processes money, it just shows your payment details so people can pay you without you spelling them out every time.',
     features: [
-      'Track your payments and subscriptions',
-      'Reminders for upcoming due dates',
-      'See your recurring expenses at a glance',
-      'Everything in one place',
+      'Your own public page at mispagos.co/your-username',
+      'Centralize your payment methods and social links',
+      'Two visual styles (vibrant and minimal) in light and dark',
+      'Visit and click analytics on the Pro plan',
+      'Collaborators with roles to manage the page as a team',
     ],
     changelog: [],
   },
@@ -765,5 +787,19 @@ export const appContentEn: AppContentMap = {
         changes: ['Initial release of Player Radar.'],
       },
     ],
+  },
+  'agenda-pilates': {
+    tagline: 'The pilates studio and its students, on the same schedule.',
+    description:
+      'Agenda Pilates connects pilates studios with their students. Each studio publishes its class schedule, defines its time-based plans and controls the capacity of every session; students book, see their classes and know how much of their plan is left. It is multi-tenant: navigation and permissions change with role and plan, with a web app and a mobile app on the same backend.',
+    features: [
+      'Per-studio class schedule, with capacity and waiting list',
+      'Book and cancel classes from the web or your phone',
+      'Time-based plans: students see validity and remaining classes',
+      'Separate roles for studio, instructor and student',
+      'Push reminders before each class',
+      'Light and dark mode · English & Spanish',
+    ],
+    changelog: [],
   },
 };
