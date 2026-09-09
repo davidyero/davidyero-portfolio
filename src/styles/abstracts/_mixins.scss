@@ -29,40 +29,43 @@
 @mixin themed {
   &[data-theme='dark'] {
     color-scheme: dark;
-    --bg:        #{$mocha-base};
-    --bg-mantle: #{$mocha-mantle};
-    --bg-crust:  #{$mocha-crust};
-    --surface:   #{$mocha-mantle};
-    --surface-0: #{$mocha-surface0};
-    --surface-1: #{$mocha-surface1};
-    --surface-hover: #{$mocha-surface0};
-    --overlay:   #{$mocha-overlay0};
-    --border:    #{rgba($mocha-surface0, 0.7)};
-    --border-strong: #{$mocha-surface1};
+    --bg:        #{$dark-base};
+    --bg-mantle: #{$dark-mantle};
+    --bg-crust:  #{$dark-crust};
+    --surface:   #{$dark-mantle};
+    --surface-0: #{$dark-surface0};
+    --surface-1: #{$dark-surface1};
+    --surface-hover: #{$dark-surface0};
+    --overlay:   #{$dark-overlay0};
+    --border:    #{rgba($dark-surface0, 0.7)};
+    --border-strong: #{$dark-surface1};
 
-    --text:      #{$mocha-text};
-    --subtext:   #{$mocha-subtext};
-    --muted:     #{$mocha-muted};
+    --text:      #{$dark-text};
+    --subtext:   #{$dark-subtext};
+    --muted:     #{$dark-muted};
 
-    --blue:      #{$mocha-blue};
-    --lavender:  #{$mocha-lavender};
-    --mauve:     #{$mocha-mauve};
-    --green:     #{$mocha-green};
-    --yellow:    #{$mocha-yellow};
-    --red:       #{$mocha-red};
+    // Decorative accents. The brand is monochrome olive, so these all resolve
+    // to the green family; only amber and red stay apart, to keep warning and
+    // error legible as states rather than as brand.
+    --blue:      #{$dark-accent};
+    --lavender:  #{$brand-olive-glow};
+    --mauve:     #{$brand-olive-glow};
+    --green:     #{$dark-accent};
+    --yellow:    #{$dark-amber};
+    --red:       #{$dark-red};
 
-    --accent:    #{$mocha-blue};
-    --gradient:  linear-gradient(135deg, #{$mocha-blue} 0%, #{$mocha-mauve} 100%);
-    --gradient-soft: linear-gradient(135deg, #{rgba($mocha-blue, 0.18)} 0%, #{rgba($mocha-mauve, 0.18)} 100%);
-    --on-accent: #{$mocha-crust};
+    --accent:    #{$dark-accent};
+    --gradient:  linear-gradient(135deg, #{$dark-accent} 0%, #{$brand-olive-glow} 100%);
+    --gradient-soft: linear-gradient(135deg, #{rgba($dark-accent, 0.20)} 0%, #{rgba($brand-olive-glow, 0.14)} 100%);
+    --on-accent: #{$brand-ink};
 
     // Semantic tints for badges
-    --live-bg:   #{rgba($mocha-green, 0.16)};
-    --live-fg:   #{$mocha-green};
-    --beta-bg:   #{rgba($mocha-yellow, 0.16)};
-    --beta-fg:   #{$mocha-yellow};
-    --soon-bg:   #{rgba($mocha-lavender, 0.16)};
-    --soon-fg:   #{$mocha-lavender};
+    --live-bg:   #{rgba($dark-accent, 0.18)};
+    --live-fg:   #{$brand-olive-glow};
+    --beta-bg:   #{rgba($dark-amber, 0.16)};
+    --beta-fg:   #{$dark-amber};
+    --soon-bg:   #{rgba($dark-subtext, 0.14)};
+    --soon-fg:   #{$dark-subtext};
 
     --shadow-md: #{$shadow-md};
     --shadow-lg: #{$shadow-lg};
@@ -70,41 +73,41 @@
 
   &[data-theme='light'] {
     color-scheme: light;
-    --bg:        #{$latte-base};
-    --bg-mantle: #{$latte-mantle};
-    --bg-crust:  #{$latte-crust};
-    --surface:   #ffffff;
-    --surface-0: #{$latte-surface0};
-    --surface-1: #{$latte-surface1};
-    --surface-hover: #{$latte-mantle};
-    --overlay:   #{$latte-overlay0};
-    --border:    #{rgba($latte-surface1, 0.7)};
-    --border-strong: #{$latte-surface1};
+    --bg:        #{$light-base};
+    --bg-mantle: #{$light-mantle};
+    --bg-crust:  #{$light-crust};
+    --surface:   #{$brand-white};
+    --surface-0: #{$light-surface0};
+    --surface-1: #{$light-surface1};
+    --surface-hover: #{$light-mantle};
+    --overlay:   #{$light-overlay0};
+    --border:    #{rgba($light-surface1, 0.7)};
+    --border-strong: #{$light-surface1};
 
-    --text:      #{$latte-text};
-    --subtext:   #{$latte-subtext};
-    --muted:     #{$latte-muted};
+    --text:      #{$light-text};
+    --subtext:   #{$light-subtext};
+    --muted:     #{$light-muted};
 
-    --blue:      #{$latte-blue};
-    --lavender:  #{$latte-lavender};
-    --mauve:     #{$latte-mauve};
-    --green:     #{$latte-green};
-    --yellow:    #{$latte-yellow};
-    --red:       #{$latte-red};
+    --blue:      #{$light-accent};
+    --lavender:  #{$brand-olive-mid};
+    --mauve:     #{$brand-olive-mid};
+    --green:     #{$light-accent};
+    --yellow:    #{$light-amber};
+    --red:       #{$light-red};
 
-    --accent:    #{$latte-blue};
-    --gradient:  linear-gradient(135deg, #{$latte-blue} 0%, #{$latte-mauve} 100%);
-    --gradient-soft: linear-gradient(135deg, #{rgba($latte-blue, 0.12)} 0%, #{rgba($latte-mauve, 0.12)} 100%);
-    --on-accent: #ffffff;
+    --accent:    #{$light-accent};
+    --gradient:  linear-gradient(135deg, #{$light-accent} 0%, #{$brand-olive-mid} 100%);
+    --gradient-soft: linear-gradient(135deg, #{rgba($light-accent, 0.14)} 0%, #{rgba($brand-olive-mid, 0.10)} 100%);
+    --on-accent: #{$brand-white};
 
-    --live-bg:   #{rgba($latte-green, 0.14)};
-    --live-fg:   #{$latte-green};
-    --beta-bg:   #{rgba($latte-yellow, 0.16)};
-    --beta-fg:   #{$latte-yellow};
-    --soon-bg:   #{rgba($latte-lavender, 0.16)};
-    --soon-fg:   #{$latte-lavender};
+    --live-bg:   #{rgba($light-accent, 0.14)};
+    --live-fg:   #{$light-accent};
+    --beta-bg:   #{rgba($light-amber, 0.16)};
+    --beta-fg:   #{$light-amber};
+    --soon-bg:   #{rgba($light-subtext, 0.12)};
+    --soon-fg:   #{$light-subtext};
 
-    --shadow-md: 0 8px 24px rgba(60, 66, 90, 0.10);
-    --shadow-lg: 0 18px 48px rgba(60, 66, 90, 0.14);
+    --shadow-md: 0 8px 24px rgba(32, 30, 29, 0.10);
+    --shadow-lg: 0 18px 48px rgba(32, 30, 29, 0.14);
   }
 }

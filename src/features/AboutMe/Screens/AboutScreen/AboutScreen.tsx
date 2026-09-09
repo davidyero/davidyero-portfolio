@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Bot } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { BrandMark } from '../../../../components/BrandMark/BrandMark';
 import { experienceTimeline } from '../../config/experience';
 import { AboutScreenProps } from './AboutScreen.types';
 import './AboutScreen.scss';
@@ -13,7 +14,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
     <PageLayout>
       <div className="about container">
         <aside className="about__profile">
-          <div className="about__avatar">DY</div>
+          <BrandMark size="large" className="about__avatar" />
           <h1 className="about__name">David Yepes</h1>
           <p className="about__role">{t('about.role')}</p>
 

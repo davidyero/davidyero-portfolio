@@ -2,14 +2,14 @@
 @import '../../../../styles/abstracts/mixins';
 
 .experience-card {
-  background-color: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(100, 116, 139, 0.2);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: $border-radius-lg;
   padding: $spacing-xl;
   transition: all $transition-normal;
 
   &:hover {
-    border-color: var(--color-primary);
+    border-color: var(--accent);
     transform: translateY(-2px);
   }
 
@@ -37,7 +37,7 @@
 
   &__company {
     font-size: $font-size-md;
-    color: var(--color-primary);
+    color: var(--accent);
     margin-top: $spacing-xs;
   }
 

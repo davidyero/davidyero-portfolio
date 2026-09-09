@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
+import { BrandMark } from '../BrandMark/BrandMark';
 import { paths } from '../../shared/paths';
 import { HeaderProps } from './Header.types';
 import './Header.scss';
@@ -40,7 +41,7 @@ export const Header: React.FC<HeaderProps> = () => {
     <header className="header">
       <div className="header__inner">
         <button className="header__brand" onClick={() => go('/')} aria-label="David Yepes">
-          <span className="header__logo">DY</span>
+          <BrandMark size="medium" />
           <span className="header__brand-name">David Yepes</span>
         </button>
 
