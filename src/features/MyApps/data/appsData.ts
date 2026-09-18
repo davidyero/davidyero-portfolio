@@ -1,2604 +1,3016 @@
-import { App } from '../Screens/MyAppsScreen/MyAppsScreen.types';
-import GazellaIcon from '../../../assets/icons/apps/GazellaIcon.png';
-import YouTimeIcon from '../../../assets/icons/apps/YouTimeIcon.png';
-import HolidayIcon from '../../../assets/icons/apps/HolidayIcon.png';
-import TaskMasterIcon from '../../../assets/icons/apps/TaskMasterIcon.png';
-import PronostigolIcon from '../../../assets/icons/apps/PronostigolIcon.png';
-import SuperLineUpIcon from '../../../assets/icons/apps/SuperLineUp.png';
-import EncuentraTuMascotaIcon from '../../../assets/icons/apps/EncuentraTuMascotaIcon.png';
-import MyLinkHubIcon from '../../../assets/icons/apps/MyLinkHubIcon.png';
-import SplitioIcon from '../../../assets/icons/apps/SplitioIcon.png';
-import TrainFlowAIIcon from '../../../assets/icons/apps/TrainFlowAIIcon.png';
-import FootballCupIcon from '../../../assets/icons/apps/FootballCupIcon.png';
-import HabitFlowIcon from '../../../assets/icons/apps/HabitFlowIcon.png';
-import CopMonedaColombianaIcon from '../../../assets/icons/apps/CopMonedaColombianaIcon.png';
+import { App } from "../Screens/MyAppsScreen/MyAppsScreen.types";
+import GazellaIcon from "../../../assets/icons/apps/GazellaIcon.png";
+import YouTimeIcon from "../../../assets/icons/apps/YouTimeIcon.png";
+import HolidayIcon from "../../../assets/icons/apps/HolidayIcon.png";
+import TaskMasterIcon from "../../../assets/icons/apps/TaskMasterIcon.png";
+import PronostigolIcon from "../../../assets/icons/apps/PronostigolIcon.png";
+import SuperLineUpIcon from "../../../assets/icons/apps/SuperLineUp.png";
+import EncuentraTuMascotaIcon from "../../../assets/icons/apps/EncuentraTuMascotaIcon.png";
+import MyLinkHubIcon from "../../../assets/icons/apps/MyLinkHubIcon.png";
+import SplitioIcon from "../../../assets/icons/apps/SplitioIcon.png";
+import TrainFlowAIIcon from "../../../assets/icons/apps/TrainFlowAIIcon.png";
+import FootballCupIcon from "../../../assets/icons/apps/FootballCupIcon.png";
+import HabitFlowIcon from "../../../assets/icons/apps/HabitFlowIcon.png";
+import CopMonedaColombianaIcon from "../../../assets/icons/apps/CopMonedaColombianaIcon.png";
 
-import PlayerRadarIcon from '../../../assets/icons/apps/PlayerRadarIcon.png';
-import MisPagosIcon from '../../../assets/icons/apps/MisPagosIcon.png';
-import AgendaPilatesIcon from '../../../assets/icons/apps/AgendaPilatesIcon.png';
+import PlayerRadarIcon from "../../../assets/icons/apps/PlayerRadarIcon.png";
+import MisPagosIcon from "../../../assets/icons/apps/MisPagosIcon.png";
+import AgendaPilatesIcon from "../../../assets/icons/apps/AgendaPilatesIcon.png";
 
 export const appsData: App[] = [
   {
-    id: '1',
-    name: 'Gazella',
-    slug: 'gazella',
+    id: "1",
+    name: "Gazella",
+    slug: "gazella",
     description:
-      'Con Gazella, puedes explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca.',
-    icon: '🏃',
+      "Con Gazella, puedes explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca.",
+    icon: "🏃",
     logo: GazellaIcon,
-    iconBgColor: '#bfdbfe',
+    iconBgColor: "#bfdbfe",
     fullDescription:
-      'Con Gazella, puedes explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca. Descubre carreras, maratones y competencias cerca de ti.',
+      "Con Gazella, puedes explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca. Descubre carreras, maratones y competencias cerca de ti.",
     features: [
-      'Explora eventos deportivos de todo el mundo',
-      'Inscríbete fácilmente a carreras y competencias',
-      'Recibe notificaciones de eventos cercanos',
-      'Consulta el calendario de eventos por categoría',
-      'Guarda tus eventos favoritos',
+      "Explora eventos deportivos de todo el mundo",
+      "Inscríbete fácilmente a carreras y competencias",
+      "Recibe notificaciones de eventos cercanos",
+      "Consulta el calendario de eventos por categoría",
+      "Guarda tus eventos favoritos",
     ],
-    appStoreUrl: 'https://apps.apple.com/us/app/gazella-sports/id6479961490',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.gazellaSports',
-    changelog: [
-      {
-        version: '2.1.0',
-        date: '15 de Octubre, 2023',
-        type: 'new',
-        changes: [
-          'Se agregó un nuevo dashboard personalizable.',
-          'El rendimiento de carga se ha optimizado en un 30%.',
-          'Integración con calendarios externos (Google Calendar, Outlook).',
-        ],
-      },
-      {
-        version: '2.0.0',
-        date: '1 de Agosto, 2023',
-        type: 'fix',
-        changes: [
-          'Se ha realizado una reescritura completa del motor principal para mejorar la estabilidad y corregir errores críticos reportados por la comunidad.',
-          'Corregido un error que provocaba cierres inesperados al exportar datos.',
-          'Solucionado un problema de sincronización entre dispositivos.',
-          'Mejora de la seguridad en la autenticación de usuarios.',
-        ],
-      },
-      {
-        version: '1.0.0',
-        date: '15 de Enero, 2023',
-        type: 'new',
-        changes: [
-          'Lanzamiento inicial de Gazella. Incluye las funcionalidades básicas de gestión de eventos deportivos y exploración en tiempo real.',
-        ],
-      },
-    ],
-    termsAndConditions: {
-      es: {
-        lastUpdated: '1 de Diciembre, 2023',
-        sections: [
-          {
-            title: '1. Aceptación de los Términos',
-            content: '<p>Al descargar, instalar o usar Gazella ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con estos términos, no uses la Aplicación.</p>',
-          },
-          {
-            title: '2. Uso de la Aplicación',
-            content: '<p>Gazella te permite explorar y registrarte en eventos deportivos. Te comprometes a:</p><ul><li>Proporcionar información precisa y actualizada al registrarte</li><li>No usar la Aplicación para fines ilegales o no autorizados</li><li>No intentar acceder a áreas restringidas de la Aplicación</li></ul>',
-          },
-          {
-            title: '3. Privacidad y Datos Personales',
-            content: '<p>Recopilamos y procesamos tus datos personales de acuerdo con nuestra Política de Privacidad. Al usar la Aplicación, consientes la recopilación y uso de tu información según se describe en dicha política.</p>',
-          },
-          {
-            title: '4. Contenido del Usuario',
-            content: '<p>Eres responsable del contenido que publiques o compartas a través de la Aplicación. Nos reservamos el derecho de eliminar cualquier contenido que consideremos inapropiado o que viole estos términos.</p>',
-          },
-          {
-            title: '5. Propiedad Intelectual',
-            content: '<p>Todos los derechos de propiedad intelectual sobre la Aplicación y su contenido son propiedad de Gazella o de sus licenciantes. No puedes copiar, modificar o distribuir ninguna parte de la Aplicación sin nuestro consentimiento previo por escrito.</p>',
-          },
-          {
-            title: '6. Limitación de Responsabilidad',
-            content: '<p>Gazella se proporciona "tal cual" sin garantías de ningún tipo. No nos hacemos responsables de:</p><ul><li>Interrupciones en el servicio</li><li>Errores o inexactitudes en la información de eventos</li><li>Daños derivados del uso de la Aplicación</li></ul>',
-          },
-          {
-            title: '7. Modificaciones',
-            content: '<p>Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en la Aplicación.</p>',
-          },
-          {
-            title: '8. Contacto',
-            content: '<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@gazella.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'December 1, 2023',
-        sections: [
-          {
-            title: '1. Acceptance of Terms',
-            content: '<p>By downloading, installing, or using Gazella ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with these terms, do not use the Application.</p>',
-          },
-          {
-            title: '2. Use of the Application',
-            content: '<p>Gazella allows you to explore and register for sports events. You agree to:</p><ul><li>Provide accurate and up-to-date information when registering</li><li>Not use the Application for illegal or unauthorized purposes</li><li>Not attempt to access restricted areas of the Application</li></ul>',
-          },
-          {
-            title: '3. Privacy and Personal Data',
-            content: '<p>We collect and process your personal data in accordance with our Privacy Policy. By using the Application, you consent to the collection and use of your information as described in that policy.</p>',
-          },
-          {
-            title: '4. User Content',
-            content: '<p>You are responsible for any content you post or share through the Application. We reserve the right to remove any content we deem inappropriate or in violation of these terms.</p>',
-          },
-          {
-            title: '5. Intellectual Property',
-            content: '<p>All intellectual property rights to the Application and its content are owned by Gazella or its licensors. You may not copy, modify, or distribute any part of the Application without our prior written consent.</p>',
-          },
-          {
-            title: '6. Limitation of Liability',
-            content: '<p>Gazella is provided "as is" without warranties of any kind. We are not responsible for:</p><ul><li>Service interruptions</li><li>Errors or inaccuracies in event information</li><li>Damages arising from use of the Application</li></ul>',
-          },
-          {
-            title: '7. Modifications',
-            content: '<p>We reserve the right to modify these Terms and Conditions at any time. Modifications will take effect immediately upon publication in the Application.</p>',
-          },
-          {
-            title: '8. Contact',
-            content: '<p>If you have questions about these Terms and Conditions, contact us at: support@gazella.com</p>',
-          },
-        ],
-      },
-    },
-    privacyPolicy: {
-      es: {
-        lastUpdated: '1 de Diciembre, 2023',
-        sections: [
-          {
-            title: '1. Introducción',
-            content: '<p>Esta Política de Privacidad describe cómo Gazella recopila, usa y protege tu información cuando usas la Aplicación. Al usar Gazella, aceptas las prácticas descritas aquí.</p>',
-          },
-          {
-            title: '2. Información que Recopilamos',
-            content: '<p>Recopilamos información que nos proporcionas y datos generados por tu uso:</p><ul><li>Datos de cuenta: nombre, correo electrónico y fecha de nacimiento</li><li>Datos de uso: eventos consultados, inscripciones y favoritos</li><li>Información del dispositivo: modelo, sistema operativo e identificadores</li><li>Ubicación aproximada (con tu permiso) para mostrarte eventos cercanos</li></ul>',
-          },
-          {
-            title: '3. Cómo Usamos tu Información',
-            content: '<p>Usamos tus datos para:</p><ul><li>Gestionar tu cuenta y procesar inscripciones</li><li>Mostrarte eventos relevantes y enviarte notificaciones</li><li>Mejorar la Aplicación y prevenir fraude</li><li>Cumplir obligaciones legales</li></ul>',
-          },
-          {
-            title: '4. Compartir Información con Terceros',
-            content: '<p>No vendemos tu información personal. Podemos compartirla con:</p><ul><li>Organizadores de eventos cuando te inscribes</li><li>Proveedores de servicios necesarios para operar la Aplicación (hosting, analítica)</li><li>Autoridades cuando la ley lo requiera</li></ul>',
-          },
-          {
-            title: '5. Almacenamiento y Seguridad',
-            content: '<p>Tus datos se almacenan en servidores seguros y se transmiten cifrados. Implementamos medidas técnicas y organizativas razonables para protegerlos, aunque ningún sistema es 100% infalible.</p>',
-          },
-          {
-            title: '6. Tus Derechos',
-            content: '<p>Puedes acceder, corregir o eliminar tu información desde la configuración de la Aplicación o escribiéndonos. También puedes oponerte al procesamiento o solicitar la portabilidad de tus datos.</p>',
-          },
-          {
-            title: '7. Menores de Edad',
-            content: '<p>Gazella no está dirigida a menores de 13 años. No recopilamos a sabiendas datos personales de menores de esa edad.</p>',
-          },
-          {
-            title: '8. Cambios y Contacto',
-            content: '<p>Podemos actualizar esta Política y te notificaremos cambios significativos a través de la Aplicación. Para preguntas sobre privacidad, contáctanos en: soporte@gazella.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'December 1, 2023',
-        sections: [
-          {
-            title: '1. Introduction',
-            content: '<p>This Privacy Policy describes how Gazella collects, uses, and protects your information when you use the Application. By using Gazella, you accept the practices described here.</p>',
-          },
-          {
-            title: '2. Information We Collect',
-            content: '<p>We collect information you provide and data generated by your use:</p><ul><li>Account data: name, email, and date of birth</li><li>Usage data: events viewed, registrations, and favorites</li><li>Device information: model, operating system, and identifiers</li><li>Approximate location (with your permission) to show you nearby events</li></ul>',
-          },
-          {
-            title: '3. How We Use Your Information',
-            content: '<p>We use your data to:</p><ul><li>Manage your account and process registrations</li><li>Show you relevant events and send notifications</li><li>Improve the Application and prevent fraud</li><li>Comply with legal obligations</li></ul>',
-          },
-          {
-            title: '4. Sharing with Third Parties',
-            content: '<p>We do not sell your personal information. We may share it with:</p><ul><li>Event organizers when you register</li><li>Service providers needed to operate the Application (hosting, analytics)</li><li>Authorities when required by law</li></ul>',
-          },
-          {
-            title: '5. Storage and Security',
-            content: '<p>Your data is stored on secure servers and transmitted encrypted. We implement reasonable technical and organizational measures to protect it, although no system is 100% foolproof.</p>',
-          },
-          {
-            title: '6. Your Rights',
-            content: '<p>You can access, correct, or delete your information from the Application settings or by writing to us. You may also object to processing or request the portability of your data.</p>',
-          },
-          {
-            title: '7. Minors',
-            content: '<p>Gazella is not directed at children under 13. We do not knowingly collect personal data from children under that age.</p>',
-          },
-          {
-            title: '8. Changes and Contact',
-            content: '<p>We may update this Policy and will notify you of significant changes through the Application. For privacy questions, contact us at: support@gazella.com</p>',
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: '2',
-    name: 'Youtime',
-    slug: 'youtime',
-    description:
-      'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
-    icon: '⏰',
-    logo: YouTimeIcon,
-    iconBgColor: '#a5b4fc',
-    fullDescription:
-      'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
-    features: [
-      'Comparte videos desde un timestamp específico',
-      'Interfaz simple e intuitiva',
-      'Genera enlaces limpios y cortos',
-      'Sin anuncios ni distracciones',
-    ],
-    appStoreUrl: '',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.youtime',
-    changelog: [
-      {
-        version: '1.2.0',
-        date: '20 de Septiembre, 2023',
-        type: 'improvement',
-        changes: [
-          'Mejora en la detección automática de timestamps',
-          'Interfaz rediseñada más moderna',
-          'Soporte para copiar enlace automáticamente',
-        ],
-      },
-      {
-        version: '1.0.0',
-        date: '5 de Marzo, 2023',
-        type: 'new',
-        changes: [
-          'Lanzamiento inicial de Youtime con funcionalidad básica de timestamps.',
-        ],
-      },
-    ],
-    termsAndConditions: {
-      es: {
-        lastUpdated: '1 de Octubre, 2023',
-        sections: [
-          {
-            title: '1. Aceptación de los Términos',
-            content: '<p>Al usar Youtime (\"la Aplicación\"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
-          },
-          {
-            title: '2. Uso del Servicio',
-            content: '<p>Youtime te permite compartir enlaces de YouTube con timestamps personalizados. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente para compartir contenido de YouTube de forma legítima</li><li>No intentar modificar o alterar el funcionamiento de la Aplicación</li><li>Respetar los derechos de autor del contenido compartido</li></ul>',
-          },
-          {
-            title: '3. Privacidad',
-            content: '<p>Youtime no recopila ni almacena información personal de los usuarios. Los enlaces que generas son procesados localmente en tu dispositivo.</p>',
-          },
-          {
-            title: '4. Propiedad Intelectual',
-            content: '<p>Todos los derechos sobre la Aplicación son propiedad de Youtime. No puedes copiar, modificar o distribuir la Aplicación sin permiso.</p>',
-          },
-          {
-            title: '5. Limitación de Responsabilidad',
-            content: '<p>La Aplicación se proporciona "tal cual" sin garantías. No nos hacemos responsables de problemas técnicos o errores en los enlaces generados.</p>',
-          },
-          {
-            title: '6. Contacto',
-            content: '<p>Para preguntas o comentarios, contáctanos en: soporte@youtime.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'October 1, 2023',
-        sections: [
-          {
-            title: '1. Acceptance of Terms',
-            content: '<p>By using Youtime (\"the Application\"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
-          },
-          {
-            title: '2. Use of Service',
-            content: '<p>Youtime allows you to share YouTube links with custom timestamps. You agree to:</p><ul><li>Use the Application only to share YouTube content legitimately</li><li>Not attempt to modify or alter the Application\'s functionality</li><li>Respect the copyright of shared content</li></ul>',
-          },
-          {
-            title: '3. Privacy',
-            content: '<p>Youtime does not collect or store personal user information. The links you generate are processed locally on your device.</p>',
-          },
-          {
-            title: '4. Intellectual Property',
-            content: '<p>All rights to the Application are owned by Youtime. You may not copy, modify, or distribute the Application without permission.</p>',
-          },
-          {
-            title: '5. Limitation of Liability',
-            content: '<p>The Application is provided "as is" without warranties. We are not responsible for technical issues or errors in generated links.</p>',
-          },
-          {
-            title: '6. Contact',
-            content: '<p>For questions or comments, contact us at: support@youtime.com</p>',
-          },
-        ],
-      },
-    },
-    privacyPolicy: {
-      es: {
-        lastUpdated: '1 de Octubre, 2023',
-        sections: [
-          {
-            title: '1. Introducción',
-            content: '<p>Esta Política de Privacidad describe cómo Youtime maneja la información cuando usas la Aplicación. Tu privacidad es importante para nosotros.</p>',
-          },
-          {
-            title: '2. Información que NO Recopilamos',
-            content: '<p>Youtime no requiere registro ni cuenta. No recopilamos ni almacenamos información personal identificable como nombre, correo electrónico, dirección o ubicación.</p>',
-          },
-          {
-            title: '3. Procesamiento Local',
-            content: '<p>Los enlaces de YouTube y los timestamps que introduces se procesan localmente en tu dispositivo para generar la URL final. Esta información no se transmite a nuestros servidores.</p>',
-          },
-          {
-            title: '4. Datos del Dispositivo y Permisos',
-            content: '<p>La Aplicación puede solicitar permisos básicos del sistema (como acceso al portapapeles para copiar enlaces). Estos permisos se usan únicamente para la funcionalidad correspondiente y no implican recopilación de datos personales.</p>',
-          },
-          {
-            title: '5. Servicios de Terceros',
-            content: '<p>Los enlaces que generas apuntan a YouTube (operado por Google), que tiene su propia política de privacidad. Te recomendamos consultarla para entender cómo trata tus datos cuando reproduces el video.</p>',
-          },
-          {
-            title: '6. Cambios y Contacto',
-            content: '<p>Podemos actualizar esta Política. Cualquier cambio se publicará en la Aplicación. Para preguntas, contáctanos en: soporte@youtime.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'October 1, 2023',
-        sections: [
-          {
-            title: '1. Introduction',
-            content: '<p>This Privacy Policy describes how Youtime handles information when you use the Application. Your privacy is important to us.</p>',
-          },
-          {
-            title: '2. Information We Do NOT Collect',
-            content: '<p>Youtime does not require registration or an account. We do not collect or store personally identifiable information such as name, email, address, or location.</p>',
-          },
-          {
-            title: '3. Local Processing',
-            content: '<p>The YouTube links and timestamps you enter are processed locally on your device to generate the final URL. This information is not transmitted to our servers.</p>',
-          },
-          {
-            title: '4. Device Data and Permissions',
-            content: '<p>The Application may request basic system permissions (such as clipboard access to copy links). These permissions are used solely for the corresponding feature and do not involve personal data collection.</p>',
-          },
-          {
-            title: '5. Third-Party Services',
-            content: '<p>The links you generate point to YouTube (operated by Google), which has its own privacy policy. We recommend reviewing it to understand how Google handles your data when you play the video.</p>',
-          },
-          {
-            title: '6. Changes and Contact',
-            content: '<p>We may update this Policy. Any changes will be published in the Application. For questions, contact us at: support@youtime.com</p>',
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: '3',
-    name: 'Festivos del mundo',
-    slug: 'festivos-del-mundo',
-    description: 'Explora y celebra con los feriados mundiales: tu guía completa para los feriados globales',
-    icon: '🌍',
-    logo: HolidayIcon,
-    iconBgColor: '#bfdbfe',
-    fullDescription:
-      'Explora y celebra los feriados de todo el mundo. Una guía completa con información detallada de festividades, días festivos y celebraciones de diferentes países y culturas.',
-    features: [
-      'Base de datos completa de feriados mundiales',
-      'Información detallada de cada festividad',
-      'Filtrado por país y tipo de celebración',
-      'Notificaciones de próximos feriados',
-      'Calendario sincronizable',
-    ],
-    appStoreUrl: 'https://apps.apple.com/us/app/festivos-del-mundo/id6475969475',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.holidayslatamapp',
-    changelog: [
-      {
-        version: '1.5.0',
-        date: '10 de Noviembre, 2023',
-        type: 'new',
-        changes: [
-          'Agregados feriados de 50 países nuevos',
-          'Nueva función de compartir festividades',
-          'Widget para pantalla de inicio',
-        ],
-      },
-    ],
-    termsAndConditions: {
-      es: {
-        lastUpdated: '15 de Noviembre, 2023',
-        sections: [
-          {
-            title: '1. Aceptación de los Términos',
-            content: '<p>Al usar Festivos del mundo (\"la Aplicación\"), aceptas estar sujeto a estos Términos y Condiciones.</p>',
-          },
-          {
-            title: '2. Uso de la Información',
-            content: '<p>La información sobre feriados se proporciona únicamente con fines informativos. Te comprometes a:</p><ul><li>Verificar la información con fuentes oficiales cuando sea necesario</li><li>No usar la información para fines comerciales sin autorización</li><li>Respetar las tradiciones culturales de los feriados presentados</li></ul>',
-          },
-          {
-            title: '3. Exactitud de la Información',
-            content: '<p>Hacemos nuestro mejor esfuerzo para mantener la información actualizada, pero no garantizamos la exactitud absoluta de las fechas y descripciones de los feriados.</p>',
-          },
-          {
-            title: '4. Privacidad',
-            content: '<p>Recopilamos datos mínimos para mejorar la experiencia del usuario, como preferencias de país y notificaciones. Consulta nuestra Política de Privacidad para más detalles.</p>',
-          },
-          {
-            title: '5. Propiedad Intelectual',
-            content: '<p>El contenido de la Aplicación, incluyendo textos e imágenes, está protegido por derechos de autor. No puedes reproducir el contenido sin permiso.</p>',
-          },
-          {
-            title: '6. Limitación de Responsabilidad',
-            content: '<p>No nos hacemos responsables de:</p><ul><li>Errores en fechas o descripciones de feriados</li><li>Cambios de última hora en calendarios oficiales</li><li>Decisiones tomadas basadas en la información de la Aplicación</li></ul>',
-          },
-          {
-            title: '7. Contacto',
-            content: '<p>Para reportar errores o sugerencias, contáctanos en: info@festivosdelmundo.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'November 15, 2023',
-        sections: [
-          {
-            title: '1. Acceptance of Terms',
-            content: '<p>By using Festivos del mundo (\"the Application\"), you agree to be bound by these Terms and Conditions.</p>',
-          },
-          {
-            title: '2. Use of Information',
-            content: '<p>Holiday information is provided for informational purposes only. You agree to:</p><ul><li>Verify information with official sources when necessary</li><li>Not use the information for commercial purposes without authorization</li><li>Respect the cultural traditions of the holidays presented</li></ul>',
-          },
-          {
-            title: '3. Information Accuracy',
-            content: '<p>We make our best effort to keep information up to date, but we do not guarantee absolute accuracy of holiday dates and descriptions.</p>',
-          },
-          {
-            title: '4. Privacy',
-            content: '<p>We collect minimal data to improve user experience, such as country preferences and notifications. See our Privacy Policy for more details.</p>',
-          },
-          {
-            title: '5. Intellectual Property',
-            content: '<p>The Application\'s content, including texts and images, is protected by copyright. You may not reproduce the content without permission.</p>',
-          },
-          {
-            title: '6. Limitation of Liability',
-            content: '<p>We are not responsible for:</p><ul><li>Errors in holiday dates or descriptions</li><li>Last-minute changes in official calendars</li><li>Decisions made based on information from the Application</li></ul>',
-          },
-          {
-            title: '7. Contact',
-            content: '<p>To report errors or suggestions, contact us at: info@festivosdelmundo.com</p>',
-          },
-        ],
-      },
-    },
-    privacyPolicy: {
-      es: {
-        lastUpdated: '15 de Noviembre, 2023',
-        sections: [
-          {
-            title: '1. Introducción',
-            content: '<p>Esta Política describe cómo Festivos del mundo maneja la información cuando usas la Aplicación.</p>',
-          },
-          {
-            title: '2. Información que Recopilamos',
-            content: '<p>Recopilamos información mínima necesaria para mejorar tu experiencia:</p><ul><li>Preferencias de país y categorías de feriados</li><li>Configuración de notificaciones</li><li>Datos técnicos del dispositivo (versión del sistema operativo, idioma)</li></ul>',
-          },
-          {
-            title: '3. Cómo Usamos tu Información',
-            content: '<p>Usamos los datos para personalizar el contenido (mostrarte feriados de los países que sigues), enviarte notificaciones de festividades próximas y mejorar la calidad del servicio.</p>',
-          },
-          {
-            title: '4. Almacenamiento',
-            content: '<p>Las preferencias se almacenan principalmente en tu dispositivo. Podemos sincronizar configuraciones con servidores seguros si activas esa opción.</p>',
-          },
-          {
-            title: '5. Compartir Información',
-            content: '<p>No vendemos ni compartimos tu información personal con terceros para fines de marketing. Podemos usar proveedores de analítica para entender el uso agregado y anónimo de la Aplicación.</p>',
-          },
-          {
-            title: '6. Tus Derechos',
-            content: '<p>Puedes restablecer tus preferencias o desinstalar la Aplicación en cualquier momento, lo que removerá los datos almacenados localmente.</p>',
-          },
-          {
-            title: '7. Cambios y Contacto',
-            content: '<p>Esta Política puede actualizarse. Para preguntas sobre privacidad, contáctanos en: info@festivosdelmundo.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'November 15, 2023',
-        sections: [
-          {
-            title: '1. Introduction',
-            content: '<p>This Policy describes how Festivos del mundo handles information when you use the Application.</p>',
-          },
-          {
-            title: '2. Information We Collect',
-            content: '<p>We collect minimal information needed to improve your experience:</p><ul><li>Country and holiday category preferences</li><li>Notification settings</li><li>Technical device data (operating system version, language)</li></ul>',
-          },
-          {
-            title: '3. How We Use Your Information',
-            content: '<p>We use the data to personalize content (showing you holidays for the countries you follow), send notifications about upcoming holidays, and improve service quality.</p>',
-          },
-          {
-            title: '4. Storage',
-            content: '<p>Preferences are primarily stored on your device. We may sync settings with secure servers if you enable that option.</p>',
-          },
-          {
-            title: '5. Sharing Information',
-            content: '<p>We do not sell or share your personal information with third parties for marketing purposes. We may use analytics providers to understand aggregated and anonymous use of the Application.</p>',
-          },
-          {
-            title: '6. Your Rights',
-            content: '<p>You can reset your preferences or uninstall the Application at any time, which will remove locally stored data.</p>',
-          },
-          {
-            title: '7. Changes and Contact',
-            content: '<p>This Policy may be updated. For privacy questions, contact us at: info@festivosdelmundo.com</p>',
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: '5',
-    name: 'TaskMaster',
-    slug: 'taskmaster',
-    description:
-      'TaskMaster es tu asistente personal de productividad. Organiza tus tareas, proyectos y objetivos en un solo lugar con una interfaz intuitiva y poderosas funciones de gestión.',
-    icon: '✅',
-    logo: TaskMasterIcon,
-    iconBgColor: '#fcd34d',
-    fullDescription:
-      'TaskMaster es la solución definitiva para gestionar tu productividad. Con funciones avanzadas de organización, recordatorios inteligentes y análisis de rendimiento, podrás alcanzar tus objetivos de manera eficiente.',
-    features: [
-      'Gestión de tareas con prioridades y etiquetas',
-      'Proyectos colaborativos en equipo',
-      'Recordatorios inteligentes personalizables',
-      'Estadísticas y análisis de productividad',
-      'Sincronización en la nube entre dispositivos',
-      'Modo enfoque para eliminar distracciones',
-    ],
-    appStoreUrl: 'https://apps.apple.com/us/app/taskmasterpro-plus/id6741769410',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.taskmasterpro',
-    changelog: [
-      {
-        version: '3.5.0',
-        date: '5 de Diciembre, 2023',
-        type: 'new',
-        changes: [
-          'Nuevo modo de vista Kanban para proyectos',
-          'Integración con herramientas de comunicación (Slack, Teams)',
-          'Plantillas predefinidas para diferentes tipos de proyectos',
-          'Widget mejorado para pantalla de inicio',
-        ],
-      },
-      {
-        version: '3.0.0',
-        date: '20 de Agosto, 2023',
-        type: 'new',
-        changes: [
-          'Rediseño completo de la interfaz',
-          'Colaboración en tiempo real',
-          'Modo oscuro mejorado',
-        ],
-      },
-      {
-        version: '2.8.0',
-        date: '10 de Mayo, 2023',
-        type: 'improvement',
-        changes: [
-          'Optimización del rendimiento en dispositivos de gama baja',
-          'Corrección de errores en sincronización',
-          'Mejoras en la búsqueda de tareas',
-        ],
-      },
-    ],
-    termsAndConditions: {
-      es: {
-        lastUpdated: '5 de Diciembre, 2023',
-        sections: [
-          {
-            title: '1. Aceptación de los Términos',
-            content: '<p>Al usar TaskMaster (\"la Aplicación\"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
-          },
-          {
-            title: '2. Cuenta de Usuario',
-            content: '<p>Para usar TaskMaster, necesitas crear una cuenta. Te comprometes a:</p><ul><li>Proporcionar información precisa y completa</li><li>Mantener la seguridad de tu contraseña</li><li>Notificarnos inmediatamente de cualquier uso no autorizado</li><li>No compartir tu cuenta con terceros</li></ul>',
-          },
-          {
-            title: '3. Uso de la Aplicación',
-            content: '<p>TaskMaster te permite gestionar tareas y proyectos. Te comprometes a:</p><ul><li>Usar la Aplicación de manera responsable</li><li>No cargar contenido ilegal o inapropiado</li><li>Respetar los derechos de otros usuarios</li><li>No intentar comprometer la seguridad del servicio</li></ul>',
-          },
-          {
-            title: '4. Privacidad y Datos',
-            content: '<p>Recopilamos y almacenamos tus tareas, proyectos y datos de colaboración. Toda la información se cifra y protege según nuestra Política de Privacidad. No compartimos tus datos con terceros sin tu consentimiento.</p>',
-          },
-          {
-            title: '5. Suscripciones y Pagos',
-            content: '<p>TaskMaster ofrece planes gratuitos y premium. Los planes premium se renuevan automáticamente a menos que los canceles. Los pagos no son reembolsables excepto según lo exija la ley.</p>',
-          },
-          {
-            title: '6. Propiedad Intelectual',
-            content: '<p>Todos los derechos sobre la Aplicación son propiedad de TaskMaster. El contenido que creas (tareas, proyectos) sigue siendo tuyo, pero nos otorgas licencia para procesarlo y mostrarlo según la funcionalidad de la Aplicación.</p>',
-          },
-          {
-            title: '7. Limitación de Responsabilidad',
-            content: '<p>No nos hacemos responsables de:</p><ul><li>Pérdida de datos debido a problemas técnicos</li><li>Interrupciones del servicio</li><li>Decisiones tomadas basadas en el uso de la Aplicación</li></ul>',
-          },
-          {
-            title: '8. Terminación',
-            content: '<p>Puedes cancelar tu cuenta en cualquier momento. Nos reservamos el derecho de suspender o terminar cuentas que violen estos términos.</p>',
-          },
-          {
-            title: '9. Contacto',
-            content: '<p>Para soporte o preguntas, contáctanos en: support@taskmaster.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'December 5, 2023',
-        sections: [
-          {
-            title: '1. Acceptance of Terms',
-            content: '<p>By using TaskMaster (\"the Application\"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
-          },
-          {
-            title: '2. User Account',
-            content: '<p>To use TaskMaster, you need to create an account. You agree to:</p><ul><li>Provide accurate and complete information</li><li>Maintain the security of your password</li><li>Notify us immediately of any unauthorized use</li><li>Not share your account with third parties</li></ul>',
-          },
-          {
-            title: '3. Use of the Application',
-            content: '<p>TaskMaster allows you to manage tasks and projects. You agree to:</p><ul><li>Use the Application responsibly</li><li>Not upload illegal or inappropriate content</li><li>Respect the rights of other users</li><li>Not attempt to compromise service security</li></ul>',
-          },
-          {
-            title: '4. Privacy and Data',
-            content: '<p>We collect and store your tasks, projects, and collaboration data. All information is encrypted and protected according to our Privacy Policy. We do not share your data with third parties without your consent.</p>',
-          },
-          {
-            title: '5. Subscriptions and Payments',
-            content: '<p>TaskMaster offers free and premium plans. Premium plans auto-renew unless you cancel. Payments are non-refundable except as required by law.</p>',
-          },
-          {
-            title: '6. Intellectual Property',
-            content: '<p>All rights to the Application are owned by TaskMaster. Content you create (tasks, projects) remains yours, but you grant us a license to process and display it according to the Application\'s functionality.</p>',
-          },
-          {
-            title: '7. Limitation of Liability',
-            content: '<p>We are not responsible for:</p><ul><li>Data loss due to technical issues</li><li>Service interruptions</li><li>Decisions made based on use of the Application</li></ul>',
-          },
-          {
-            title: '8. Termination',
-            content: '<p>You can cancel your account at any time. We reserve the right to suspend or terminate accounts that violate these terms.</p>',
-          },
-          {
-            title: '9. Contact',
-            content: '<p>For support or questions, contact us at: support@taskmaster.com</p>',
-          },
-        ],
-      },
-    },
-    privacyPolicy: {
-      es: {
-        lastUpdated: '5 de Diciembre, 2023',
-        sections: [
-          {
-            title: '1. Introducción',
-            content: '<p>Esta Política describe cómo TaskMaster recopila, usa y protege tu información cuando usas la Aplicación.</p>',
-          },
-          {
-            title: '2. Información que Recopilamos',
-            content: '<p>Para ofrecer la funcionalidad de TaskMaster recopilamos:</p><ul><li>Datos de cuenta: nombre, correo electrónico y contraseña cifrada</li><li>Contenido del usuario: tareas, proyectos, etiquetas y archivos adjuntos</li><li>Datos de colaboración: invitaciones, comentarios y miembros del equipo</li><li>Datos técnicos: dispositivo, dirección IP y registros de uso</li><li>Información de pago para suscripciones (procesada por nuestros proveedores de pago)</li></ul>',
-          },
-          {
-            title: '3. Cómo Usamos tu Información',
-            content: '<p>Usamos tus datos para operar el servicio, sincronizar entre dispositivos, enviar recordatorios, ofrecer funciones colaborativas, procesar pagos y mejorar la Aplicación.</p>',
-          },
-          {
-            title: '4. Compartir Información',
-            content: '<p>No vendemos tu información personal. Podemos compartirla con:</p><ul><li>Otros miembros de los equipos en los que colaboras (limitado al contenido compartido)</li><li>Proveedores de servicios (hosting, pagos, analítica) bajo acuerdos de confidencialidad</li><li>Autoridades cuando la ley lo requiera</li></ul>',
-          },
-          {
-            title: '5. Almacenamiento, Seguridad y Retención',
-            content: '<p>Tus datos se cifran en tránsito y en reposo. Conservamos tu información mientras tu cuenta esté activa; al cerrar la cuenta, eliminamos tus datos en un plazo razonable, salvo obligaciones legales de retención.</p>',
-          },
-          {
-            title: '6. Tus Derechos',
-            content: '<p>Puedes acceder, exportar, corregir o eliminar tu información desde la configuración de tu cuenta. También puedes solicitar la portabilidad de tus datos contactándonos.</p>',
-          },
-          {
-            title: '7. Menores de Edad',
-            content: '<p>TaskMaster no está dirigida a menores de 13 años. No recopilamos a sabiendas datos personales de menores de esa edad.</p>',
-          },
-          {
-            title: '8. Cambios y Contacto',
-            content: '<p>Podemos actualizar esta Política. Te notificaremos cambios significativos por correo o dentro de la Aplicación. Para preguntas, contáctanos en: support@taskmaster.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'December 5, 2023',
-        sections: [
-          {
-            title: '1. Introduction',
-            content: '<p>This Policy describes how TaskMaster collects, uses, and protects your information when you use the Application.</p>',
-          },
-          {
-            title: '2. Information We Collect',
-            content: '<p>To provide TaskMaster functionality we collect:</p><ul><li>Account data: name, email, and encrypted password</li><li>User content: tasks, projects, labels, and attachments</li><li>Collaboration data: invitations, comments, and team members</li><li>Technical data: device, IP address, and usage logs</li><li>Payment information for subscriptions (processed by our payment providers)</li></ul>',
-          },
-          {
-            title: '3. How We Use Your Information',
-            content: '<p>We use your data to operate the service, sync across devices, send reminders, offer collaboration features, process payments, and improve the Application.</p>',
-          },
-          {
-            title: '4. Sharing Information',
-            content: '<p>We do not sell your personal information. We may share it with:</p><ul><li>Other members of teams you collaborate with (limited to shared content)</li><li>Service providers (hosting, payments, analytics) under confidentiality agreements</li><li>Authorities when required by law</li></ul>',
-          },
-          {
-            title: '5. Storage, Security and Retention',
-            content: '<p>Your data is encrypted in transit and at rest. We retain your information while your account is active; upon account closure, we delete your data within a reasonable period, except where legal retention obligations apply.</p>',
-          },
-          {
-            title: '6. Your Rights',
-            content: '<p>You can access, export, correct, or delete your information from your account settings. You may also request the portability of your data by contacting us.</p>',
-          },
-          {
-            title: '7. Minors',
-            content: '<p>TaskMaster is not directed at children under 13. We do not knowingly collect personal data from children under that age.</p>',
-          },
-          {
-            title: '8. Changes and Contact',
-            content: '<p>We may update this Policy. We will notify you of significant changes via email or in-app. For questions, contact us at: support@taskmaster.com</p>',
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: '6',
-    name: 'Pronostigol',
-    slug: 'pronostigol',
-    description:
-      'Pronostigol es la app definitiva para los amantes del fútbol. Crea quinielas, compite con amigos y demuestra tus conocimientos prediciendo resultados de ligas y torneos internacionales.',
-    icon: '🎯',
-    logo: PronostigolIcon,
-    iconBgColor: '#86efac',
-    fullDescription:
-      'Pronostigol te permite crear y participar en quinielas de fútbol de manera fácil y divertida. Compite con amigos, colegas o únete a ligas públicas. Sistema de puntos, rankings en tiempo real y premios virtuales te esperan.',
-    features: [
-      'Crea quinielas personalizadas para cualquier torneo',
-      'Participa en ligas públicas y privadas',
-      'Sistema de puntuación personalizable',
-      'Rankings y estadísticas detalladas',
-      'Notificaciones de partidos próximos',
-      'Chat integrado con otros participantes',
-    ],
-    appStoreUrl: 'https://apps.apple.com/us/app/pronostigol/id6550892183',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.pronostigolapp',
-    changelog: [
-      {
-        version: '2.8.0',
-        date: '28 de Noviembre, 2023',
-        type: 'new',
-        changes: [
-          'Soporte para Copa América 2024',
-          'Nueva función de predicciones especiales (goleador, tarjetas, etc.)',
-          'Modo competitivo con premios virtuales',
-          'Integración con estadísticas en vivo',
-        ],
-      },
-      {
-        version: '2.5.0',
-        date: '15 de Septiembre, 2023',
-        type: 'improvement',
-        changes: [
-          'Mejoras en el sistema de notificaciones',
-          'Optimización de la velocidad de carga',
-          'Corrección de errores en el cálculo de puntos',
-        ],
-      },
-      {
-        version: '2.0.0',
-        date: '1 de Junio, 2023',
-        type: 'new',
-        changes: [
-          'Rediseño completo de la interfaz',
-          'Sistema de chat entre participantes',
-          'Nuevos modos de juego',
-        ],
-      },
-    ],
-    termsAndConditions: {
-      es: {
-        lastUpdated: '28 de Noviembre, 2023',
-        sections: [
-          {
-            title: '1. Aceptación de los Términos',
-            content: '<p>Al usar Pronostigol (\"la Aplicación\"), aceptas estos Términos y Condiciones en su totalidad.</p>',
-          },
-          {
-            title: '2. Naturaleza del Servicio',
-            content: '<p>Pronostigol es una plataforma de entretenimiento para crear y participar en quinielas de fútbol. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines recreativos</li><li>No usar la plataforma para apuestas con dinero real</li><li>Respetar las reglas de las ligas en las que participas</li><li>No crear múltiples cuentas para obtener ventajas injustas</li></ul>',
-          },
-          {
-            title: '3. Cuenta de Usuario',
-            content: '<p>Para participar en quinielas, debes crear una cuenta proporcionando información verídica. Eres responsable de mantener la confidencialidad de tu contraseña.</p>',
-          },
-          {
-            title: '4. Ligas y Competencias',
-            content: '<p>Puedes crear ligas privadas o unirte a ligas públicas. Los administradores de ligas pueden establecer reglas específicas que todos los participantes deben respetar.</p>',
-          },
-          {
-            title: '5. Sistema de Puntuación',
-            content: '<p>El sistema de puntuación puede variar según la configuración de cada liga. Pronostigol calcula automáticamente los puntos basándose en los resultados oficiales de los partidos.</p>',
-          },
-          {
-            title: '6. Premios Virtuales',
-            content: '<p>Los premios ofrecidos en Pronostigol son virtuales y no tienen valor monetario. No se pueden canjear por dinero real ni productos físicos.</p>',
-          },
-          {
-            title: '7. Conducta del Usuario',
-            content: '<p>Está prohibido:</p><ul><li>Usar lenguaje ofensivo o inapropiado en chats</li><li>Acosar o intimidar a otros usuarios</li><li>Compartir contenido ilegal o inapropiado</li><li>Intentar manipular resultados o el sistema de puntuación</li></ul>',
-          },
-          {
-            title: '8. Privacidad',
-            content: '<p>Recopilamos datos sobre tus predicciones, interacciones y preferencias. Consulta nuestra Política de Privacidad para más información.</p>',
-          },
-          {
-            title: '9. Limitación de Responsabilidad',
-            content: '<p>No nos hacemos responsables de:</p><ul><li>Errores en resultados de partidos reportados por fuentes oficiales</li><li>Interrupciones del servicio durante eventos importantes</li><li>Disputas entre usuarios de una misma liga</li><li>Pérdidas o daños derivados del uso de la Aplicación</li></ul>',
-          },
-          {
-            title: '10. Contacto',
-            content: '<p>Para soporte técnico o reportar problemas, contáctanos en: soporte@pronostigol.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'November 28, 2023',
-        sections: [
-          {
-            title: '1. Acceptance of Terms',
-            content: '<p>By using Pronostigol (\"the Application\"), you fully accept these Terms and Conditions.</p>',
-          },
-          {
-            title: '2. Nature of Service',
-            content: '<p>Pronostigol is an entertainment platform for creating and participating in soccer pools. You agree to:</p><ul><li>Use the Application solely for recreational purposes</li><li>Not use the platform for real money betting</li><li>Respect the rules of the leagues you participate in</li><li>Not create multiple accounts to gain unfair advantages</li></ul>',
-          },
-          {
-            title: '3. User Account',
-            content: '<p>To participate in pools, you must create an account providing truthful information. You are responsible for maintaining the confidentiality of your password.</p>',
-          },
-          {
-            title: '4. Leagues and Competitions',
-            content: '<p>You can create private leagues or join public leagues. League administrators can establish specific rules that all participants must respect.</p>',
-          },
-          {
-            title: '5. Scoring System',
-            content: '<p>The scoring system may vary depending on each league\'s configuration. Pronostigol automatically calculates points based on official match results.</p>',
-          },
-          {
-            title: '6. Virtual Prizes',
-            content: '<p>Prizes offered in Pronostigol are virtual and have no monetary value. They cannot be redeemed for real money or physical products.</p>',
-          },
-          {
-            title: '7. User Conduct',
-            content: '<p>The following is prohibited:</p><ul><li>Using offensive or inappropriate language in chats</li><li>Harassing or intimidating other users</li><li>Sharing illegal or inappropriate content</li><li>Attempting to manipulate results or the scoring system</li></ul>',
-          },
-          {
-            title: '8. Privacy',
-            content: '<p>We collect data about your predictions, interactions, and preferences. See our Privacy Policy for more information.</p>',
-          },
-          {
-            title: '9. Limitation of Liability',
-            content: '<p>We are not responsible for:</p><ul><li>Errors in match results reported by official sources</li><li>Service interruptions during important events</li><li>Disputes between users of the same league</li><li>Losses or damages arising from use of the Application</li></ul>',
-          },
-          {
-            title: '10. Contact',
-            content: '<p>For technical support or to report issues, contact us at: support@pronostigol.com</p>',
-          },
-        ],
-      },
-    },
-    privacyPolicy: {
-      es: {
-        lastUpdated: '28 de Noviembre, 2023',
-        sections: [
-          {
-            title: '1. Introducción',
-            content: '<p>Esta Política describe cómo Pronostigol recopila, usa y protege tu información cuando usas la Aplicación.</p>',
-          },
-          {
-            title: '2. Información que Recopilamos',
-            content: '<p>Para participar en quinielas recopilamos:</p><ul><li>Datos de cuenta: nombre de usuario, correo electrónico y contraseña cifrada</li><li>Predicciones, resultados y participación en ligas</li><li>Mensajes y comentarios en chats de ligas</li><li>Datos del dispositivo y registros de uso</li><li>Información para notificaciones push (con tu permiso)</li></ul>',
-          },
-          {
-            title: '3. Cómo Usamos tu Información',
-            content: '<p>Usamos tus datos para:</p><ul><li>Operar las quinielas y calcular puntajes</li><li>Mostrar rankings y permitir interacción entre usuarios</li><li>Enviar notificaciones de partidos próximos y resultados</li><li>Mejorar la Aplicación y prevenir comportamientos abusivos</li></ul>',
-          },
-          {
-            title: '4. Compartir Información',
-            content: '<p>No vendemos tu información personal. Otros participantes de las ligas en las que estás pueden ver tu nombre de usuario, predicciones y mensajes en chats. También podemos usar proveedores de servicios bajo acuerdos de confidencialidad.</p>',
-          },
-          {
-            title: '5. Almacenamiento y Seguridad',
-            content: '<p>Tus datos se transmiten cifrados y se almacenan en servidores seguros. Aplicamos medidas razonables para protegerlos, aunque ningún sistema es 100% infalible.</p>',
-          },
-          {
-            title: '6. Tus Derechos',
-            content: '<p>Puedes editar tu perfil, eliminar mensajes propios o cerrar tu cuenta desde la configuración. Al cerrar la cuenta, tus datos personales se eliminan; tus predicciones pueden conservarse de forma anónima para mantener la integridad histórica de las ligas.</p>',
-          },
-          {
-            title: '7. Menores de Edad',
-            content: '<p>Pronostigol no está dirigida a menores de 13 años. No recopilamos a sabiendas datos personales de menores de esa edad.</p>',
-          },
-          {
-            title: '8. Cambios y Contacto',
-            content: '<p>Podemos actualizar esta Política y notificaremos cambios relevantes en la Aplicación. Para preguntas, contáctanos en: soporte@pronostigol.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'November 28, 2023',
-        sections: [
-          {
-            title: '1. Introduction',
-            content: '<p>This Policy describes how Pronostigol collects, uses, and protects your information when you use the Application.</p>',
-          },
-          {
-            title: '2. Information We Collect',
-            content: '<p>To participate in pools we collect:</p><ul><li>Account data: username, email, and encrypted password</li><li>Predictions, results, and league participation</li><li>Messages and comments in league chats</li><li>Device data and usage logs</li><li>Push notification information (with your permission)</li></ul>',
-          },
-          {
-            title: '3. How We Use Your Information',
-            content: '<p>We use your data to:</p><ul><li>Operate pools and calculate scores</li><li>Display rankings and enable interaction between users</li><li>Send notifications about upcoming matches and results</li><li>Improve the Application and prevent abusive behavior</li></ul>',
-          },
-          {
-            title: '4. Sharing Information',
-            content: '<p>We do not sell your personal information. Other members of leagues you participate in can see your username, predictions, and chat messages. We may also use service providers under confidentiality agreements.</p>',
-          },
-          {
-            title: '5. Storage and Security',
-            content: '<p>Your data is transmitted encrypted and stored on secure servers. We apply reasonable measures to protect it, although no system is 100% foolproof.</p>',
-          },
-          {
-            title: '6. Your Rights',
-            content: '<p>You can edit your profile, delete your own messages, or close your account from settings. Upon account closure, your personal data is deleted; your predictions may be retained anonymously to preserve the historical integrity of the leagues.</p>',
-          },
-          {
-            title: '7. Minors',
-            content: '<p>Pronostigol is not directed at children under 13. We do not knowingly collect personal data from children under that age.</p>',
-          },
-          {
-            title: '8. Changes and Contact',
-            content: '<p>We may update this Policy and will notify you of relevant changes in the Application. For questions, contact us at: support@pronostigol.com</p>',
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: '7',
-    name: 'SuperLineUp',
-    slug: 'superlineup',
-    description:
-      'Crea alineaciones de fútbol increíbles en segundos. Equipo (11) o partido completo (22), formaciones clásicas, drag & drop y personalización total.',
-    icon: '⚽',
-    logo: SuperLineUpIcon,
-    iconBgColor: '#86efac',
-    fullDescription:
-      '¡Bienvenido a SuperLineUp! Crea alineaciones de fútbol increíbles en segundos: equipo (11) o partido completo (22), más de 7 formaciones clásicas, drag & drop fluido, camisetas, césped y estadio personalizables, guarda y comparte como imagen, 100% sin conexión. Arma tu alineación, muestra tu táctica y comparte tu pasión.',
-    features: [
-      'Diseña alineaciones de un equipo (11) o de un partido completo (22)',
-      'Elige entre múltiples formaciones tácticas (4-4-2, 4-3-3, 3-5-2 y más)',
-      'Personaliza camisetas, césped, estadio y tribunas',
-      'Mueve jugadores con drag & drop fluido',
-      'Exporta la alineación como imagen lista para redes sociales',
-      'Funciona 100% sin conexión',
-    ],
-    appStoreUrl: 'https://apps.apple.com/us/app/superlineup-11/id6764713164',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.davidyero.superlineup',
-    changelog: [
-      {
-        version: '1.0.0',
-        date: '6 de Mayo, 2026',
-        type: 'new',
-        changes: [
-          'Lanzamiento inicial de SuperLineUp.',
-          'Diseño de alineaciones para equipo (11) y partido completo (22).',
-          'Más de 7 formaciones clásicas disponibles (4-4-2, 4-3-3, 3-5-2 y más).',
-          'Personalización de camisetas, césped, estadio y tribunas.',
-          'Drag & drop fluido para reposicionar jugadores.',
-          'Exportación de la alineación como imagen para compartir.',
-          'Funcionamiento 100% sin conexión.',
-        ],
-      },
-    ],
-    termsAndConditions: {
-      es: {
-        lastUpdated: '6 de Mayo, 2026',
-        sections: [
-          {
-            title: '1. Aceptación de los Términos',
-            content: '<p>Al descargar, instalar o usar SuperLineUp ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con estos términos, no uses la Aplicación.</p>',
-          },
-          {
-            title: '2. Naturaleza del Servicio',
-            content: '<p>SuperLineUp es una aplicación de entretenimiento que te permite diseñar alineaciones de fútbol con fines recreativos y creativos. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines personales, educativos o de entretenimiento</li><li>No usar la Aplicación para actividades ilegales o no autorizadas</li><li>No intentar modificar, descompilar o realizar ingeniería inversa sobre la Aplicación</li></ul>',
-          },
-          {
-            title: '3. Funcionamiento Sin Conexión y Privacidad',
-            content: '<p>SuperLineUp funciona 100% sin conexión y todos los datos (alineaciones, configuraciones, personalizaciones) se almacenan localmente en tu dispositivo. No recopilamos, transmitimos ni almacenamos información personal en servidores externos. Eres responsable de respaldar tus alineaciones si así lo deseas.</p>',
-          },
-          {
-            title: '4. Contenido Generado por el Usuario',
-            content: '<p>Las alineaciones, imágenes exportadas y demás contenido que generes con la Aplicación son de tu propiedad. Eres responsable del uso que hagas de dicho contenido al compartirlo en redes sociales u otros medios, incluyendo el cumplimiento de las normas de las plataformas en las que lo publiques.</p>',
-          },
-          {
-            title: '5. Marcas y Equipos',
-            content: '<p>SuperLineUp no está afiliado, asociado, autorizado, respaldado ni oficialmente conectado con ningún club, liga, federación, jugador o entidad deportiva real. Cualquier referencia a equipos, formaciones o estilos visuales tiene fines exclusivamente ilustrativos y de personalización por parte del usuario. Las marcas y logotipos pertenecen a sus respectivos propietarios.</p>',
-          },
-          {
-            title: '6. Propiedad Intelectual',
-            content: '<p>Todos los derechos de propiedad intelectual sobre la Aplicación, incluyendo su código, diseño, gráficos e interfaz, son propiedad de SuperLineUp o de sus licenciantes. No puedes copiar, modificar, distribuir ni explotar comercialmente la Aplicación o sus componentes sin nuestro consentimiento previo por escrito.</p>',
-          },
-          {
-            title: '7. Limitación de Responsabilidad',
-            content: '<p>SuperLineUp se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de:</p><ul><li>Pérdida de datos almacenados localmente en el dispositivo</li><li>Errores, interrupciones o incompatibilidades con determinados dispositivos</li><li>Daños derivados del uso o imposibilidad de uso de la Aplicación</li><li>Uso indebido del contenido exportado por parte del usuario o de terceros</li></ul>',
-          },
-          {
-            title: '8. Modificaciones',
-            content: '<p>Nos reservamos el derecho de modificar estos Términos y Condiciones, así como las características de la Aplicación, en cualquier momento. Las modificaciones entrarán en vigor desde su publicación en la Aplicación o en la tienda correspondiente.</p>',
-          },
-          {
-            title: '9. Contacto',
-            content: '<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@superlineup.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'May 6, 2026',
-        sections: [
-          {
-            title: '1. Acceptance of Terms',
-            content: '<p>By downloading, installing, or using SuperLineUp ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with these terms, do not use the Application.</p>',
-          },
-          {
-            title: '2. Nature of Service',
-            content: '<p>SuperLineUp is an entertainment application that lets you design soccer line-ups for recreational and creative purposes. You agree to:</p><ul><li>Use the Application only for personal, educational, or entertainment purposes</li><li>Not use the Application for illegal or unauthorized activities</li><li>Not attempt to modify, decompile, or reverse engineer the Application</li></ul>',
-          },
-          {
-            title: '3. Offline Operation and Privacy',
-            content: '<p>SuperLineUp runs 100% offline and all data (line-ups, settings, customizations) is stored locally on your device. We do not collect, transmit, or store personal information on external servers. You are responsible for backing up your line-ups if you wish to do so.</p>',
-          },
-          {
-            title: '4. User-Generated Content',
-            content: '<p>The line-ups, exported images, and any other content you generate with the Application are your property. You are responsible for how you use such content when sharing it on social media or other channels, including complying with the rules of the platforms where you publish it.</p>',
-          },
-          {
-            title: '5. Trademarks and Teams',
-            content: '<p>SuperLineUp is not affiliated, associated, authorized, endorsed by, or in any way officially connected with any real club, league, federation, player, or sports entity. Any reference to teams, formations, or visual styles is for purely illustrative and user-customization purposes. All trademarks and logos belong to their respective owners.</p>',
-          },
-          {
-            title: '6. Intellectual Property',
-            content: '<p>All intellectual property rights to the Application, including its code, design, graphics, and interface, are owned by SuperLineUp or its licensors. You may not copy, modify, distribute, or commercially exploit the Application or its components without our prior written consent.</p>',
-          },
-          {
-            title: '7. Limitation of Liability',
-            content: '<p>SuperLineUp is provided "as is" and "as available", without warranties of any kind. We are not responsible for:</p><ul><li>Loss of data stored locally on the device</li><li>Errors, interruptions, or incompatibilities with certain devices</li><li>Damages arising from use of or inability to use the Application</li><li>Misuse of exported content by the user or third parties</li></ul>',
-          },
-          {
-            title: '8. Modifications',
-            content: '<p>We reserve the right to modify these Terms and Conditions, as well as the features of the Application, at any time. Modifications will take effect upon publication in the Application or the relevant store.</p>',
-          },
-          {
-            title: '9. Contact',
-            content: '<p>If you have questions about these Terms and Conditions, contact us at: support@superlineup.com</p>',
-          },
-        ],
-      },
-    },
-    privacyPolicy: {
-      es: {
-        lastUpdated: '6 de Mayo, 2026',
-        sections: [
-          {
-            title: '1. Introducción',
-            content: '<p>Esta Política describe cómo SuperLineUp maneja la información cuando usas la Aplicación. Tu privacidad es prioridad.</p>',
-          },
-          {
-            title: '2. Información que NO Recopilamos',
-            content: '<p>SuperLineUp funciona 100% sin conexión. No requerimos registro y no recopilamos, transmitimos ni almacenamos información personal identificable como nombre, correo electrónico o ubicación.</p>',
-          },
-          {
-            title: '3. Almacenamiento Local',
-            content: '<p>Tus alineaciones, configuraciones y personalizaciones se guardan exclusivamente en el almacenamiento local de tu dispositivo (mediante MMKV). Si desinstalas la Aplicación, estos datos se eliminan.</p>',
-          },
-          {
-            title: '4. Permisos del Dispositivo',
-            content: '<p>La Aplicación puede solicitar permisos para guardar imágenes en tu galería al exportar alineaciones. Estos permisos se usan únicamente para la funcionalidad correspondiente y no implican recopilación de datos.</p>',
-          },
-          {
-            title: '5. Compartir Imágenes',
-            content: '<p>Cuando exportas y compartes una alineación, la imagen se procesa localmente y se entrega al sistema de tu dispositivo (galería, redes sociales, mensajería). Las plataformas a las que la envíes manejarán esa imagen según sus propias políticas.</p>',
-          },
-          {
-            title: '6. Servicios de Terceros',
-            content: '<p>SuperLineUp no integra servicios de analítica ni redes publicitarias que recopilen datos personales en esta versión. Si esto cambia en futuras versiones, actualizaremos esta Política.</p>',
-          },
-          {
-            title: '7. Cambios y Contacto',
-            content: '<p>Podemos actualizar esta Política y los cambios se publicarán en la Aplicación o en la tienda correspondiente. Para preguntas, contáctanos en: soporte@superlineup.com</p>',
-          },
-        ],
-      },
-      en: {
-        lastUpdated: 'May 6, 2026',
-        sections: [
-          {
-            title: '1. Introduction',
-            content: '<p>This Policy describes how SuperLineUp handles information when you use the Application. Your privacy is a priority.</p>',
-          },
-          {
-            title: '2. Information We Do NOT Collect',
-            content: '<p>SuperLineUp runs 100% offline. We do not require registration and do not collect, transmit, or store personally identifiable information such as name, email, or location.</p>',
-          },
-          {
-            title: '3. Local Storage',
-            content: '<p>Your line-ups, settings, and customizations are stored exclusively in the local storage of your device (via MMKV). If you uninstall the Application, this data is deleted.</p>',
-          },
-          {
-            title: '4. Device Permissions',
-            content: '<p>The Application may request permissions to save images to your gallery when exporting line-ups. These permissions are used solely for the corresponding feature and do not involve data collection.</p>',
-          },
-          {
-            title: '5. Sharing Images',
-            content: '<p>When you export and share a line-up, the image is processed locally and handed off to your device system (gallery, social media, messaging). The platforms you send it to will handle that image according to their own policies.</p>',
-          },
-          {
-            title: '6. Third-Party Services',
-            content: '<p>SuperLineUp does not integrate analytics or advertising networks that collect personal data in this version. If this changes in future versions, we will update this Policy.</p>',
-          },
-          {
-            title: '7. Changes and Contact',
-            content: '<p>We may update this Policy, and changes will be published in the Application or relevant store. For questions, contact us at: support@superlineup.com</p>',
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: '8',
-    name: 'Football Cup Simulator',
-    slug: 'football-cup-simulator',
-    description: 'Simula torneos de copa de fútbol y vive cada ronda hasta la final.',
-    icon: '',
-    logo: FootballCupIcon,
-    appStoreUrl: 'https://apps.apple.com/us/app/football-tournament-simulator/id6756631490',
+    appStoreUrl: "https://apps.apple.com/us/app/gazella-sports/id6479961490",
     playStoreUrl:
-      'https://play.google.com/store/apps/details?id=com.davidyero.footballcupsimulator',
+      "https://play.google.com/store/apps/details?id=com.gazellaSports",
+    changelog: [
+      {
+        version: "2.1.0",
+        date: "15 de Octubre, 2023",
+        type: "new",
+        changes: [
+          "Se agregó un nuevo dashboard personalizable.",
+          "El rendimiento de carga se ha optimizado en un 30%.",
+          "Integración con calendarios externos (Google Calendar, Outlook).",
+        ],
+      },
+      {
+        version: "2.0.0",
+        date: "1 de Agosto, 2023",
+        type: "fix",
+        changes: [
+          "Se ha realizado una reescritura completa del motor principal para mejorar la estabilidad y corregir errores críticos reportados por la comunidad.",
+          "Corregido un error que provocaba cierres inesperados al exportar datos.",
+          "Solucionado un problema de sincronización entre dispositivos.",
+          "Mejora de la seguridad en la autenticación de usuarios.",
+        ],
+      },
+      {
+        version: "1.0.0",
+        date: "15 de Enero, 2023",
+        type: "new",
+        changes: [
+          "Lanzamiento inicial de Gazella. Incluye las funcionalidades básicas de gestión de eventos deportivos y exploración en tiempo real.",
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: "1 de Diciembre, 2023",
+        sections: [
+          {
+            title: "1. Aceptación de los Términos",
+            content:
+              '<p>Al descargar, instalar o usar Gazella ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con estos términos, no uses la Aplicación.</p>',
+          },
+          {
+            title: "2. Uso de la Aplicación",
+            content:
+              "<p>Gazella te permite explorar y registrarte en eventos deportivos. Te comprometes a:</p><ul><li>Proporcionar información precisa y actualizada al registrarte</li><li>No usar la Aplicación para fines ilegales o no autorizados</li><li>No intentar acceder a áreas restringidas de la Aplicación</li></ul>",
+          },
+          {
+            title: "3. Privacidad y Datos Personales",
+            content:
+              "<p>Recopilamos y procesamos tus datos personales de acuerdo con nuestra Política de Privacidad. Al usar la Aplicación, consientes la recopilación y uso de tu información según se describe en dicha política.</p>",
+          },
+          {
+            title: "4. Contenido del Usuario",
+            content:
+              "<p>Eres responsable del contenido que publiques o compartas a través de la Aplicación. Nos reservamos el derecho de eliminar cualquier contenido que consideremos inapropiado o que viole estos términos.</p>",
+          },
+          {
+            title: "5. Propiedad Intelectual",
+            content:
+              "<p>Todos los derechos de propiedad intelectual sobre la Aplicación y su contenido son propiedad de Gazella o de sus licenciantes. No puedes copiar, modificar o distribuir ninguna parte de la Aplicación sin nuestro consentimiento previo por escrito.</p>",
+          },
+          {
+            title: "6. Limitación de Responsabilidad",
+            content:
+              '<p>Gazella se proporciona "tal cual" sin garantías de ningún tipo. No nos hacemos responsables de:</p><ul><li>Interrupciones en el servicio</li><li>Errores o inexactitudes en la información de eventos</li><li>Daños derivados del uso de la Aplicación</li></ul>',
+          },
+          {
+            title: "7. Modificaciones",
+            content:
+              "<p>Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en la Aplicación.</p>",
+          },
+          {
+            title: "8. Contacto",
+            content:
+              "<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@gazella.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "December 1, 2023",
+        sections: [
+          {
+            title: "1. Acceptance of Terms",
+            content:
+              '<p>By downloading, installing, or using Gazella ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with these terms, do not use the Application.</p>',
+          },
+          {
+            title: "2. Use of the Application",
+            content:
+              "<p>Gazella allows you to explore and register for sports events. You agree to:</p><ul><li>Provide accurate and up-to-date information when registering</li><li>Not use the Application for illegal or unauthorized purposes</li><li>Not attempt to access restricted areas of the Application</li></ul>",
+          },
+          {
+            title: "3. Privacy and Personal Data",
+            content:
+              "<p>We collect and process your personal data in accordance with our Privacy Policy. By using the Application, you consent to the collection and use of your information as described in that policy.</p>",
+          },
+          {
+            title: "4. User Content",
+            content:
+              "<p>You are responsible for any content you post or share through the Application. We reserve the right to remove any content we deem inappropriate or in violation of these terms.</p>",
+          },
+          {
+            title: "5. Intellectual Property",
+            content:
+              "<p>All intellectual property rights to the Application and its content are owned by Gazella or its licensors. You may not copy, modify, or distribute any part of the Application without our prior written consent.</p>",
+          },
+          {
+            title: "6. Limitation of Liability",
+            content:
+              '<p>Gazella is provided "as is" without warranties of any kind. We are not responsible for:</p><ul><li>Service interruptions</li><li>Errors or inaccuracies in event information</li><li>Damages arising from use of the Application</li></ul>',
+          },
+          {
+            title: "7. Modifications",
+            content:
+              "<p>We reserve the right to modify these Terms and Conditions at any time. Modifications will take effect immediately upon publication in the Application.</p>",
+          },
+          {
+            title: "8. Contact",
+            content:
+              "<p>If you have questions about these Terms and Conditions, contact us at: support@gazella.com</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "1 de Diciembre, 2023",
+        sections: [
+          {
+            title: "1. Introducción",
+            content:
+              "<p>Esta Política de Privacidad describe cómo Gazella recopila, usa y protege tu información cuando usas la Aplicación. Al usar Gazella, aceptas las prácticas descritas aquí.</p>",
+          },
+          {
+            title: "2. Información que Recopilamos",
+            content:
+              "<p>Recopilamos información que nos proporcionas y datos generados por tu uso:</p><ul><li>Datos de cuenta: nombre, correo electrónico y fecha de nacimiento</li><li>Datos de uso: eventos consultados, inscripciones y favoritos</li><li>Información del dispositivo: modelo, sistema operativo e identificadores</li><li>Ubicación aproximada (con tu permiso) para mostrarte eventos cercanos</li></ul>",
+          },
+          {
+            title: "3. Cómo Usamos tu Información",
+            content:
+              "<p>Usamos tus datos para:</p><ul><li>Gestionar tu cuenta y procesar inscripciones</li><li>Mostrarte eventos relevantes y enviarte notificaciones</li><li>Mejorar la Aplicación y prevenir fraude</li><li>Cumplir obligaciones legales</li></ul>",
+          },
+          {
+            title: "4. Compartir Información con Terceros",
+            content:
+              "<p>No vendemos tu información personal. Podemos compartirla con:</p><ul><li>Organizadores de eventos cuando te inscribes</li><li>Proveedores de servicios necesarios para operar la Aplicación (hosting, analítica)</li><li>Autoridades cuando la ley lo requiera</li></ul>",
+          },
+          {
+            title: "5. Almacenamiento y Seguridad",
+            content:
+              "<p>Tus datos se almacenan en servidores seguros y se transmiten cifrados. Implementamos medidas técnicas y organizativas razonables para protegerlos, aunque ningún sistema es 100% infalible.</p>",
+          },
+          {
+            title: "6. Tus Derechos",
+            content:
+              "<p>Puedes acceder, corregir o eliminar tu información desde la configuración de la Aplicación o escribiéndonos. También puedes oponerte al procesamiento o solicitar la portabilidad de tus datos.</p>",
+          },
+          {
+            title: "7. Menores de Edad",
+            content:
+              "<p>Gazella no está dirigida a menores de 13 años. No recopilamos a sabiendas datos personales de menores de esa edad.</p>",
+          },
+          {
+            title: "8. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política y te notificaremos cambios significativos a través de la Aplicación. Para preguntas sobre privacidad, contáctanos en: soporte@gazella.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "December 1, 2023",
+        sections: [
+          {
+            title: "1. Introduction",
+            content:
+              "<p>This Privacy Policy describes how Gazella collects, uses, and protects your information when you use the Application. By using Gazella, you accept the practices described here.</p>",
+          },
+          {
+            title: "2. Information We Collect",
+            content:
+              "<p>We collect information you provide and data generated by your use:</p><ul><li>Account data: name, email, and date of birth</li><li>Usage data: events viewed, registrations, and favorites</li><li>Device information: model, operating system, and identifiers</li><li>Approximate location (with your permission) to show you nearby events</li></ul>",
+          },
+          {
+            title: "3. How We Use Your Information",
+            content:
+              "<p>We use your data to:</p><ul><li>Manage your account and process registrations</li><li>Show you relevant events and send notifications</li><li>Improve the Application and prevent fraud</li><li>Comply with legal obligations</li></ul>",
+          },
+          {
+            title: "4. Sharing with Third Parties",
+            content:
+              "<p>We do not sell your personal information. We may share it with:</p><ul><li>Event organizers when you register</li><li>Service providers needed to operate the Application (hosting, analytics)</li><li>Authorities when required by law</li></ul>",
+          },
+          {
+            title: "5. Storage and Security",
+            content:
+              "<p>Your data is stored on secure servers and transmitted encrypted. We implement reasonable technical and organizational measures to protect it, although no system is 100% foolproof.</p>",
+          },
+          {
+            title: "6. Your Rights",
+            content:
+              "<p>You can access, correct, or delete your information from the Application settings or by writing to us. You may also object to processing or request the portability of your data.</p>",
+          },
+          {
+            title: "7. Minors",
+            content:
+              "<p>Gazella is not directed at children under 13. We do not knowingly collect personal data from children under that age.</p>",
+          },
+          {
+            title: "8. Changes and Contact",
+            content:
+              "<p>We may update this Policy and will notify you of significant changes through the Application. For privacy questions, contact us at: support@gazella.com</p>",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "2",
+    name: "Youtime",
+    slug: "youtime",
+    description:
+      'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
+    icon: "⏰",
+    logo: YouTimeIcon,
+    iconBgColor: "#a5b4fc",
+    fullDescription:
+      'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
+    features: [
+      "Comparte videos desde un timestamp específico",
+      "Interfaz simple e intuitiva",
+      "Genera enlaces limpios y cortos",
+      "Sin anuncios ni distracciones",
+    ],
+    appStoreUrl: "",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.youtime",
+    changelog: [
+      {
+        version: "1.2.0",
+        date: "20 de Septiembre, 2023",
+        type: "improvement",
+        changes: [
+          "Mejora en la detección automática de timestamps",
+          "Interfaz rediseñada más moderna",
+          "Soporte para copiar enlace automáticamente",
+        ],
+      },
+      {
+        version: "1.0.0",
+        date: "5 de Marzo, 2023",
+        type: "new",
+        changes: [
+          "Lanzamiento inicial de Youtime con funcionalidad básica de timestamps.",
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: "1 de Octubre, 2023",
+        sections: [
+          {
+            title: "1. Aceptación de los Términos",
+            content:
+              '<p>Al usar Youtime (\"la Aplicación\"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
+          },
+          {
+            title: "2. Uso del Servicio",
+            content:
+              "<p>Youtime te permite compartir enlaces de YouTube con timestamps personalizados. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente para compartir contenido de YouTube de forma legítima</li><li>No intentar modificar o alterar el funcionamiento de la Aplicación</li><li>Respetar los derechos de autor del contenido compartido</li></ul>",
+          },
+          {
+            title: "3. Privacidad",
+            content:
+              "<p>Youtime no recopila ni almacena información personal de los usuarios. Los enlaces que generas son procesados localmente en tu dispositivo.</p>",
+          },
+          {
+            title: "4. Propiedad Intelectual",
+            content:
+              "<p>Todos los derechos sobre la Aplicación son propiedad de Youtime. No puedes copiar, modificar o distribuir la Aplicación sin permiso.</p>",
+          },
+          {
+            title: "5. Limitación de Responsabilidad",
+            content:
+              '<p>La Aplicación se proporciona "tal cual" sin garantías. No nos hacemos responsables de problemas técnicos o errores en los enlaces generados.</p>',
+          },
+          {
+            title: "6. Contacto",
+            content:
+              "<p>Para preguntas o comentarios, contáctanos en: soporte@youtime.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "October 1, 2023",
+        sections: [
+          {
+            title: "1. Acceptance of Terms",
+            content:
+              '<p>By using Youtime (\"the Application\"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
+          },
+          {
+            title: "2. Use of Service",
+            content:
+              "<p>Youtime allows you to share YouTube links with custom timestamps. You agree to:</p><ul><li>Use the Application only to share YouTube content legitimately</li><li>Not attempt to modify or alter the Application's functionality</li><li>Respect the copyright of shared content</li></ul>",
+          },
+          {
+            title: "3. Privacy",
+            content:
+              "<p>Youtime does not collect or store personal user information. The links you generate are processed locally on your device.</p>",
+          },
+          {
+            title: "4. Intellectual Property",
+            content:
+              "<p>All rights to the Application are owned by Youtime. You may not copy, modify, or distribute the Application without permission.</p>",
+          },
+          {
+            title: "5. Limitation of Liability",
+            content:
+              '<p>The Application is provided "as is" without warranties. We are not responsible for technical issues or errors in generated links.</p>',
+          },
+          {
+            title: "6. Contact",
+            content:
+              "<p>For questions or comments, contact us at: support@youtime.com</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "1 de Octubre, 2023",
+        sections: [
+          {
+            title: "1. Introducción",
+            content:
+              "<p>Esta Política de Privacidad describe cómo Youtime maneja la información cuando usas la Aplicación. Tu privacidad es importante para nosotros.</p>",
+          },
+          {
+            title: "2. Información que NO Recopilamos",
+            content:
+              "<p>Youtime no requiere registro ni cuenta. No recopilamos ni almacenamos información personal identificable como nombre, correo electrónico, dirección o ubicación.</p>",
+          },
+          {
+            title: "3. Procesamiento Local",
+            content:
+              "<p>Los enlaces de YouTube y los timestamps que introduces se procesan localmente en tu dispositivo para generar la URL final. Esta información no se transmite a nuestros servidores.</p>",
+          },
+          {
+            title: "4. Datos del Dispositivo y Permisos",
+            content:
+              "<p>La Aplicación puede solicitar permisos básicos del sistema (como acceso al portapapeles para copiar enlaces). Estos permisos se usan únicamente para la funcionalidad correspondiente y no implican recopilación de datos personales.</p>",
+          },
+          {
+            title: "5. Servicios de Terceros",
+            content:
+              "<p>Los enlaces que generas apuntan a YouTube (operado por Google), que tiene su propia política de privacidad. Te recomendamos consultarla para entender cómo trata tus datos cuando reproduces el video.</p>",
+          },
+          {
+            title: "6. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política. Cualquier cambio se publicará en la Aplicación. Para preguntas, contáctanos en: soporte@youtime.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "October 1, 2023",
+        sections: [
+          {
+            title: "1. Introduction",
+            content:
+              "<p>This Privacy Policy describes how Youtime handles information when you use the Application. Your privacy is important to us.</p>",
+          },
+          {
+            title: "2. Information We Do NOT Collect",
+            content:
+              "<p>Youtime does not require registration or an account. We do not collect or store personally identifiable information such as name, email, address, or location.</p>",
+          },
+          {
+            title: "3. Local Processing",
+            content:
+              "<p>The YouTube links and timestamps you enter are processed locally on your device to generate the final URL. This information is not transmitted to our servers.</p>",
+          },
+          {
+            title: "4. Device Data and Permissions",
+            content:
+              "<p>The Application may request basic system permissions (such as clipboard access to copy links). These permissions are used solely for the corresponding feature and do not involve personal data collection.</p>",
+          },
+          {
+            title: "5. Third-Party Services",
+            content:
+              "<p>The links you generate point to YouTube (operated by Google), which has its own privacy policy. We recommend reviewing it to understand how Google handles your data when you play the video.</p>",
+          },
+          {
+            title: "6. Changes and Contact",
+            content:
+              "<p>We may update this Policy. Any changes will be published in the Application. For questions, contact us at: support@youtime.com</p>",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "3",
+    name: "Festivos del mundo",
+    slug: "festivos-del-mundo",
+    description:
+      "Explora y celebra con los feriados mundiales: tu guía completa para los feriados globales",
+    icon: "🌍",
+    logo: HolidayIcon,
+    iconBgColor: "#bfdbfe",
+    fullDescription:
+      "Explora y celebra los feriados de todo el mundo. Una guía completa con información detallada de festividades, días festivos y celebraciones de diferentes países y culturas.",
+    features: [
+      "Base de datos completa de feriados mundiales",
+      "Información detallada de cada festividad",
+      "Filtrado por país y tipo de celebración",
+      "Notificaciones de próximos feriados",
+      "Calendario sincronizable",
+    ],
+    appStoreUrl:
+      "https://apps.apple.com/us/app/festivos-del-mundo/id6475969475",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.holidayslatamapp",
+    changelog: [
+      {
+        version: "1.5.0",
+        date: "10 de Noviembre, 2023",
+        type: "new",
+        changes: [
+          "Agregados feriados de 50 países nuevos",
+          "Nueva función de compartir festividades",
+          "Widget para pantalla de inicio",
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: "15 de Noviembre, 2023",
+        sections: [
+          {
+            title: "1. Aceptación de los Términos",
+            content:
+              '<p>Al usar Festivos del mundo (\"la Aplicación\"), aceptas estar sujeto a estos Términos y Condiciones.</p>',
+          },
+          {
+            title: "2. Uso de la Información",
+            content:
+              "<p>La información sobre feriados se proporciona únicamente con fines informativos. Te comprometes a:</p><ul><li>Verificar la información con fuentes oficiales cuando sea necesario</li><li>No usar la información para fines comerciales sin autorización</li><li>Respetar las tradiciones culturales de los feriados presentados</li></ul>",
+          },
+          {
+            title: "3. Exactitud de la Información",
+            content:
+              "<p>Hacemos nuestro mejor esfuerzo para mantener la información actualizada, pero no garantizamos la exactitud absoluta de las fechas y descripciones de los feriados.</p>",
+          },
+          {
+            title: "4. Privacidad",
+            content:
+              "<p>Recopilamos datos mínimos para mejorar la experiencia del usuario, como preferencias de país y notificaciones. Consulta nuestra Política de Privacidad para más detalles.</p>",
+          },
+          {
+            title: "5. Propiedad Intelectual",
+            content:
+              "<p>El contenido de la Aplicación, incluyendo textos e imágenes, está protegido por derechos de autor. No puedes reproducir el contenido sin permiso.</p>",
+          },
+          {
+            title: "6. Limitación de Responsabilidad",
+            content:
+              "<p>No nos hacemos responsables de:</p><ul><li>Errores en fechas o descripciones de feriados</li><li>Cambios de última hora en calendarios oficiales</li><li>Decisiones tomadas basadas en la información de la Aplicación</li></ul>",
+          },
+          {
+            title: "7. Contacto",
+            content:
+              "<p>Para reportar errores o sugerencias, contáctanos en: info@festivosdelmundo.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "November 15, 2023",
+        sections: [
+          {
+            title: "1. Acceptance of Terms",
+            content:
+              '<p>By using Festivos del mundo (\"the Application\"), you agree to be bound by these Terms and Conditions.</p>',
+          },
+          {
+            title: "2. Use of Information",
+            content:
+              "<p>Holiday information is provided for informational purposes only. You agree to:</p><ul><li>Verify information with official sources when necessary</li><li>Not use the information for commercial purposes without authorization</li><li>Respect the cultural traditions of the holidays presented</li></ul>",
+          },
+          {
+            title: "3. Information Accuracy",
+            content:
+              "<p>We make our best effort to keep information up to date, but we do not guarantee absolute accuracy of holiday dates and descriptions.</p>",
+          },
+          {
+            title: "4. Privacy",
+            content:
+              "<p>We collect minimal data to improve user experience, such as country preferences and notifications. See our Privacy Policy for more details.</p>",
+          },
+          {
+            title: "5. Intellectual Property",
+            content:
+              "<p>The Application's content, including texts and images, is protected by copyright. You may not reproduce the content without permission.</p>",
+          },
+          {
+            title: "6. Limitation of Liability",
+            content:
+              "<p>We are not responsible for:</p><ul><li>Errors in holiday dates or descriptions</li><li>Last-minute changes in official calendars</li><li>Decisions made based on information from the Application</li></ul>",
+          },
+          {
+            title: "7. Contact",
+            content:
+              "<p>To report errors or suggestions, contact us at: info@festivosdelmundo.com</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "15 de Noviembre, 2023",
+        sections: [
+          {
+            title: "1. Introducción",
+            content:
+              "<p>Esta Política describe cómo Festivos del mundo maneja la información cuando usas la Aplicación.</p>",
+          },
+          {
+            title: "2. Información que Recopilamos",
+            content:
+              "<p>Recopilamos información mínima necesaria para mejorar tu experiencia:</p><ul><li>Preferencias de país y categorías de feriados</li><li>Configuración de notificaciones</li><li>Datos técnicos del dispositivo (versión del sistema operativo, idioma)</li></ul>",
+          },
+          {
+            title: "3. Cómo Usamos tu Información",
+            content:
+              "<p>Usamos los datos para personalizar el contenido (mostrarte feriados de los países que sigues), enviarte notificaciones de festividades próximas y mejorar la calidad del servicio.</p>",
+          },
+          {
+            title: "4. Almacenamiento",
+            content:
+              "<p>Las preferencias se almacenan principalmente en tu dispositivo. Podemos sincronizar configuraciones con servidores seguros si activas esa opción.</p>",
+          },
+          {
+            title: "5. Compartir Información",
+            content:
+              "<p>No vendemos ni compartimos tu información personal con terceros para fines de marketing. Podemos usar proveedores de analítica para entender el uso agregado y anónimo de la Aplicación.</p>",
+          },
+          {
+            title: "6. Tus Derechos",
+            content:
+              "<p>Puedes restablecer tus preferencias o desinstalar la Aplicación en cualquier momento, lo que removerá los datos almacenados localmente.</p>",
+          },
+          {
+            title: "7. Cambios y Contacto",
+            content:
+              "<p>Esta Política puede actualizarse. Para preguntas sobre privacidad, contáctanos en: info@festivosdelmundo.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "November 15, 2023",
+        sections: [
+          {
+            title: "1. Introduction",
+            content:
+              "<p>This Policy describes how Festivos del mundo handles information when you use the Application.</p>",
+          },
+          {
+            title: "2. Information We Collect",
+            content:
+              "<p>We collect minimal information needed to improve your experience:</p><ul><li>Country and holiday category preferences</li><li>Notification settings</li><li>Technical device data (operating system version, language)</li></ul>",
+          },
+          {
+            title: "3. How We Use Your Information",
+            content:
+              "<p>We use the data to personalize content (showing you holidays for the countries you follow), send notifications about upcoming holidays, and improve service quality.</p>",
+          },
+          {
+            title: "4. Storage",
+            content:
+              "<p>Preferences are primarily stored on your device. We may sync settings with secure servers if you enable that option.</p>",
+          },
+          {
+            title: "5. Sharing Information",
+            content:
+              "<p>We do not sell or share your personal information with third parties for marketing purposes. We may use analytics providers to understand aggregated and anonymous use of the Application.</p>",
+          },
+          {
+            title: "6. Your Rights",
+            content:
+              "<p>You can reset your preferences or uninstall the Application at any time, which will remove locally stored data.</p>",
+          },
+          {
+            title: "7. Changes and Contact",
+            content:
+              "<p>This Policy may be updated. For privacy questions, contact us at: info@festivosdelmundo.com</p>",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "5",
+    name: "TaskMaster",
+    slug: "taskmaster",
+    description:
+      "TaskMaster es tu asistente personal de productividad. Organiza tus tareas, proyectos y objetivos en un solo lugar con una interfaz intuitiva y poderosas funciones de gestión.",
+    icon: "✅",
+    logo: TaskMasterIcon,
+    iconBgColor: "#fcd34d",
+    fullDescription:
+      "TaskMaster es la solución definitiva para gestionar tu productividad. Con funciones avanzadas de organización, recordatorios inteligentes y análisis de rendimiento, podrás alcanzar tus objetivos de manera eficiente.",
+    features: [
+      "Gestión de tareas con prioridades y etiquetas",
+      "Proyectos colaborativos en equipo",
+      "Recordatorios inteligentes personalizables",
+      "Estadísticas y análisis de productividad",
+      "Sincronización en la nube entre dispositivos",
+      "Modo enfoque para eliminar distracciones",
+    ],
+    appStoreUrl:
+      "https://apps.apple.com/us/app/taskmasterpro-plus/id6741769410",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.taskmasterpro",
+    changelog: [
+      {
+        version: "3.5.0",
+        date: "5 de Diciembre, 2023",
+        type: "new",
+        changes: [
+          "Nuevo modo de vista Kanban para proyectos",
+          "Integración con herramientas de comunicación (Slack, Teams)",
+          "Plantillas predefinidas para diferentes tipos de proyectos",
+          "Widget mejorado para pantalla de inicio",
+        ],
+      },
+      {
+        version: "3.0.0",
+        date: "20 de Agosto, 2023",
+        type: "new",
+        changes: [
+          "Rediseño completo de la interfaz",
+          "Colaboración en tiempo real",
+          "Modo oscuro mejorado",
+        ],
+      },
+      {
+        version: "2.8.0",
+        date: "10 de Mayo, 2023",
+        type: "improvement",
+        changes: [
+          "Optimización del rendimiento en dispositivos de gama baja",
+          "Corrección de errores en sincronización",
+          "Mejoras en la búsqueda de tareas",
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: "5 de Diciembre, 2023",
+        sections: [
+          {
+            title: "1. Aceptación de los Términos",
+            content:
+              '<p>Al usar TaskMaster (\"la Aplicación\"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
+          },
+          {
+            title: "2. Cuenta de Usuario",
+            content:
+              "<p>Para usar TaskMaster, necesitas crear una cuenta. Te comprometes a:</p><ul><li>Proporcionar información precisa y completa</li><li>Mantener la seguridad de tu contraseña</li><li>Notificarnos inmediatamente de cualquier uso no autorizado</li><li>No compartir tu cuenta con terceros</li></ul>",
+          },
+          {
+            title: "3. Uso de la Aplicación",
+            content:
+              "<p>TaskMaster te permite gestionar tareas y proyectos. Te comprometes a:</p><ul><li>Usar la Aplicación de manera responsable</li><li>No cargar contenido ilegal o inapropiado</li><li>Respetar los derechos de otros usuarios</li><li>No intentar comprometer la seguridad del servicio</li></ul>",
+          },
+          {
+            title: "4. Privacidad y Datos",
+            content:
+              "<p>Recopilamos y almacenamos tus tareas, proyectos y datos de colaboración. Toda la información se cifra y protege según nuestra Política de Privacidad. No compartimos tus datos con terceros sin tu consentimiento.</p>",
+          },
+          {
+            title: "5. Suscripciones y Pagos",
+            content:
+              "<p>TaskMaster ofrece planes gratuitos y premium. Los planes premium se renuevan automáticamente a menos que los canceles. Los pagos no son reembolsables excepto según lo exija la ley.</p>",
+          },
+          {
+            title: "6. Propiedad Intelectual",
+            content:
+              "<p>Todos los derechos sobre la Aplicación son propiedad de TaskMaster. El contenido que creas (tareas, proyectos) sigue siendo tuyo, pero nos otorgas licencia para procesarlo y mostrarlo según la funcionalidad de la Aplicación.</p>",
+          },
+          {
+            title: "7. Limitación de Responsabilidad",
+            content:
+              "<p>No nos hacemos responsables de:</p><ul><li>Pérdida de datos debido a problemas técnicos</li><li>Interrupciones del servicio</li><li>Decisiones tomadas basadas en el uso de la Aplicación</li></ul>",
+          },
+          {
+            title: "8. Terminación",
+            content:
+              "<p>Puedes cancelar tu cuenta en cualquier momento. Nos reservamos el derecho de suspender o terminar cuentas que violen estos términos.</p>",
+          },
+          {
+            title: "9. Contacto",
+            content:
+              "<p>Para soporte o preguntas, contáctanos en: support@taskmaster.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "December 5, 2023",
+        sections: [
+          {
+            title: "1. Acceptance of Terms",
+            content:
+              '<p>By using TaskMaster (\"the Application\"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
+          },
+          {
+            title: "2. User Account",
+            content:
+              "<p>To use TaskMaster, you need to create an account. You agree to:</p><ul><li>Provide accurate and complete information</li><li>Maintain the security of your password</li><li>Notify us immediately of any unauthorized use</li><li>Not share your account with third parties</li></ul>",
+          },
+          {
+            title: "3. Use of the Application",
+            content:
+              "<p>TaskMaster allows you to manage tasks and projects. You agree to:</p><ul><li>Use the Application responsibly</li><li>Not upload illegal or inappropriate content</li><li>Respect the rights of other users</li><li>Not attempt to compromise service security</li></ul>",
+          },
+          {
+            title: "4. Privacy and Data",
+            content:
+              "<p>We collect and store your tasks, projects, and collaboration data. All information is encrypted and protected according to our Privacy Policy. We do not share your data with third parties without your consent.</p>",
+          },
+          {
+            title: "5. Subscriptions and Payments",
+            content:
+              "<p>TaskMaster offers free and premium plans. Premium plans auto-renew unless you cancel. Payments are non-refundable except as required by law.</p>",
+          },
+          {
+            title: "6. Intellectual Property",
+            content:
+              "<p>All rights to the Application are owned by TaskMaster. Content you create (tasks, projects) remains yours, but you grant us a license to process and display it according to the Application's functionality.</p>",
+          },
+          {
+            title: "7. Limitation of Liability",
+            content:
+              "<p>We are not responsible for:</p><ul><li>Data loss due to technical issues</li><li>Service interruptions</li><li>Decisions made based on use of the Application</li></ul>",
+          },
+          {
+            title: "8. Termination",
+            content:
+              "<p>You can cancel your account at any time. We reserve the right to suspend or terminate accounts that violate these terms.</p>",
+          },
+          {
+            title: "9. Contact",
+            content:
+              "<p>For support or questions, contact us at: support@taskmaster.com</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "5 de Diciembre, 2023",
+        sections: [
+          {
+            title: "1. Introducción",
+            content:
+              "<p>Esta Política describe cómo TaskMaster recopila, usa y protege tu información cuando usas la Aplicación.</p>",
+          },
+          {
+            title: "2. Información que Recopilamos",
+            content:
+              "<p>Para ofrecer la funcionalidad de TaskMaster recopilamos:</p><ul><li>Datos de cuenta: nombre, correo electrónico y contraseña cifrada</li><li>Contenido del usuario: tareas, proyectos, etiquetas y archivos adjuntos</li><li>Datos de colaboración: invitaciones, comentarios y miembros del equipo</li><li>Datos técnicos: dispositivo, dirección IP y registros de uso</li><li>Información de pago para suscripciones (procesada por nuestros proveedores de pago)</li></ul>",
+          },
+          {
+            title: "3. Cómo Usamos tu Información",
+            content:
+              "<p>Usamos tus datos para operar el servicio, sincronizar entre dispositivos, enviar recordatorios, ofrecer funciones colaborativas, procesar pagos y mejorar la Aplicación.</p>",
+          },
+          {
+            title: "4. Compartir Información",
+            content:
+              "<p>No vendemos tu información personal. Podemos compartirla con:</p><ul><li>Otros miembros de los equipos en los que colaboras (limitado al contenido compartido)</li><li>Proveedores de servicios (hosting, pagos, analítica) bajo acuerdos de confidencialidad</li><li>Autoridades cuando la ley lo requiera</li></ul>",
+          },
+          {
+            title: "5. Almacenamiento, Seguridad y Retención",
+            content:
+              "<p>Tus datos se cifran en tránsito y en reposo. Conservamos tu información mientras tu cuenta esté activa; al cerrar la cuenta, eliminamos tus datos en un plazo razonable, salvo obligaciones legales de retención.</p>",
+          },
+          {
+            title: "6. Tus Derechos",
+            content:
+              "<p>Puedes acceder, exportar, corregir o eliminar tu información desde la configuración de tu cuenta. También puedes solicitar la portabilidad de tus datos contactándonos.</p>",
+          },
+          {
+            title: "7. Menores de Edad",
+            content:
+              "<p>TaskMaster no está dirigida a menores de 13 años. No recopilamos a sabiendas datos personales de menores de esa edad.</p>",
+          },
+          {
+            title: "8. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política. Te notificaremos cambios significativos por correo o dentro de la Aplicación. Para preguntas, contáctanos en: support@taskmaster.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "December 5, 2023",
+        sections: [
+          {
+            title: "1. Introduction",
+            content:
+              "<p>This Policy describes how TaskMaster collects, uses, and protects your information when you use the Application.</p>",
+          },
+          {
+            title: "2. Information We Collect",
+            content:
+              "<p>To provide TaskMaster functionality we collect:</p><ul><li>Account data: name, email, and encrypted password</li><li>User content: tasks, projects, labels, and attachments</li><li>Collaboration data: invitations, comments, and team members</li><li>Technical data: device, IP address, and usage logs</li><li>Payment information for subscriptions (processed by our payment providers)</li></ul>",
+          },
+          {
+            title: "3. How We Use Your Information",
+            content:
+              "<p>We use your data to operate the service, sync across devices, send reminders, offer collaboration features, process payments, and improve the Application.</p>",
+          },
+          {
+            title: "4. Sharing Information",
+            content:
+              "<p>We do not sell your personal information. We may share it with:</p><ul><li>Other members of teams you collaborate with (limited to shared content)</li><li>Service providers (hosting, payments, analytics) under confidentiality agreements</li><li>Authorities when required by law</li></ul>",
+          },
+          {
+            title: "5. Storage, Security and Retention",
+            content:
+              "<p>Your data is encrypted in transit and at rest. We retain your information while your account is active; upon account closure, we delete your data within a reasonable period, except where legal retention obligations apply.</p>",
+          },
+          {
+            title: "6. Your Rights",
+            content:
+              "<p>You can access, export, correct, or delete your information from your account settings. You may also request the portability of your data by contacting us.</p>",
+          },
+          {
+            title: "7. Minors",
+            content:
+              "<p>TaskMaster is not directed at children under 13. We do not knowingly collect personal data from children under that age.</p>",
+          },
+          {
+            title: "8. Changes and Contact",
+            content:
+              "<p>We may update this Policy. We will notify you of significant changes via email or in-app. For questions, contact us at: support@taskmaster.com</p>",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "6",
+    name: "Pronostigol",
+    slug: "pronostigol",
+    description:
+      "Pronostigol es la app definitiva para los amantes del fútbol. Crea quinielas, compite con amigos y demuestra tus conocimientos prediciendo resultados de ligas y torneos internacionales.",
+    icon: "🎯",
+    logo: PronostigolIcon,
+    iconBgColor: "#86efac",
+    fullDescription:
+      "Pronostigol te permite crear y participar en quinielas de fútbol de manera fácil y divertida. Compite con amigos, colegas o únete a ligas públicas. Sistema de puntos, rankings en tiempo real y premios virtuales te esperan.",
+    features: [
+      "Crea quinielas personalizadas para cualquier torneo",
+      "Participa en ligas públicas y privadas",
+      "Sistema de puntuación personalizable",
+      "Rankings y estadísticas detalladas",
+      "Notificaciones de partidos próximos",
+      "Chat integrado con otros participantes",
+    ],
+    appStoreUrl: "https://apps.apple.com/us/app/pronostigol/id6550892183",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.pronostigolapp",
+    changelog: [
+      {
+        version: "2.8.0",
+        date: "28 de Noviembre, 2023",
+        type: "new",
+        changes: [
+          "Soporte para Copa América 2024",
+          "Nueva función de predicciones especiales (goleador, tarjetas, etc.)",
+          "Modo competitivo con premios virtuales",
+          "Integración con estadísticas en vivo",
+        ],
+      },
+      {
+        version: "2.5.0",
+        date: "15 de Septiembre, 2023",
+        type: "improvement",
+        changes: [
+          "Mejoras en el sistema de notificaciones",
+          "Optimización de la velocidad de carga",
+          "Corrección de errores en el cálculo de puntos",
+        ],
+      },
+      {
+        version: "2.0.0",
+        date: "1 de Junio, 2023",
+        type: "new",
+        changes: [
+          "Rediseño completo de la interfaz",
+          "Sistema de chat entre participantes",
+          "Nuevos modos de juego",
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: "28 de Noviembre, 2023",
+        sections: [
+          {
+            title: "1. Aceptación de los Términos",
+            content:
+              '<p>Al usar Pronostigol (\"la Aplicación\"), aceptas estos Términos y Condiciones en su totalidad.</p>',
+          },
+          {
+            title: "2. Naturaleza del Servicio",
+            content:
+              "<p>Pronostigol es una plataforma de entretenimiento para crear y participar en quinielas de fútbol. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines recreativos</li><li>No usar la plataforma para apuestas con dinero real</li><li>Respetar las reglas de las ligas en las que participas</li><li>No crear múltiples cuentas para obtener ventajas injustas</li></ul>",
+          },
+          {
+            title: "3. Cuenta de Usuario",
+            content:
+              "<p>Para participar en quinielas, debes crear una cuenta proporcionando información verídica. Eres responsable de mantener la confidencialidad de tu contraseña.</p>",
+          },
+          {
+            title: "4. Ligas y Competencias",
+            content:
+              "<p>Puedes crear ligas privadas o unirte a ligas públicas. Los administradores de ligas pueden establecer reglas específicas que todos los participantes deben respetar.</p>",
+          },
+          {
+            title: "5. Sistema de Puntuación",
+            content:
+              "<p>El sistema de puntuación puede variar según la configuración de cada liga. Pronostigol calcula automáticamente los puntos basándose en los resultados oficiales de los partidos.</p>",
+          },
+          {
+            title: "6. Premios Virtuales",
+            content:
+              "<p>Los premios ofrecidos en Pronostigol son virtuales y no tienen valor monetario. No se pueden canjear por dinero real ni productos físicos.</p>",
+          },
+          {
+            title: "7. Conducta del Usuario",
+            content:
+              "<p>Está prohibido:</p><ul><li>Usar lenguaje ofensivo o inapropiado en chats</li><li>Acosar o intimidar a otros usuarios</li><li>Compartir contenido ilegal o inapropiado</li><li>Intentar manipular resultados o el sistema de puntuación</li></ul>",
+          },
+          {
+            title: "8. Privacidad",
+            content:
+              "<p>Recopilamos datos sobre tus predicciones, interacciones y preferencias. Consulta nuestra Política de Privacidad para más información.</p>",
+          },
+          {
+            title: "9. Limitación de Responsabilidad",
+            content:
+              "<p>No nos hacemos responsables de:</p><ul><li>Errores en resultados de partidos reportados por fuentes oficiales</li><li>Interrupciones del servicio durante eventos importantes</li><li>Disputas entre usuarios de una misma liga</li><li>Pérdidas o daños derivados del uso de la Aplicación</li></ul>",
+          },
+          {
+            title: "10. Contacto",
+            content:
+              "<p>Para soporte técnico o reportar problemas, contáctanos en: soporte@pronostigol.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "November 28, 2023",
+        sections: [
+          {
+            title: "1. Acceptance of Terms",
+            content:
+              '<p>By using Pronostigol (\"the Application\"), you fully accept these Terms and Conditions.</p>',
+          },
+          {
+            title: "2. Nature of Service",
+            content:
+              "<p>Pronostigol is an entertainment platform for creating and participating in soccer pools. You agree to:</p><ul><li>Use the Application solely for recreational purposes</li><li>Not use the platform for real money betting</li><li>Respect the rules of the leagues you participate in</li><li>Not create multiple accounts to gain unfair advantages</li></ul>",
+          },
+          {
+            title: "3. User Account",
+            content:
+              "<p>To participate in pools, you must create an account providing truthful information. You are responsible for maintaining the confidentiality of your password.</p>",
+          },
+          {
+            title: "4. Leagues and Competitions",
+            content:
+              "<p>You can create private leagues or join public leagues. League administrators can establish specific rules that all participants must respect.</p>",
+          },
+          {
+            title: "5. Scoring System",
+            content:
+              "<p>The scoring system may vary depending on each league's configuration. Pronostigol automatically calculates points based on official match results.</p>",
+          },
+          {
+            title: "6. Virtual Prizes",
+            content:
+              "<p>Prizes offered in Pronostigol are virtual and have no monetary value. They cannot be redeemed for real money or physical products.</p>",
+          },
+          {
+            title: "7. User Conduct",
+            content:
+              "<p>The following is prohibited:</p><ul><li>Using offensive or inappropriate language in chats</li><li>Harassing or intimidating other users</li><li>Sharing illegal or inappropriate content</li><li>Attempting to manipulate results or the scoring system</li></ul>",
+          },
+          {
+            title: "8. Privacy",
+            content:
+              "<p>We collect data about your predictions, interactions, and preferences. See our Privacy Policy for more information.</p>",
+          },
+          {
+            title: "9. Limitation of Liability",
+            content:
+              "<p>We are not responsible for:</p><ul><li>Errors in match results reported by official sources</li><li>Service interruptions during important events</li><li>Disputes between users of the same league</li><li>Losses or damages arising from use of the Application</li></ul>",
+          },
+          {
+            title: "10. Contact",
+            content:
+              "<p>For technical support or to report issues, contact us at: support@pronostigol.com</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "28 de Noviembre, 2023",
+        sections: [
+          {
+            title: "1. Introducción",
+            content:
+              "<p>Esta Política describe cómo Pronostigol recopila, usa y protege tu información cuando usas la Aplicación.</p>",
+          },
+          {
+            title: "2. Información que Recopilamos",
+            content:
+              "<p>Para participar en quinielas recopilamos:</p><ul><li>Datos de cuenta: nombre de usuario, correo electrónico y contraseña cifrada</li><li>Predicciones, resultados y participación en ligas</li><li>Mensajes y comentarios en chats de ligas</li><li>Datos del dispositivo y registros de uso</li><li>Información para notificaciones push (con tu permiso)</li></ul>",
+          },
+          {
+            title: "3. Cómo Usamos tu Información",
+            content:
+              "<p>Usamos tus datos para:</p><ul><li>Operar las quinielas y calcular puntajes</li><li>Mostrar rankings y permitir interacción entre usuarios</li><li>Enviar notificaciones de partidos próximos y resultados</li><li>Mejorar la Aplicación y prevenir comportamientos abusivos</li></ul>",
+          },
+          {
+            title: "4. Compartir Información",
+            content:
+              "<p>No vendemos tu información personal. Otros participantes de las ligas en las que estás pueden ver tu nombre de usuario, predicciones y mensajes en chats. También podemos usar proveedores de servicios bajo acuerdos de confidencialidad.</p>",
+          },
+          {
+            title: "5. Almacenamiento y Seguridad",
+            content:
+              "<p>Tus datos se transmiten cifrados y se almacenan en servidores seguros. Aplicamos medidas razonables para protegerlos, aunque ningún sistema es 100% infalible.</p>",
+          },
+          {
+            title: "6. Tus Derechos",
+            content:
+              "<p>Puedes editar tu perfil, eliminar mensajes propios o cerrar tu cuenta desde la configuración. Al cerrar la cuenta, tus datos personales se eliminan; tus predicciones pueden conservarse de forma anónima para mantener la integridad histórica de las ligas.</p>",
+          },
+          {
+            title: "7. Menores de Edad",
+            content:
+              "<p>Pronostigol no está dirigida a menores de 13 años. No recopilamos a sabiendas datos personales de menores de esa edad.</p>",
+          },
+          {
+            title: "8. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política y notificaremos cambios relevantes en la Aplicación. Para preguntas, contáctanos en: soporte@pronostigol.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "November 28, 2023",
+        sections: [
+          {
+            title: "1. Introduction",
+            content:
+              "<p>This Policy describes how Pronostigol collects, uses, and protects your information when you use the Application.</p>",
+          },
+          {
+            title: "2. Information We Collect",
+            content:
+              "<p>To participate in pools we collect:</p><ul><li>Account data: username, email, and encrypted password</li><li>Predictions, results, and league participation</li><li>Messages and comments in league chats</li><li>Device data and usage logs</li><li>Push notification information (with your permission)</li></ul>",
+          },
+          {
+            title: "3. How We Use Your Information",
+            content:
+              "<p>We use your data to:</p><ul><li>Operate pools and calculate scores</li><li>Display rankings and enable interaction between users</li><li>Send notifications about upcoming matches and results</li><li>Improve the Application and prevent abusive behavior</li></ul>",
+          },
+          {
+            title: "4. Sharing Information",
+            content:
+              "<p>We do not sell your personal information. Other members of leagues you participate in can see your username, predictions, and chat messages. We may also use service providers under confidentiality agreements.</p>",
+          },
+          {
+            title: "5. Storage and Security",
+            content:
+              "<p>Your data is transmitted encrypted and stored on secure servers. We apply reasonable measures to protect it, although no system is 100% foolproof.</p>",
+          },
+          {
+            title: "6. Your Rights",
+            content:
+              "<p>You can edit your profile, delete your own messages, or close your account from settings. Upon account closure, your personal data is deleted; your predictions may be retained anonymously to preserve the historical integrity of the leagues.</p>",
+          },
+          {
+            title: "7. Minors",
+            content:
+              "<p>Pronostigol is not directed at children under 13. We do not knowingly collect personal data from children under that age.</p>",
+          },
+          {
+            title: "8. Changes and Contact",
+            content:
+              "<p>We may update this Policy and will notify you of relevant changes in the Application. For questions, contact us at: support@pronostigol.com</p>",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "7",
+    name: "SuperLineUp",
+    slug: "superlineup",
+    description:
+      "Crea alineaciones de fútbol increíbles en segundos. Equipo (11) o partido completo (22), formaciones clásicas, drag & drop y personalización total.",
+    icon: "⚽",
+    logo: SuperLineUpIcon,
+    iconBgColor: "#86efac",
+    fullDescription:
+      "¡Bienvenido a SuperLineUp! Crea alineaciones de fútbol increíbles en segundos: equipo (11) o partido completo (22), más de 7 formaciones clásicas, drag & drop fluido, camisetas, césped y estadio personalizables, guarda y comparte como imagen, 100% sin conexión. Arma tu alineación, muestra tu táctica y comparte tu pasión.",
+    features: [
+      "Diseña alineaciones de un equipo (11) o de un partido completo (22)",
+      "Elige entre múltiples formaciones tácticas (4-4-2, 4-3-3, 3-5-2 y más)",
+      "Personaliza camisetas, césped, estadio y tribunas",
+      "Mueve jugadores con drag & drop fluido",
+      "Exporta la alineación como imagen lista para redes sociales",
+      "Funciona 100% sin conexión",
+    ],
+    appStoreUrl: "https://apps.apple.com/us/app/superlineup-11/id6764713164",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.davidyero.superlineup",
+    changelog: [
+      {
+        version: "1.0.0",
+        date: "6 de Mayo, 2026",
+        type: "new",
+        changes: [
+          "Lanzamiento inicial de SuperLineUp.",
+          "Diseño de alineaciones para equipo (11) y partido completo (22).",
+          "Más de 7 formaciones clásicas disponibles (4-4-2, 4-3-3, 3-5-2 y más).",
+          "Personalización de camisetas, césped, estadio y tribunas.",
+          "Drag & drop fluido para reposicionar jugadores.",
+          "Exportación de la alineación como imagen para compartir.",
+          "Funcionamiento 100% sin conexión.",
+        ],
+      },
+    ],
+    termsAndConditions: {
+      es: {
+        lastUpdated: "6 de Mayo, 2026",
+        sections: [
+          {
+            title: "1. Aceptación de los Términos",
+            content:
+              '<p>Al descargar, instalar o usar SuperLineUp ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con estos términos, no uses la Aplicación.</p>',
+          },
+          {
+            title: "2. Naturaleza del Servicio",
+            content:
+              "<p>SuperLineUp es una aplicación de entretenimiento que te permite diseñar alineaciones de fútbol con fines recreativos y creativos. Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines personales, educativos o de entretenimiento</li><li>No usar la Aplicación para actividades ilegales o no autorizadas</li><li>No intentar modificar, descompilar o realizar ingeniería inversa sobre la Aplicación</li></ul>",
+          },
+          {
+            title: "3. Funcionamiento Sin Conexión y Privacidad",
+            content:
+              "<p>SuperLineUp funciona 100% sin conexión y todos los datos (alineaciones, configuraciones, personalizaciones) se almacenan localmente en tu dispositivo. No recopilamos, transmitimos ni almacenamos información personal en servidores externos. Eres responsable de respaldar tus alineaciones si así lo deseas.</p>",
+          },
+          {
+            title: "4. Contenido Generado por el Usuario",
+            content:
+              "<p>Las alineaciones, imágenes exportadas y demás contenido que generes con la Aplicación son de tu propiedad. Eres responsable del uso que hagas de dicho contenido al compartirlo en redes sociales u otros medios, incluyendo el cumplimiento de las normas de las plataformas en las que lo publiques.</p>",
+          },
+          {
+            title: "5. Marcas y Equipos",
+            content:
+              "<p>SuperLineUp no está afiliado, asociado, autorizado, respaldado ni oficialmente conectado con ningún club, liga, federación, jugador o entidad deportiva real. Cualquier referencia a equipos, formaciones o estilos visuales tiene fines exclusivamente ilustrativos y de personalización por parte del usuario. Las marcas y logotipos pertenecen a sus respectivos propietarios.</p>",
+          },
+          {
+            title: "6. Propiedad Intelectual",
+            content:
+              "<p>Todos los derechos de propiedad intelectual sobre la Aplicación, incluyendo su código, diseño, gráficos e interfaz, son propiedad de SuperLineUp o de sus licenciantes. No puedes copiar, modificar, distribuir ni explotar comercialmente la Aplicación o sus componentes sin nuestro consentimiento previo por escrito.</p>",
+          },
+          {
+            title: "7. Limitación de Responsabilidad",
+            content:
+              '<p>SuperLineUp se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de:</p><ul><li>Pérdida de datos almacenados localmente en el dispositivo</li><li>Errores, interrupciones o incompatibilidades con determinados dispositivos</li><li>Daños derivados del uso o imposibilidad de uso de la Aplicación</li><li>Uso indebido del contenido exportado por parte del usuario o de terceros</li></ul>',
+          },
+          {
+            title: "8. Modificaciones",
+            content:
+              "<p>Nos reservamos el derecho de modificar estos Términos y Condiciones, así como las características de la Aplicación, en cualquier momento. Las modificaciones entrarán en vigor desde su publicación en la Aplicación o en la tienda correspondiente.</p>",
+          },
+          {
+            title: "9. Contacto",
+            content:
+              "<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@superlineup.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "May 6, 2026",
+        sections: [
+          {
+            title: "1. Acceptance of Terms",
+            content:
+              '<p>By downloading, installing, or using SuperLineUp ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with these terms, do not use the Application.</p>',
+          },
+          {
+            title: "2. Nature of Service",
+            content:
+              "<p>SuperLineUp is an entertainment application that lets you design soccer line-ups for recreational and creative purposes. You agree to:</p><ul><li>Use the Application only for personal, educational, or entertainment purposes</li><li>Not use the Application for illegal or unauthorized activities</li><li>Not attempt to modify, decompile, or reverse engineer the Application</li></ul>",
+          },
+          {
+            title: "3. Offline Operation and Privacy",
+            content:
+              "<p>SuperLineUp runs 100% offline and all data (line-ups, settings, customizations) is stored locally on your device. We do not collect, transmit, or store personal information on external servers. You are responsible for backing up your line-ups if you wish to do so.</p>",
+          },
+          {
+            title: "4. User-Generated Content",
+            content:
+              "<p>The line-ups, exported images, and any other content you generate with the Application are your property. You are responsible for how you use such content when sharing it on social media or other channels, including complying with the rules of the platforms where you publish it.</p>",
+          },
+          {
+            title: "5. Trademarks and Teams",
+            content:
+              "<p>SuperLineUp is not affiliated, associated, authorized, endorsed by, or in any way officially connected with any real club, league, federation, player, or sports entity. Any reference to teams, formations, or visual styles is for purely illustrative and user-customization purposes. All trademarks and logos belong to their respective owners.</p>",
+          },
+          {
+            title: "6. Intellectual Property",
+            content:
+              "<p>All intellectual property rights to the Application, including its code, design, graphics, and interface, are owned by SuperLineUp or its licensors. You may not copy, modify, distribute, or commercially exploit the Application or its components without our prior written consent.</p>",
+          },
+          {
+            title: "7. Limitation of Liability",
+            content:
+              '<p>SuperLineUp is provided "as is" and "as available", without warranties of any kind. We are not responsible for:</p><ul><li>Loss of data stored locally on the device</li><li>Errors, interruptions, or incompatibilities with certain devices</li><li>Damages arising from use of or inability to use the Application</li><li>Misuse of exported content by the user or third parties</li></ul>',
+          },
+          {
+            title: "8. Modifications",
+            content:
+              "<p>We reserve the right to modify these Terms and Conditions, as well as the features of the Application, at any time. Modifications will take effect upon publication in the Application or the relevant store.</p>",
+          },
+          {
+            title: "9. Contact",
+            content:
+              "<p>If you have questions about these Terms and Conditions, contact us at: support@superlineup.com</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "6 de Mayo, 2026",
+        sections: [
+          {
+            title: "1. Introducción",
+            content:
+              "<p>Esta Política describe cómo SuperLineUp maneja la información cuando usas la Aplicación. Tu privacidad es prioridad.</p>",
+          },
+          {
+            title: "2. Información que NO Recopilamos",
+            content:
+              "<p>SuperLineUp funciona 100% sin conexión. No requerimos registro y no recopilamos, transmitimos ni almacenamos información personal identificable como nombre, correo electrónico o ubicación.</p>",
+          },
+          {
+            title: "3. Almacenamiento Local",
+            content:
+              "<p>Tus alineaciones, configuraciones y personalizaciones se guardan exclusivamente en el almacenamiento local de tu dispositivo (mediante MMKV). Si desinstalas la Aplicación, estos datos se eliminan.</p>",
+          },
+          {
+            title: "4. Permisos del Dispositivo",
+            content:
+              "<p>La Aplicación puede solicitar permisos para guardar imágenes en tu galería al exportar alineaciones. Estos permisos se usan únicamente para la funcionalidad correspondiente y no implican recopilación de datos.</p>",
+          },
+          {
+            title: "5. Compartir Imágenes",
+            content:
+              "<p>Cuando exportas y compartes una alineación, la imagen se procesa localmente y se entrega al sistema de tu dispositivo (galería, redes sociales, mensajería). Las plataformas a las que la envíes manejarán esa imagen según sus propias políticas.</p>",
+          },
+          {
+            title: "6. Servicios de Terceros",
+            content:
+              "<p>SuperLineUp no integra servicios de analítica ni redes publicitarias que recopilen datos personales en esta versión. Si esto cambia en futuras versiones, actualizaremos esta Política.</p>",
+          },
+          {
+            title: "7. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política y los cambios se publicarán en la Aplicación o en la tienda correspondiente. Para preguntas, contáctanos en: soporte@superlineup.com</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "May 6, 2026",
+        sections: [
+          {
+            title: "1. Introduction",
+            content:
+              "<p>This Policy describes how SuperLineUp handles information when you use the Application. Your privacy is a priority.</p>",
+          },
+          {
+            title: "2. Information We Do NOT Collect",
+            content:
+              "<p>SuperLineUp runs 100% offline. We do not require registration and do not collect, transmit, or store personally identifiable information such as name, email, or location.</p>",
+          },
+          {
+            title: "3. Local Storage",
+            content:
+              "<p>Your line-ups, settings, and customizations are stored exclusively in the local storage of your device (via MMKV). If you uninstall the Application, this data is deleted.</p>",
+          },
+          {
+            title: "4. Device Permissions",
+            content:
+              "<p>The Application may request permissions to save images to your gallery when exporting line-ups. These permissions are used solely for the corresponding feature and do not involve data collection.</p>",
+          },
+          {
+            title: "5. Sharing Images",
+            content:
+              "<p>When you export and share a line-up, the image is processed locally and handed off to your device system (gallery, social media, messaging). The platforms you send it to will handle that image according to their own policies.</p>",
+          },
+          {
+            title: "6. Third-Party Services",
+            content:
+              "<p>SuperLineUp does not integrate analytics or advertising networks that collect personal data in this version. If this changes in future versions, we will update this Policy.</p>",
+          },
+          {
+            title: "7. Changes and Contact",
+            content:
+              "<p>We may update this Policy, and changes will be published in the Application or relevant store. For questions, contact us at: support@superlineup.com</p>",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "8",
+    name: "Football Cup Simulator",
+    slug: "football-cup-simulator",
+    description:
+      "Simula torneos de copa de fútbol y vive cada ronda hasta la final.",
+    icon: "",
+    logo: FootballCupIcon,
+    appStoreUrl:
+      "https://apps.apple.com/us/app/football-tournament-simulator/id6756631490",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.davidyero.footballcupsimulator",
     accountDeletion: {
       es: {
-        lastUpdated: '8 de septiembre de 2026',
+        lastUpdated: "8 de septiembre de 2026",
         sections: [
           {
-            title: '1. De qué aplicación hablamos',
+            title: "1. De qué aplicación hablamos",
             content:
-              '<p>Esta página explica cómo eliminar tu cuenta de <strong>Football Cup Simulator</strong>, desarrollada por David Yepes (@Davidyero) y publicada en Google Play con el identificador <code>com.davidyero.footballcupsimulator</code>.</p><p>La cuenta es opcional: puedes usar la app sin registrarte. Estas instrucciones aplican solo si creaste una.</p>',
+              "<p>Esta página explica cómo eliminar tu cuenta de <strong>Football Cup Simulator</strong>, desarrollada por David Yepes (@Davidyero) y publicada en Google Play con el identificador <code>com.davidyero.footballcupsimulator</code>.</p><p>La cuenta es opcional: puedes usar la app sin registrarte. Estas instrucciones aplican solo si creaste una.</p>",
           },
           {
-            title: '2. Eliminar tu cuenta desde la app',
+            title: "2. Eliminar tu cuenta desde la app",
             content:
-              '<p>Es la vía más rápida y el borrado es inmediato:</p><ol><li>Abre Football Cup Simulator.</li><li>Ve a la pestaña <strong>Perfil</strong>.</li><li>Entra en <strong>Cuenta</strong>.</li><li>Pulsa <strong>Eliminar cuenta</strong>.</li><li>Confirma en el aviso <strong>¿Eliminar cuenta?</strong>.</li></ol><p>La cuenta y sus datos se borran en ese momento. La acción no se puede deshacer.</p>',
+              "<p>Es la vía más rápida y el borrado es inmediato:</p><ol><li>Abre Football Cup Simulator.</li><li>Ve a la pestaña <strong>Perfil</strong>.</li><li>Entra en <strong>Cuenta</strong>.</li><li>Pulsa <strong>Eliminar cuenta</strong>.</li><li>Confirma en el aviso <strong>¿Eliminar cuenta?</strong>.</li></ol><p>La cuenta y sus datos se borran en ese momento. La acción no se puede deshacer.</p>",
           },
           {
-            title: '3. Pedir la eliminación sin instalar la app',
+            title: "3. Pedir la eliminación sin instalar la app",
             content:
-              '<p>Si ya desinstalaste la aplicación, escríbenos a <strong>support@davidyero.com</strong> <em>desde la misma dirección de correo con la que te registraste</em>, con el asunto <strong>Eliminar cuenta - Football Cup Simulator</strong>.</p><p>Usamos esa dirección para verificar que la cuenta es tuya. Procesamos la solicitud en un plazo máximo de <strong>30 días</strong> y te confirmamos por correo cuando esté hecha.</p>',
+              "<p>Si ya desinstalaste la aplicación, escríbenos a <strong>support@davidyero.com</strong> <em>desde la misma dirección de correo con la que te registraste</em>, con el asunto <strong>Eliminar cuenta - Football Cup Simulator</strong>.</p><p>Usamos esa dirección para verificar que la cuenta es tuya. Procesamos la solicitud en un plazo máximo de <strong>30 días</strong> y te confirmamos por correo cuando esté hecha.</p>",
           },
           {
-            title: '4. Qué datos se eliminan',
+            title: "4. Qué datos se eliminan",
             content:
-              '<p>Al eliminar la cuenta se borran de forma permanente de nuestros servidores:</p><ul><li>Los datos de la cuenta: correo electrónico, nombre, nombre de usuario y la versión cifrada de la contraseña.</li><li>Tus predicciones y torneos sincronizados en la nube.</li><li>Los podios que hayas elegido.</li><li>El historial de compras registrado en nuestro servidor.</li><li>Las peticiones de competencias que hayas enviado.</li></ul><p>Los torneos que tengas guardados únicamente en el teléfono no están en nuestros servidores: desaparecen al desinstalar la app.</p>',
+              "<p>Al eliminar la cuenta se borran de forma permanente de nuestros servidores:</p><ul><li>Los datos de la cuenta: correo electrónico, nombre, nombre de usuario y la versión cifrada de la contraseña.</li><li>Tus predicciones y torneos sincronizados en la nube.</li><li>Los podios que hayas elegido.</li><li>El historial de compras registrado en nuestro servidor.</li><li>Las peticiones de competencias que hayas enviado.</li></ul><p>Los torneos que tengas guardados únicamente en el teléfono no están en nuestros servidores: desaparecen al desinstalar la app.</p>",
           },
           {
-            title: '5. Qué se conserva y durante cuánto tiempo',
+            title: "5. Qué se conserva y durante cuánto tiempo",
             content:
-              '<p><strong>Registro del dispositivo para notificaciones.</strong> Guardamos un identificador de instalación y el token de notificaciones para poder enviar avisos. Al eliminar la cuenta, ese registro <strong>se desvincula de tu identidad</strong> y deja de estar asociado a ninguna persona. Se elimina cuando desinstalas la app, cuando desactivas los avisos en Ajustes, o automáticamente cuando el token deja de estar activo.</p><p><strong>Copias de seguridad.</strong> Nuestras copias de seguridad cifradas de la base de datos pueden conservar una copia de los datos hasta <strong>30 días</strong> desde el borrado, tras los cuales se sobrescriben.</p>',
+              "<p><strong>Registro del dispositivo para notificaciones.</strong> Guardamos un identificador de instalación y el token de notificaciones para poder enviar avisos. Al eliminar la cuenta, ese registro <strong>se desvincula de tu identidad</strong> y deja de estar asociado a ninguna persona. Se elimina cuando desinstalas la app, cuando desactivas los avisos en Ajustes, o automáticamente cuando el token deja de estar activo.</p><p><strong>Copias de seguridad.</strong> Nuestras copias de seguridad cifradas de la base de datos pueden conservar una copia de los datos hasta <strong>30 días</strong> desde el borrado, tras los cuales se sobrescriben.</p>",
           },
           {
-            title: '6. Tu suscripción no se cancela sola',
+            title: "6. Tu suscripción no se cancela sola",
             content:
-              '<p>Eliminar la cuenta <strong>no cancela</strong> una suscripción activa. Las suscripciones las gestiona la tienda, así que debes cancelarla tú desde <strong>Google Play &gt; Pagos y suscripciones &gt; Suscripciones</strong> (o desde Ajustes &gt; Apple ID &gt; Suscripciones en iOS). Cancela antes de borrar la cuenta para no seguir pagando.</p>',
+              "<p>Eliminar la cuenta <strong>no cancela</strong> una suscripción activa. Las suscripciones las gestiona la tienda, así que debes cancelarla tú desde <strong>Google Play &gt; Pagos y suscripciones &gt; Suscripciones</strong> (o desde Ajustes &gt; Apple ID &gt; Suscripciones en iOS). Cancela antes de borrar la cuenta para no seguir pagando.</p>",
           },
           {
-            title: '7. Contacto',
+            title: "7. Contacto",
             content:
-              '<p>Cualquier duda sobre la eliminación de tu cuenta o de tus datos: <strong>support@davidyero.com</strong>.</p>',
+              "<p>Cualquier duda sobre la eliminación de tu cuenta o de tus datos: <strong>support@davidyero.com</strong>.</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'September 8, 2026',
+        lastUpdated: "September 8, 2026",
         sections: [
           {
-            title: '1. Which app this is about',
+            title: "1. Which app this is about",
             content:
-              '<p>This page explains how to delete your <strong>Football Cup Simulator</strong> account. The app is developed by David Yepes (@Davidyero) and published on Google Play under the identifier <code>com.davidyero.footballcupsimulator</code>.</p><p>An account is optional: you can use the app without signing up. These instructions only apply if you created one.</p>',
+              "<p>This page explains how to delete your <strong>Football Cup Simulator</strong> account. The app is developed by David Yepes (@Davidyero) and published on Google Play under the identifier <code>com.davidyero.footballcupsimulator</code>.</p><p>An account is optional: you can use the app without signing up. These instructions only apply if you created one.</p>",
           },
           {
-            title: '2. Delete your account from the app',
+            title: "2. Delete your account from the app",
             content:
-              '<p>This is the fastest route and the deletion is immediate:</p><ol><li>Open Football Cup Simulator.</li><li>Go to the <strong>Profile</strong> tab.</li><li>Open <strong>Account</strong>.</li><li>Tap <strong>Delete account</strong>.</li><li>Confirm on the <strong>Delete account?</strong> prompt.</li></ol><p>Your account and its data are erased right then. The action cannot be undone.</p>',
+              "<p>This is the fastest route and the deletion is immediate:</p><ol><li>Open Football Cup Simulator.</li><li>Go to the <strong>Profile</strong> tab.</li><li>Open <strong>Account</strong>.</li><li>Tap <strong>Delete account</strong>.</li><li>Confirm on the <strong>Delete account?</strong> prompt.</li></ol><p>Your account and its data are erased right then. The action cannot be undone.</p>",
           },
           {
-            title: '3. Request deletion without installing the app',
+            title: "3. Request deletion without installing the app",
             content:
-              '<p>If you already uninstalled the app, email us at <strong>support@davidyero.com</strong> <em>from the same address you signed up with</em>, using the subject <strong>Delete account - Football Cup Simulator</strong>.</p><p>We use that address to verify the account is yours. We process the request within <strong>30 days</strong> and confirm by email once it is done.</p>',
+              "<p>If you already uninstalled the app, email us at <strong>support@davidyero.com</strong> <em>from the same address you signed up with</em>, using the subject <strong>Delete account - Football Cup Simulator</strong>.</p><p>We use that address to verify the account is yours. We process the request within <strong>30 days</strong> and confirm by email once it is done.</p>",
           },
           {
-            title: '4. What data is deleted',
+            title: "4. What data is deleted",
             content:
-              '<p>Deleting your account permanently removes the following from our servers:</p><ul><li>Account data: email address, name, username and the encrypted version of your password.</li><li>Your predictions and tournaments synced to the cloud.</li><li>The podiums you picked.</li><li>The purchase history recorded on our server.</li><li>Any competition requests you sent us.</li></ul><p>Tournaments saved only on your phone never reach our servers: they disappear when you uninstall the app.</p>',
+              "<p>Deleting your account permanently removes the following from our servers:</p><ul><li>Account data: email address, name, username and the encrypted version of your password.</li><li>Your predictions and tournaments synced to the cloud.</li><li>The podiums you picked.</li><li>The purchase history recorded on our server.</li><li>Any competition requests you sent us.</li></ul><p>Tournaments saved only on your phone never reach our servers: they disappear when you uninstall the app.</p>",
           },
           {
-            title: '5. What is kept, and for how long',
+            title: "5. What is kept, and for how long",
             content:
-              '<p><strong>Device record for notifications.</strong> We store an installation identifier and a notification token so we can deliver alerts. When you delete your account that record is <strong>unlinked from your identity</strong> and is no longer associated with any person. It is removed when you uninstall the app, when you turn alerts off in Settings, or automatically once the token goes inactive.</p><p><strong>Backups.</strong> Our encrypted database backups may retain a copy of the data for up to <strong>30 days</strong> after deletion, after which they are overwritten.</p>',
+              "<p><strong>Device record for notifications.</strong> We store an installation identifier and a notification token so we can deliver alerts. When you delete your account that record is <strong>unlinked from your identity</strong> and is no longer associated with any person. It is removed when you uninstall the app, when you turn alerts off in Settings, or automatically once the token goes inactive.</p><p><strong>Backups.</strong> Our encrypted database backups may retain a copy of the data for up to <strong>30 days</strong> after deletion, after which they are overwritten.</p>",
           },
           {
-            title: '6. Your subscription is not cancelled automatically',
+            title: "6. Your subscription is not cancelled automatically",
             content:
-              '<p>Deleting your account does <strong>not</strong> cancel an active subscription. Subscriptions are handled by the store, so you must cancel it yourself under <strong>Google Play &gt; Payments and subscriptions &gt; Subscriptions</strong> (or Settings &gt; Apple ID &gt; Subscriptions on iOS). Cancel before deleting your account so you are not charged again.</p>',
+              "<p>Deleting your account does <strong>not</strong> cancel an active subscription. Subscriptions are handled by the store, so you must cancel it yourself under <strong>Google Play &gt; Payments and subscriptions &gt; Subscriptions</strong> (or Settings &gt; Apple ID &gt; Subscriptions on iOS). Cancel before deleting your account so you are not charged again.</p>",
           },
           {
-            title: '7. Contact',
+            title: "7. Contact",
             content:
-              '<p>Any questions about deleting your account or your data: <strong>support@davidyero.com</strong>.</p>',
+              "<p>Any questions about deleting your account or your data: <strong>support@davidyero.com</strong>.</p>",
           },
         ],
       },
     },
     termsAndConditions: {
       es: {
-        lastUpdated: '8 de septiembre de 2026',
+        lastUpdated: "8 de septiembre de 2026",
         sections: [
           {
-            title: '1. Aceptacion de los Terminos',
+            title: "1. Aceptacion de los Terminos",
             content:
-              '<p>Al descargar o usar <strong>Football Cup Simulator</strong> aceptas estos Terminos. Si no estas de acuerdo con ellos, no uses la aplicacion. La aplicacion la desarrolla y opera David Yepes (@Davidyero) a titulo individual.</p>',
+              "<p>Al descargar o usar <strong>Football Cup Simulator</strong> aceptas estos Terminos. Si no estas de acuerdo con ellos, no uses la aplicacion. La aplicacion la desarrolla y opera David Yepes (@Davidyero) a titulo individual.</p>",
           },
           {
-            title: '2. Descripcion del Servicio',
+            title: "2. Descripcion del Servicio",
             content:
-              '<p>Football Cup Simulator es una aplicacion de entretenimiento para <strong>simular torneos de futbol y hacer predicciones</strong>: montas una copa o una liga, avanzas ronda a ronda, eliges tu podio y comparas tus elecciones con las del resto de la gente.</p><p>Los resultados son simulados o pronosticados por ti. <strong>La aplicacion no ofrece apuestas, ni premios en dinero, ni participacion en juegos de azar de ningun tipo.</strong></p>',
+              "<p>Football Cup Simulator es una aplicacion de entretenimiento para <strong>simular torneos de futbol y hacer predicciones</strong>: montas una copa o una liga, avanzas ronda a ronda, eliges tu podio y comparas tus elecciones con las del resto de la gente.</p><p>Los resultados son simulados o pronosticados por ti. <strong>La aplicacion no ofrece apuestas, ni premios en dinero, ni participacion en juegos de azar de ningun tipo.</strong></p>",
           },
           {
-            title: '3. Cuentas',
+            title: "3. Cuentas",
             content:
-              '<p>Puedes usar la aplicacion <strong>sin crear una cuenta</strong>. Crear una es opcional y sirve para guardar tus predicciones en la nube, recuperarlas en otro telefono y participar en el podio compartido.</p><p>Si creas una cuenta, te comprometes a dar datos veraces y a mantener tu contrasena a salvo. Eres responsable de la actividad que ocurra con tu cuenta. Puedes eliminarla en cualquier momento desde <em>Perfil &gt; Cuenta &gt; Eliminar cuenta</em>, o siguiendo las instrucciones de nuestra pagina de eliminacion de cuenta.</p>',
+              "<p>Puedes usar la aplicacion <strong>sin crear una cuenta</strong>. Crear una es opcional y sirve para guardar tus predicciones en la nube, recuperarlas en otro telefono y participar en el podio compartido.</p><p>Si creas una cuenta, te comprometes a dar datos veraces y a mantener tu contrasena a salvo. Eres responsable de la actividad que ocurra con tu cuenta. Puedes eliminarla en cualquier momento desde <em>Perfil &gt; Cuenta &gt; Eliminar cuenta</em>, o siguiendo las instrucciones de nuestra pagina de eliminacion de cuenta.</p>",
           },
           {
-            title: '4. Suscripciones y Pagos',
+            title: "4. Suscripciones y Pagos",
             content:
-              '<p>La aplicacion ofrece un plan <strong>gratuito</strong> y planes <strong>de pago</strong> que amplian los limites y quitan la publicidad. Las suscripciones se compran y se gestionan <strong>a traves de la tienda</strong> (Google Play o App Store), no a traves nuestro.</p><ul><li>El precio, la moneda y la duracion son los que muestre la tienda en el momento de la compra.</li><li>La suscripcion <strong>se renueva automaticamente</strong> salvo que la canceles al menos 24 horas antes de que termine el periodo en curso.</li><li>Para cancelar: <em>Google Play &gt; Pagos y suscripciones &gt; Suscripciones</em>, o <em>Ajustes &gt; Apple ID &gt; Suscripciones</em> en iOS. <strong>Eliminar tu cuenta no cancela la suscripcion.</strong></li><li>Las devoluciones las decide la tienda segun su propia politica; nosotros no podemos emitirlas.</li></ul>',
+              "<p>La aplicacion ofrece un plan <strong>gratuito</strong> y planes <strong>de pago</strong> que amplian los limites y quitan la publicidad. Las suscripciones se compran y se gestionan <strong>a traves de la tienda</strong> (Google Play o App Store), no a traves nuestro.</p><ul><li>El precio, la moneda y la duracion son los que muestre la tienda en el momento de la compra.</li><li>La suscripcion <strong>se renueva automaticamente</strong> salvo que la canceles al menos 24 horas antes de que termine el periodo en curso.</li><li>Para cancelar: <em>Google Play &gt; Pagos y suscripciones &gt; Suscripciones</em>, o <em>Ajustes &gt; Apple ID &gt; Suscripciones</em> en iOS. <strong>Eliminar tu cuenta no cancela la suscripcion.</strong></li><li>Las devoluciones las decide la tienda segun su propia politica; nosotros no podemos emitirlas.</li></ul>",
           },
           {
-            title: '5. Codigos de Canje',
+            title: "5. Codigos de Canje",
             content:
-              '<p>Podemos emitir codigos que desbloquean funciones o un plan durante un tiempo. Los codigos son personales, de un solo uso salvo que se indique lo contrario, no son canjeables por dinero y podemos anularlos si detectamos un uso fraudulento o su reventa.</p>',
+              "<p>Podemos emitir codigos que desbloquean funciones o un plan durante un tiempo. Los codigos son personales, de un solo uso salvo que se indique lo contrario, no son canjeables por dinero y podemos anularlos si detectamos un uso fraudulento o su reventa.</p>",
           },
           {
-            title: '6. Uso Aceptable',
+            title: "6. Uso Aceptable",
             content:
-              '<p>Al usar la aplicacion te comprometes a no: intentar acceder a cuentas o datos de otras personas; manipular las peticiones a nuestro servidor para falsear predicciones, podios o compras; automatizar el uso de la aplicacion; ni enviar contenido ilegal, ofensivo o que infrinja derechos de terceros a traves de los formularios de la aplicacion.</p><p>Podemos suspender o eliminar una cuenta que incumpla esta seccion.</p>',
+              "<p>Al usar la aplicacion te comprometes a no: intentar acceder a cuentas o datos de otras personas; manipular las peticiones a nuestro servidor para falsear predicciones, podios o compras; automatizar el uso de la aplicacion; ni enviar contenido ilegal, ofensivo o que infrinja derechos de terceros a traves de los formularios de la aplicacion.</p><p>Podemos suspender o eliminar una cuenta que incumpla esta seccion.</p>",
           },
           {
-            title: '7. Publicidad',
+            title: "7. Publicidad",
             content:
-              '<p>En el plan gratuito la aplicacion muestra publicidad de <strong>Google AdMob</strong>, en formato banner, anuncio a pantalla completa y anuncio bonificado (el que ves voluntariamente para obtener una ventaja puntual). Los planes de pago no muestran publicidad. El tratamiento de datos que hace la publicidad se explica en la <strong>Politica de Privacidad</strong>.</p>',
+              "<p>En el plan gratuito la aplicacion muestra publicidad de <strong>Google AdMob</strong>, en formato banner, anuncio a pantalla completa y anuncio bonificado (el que ves voluntariamente para obtener una ventaja puntual). Los planes de pago no muestran publicidad. El tratamiento de datos que hace la publicidad se explica en la <strong>Politica de Privacidad</strong>.</p>",
           },
           {
-            title: '8. Propiedad Intelectual y Ausencia de Afiliacion',
+            title: "8. Propiedad Intelectual y Ausencia de Afiliacion",
             content:
-              '<p>La aplicacion, su codigo, su diseno y sus textos son propiedad de David Yepes. No puedes copiarlos, redistribuirlos ni crear obras derivadas sin permiso escrito.</p><p><strong>Football Cup Simulator es un producto independiente y no esta afiliado, patrocinado ni respaldado por la FIFA, la UEFA, la CONMEBOL, la CONCACAF, ninguna federacion, liga, competicion, club ni jugador.</strong> Los nombres de equipos, competiciones y paises se usan unicamente con caracter descriptivo e informativo, para identificar a que se refiere cada simulacion. Todas las marcas pertenecen a sus respectivos titulares.</p>',
+              "<p>La aplicacion, su codigo, su diseno y sus textos son propiedad de David Yepes. No puedes copiarlos, redistribuirlos ni crear obras derivadas sin permiso escrito.</p><p><strong>Football Cup Simulator es un producto independiente y no esta afiliado, patrocinado ni respaldado por la FIFA, la UEFA, la CONMEBOL, la CONCACAF, ninguna federacion, liga, competicion, club ni jugador.</strong> Los nombres de equipos, competiciones y paises se usan unicamente con caracter descriptivo e informativo, para identificar a que se refiere cada simulacion. Todas las marcas pertenecen a sus respectivos titulares.</p>",
           },
           {
-            title: '9. Limitacion de Responsabilidad',
+            title: "9. Limitacion de Responsabilidad",
             content:
-              '<p>La aplicacion se ofrece <strong>tal cual</strong>, sin garantia de que este siempre disponible ni libre de errores. Los datos de competiciones, calendarios y equipos pueden contener imprecisiones o quedar desactualizados, y las simulaciones y predicciones <strong>no son un pronostico fiable de ningun resultado real</strong> ni deben usarse para tomar decisiones economicas.</p><p>En la medida que lo permita la ley, no respondemos por danos indirectos, perdida de datos o lucro cesante derivados del uso de la aplicacion.</p>',
+              "<p>La aplicacion se ofrece <strong>tal cual</strong>, sin garantia de que este siempre disponible ni libre de errores. Los datos de competiciones, calendarios y equipos pueden contener imprecisiones o quedar desactualizados, y las simulaciones y predicciones <strong>no son un pronostico fiable de ningun resultado real</strong> ni deben usarse para tomar decisiones economicas.</p><p>En la medida que lo permita la ley, no respondemos por danos indirectos, perdida de datos o lucro cesante derivados del uso de la aplicacion.</p>",
           },
           {
-            title: '10. Modificaciones',
+            title: "10. Modificaciones",
             content:
-              '<p>Podemos actualizar estos Terminos para reflejar cambios en la aplicacion o en la ley. Publicaremos la version nueva en esta misma pagina con su fecha de actualizacion. Si sigues usando la aplicacion despues de un cambio, se entiende que lo aceptas.</p>',
+              "<p>Podemos actualizar estos Terminos para reflejar cambios en la aplicacion o en la ley. Publicaremos la version nueva en esta misma pagina con su fecha de actualizacion. Si sigues usando la aplicacion despues de un cambio, se entiende que lo aceptas.</p>",
           },
           {
-            title: '11. Contacto',
+            title: "11. Contacto",
             content:
-              '<p>Si tienes preguntas sobre estos Terminos, contactanos en: <strong>support@davidyero.com</strong></p>',
+              "<p>Si tienes preguntas sobre estos Terminos, contactanos en: <strong>support@davidyero.com</strong></p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'September 8, 2026',
+        lastUpdated: "September 8, 2026",
         sections: [
           {
-            title: '1. Acceptance of Terms',
+            title: "1. Acceptance of Terms",
             content:
-              '<p>By downloading or using <strong>Football Cup Simulator</strong> you accept these Terms. If you do not agree with them, do not use the app. The app is developed and operated by David Yepes (@Davidyero) as an individual.</p>',
+              "<p>By downloading or using <strong>Football Cup Simulator</strong> you accept these Terms. If you do not agree with them, do not use the app. The app is developed and operated by David Yepes (@Davidyero) as an individual.</p>",
           },
           {
-            title: '2. Description of the Service',
+            title: "2. Description of the Service",
             content:
-              '<p>Football Cup Simulator is an entertainment app for <strong>simulating football tournaments and making predictions</strong>: you set up a cup or a league, advance round by round, pick your podium and compare your choices with what everyone else picked.</p><p>Results are simulated or predicted by you. <strong>The app offers no betting, no cash prizes and no gambling of any kind.</strong></p>',
+              "<p>Football Cup Simulator is an entertainment app for <strong>simulating football tournaments and making predictions</strong>: you set up a cup or a league, advance round by round, pick your podium and compare your choices with what everyone else picked.</p><p>Results are simulated or predicted by you. <strong>The app offers no betting, no cash prizes and no gambling of any kind.</strong></p>",
           },
           {
-            title: '3. Accounts',
+            title: "3. Accounts",
             content:
-              '<p>You can use the app <strong>without creating an account</strong>. Creating one is optional and it exists to save your predictions to the cloud, recover them on another phone and take part in the shared podium.</p><p>If you create an account, you agree to provide accurate information and to keep your password safe. You are responsible for activity that happens under your account. You can delete it at any time from <em>Profile &gt; Account &gt; Delete account</em>, or by following the instructions on our account deletion page.</p>',
+              "<p>You can use the app <strong>without creating an account</strong>. Creating one is optional and it exists to save your predictions to the cloud, recover them on another phone and take part in the shared podium.</p><p>If you create an account, you agree to provide accurate information and to keep your password safe. You are responsible for activity that happens under your account. You can delete it at any time from <em>Profile &gt; Account &gt; Delete account</em>, or by following the instructions on our account deletion page.</p>",
           },
           {
-            title: '4. Subscriptions and Payments',
+            title: "4. Subscriptions and Payments",
             content:
-              '<p>The app offers a <strong>free</strong> plan and <strong>paid</strong> plans that raise the limits and remove advertising. Subscriptions are purchased and managed <strong>through the store</strong> (Google Play or the App Store), not through us.</p><ul><li>Price, currency and duration are whatever the store shows at the time of purchase.</li><li>The subscription <strong>renews automatically</strong> unless you cancel it at least 24 hours before the current period ends.</li><li>To cancel: <em>Google Play &gt; Payments and subscriptions &gt; Subscriptions</em>, or <em>Settings &gt; Apple ID &gt; Subscriptions</em> on iOS. <strong>Deleting your account does not cancel the subscription.</strong></li><li>Refunds are decided by the store under its own policy; we cannot issue them.</li></ul>',
+              "<p>The app offers a <strong>free</strong> plan and <strong>paid</strong> plans that raise the limits and remove advertising. Subscriptions are purchased and managed <strong>through the store</strong> (Google Play or the App Store), not through us.</p><ul><li>Price, currency and duration are whatever the store shows at the time of purchase.</li><li>The subscription <strong>renews automatically</strong> unless you cancel it at least 24 hours before the current period ends.</li><li>To cancel: <em>Google Play &gt; Payments and subscriptions &gt; Subscriptions</em>, or <em>Settings &gt; Apple ID &gt; Subscriptions</em> on iOS. <strong>Deleting your account does not cancel the subscription.</strong></li><li>Refunds are decided by the store under its own policy; we cannot issue them.</li></ul>",
           },
           {
-            title: '5. Redeem Codes',
+            title: "5. Redeem Codes",
             content:
-              '<p>We may issue codes that unlock features or a plan for a period of time. Codes are personal, single-use unless stated otherwise, cannot be exchanged for money, and we may void them if we detect fraudulent use or resale.</p>',
+              "<p>We may issue codes that unlock features or a plan for a period of time. Codes are personal, single-use unless stated otherwise, cannot be exchanged for money, and we may void them if we detect fraudulent use or resale.</p>",
           },
           {
-            title: '6. Acceptable Use',
+            title: "6. Acceptable Use",
             content:
-              '<p>By using the app you agree not to: attempt to access other people accounts or data; tamper with requests to our server in order to fake predictions, podiums or purchases; automate use of the app; or submit illegal, offensive or infringing content through the forms in the app.</p><p>We may suspend or delete an account that breaches this section.</p>',
+              "<p>By using the app you agree not to: attempt to access other people accounts or data; tamper with requests to our server in order to fake predictions, podiums or purchases; automate use of the app; or submit illegal, offensive or infringing content through the forms in the app.</p><p>We may suspend or delete an account that breaches this section.</p>",
           },
           {
-            title: '7. Advertising',
+            title: "7. Advertising",
             content:
-              '<p>On the free plan the app shows <strong>Google AdMob</strong> advertising as banners, full-screen ads and rewarded ads (the ones you choose to watch in exchange for a one-off benefit). Paid plans show no advertising. How advertising handles data is explained in the <strong>Privacy Policy</strong>.</p>',
+              "<p>On the free plan the app shows <strong>Google AdMob</strong> advertising as banners, full-screen ads and rewarded ads (the ones you choose to watch in exchange for a one-off benefit). Paid plans show no advertising. How advertising handles data is explained in the <strong>Privacy Policy</strong>.</p>",
           },
           {
-            title: '8. Intellectual Property and No Affiliation',
+            title: "8. Intellectual Property and No Affiliation",
             content:
-              '<p>The app, its code, its design and its texts belong to David Yepes. You may not copy, redistribute or create derivative works from them without written permission.</p><p><strong>Football Cup Simulator is an independent product and is not affiliated with, sponsored by or endorsed by FIFA, UEFA, CONMEBOL, CONCACAF, or any federation, league, competition, club or player.</strong> Team, competition and country names are used purely descriptively, to identify what each simulation refers to. All trademarks belong to their respective owners.</p>',
+              "<p>The app, its code, its design and its texts belong to David Yepes. You may not copy, redistribute or create derivative works from them without written permission.</p><p><strong>Football Cup Simulator is an independent product and is not affiliated with, sponsored by or endorsed by FIFA, UEFA, CONMEBOL, CONCACAF, or any federation, league, competition, club or player.</strong> Team, competition and country names are used purely descriptively, to identify what each simulation refers to. All trademarks belong to their respective owners.</p>",
           },
           {
-            title: '9. Limitation of Liability',
+            title: "9. Limitation of Liability",
             content:
-              '<p>The app is provided <strong>as is</strong>, with no guarantee that it will always be available or free of errors. Competition, fixture and team data may be inaccurate or out of date, and simulations and predictions <strong>are not a reliable forecast of any real result</strong> and must not be used to make financial decisions.</p><p>To the extent permitted by law, we are not liable for indirect damages, data loss or lost profits arising from use of the app.</p>',
+              "<p>The app is provided <strong>as is</strong>, with no guarantee that it will always be available or free of errors. Competition, fixture and team data may be inaccurate or out of date, and simulations and predictions <strong>are not a reliable forecast of any real result</strong> and must not be used to make financial decisions.</p><p>To the extent permitted by law, we are not liable for indirect damages, data loss or lost profits arising from use of the app.</p>",
           },
           {
-            title: '10. Modifications',
+            title: "10. Modifications",
             content:
-              '<p>We may update these Terms to reflect changes in the app or in the law. We will publish the new version on this page with its update date. If you keep using the app after a change, you are deemed to accept it.</p>',
+              "<p>We may update these Terms to reflect changes in the app or in the law. We will publish the new version on this page with its update date. If you keep using the app after a change, you are deemed to accept it.</p>",
           },
           {
-            title: '11. Contact',
+            title: "11. Contact",
             content:
-              '<p>If you have questions about these Terms, contact us at: <strong>support@davidyero.com</strong></p>',
+              "<p>If you have questions about these Terms, contact us at: <strong>support@davidyero.com</strong></p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: '8 de septiembre de 2026',
+        lastUpdated: "8 de septiembre de 2026",
         sections: [
           {
-            title: '1. Introduccion',
+            title: "1. Introduccion",
             content:
-              '<p>Esta Politica de Privacidad explica que datos trata <strong>Football Cup Simulator</strong>, para que, con quien se comparten y como puedes controlarlos. La aplicacion la desarrolla y opera David Yepes (@Davidyero).</p><p>Lo primero y mas importante: <strong>puedes usar la aplicacion sin crear una cuenta y sin darnos tu correo</strong>. Casi todo lo que se describe aqui solo ocurre si decides registrarte.</p>',
+              "<p>Esta Politica de Privacidad explica que datos trata <strong>Football Cup Simulator</strong>, para que, con quien se comparten y como puedes controlarlos. La aplicacion la desarrolla y opera David Yepes (@Davidyero).</p><p>Lo primero y mas importante: <strong>puedes usar la aplicacion sin crear una cuenta y sin darnos tu correo</strong>. Casi todo lo que se describe aqui solo ocurre si decides registrarte.</p>",
           },
           {
-            title: '2. Datos que Recopilamos',
+            title: "2. Datos que Recopilamos",
             content:
-              '<p>Podemos tratar los siguientes datos:</p><ul><li><strong>Cuenta (opcional):</strong> tu nombre, tu nombre de usuario y tu correo electronico, junto con una version cifrada de tu contrasena. Si cambias de correo, guardamos el nuevo de forma temporal hasta que confirmes el codigo que te enviamos.</li><li><strong>Tus predicciones y torneos:</strong> se copian a nuestros servidores unicamente si tienes cuenta, para que no se pierdan al cambiar de telefono.</li><li><strong>Tu podio:</strong> las tres posiciones que eliges en una competencia, para poder mostrar las estadisticas agregadas de lo que elige la gente.</li><li><strong>Peticiones que nos envias:</strong> el contenido del formulario cuando nos pides que anadamos una competencia.</li><li><strong>Historial de compras:</strong> gestionado a traves de RevenueCat, para reconocer tu plan.</li><li><strong>Identificador de instalacion y token de notificaciones:</strong> necesarios para poder enviarte avisos. Se guardan junto a la plataforma, el idioma de la aplicacion y tu plan.</li><li><strong>Identificador de publicidad:</strong> lo recoge Google AdMob para servir anuncios.</li><li><strong>Uso de la aplicacion:</strong> Google Firebase Analytics registra por que pantallas pasas, de forma agregada.</li></ul><p>No pedimos ni recogemos tu ubicacion, tus contactos, tus fotos, tu microfono ni tu agenda. La aplicacion no solicita ninguno de esos permisos.</p>',
+              "<p>Podemos tratar los siguientes datos:</p><ul><li><strong>Cuenta (opcional):</strong> tu nombre, tu nombre de usuario y tu correo electronico, junto con una version cifrada de tu contrasena. Si cambias de correo, guardamos el nuevo de forma temporal hasta que confirmes el codigo que te enviamos.</li><li><strong>Tus predicciones y torneos:</strong> se copian a nuestros servidores unicamente si tienes cuenta, para que no se pierdan al cambiar de telefono.</li><li><strong>Tu podio:</strong> las tres posiciones que eliges en una competencia, para poder mostrar las estadisticas agregadas de lo que elige la gente.</li><li><strong>Peticiones que nos envias:</strong> el contenido del formulario cuando nos pides que anadamos una competencia.</li><li><strong>Historial de compras:</strong> gestionado a traves de RevenueCat, para reconocer tu plan.</li><li><strong>Identificador de instalacion y token de notificaciones:</strong> necesarios para poder enviarte avisos. Se guardan junto a la plataforma, el idioma de la aplicacion y tu plan.</li><li><strong>Identificador de publicidad:</strong> lo recoge Google AdMob para servir anuncios.</li><li><strong>Uso de la aplicacion:</strong> Google Firebase Analytics registra por que pantallas pasas, de forma agregada.</li></ul><p>No pedimos ni recogemos tu ubicacion, tus contactos, tus fotos, tu microfono ni tu agenda. La aplicacion no solicita ninguno de esos permisos.</p>",
           },
           {
-            title: '3. Como Usamos tus Datos',
+            title: "3. Como Usamos tus Datos",
             content:
-              '<p>Usamos los datos para: crear y autenticar tu cuenta; sincronizar tus predicciones entre dispositivos; calcular y mostrar las estadisticas agregadas del podio; reconocer y mantener tu plan; enviarte las notificaciones que hayas aceptado; mostrar publicidad en el plan gratuito; medir de forma agregada como se usa la aplicacion; y prevenir el abuso y el fraude.</p><p><strong>No usamos el contenido de tus predicciones con fines publicitarios</strong>, ni lo cruzamos con perfiles de anuncios.</p>',
+              "<p>Usamos los datos para: crear y autenticar tu cuenta; sincronizar tus predicciones entre dispositivos; calcular y mostrar las estadisticas agregadas del podio; reconocer y mantener tu plan; enviarte las notificaciones que hayas aceptado; mostrar publicidad en el plan gratuito; medir de forma agregada como se usa la aplicacion; y prevenir el abuso y el fraude.</p><p><strong>No usamos el contenido de tus predicciones con fines publicitarios</strong>, ni lo cruzamos con perfiles de anuncios.</p>",
           },
           {
-            title: '4. La Cuenta es Opcional, y que Cambia si la Creas',
+            title: "4. La Cuenta es Opcional, y que Cambia si la Creas",
             content:
-              '<p><strong>Sin cuenta:</strong> tus torneos y predicciones se guardan solo en tu telefono y nunca llegan a nuestros servidores. Lo unico que sale del dispositivo es el token de notificaciones, si has aceptado los avisos, y el identificador de publicidad si ves anuncios.</p><p><strong>Con cuenta:</strong> tus predicciones, torneos y podios se copian a nuestros servidores para que puedas recuperarlos, y quedan asociados a tu cuenta.</p>',
+              "<p><strong>Sin cuenta:</strong> tus torneos y predicciones se guardan solo en tu telefono y nunca llegan a nuestros servidores. Lo unico que sale del dispositivo es el token de notificaciones, si has aceptado los avisos, y el identificador de publicidad si ves anuncios.</p><p><strong>Con cuenta:</strong> tus predicciones, torneos y podios se copian a nuestros servidores para que puedas recuperarlos, y quedan asociados a tu cuenta.</p>",
           },
           {
-            title: '5. Notificaciones Push',
+            title: "5. Notificaciones Push",
             content:
-              '<p>Si aceptas las notificaciones, usamos <strong>Firebase Cloud Messaging</strong> de Google y guardamos un identificador de instalacion, el token de notificacion, la plataforma, el idioma de la aplicacion y tu plan.</p><p>El idioma sirve para escribirte en tu idioma; el plan, para no enviarte ofertas de un plan que ya tienes. <strong>El destinatario de un aviso es el dispositivo, no la persona</strong>: guardamos el token tambien si no tienes cuenta, porque de lo contrario no podriamos avisar a nadie que no se haya registrado.</p><p>Puedes desactivarlas cuando quieras desde el interruptor de <em>Ajustes</em> de la aplicacion, o desde los ajustes de notificaciones del sistema.</p>',
+              "<p>Si aceptas las notificaciones, usamos <strong>Firebase Cloud Messaging</strong> de Google y guardamos un identificador de instalacion, el token de notificacion, la plataforma, el idioma de la aplicacion y tu plan.</p><p>El idioma sirve para escribirte en tu idioma; el plan, para no enviarte ofertas de un plan que ya tienes. <strong>El destinatario de un aviso es el dispositivo, no la persona</strong>: guardamos el token tambien si no tienes cuenta, porque de lo contrario no podriamos avisar a nadie que no se haya registrado.</p><p>Puedes desactivarlas cuando quieras desde el interruptor de <em>Ajustes</em> de la aplicacion, o desde los ajustes de notificaciones del sistema.</p>",
           },
           {
-            title: '6. Publicidad y Consentimiento (Google AdMob)',
+            title: "6. Publicidad y Consentimiento (Google AdMob)",
             content:
-              '<p>En el plan gratuito mostramos anuncios de <strong>Google AdMob</strong>, que para servirlos trata identificadores del dispositivo, incluido el identificador de publicidad.</p><p>Donde se aplica el RGPD (Espacio Economico Europeo y Reino Unido) mostramos el <strong>formulario de consentimiento de Google</strong> antes de pedir el primer anuncio, y respetamos lo que elijas: si rechazas la personalizacion, los anuncios que se piden son <strong>no personalizados</strong>. Puedes revisar y cambiar tu eleccion en cualquier momento desde <em>Ajustes &gt; Privacidad</em> dentro de la aplicacion.</p><p>Con un plan de pago no se muestra publicidad y no se pide ningun anuncio.</p>',
+              "<p>En el plan gratuito mostramos anuncios de <strong>Google AdMob</strong>, que para servirlos trata identificadores del dispositivo, incluido el identificador de publicidad.</p><p>Donde se aplica el RGPD (Espacio Economico Europeo y Reino Unido) mostramos el <strong>formulario de consentimiento de Google</strong> antes de pedir el primer anuncio, y respetamos lo que elijas: si rechazas la personalizacion, los anuncios que se piden son <strong>no personalizados</strong>. Puedes revisar y cambiar tu eleccion en cualquier momento desde <em>Ajustes &gt; Privacidad</em> dentro de la aplicacion.</p><p>Con un plan de pago no se muestra publicidad y no se pide ningun anuncio.</p>",
           },
           {
-            title: '7. Proveedores que Tratan tus Datos',
+            title: "7. Proveedores que Tratan tus Datos",
             content:
-              '<p>Trabajamos con los siguientes proveedores, cada uno con su propia politica de privacidad:</p><ul><li><strong>Render</strong> — alojamiento de nuestro servidor y de la base de datos.</li><li><strong>Google Firebase</strong> — notificaciones push (Cloud Messaging) y medicion de uso (Analytics).</li><li><strong>Google AdMob</strong> — publicidad.</li><li><strong>RevenueCat</strong> — validacion de las suscripciones.</li><li><strong>Resend</strong> — envio de los correos de verificacion, cambio de correo y recuperacion de contrasena.</li></ul><p>Ademas, la compra en si la procesan <strong>Google Play</strong> o la <strong>App Store</strong>. Nosotros no vemos ni almacenamos los datos de tu tarjeta en ningun momento.</p>',
+              "<p>Trabajamos con los siguientes proveedores, cada uno con su propia politica de privacidad:</p><ul><li><strong>Render</strong> — alojamiento de nuestro servidor y de la base de datos.</li><li><strong>Google Firebase</strong> — notificaciones push (Cloud Messaging) y medicion de uso (Analytics).</li><li><strong>Google AdMob</strong> — publicidad.</li><li><strong>RevenueCat</strong> — validacion de las suscripciones.</li><li><strong>Resend</strong> — envio de los correos de verificacion, cambio de correo y recuperacion de contrasena.</li></ul><p>Ademas, la compra en si la procesan <strong>Google Play</strong> o la <strong>App Store</strong>. Nosotros no vemos ni almacenamos los datos de tu tarjeta en ningun momento.</p>",
           },
           {
-            title: '8. No Vendemos tus Datos',
+            title: "8. No Vendemos tus Datos",
             content:
-              '<p><strong>No vendemos tus datos personales.</strong> Solo se comparten con los proveedores enumerados arriba, y unicamente para lo que hace falta que hagan. El unico dato que se transfiere a un tercero con fines publicitarios es el identificador de publicidad, para servir anuncios.</p>',
+              "<p><strong>No vendemos tus datos personales.</strong> Solo se comparten con los proveedores enumerados arriba, y unicamente para lo que hace falta que hagan. El unico dato que se transfiere a un tercero con fines publicitarios es el identificador de publicidad, para servir anuncios.</p>",
           },
           {
-            title: '9. Menores',
+            title: "9. Menores",
             content:
-              '<p>La aplicacion no esta dirigida a menores de la edad minima que exija la ley de su pais para consentir el tratamiento de datos, y no recogemos datos de menores a sabiendas. Si crees que un menor a tu cargo nos ha facilitado datos, escribenos y los eliminaremos.</p>',
+              "<p>La aplicacion no esta dirigida a menores de la edad minima que exija la ley de su pais para consentir el tratamiento de datos, y no recogemos datos de menores a sabiendas. Si crees que un menor a tu cargo nos ha facilitado datos, escribenos y los eliminaremos.</p>",
           },
           {
-            title: '10. Tus Derechos y Control',
+            title: "10. Tus Derechos y Control",
             content:
-              '<p>Puedes, en cualquier momento:</p><ul><li><strong>Acceder y corregir</strong> los datos de tu cuenta desde <em>Perfil &gt; Cuenta</em> en la aplicacion.</li><li><strong>Eliminar tu cuenta y tus datos</strong> desde <em>Perfil &gt; Cuenta &gt; Eliminar cuenta</em>, o pedirlo sin instalar la aplicacion desde nuestra <strong>pagina de eliminacion de cuenta</strong>: <em>davidyero.com/app/football-cup-simulator/delete-account</em></li><li><strong>Desactivar las notificaciones</strong> desde Ajustes.</li><li><strong>Cambiar tu consentimiento publicitario</strong> desde <em>Ajustes &gt; Privacidad</em>.</li></ul><p>Si estas en la Union Europea, tienes ademas derecho de oposicion, limitacion y portabilidad. Escribenos y lo atendemos.</p>',
+              "<p>Puedes, en cualquier momento:</p><ul><li><strong>Acceder y corregir</strong> los datos de tu cuenta desde <em>Perfil &gt; Cuenta</em> en la aplicacion.</li><li><strong>Eliminar tu cuenta y tus datos</strong> desde <em>Perfil &gt; Cuenta &gt; Eliminar cuenta</em>, o pedirlo sin instalar la aplicacion desde nuestra <strong>pagina de eliminacion de cuenta</strong>: <em>davidyero.com/app/football-cup-simulator/delete-account</em></li><li><strong>Desactivar las notificaciones</strong> desde Ajustes.</li><li><strong>Cambiar tu consentimiento publicitario</strong> desde <em>Ajustes &gt; Privacidad</em>.</li></ul><p>Si estas en la Union Europea, tienes ademas derecho de oposicion, limitacion y portabilidad. Escribenos y lo atendemos.</p>",
           },
           {
-            title: '11. Conservacion y Eliminacion de Datos',
+            title: "11. Conservacion y Eliminacion de Datos",
             content:
-              '<p>Conservamos los datos de tu cuenta mientras la cuenta exista. Al eliminarla, se borran de forma permanente tu cuenta, tus predicciones y torneos sincronizados, tus podios, tu registro de compras y las peticiones que nos hubieras enviado.</p><p>El registro del dispositivo para notificaciones <strong>se desvincula de tu identidad</strong> y deja de estar asociado a ninguna persona; desaparece al desinstalar la aplicacion, al desactivar los avisos, o automaticamente cuando el token deja de estar activo. Nuestras copias de seguridad cifradas pueden conservar una copia hasta <strong>30 dias</strong> desde el borrado, tras los cuales se sobrescriben.</p>',
+              "<p>Conservamos los datos de tu cuenta mientras la cuenta exista. Al eliminarla, se borran de forma permanente tu cuenta, tus predicciones y torneos sincronizados, tus podios, tu registro de compras y las peticiones que nos hubieras enviado.</p><p>El registro del dispositivo para notificaciones <strong>se desvincula de tu identidad</strong> y deja de estar asociado a ninguna persona; desaparece al desinstalar la aplicacion, al desactivar los avisos, o automaticamente cuando el token deja de estar activo. Nuestras copias de seguridad cifradas pueden conservar una copia hasta <strong>30 dias</strong> desde el borrado, tras los cuales se sobrescriben.</p>",
           },
           {
-            title: '12. Cambios en esta Politica y Contacto',
+            title: "12. Cambios en esta Politica y Contacto",
             content:
-              '<p>Si cambiamos esta Politica, publicaremos la version nueva en esta misma pagina con su fecha de actualizacion. Si tienes cualquier pregunta sobre tus datos, escribenos a <strong>support@davidyero.com</strong></p>',
+              "<p>Si cambiamos esta Politica, publicaremos la version nueva en esta misma pagina con su fecha de actualizacion. Si tienes cualquier pregunta sobre tus datos, escribenos a <strong>support@davidyero.com</strong></p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'September 8, 2026',
+        lastUpdated: "September 8, 2026",
         sections: [
           {
-            title: '1. Introduction',
+            title: "1. Introduction",
             content:
-              '<p>This Privacy Policy explains what data <strong>Football Cup Simulator</strong> handles, what for, who it is shared with and how you can control it. The app is developed and operated by David Yepes (@Davidyero).</p><p>First and most important: <strong>you can use the app without creating an account and without giving us your email</strong>. Almost everything described here only happens if you choose to sign up.</p>',
+              "<p>This Privacy Policy explains what data <strong>Football Cup Simulator</strong> handles, what for, who it is shared with and how you can control it. The app is developed and operated by David Yepes (@Davidyero).</p><p>First and most important: <strong>you can use the app without creating an account and without giving us your email</strong>. Almost everything described here only happens if you choose to sign up.</p>",
           },
           {
-            title: '2. Data We Collect',
+            title: "2. Data We Collect",
             content:
-              '<p>We may handle the following data:</p><ul><li><strong>Account (optional):</strong> your name, your username and your email address, along with an encrypted version of your password. If you change your email, we store the new one temporarily until you confirm the code we send you.</li><li><strong>Your predictions and tournaments:</strong> copied to our servers only if you have an account, so they are not lost when you change phone.</li><li><strong>Your podium:</strong> the top three you pick for a competition, so we can show aggregated stats of what people choose.</li><li><strong>Requests you send us:</strong> the content of the form when you ask us to add a competition.</li><li><strong>Purchase history:</strong> handled through RevenueCat, to recognise your plan.</li><li><strong>Installation identifier and notification token:</strong> needed to send you alerts. Stored together with the platform, the app language and your plan.</li><li><strong>Advertising identifier:</strong> collected by Google AdMob to serve ads.</li><li><strong>App usage:</strong> Google Firebase Analytics records which screens you visit, in aggregate.</li></ul><p>We do not ask for or collect your location, your contacts, your photos, your microphone or your calendar. The app requests none of those permissions.</p>',
+              "<p>We may handle the following data:</p><ul><li><strong>Account (optional):</strong> your name, your username and your email address, along with an encrypted version of your password. If you change your email, we store the new one temporarily until you confirm the code we send you.</li><li><strong>Your predictions and tournaments:</strong> copied to our servers only if you have an account, so they are not lost when you change phone.</li><li><strong>Your podium:</strong> the top three you pick for a competition, so we can show aggregated stats of what people choose.</li><li><strong>Requests you send us:</strong> the content of the form when you ask us to add a competition.</li><li><strong>Purchase history:</strong> handled through RevenueCat, to recognise your plan.</li><li><strong>Installation identifier and notification token:</strong> needed to send you alerts. Stored together with the platform, the app language and your plan.</li><li><strong>Advertising identifier:</strong> collected by Google AdMob to serve ads.</li><li><strong>App usage:</strong> Google Firebase Analytics records which screens you visit, in aggregate.</li></ul><p>We do not ask for or collect your location, your contacts, your photos, your microphone or your calendar. The app requests none of those permissions.</p>",
           },
           {
-            title: '3. How We Use Your Data',
+            title: "3. How We Use Your Data",
             content:
-              '<p>We use the data to: create and authenticate your account; sync your predictions across devices; compute and show the aggregated podium stats; recognise and maintain your plan; send you the notifications you accepted; show advertising on the free plan; measure in aggregate how the app is used; and prevent abuse and fraud.</p><p><strong>We do not use the content of your predictions for advertising</strong>, nor do we cross-reference it with ad profiles.</p>',
+              "<p>We use the data to: create and authenticate your account; sync your predictions across devices; compute and show the aggregated podium stats; recognise and maintain your plan; send you the notifications you accepted; show advertising on the free plan; measure in aggregate how the app is used; and prevent abuse and fraud.</p><p><strong>We do not use the content of your predictions for advertising</strong>, nor do we cross-reference it with ad profiles.</p>",
           },
           {
-            title: '4. The Account is Optional, and What Changes if You Create One',
+            title:
+              "4. The Account is Optional, and What Changes if You Create One",
             content:
-              '<p><strong>Without an account:</strong> your tournaments and predictions are stored only on your phone and never reach our servers. The only things that leave the device are the notification token, if you accepted alerts, and the advertising identifier if you see ads.</p><p><strong>With an account:</strong> your predictions, tournaments and podiums are copied to our servers so you can recover them, and they are associated with your account.</p>',
+              "<p><strong>Without an account:</strong> your tournaments and predictions are stored only on your phone and never reach our servers. The only things that leave the device are the notification token, if you accepted alerts, and the advertising identifier if you see ads.</p><p><strong>With an account:</strong> your predictions, tournaments and podiums are copied to our servers so you can recover them, and they are associated with your account.</p>",
           },
           {
-            title: '5. Push Notifications',
+            title: "5. Push Notifications",
             content:
-              '<p>If you accept notifications, we use Google <strong>Firebase Cloud Messaging</strong> and store an installation identifier, the notification token, the platform, the app language and your plan.</p><p>The language is there so we can write to you in your own language; the plan, so we do not send you offers for a plan you already have. <strong>The recipient of an alert is the device, not the person</strong>: we store the token even if you have no account, because otherwise we could not reach anyone who has not signed up.</p><p>You can turn them off whenever you want from the switch in the app <em>Settings</em>, or from the system notification settings.</p>',
+              "<p>If you accept notifications, we use Google <strong>Firebase Cloud Messaging</strong> and store an installation identifier, the notification token, the platform, the app language and your plan.</p><p>The language is there so we can write to you in your own language; the plan, so we do not send you offers for a plan you already have. <strong>The recipient of an alert is the device, not the person</strong>: we store the token even if you have no account, because otherwise we could not reach anyone who has not signed up.</p><p>You can turn them off whenever you want from the switch in the app <em>Settings</em>, or from the system notification settings.</p>",
           },
           {
-            title: '6. Advertising and Consent (Google AdMob)',
+            title: "6. Advertising and Consent (Google AdMob)",
             content:
-              '<p>On the free plan we show <strong>Google AdMob</strong> ads, which handle device identifiers, including the advertising identifier, in order to serve them.</p><p>Where the GDPR applies (European Economic Area and United Kingdom) we show the <strong>Google consent form</strong> before requesting the first ad, and we respect your choice: if you decline personalisation, the ads requested are <strong>non-personalised</strong>. You can review and change your choice at any time from <em>Settings &gt; Privacy</em> inside the app.</p><p>On a paid plan no advertising is shown and no ad is requested at all.</p>',
+              "<p>On the free plan we show <strong>Google AdMob</strong> ads, which handle device identifiers, including the advertising identifier, in order to serve them.</p><p>Where the GDPR applies (European Economic Area and United Kingdom) we show the <strong>Google consent form</strong> before requesting the first ad, and we respect your choice: if you decline personalisation, the ads requested are <strong>non-personalised</strong>. You can review and change your choice at any time from <em>Settings &gt; Privacy</em> inside the app.</p><p>On a paid plan no advertising is shown and no ad is requested at all.</p>",
           },
           {
-            title: '7. Providers That Handle Your Data',
+            title: "7. Providers That Handle Your Data",
             content:
-              '<p>We work with the following providers, each with its own privacy policy:</p><ul><li><strong>Render</strong> — hosting for our server and database.</li><li><strong>Google Firebase</strong> — push notifications (Cloud Messaging) and usage measurement (Analytics).</li><li><strong>Google AdMob</strong> — advertising.</li><li><strong>RevenueCat</strong> — subscription validation.</li><li><strong>Resend</strong> — sending verification, email-change and password-reset messages.</li></ul><p>The purchase itself is processed by <strong>Google Play</strong> or the <strong>App Store</strong>. We never see or store your card details at any point.</p>',
+              "<p>We work with the following providers, each with its own privacy policy:</p><ul><li><strong>Render</strong> — hosting for our server and database.</li><li><strong>Google Firebase</strong> — push notifications (Cloud Messaging) and usage measurement (Analytics).</li><li><strong>Google AdMob</strong> — advertising.</li><li><strong>RevenueCat</strong> — subscription validation.</li><li><strong>Resend</strong> — sending verification, email-change and password-reset messages.</li></ul><p>The purchase itself is processed by <strong>Google Play</strong> or the <strong>App Store</strong>. We never see or store your card details at any point.</p>",
           },
           {
-            title: '8. We Do Not Sell Your Data',
+            title: "8. We Do Not Sell Your Data",
             content:
-              '<p><strong>We do not sell your personal data.</strong> It is shared only with the providers listed above, and only for what they need to do. The only data transferred to a third party for advertising purposes is the advertising identifier, in order to serve ads.</p>',
+              "<p><strong>We do not sell your personal data.</strong> It is shared only with the providers listed above, and only for what they need to do. The only data transferred to a third party for advertising purposes is the advertising identifier, in order to serve ads.</p>",
           },
           {
-            title: '9. Children',
+            title: "9. Children",
             content:
-              '<p>The app is not directed at children below the minimum age required by the law of their country to consent to data processing, and we do not knowingly collect data from children. If you believe a child in your care has given us data, write to us and we will delete it.</p>',
+              "<p>The app is not directed at children below the minimum age required by the law of their country to consent to data processing, and we do not knowingly collect data from children. If you believe a child in your care has given us data, write to us and we will delete it.</p>",
           },
           {
-            title: '10. Your Rights and Control',
+            title: "10. Your Rights and Control",
             content:
-              '<p>At any time you can:</p><ul><li><strong>Access and correct</strong> your account data from <em>Profile &gt; Account</em> in the app.</li><li><strong>Delete your account and your data</strong> from <em>Profile &gt; Account &gt; Delete account</em>, or request it without installing the app from our <strong>account deletion page</strong>: <em>davidyero.com/app/football-cup-simulator/delete-account</em></li><li><strong>Turn notifications off</strong> from Settings.</li><li><strong>Change your advertising consent</strong> from <em>Settings &gt; Privacy</em>.</li></ul><p>If you are in the European Union, you also have the right to object, to restriction and to portability. Write to us and we will handle it.</p>',
+              "<p>At any time you can:</p><ul><li><strong>Access and correct</strong> your account data from <em>Profile &gt; Account</em> in the app.</li><li><strong>Delete your account and your data</strong> from <em>Profile &gt; Account &gt; Delete account</em>, or request it without installing the app from our <strong>account deletion page</strong>: <em>davidyero.com/app/football-cup-simulator/delete-account</em></li><li><strong>Turn notifications off</strong> from Settings.</li><li><strong>Change your advertising consent</strong> from <em>Settings &gt; Privacy</em>.</li></ul><p>If you are in the European Union, you also have the right to object, to restriction and to portability. Write to us and we will handle it.</p>",
           },
           {
-            title: '11. Data Retention and Deletion',
+            title: "11. Data Retention and Deletion",
             content:
-              '<p>We keep your account data for as long as the account exists. When you delete it, we permanently erase your account, your synced predictions and tournaments, your podiums, your purchase record and any requests you had sent us.</p><p>The device record for notifications <strong>is unlinked from your identity</strong> and is no longer associated with any person; it disappears when you uninstall the app, when you turn alerts off, or automatically once the token goes inactive. Our encrypted backups may retain a copy for up to <strong>30 days</strong> after deletion, after which they are overwritten.</p>',
+              "<p>We keep your account data for as long as the account exists. When you delete it, we permanently erase your account, your synced predictions and tournaments, your podiums, your purchase record and any requests you had sent us.</p><p>The device record for notifications <strong>is unlinked from your identity</strong> and is no longer associated with any person; it disappears when you uninstall the app, when you turn alerts off, or automatically once the token goes inactive. Our encrypted backups may retain a copy for up to <strong>30 days</strong> after deletion, after which they are overwritten.</p>",
           },
           {
-            title: '12. Changes to This Policy and Contact',
+            title: "12. Changes to This Policy and Contact",
             content:
-              '<p>If we change this Policy, we will publish the new version on this page with its update date. If you have any question about your data, write to us at <strong>support@davidyero.com</strong></p>',
+              "<p>If we change this Policy, we will publish the new version on this page with its update date. If you have any question about your data, write to us at <strong>support@davidyero.com</strong></p>",
           },
         ],
       },
     },
   },
   {
-    id: '9',
-    name: 'Encuentra a tu mascota',
-    slug: 'encuentra-tu-mascota',
+    id: "9",
+    name: "Encuentra a tu mascota",
+    slug: "encuentra-tu-mascota",
     description:
-      'Reportes de mascotas perdidas y encontradas en Colombia. Gratis, sin publicidad.',
-    icon: '',
+      "Reportes de mascotas perdidas y encontradas en Colombia. Gratis, sin publicidad.",
+    icon: "",
     logo: EncuentraTuMascotaIcon,
   },
   {
-    id: '10',
-    name: 'ChamiApp',
-    slug: 'chamiapp',
-    description: 'Quiniela del Mundial 2026 para competir con amigos.',
-    icon: '',
+    id: "10",
+    name: "ChamiApp",
+    slug: "chamiapp",
+    description: "Quiniela del Mundial 2026 para competir con amigos.",
+    icon: "",
   },
   {
-    id: '11',
-    name: 'My Link Hub',
-    slug: 'my-link-hub',
-    description: 'Tu portafolio profesional y todos tus enlaces en un solo link.',
-    icon: '',
+    id: "11",
+    name: "My Link Hub",
+    slug: "my-link-hub",
+    description:
+      "Tu portafolio profesional y todos tus enlaces en un solo link.",
+    icon: "",
     logo: MyLinkHubIcon,
   },
   {
-    id: '12',
-    name: 'Splitio',
-    slug: 'splitio',
+    id: "12",
+    name: "Splitio",
+    slug: "splitio",
     description:
-      'Gastos compartidos por grupo: reparte cada gasto y calcula quién debe cuánto a quién, mes a mes.',
-    icon: '',
+      "Gastos compartidos por grupo: reparte cada gasto y calcula quién debe cuánto a quién, mes a mes.",
+    icon: "",
     logo: SplitioIcon,
+    termsAndConditions: {
+      es: {
+        lastUpdated: "17 de Septiembre, 2026",
+        sections: [
+          {
+            title: "1. Qué es y qué no es Splitio",
+            content:
+              "<p>Splitio lleva la cuenta de los gastos compartidos de un grupo y calcula quién le debe cuánto a quién. Es una herramienta de cálculo: <strong>no mueve dinero, no procesa pagos entre personas y no es asesoría financiera ni contable</strong>. Marcar una deuda como pagada solo actualiza el registro del grupo.</p>",
+          },
+          {
+            title: "2. Aceptación",
+            content:
+              "<p>Estos términos regulan el uso de Splitio, tanto en www.splitio.net como en su aplicación móvil. Al crear una cuenta, los aceptas.</p>",
+          },
+          {
+            title: "3. Tu cuenta",
+            content:
+              "<p>Los datos que registras deben ser reales y eres responsable de tu contraseña y de todo lo que se haga desde tu cuenta. Avísanos a support@davidyero.com si detectas un uso no autorizado.</p>",
+          },
+          {
+            title: "4. Uso correcto",
+            content:
+              "<p>Usa Splitio solo para llevar gastos propios o de tu grupo. Está prohibido:</p><ul><li>Invitar a personas sin su consentimiento</li><li>Registrar contenido ofensivo o ilegal</li><li>Intentar acceder a datos de otras cuentas</li><li>Interferir con el funcionamiento del servicio</li></ul>",
+          },
+          {
+            title: "5. Tu contenido",
+            content:
+              "<p>Los datos que registras siguen siendo tuyos. Nos das permiso únicamente para almacenarlos y mostrarlos a los miembros del grupo, que es lo necesario para prestar el servicio.</p>",
+          },
+          {
+            title: "6. Planes y publicidad",
+            content:
+              "<p>El plan gratuito permite crear hasta 3 grupos propios y, en la aplicación móvil, muestra anuncios. Los planes ampliados quitan ese límite y la publicidad. Si en el futuro se cobran, se avisará antes y ningún cambio se aplicará a lo ya pagado.</p>",
+          },
+          {
+            title: "7. Disponibilidad y responsabilidad",
+            content:
+              "<p>El servicio se ofrece “tal cual”, sin garantía de estar siempre disponible ni libre de errores. No respondemos por decisiones de dinero tomadas a partir de los cálculos de la app: revisa siempre las cifras con tu grupo.</p>",
+          },
+          {
+            title: "8. Suspensión y cierre",
+            content:
+              "<p>Puedes dejar de usar Splitio cuando quieras y pedir el borrado de tu cuenta escribiendo a support@davidyero.com. Podemos suspender cuentas que incumplan estos términos o que pongan en riesgo el servicio o a otras personas.</p>",
+          },
+          {
+            title: "9. Ley aplicable",
+            content:
+              "<p>Estos términos se rigen por la ley colombiana. Antes de cualquier reclamación formal, escríbenos a support@davidyero.com.</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "September 17, 2026",
+        sections: [
+          {
+            title: "1. What Splitio is and is not",
+            content:
+              "<p>Splitio keeps track of a group's shared expenses and works out who owes what to whom. It is a calculation tool: <strong>it does not move money, does not process payments between people and is not financial or accounting advice</strong>. Marking a debt as paid only updates the group's record.</p>",
+          },
+          {
+            title: "2. Acceptance",
+            content:
+              "<p>These terms govern the use of Splitio, both at www.splitio.net and in its mobile app. By creating an account, you accept them.</p>",
+          },
+          {
+            title: "3. Your account",
+            content:
+              "<p>The details you register must be real, and you are responsible for your password and for everything done from your account. Tell us at support@davidyero.com if you notice unauthorised use.</p>",
+          },
+          {
+            title: "4. Acceptable use",
+            content:
+              "<p>Use Splitio only to track your own or your group's expenses. You may not:</p><ul><li>Invite people without their consent</li><li>Record offensive or unlawful content</li><li>Try to reach other accounts' data</li><li>Interfere with the service</li></ul>",
+          },
+          {
+            title: "5. Your content",
+            content:
+              "<p>The data you record stays yours. You give us permission only to store it and show it to the members of the group, which is what the service needs to work.</p>",
+          },
+          {
+            title: "6. Plans and advertising",
+            content:
+              "<p>The free plan allows up to 3 owned groups and shows ads in the mobile app. Paid plans remove that limit and the advertising. If they ever start being charged, you will be told beforehand and no change will apply to what you already paid.</p>",
+          },
+          {
+            title: "7. Availability and liability",
+            content:
+              "<p>The service is provided “as is”, with no guarantee of being always available or free of errors. We are not liable for money decisions made from the app's calculations: always check the figures with your group.</p>",
+          },
+          {
+            title: "8. Suspension and closing",
+            content:
+              "<p>You can stop using Splitio whenever you want and request deletion of your account at support@davidyero.com. We may suspend accounts that break these terms or that put the service or other people at risk.</p>",
+          },
+          {
+            title: "9. Governing law",
+            content:
+              "<p>These terms are governed by Colombian law. Before any formal claim, write to support@davidyero.com.</p>",
+          },
+        ],
+      },
+    },
+    privacyPolicy: {
+      es: {
+        lastUpdated: "17 de Septiembre, 2026",
+        sections: [
+          {
+            title: "1. Responsable",
+            content:
+              "<p>Splitio es una aplicación para repartir gastos entre personas de un mismo grupo. El responsable es David Yepes (@Davidyero). Para cualquier asunto de privacidad: support@davidyero.com.</p>",
+          },
+          {
+            title: "2. Qué datos guardamos",
+            content:
+              "<p>De tu cuenta: nombre, correo electrónico, color de avatar y tu contraseña cifrada (nunca se guarda tal cual la escribes).</p><ul><li>De lo que registras: grupos (nombre, icono, color y moneda), miembros, ingresos del mes, gastos (descripción, monto, fecha, categoría, quién pagó y entre quiénes se reparte), pagos de deuda e invitaciones enviadas</li><li>De tus solicitudes: el tipo y el mensaje que envías desde la sección Solicitudes</li><li>Técnicos mínimos: registros del servidor con la fecha y el tipo de petición</li></ul><p>No usamos rastreadores ni herramientas de analítica.</p>",
+          },
+          {
+            title: "3. Para qué los usamos",
+            content:
+              "<p>Únicamente para prestar el servicio: crear tu cuenta, calcular los saldos del grupo, enviar las invitaciones y los correos de recuperación de contraseña, y atender tus solicitudes. No vendemos tus datos ni los usamos para perfilarte.</p>",
+          },
+          {
+            title: "4. Quién ve tu información",
+            content:
+              "<p><strong>Los miembros de un grupo ven tu nombre, tu avatar y todo lo que registras en ese grupo</strong>: tus ingresos del mes, los gastos que pagas y los saldos. Comparte un grupo solo con personas de confianza.</p><p>Proveedores que hacen funcionar el servicio: Render (servidores y base de datos), AWS Amplify (alojamiento de la web), Resend (envío de correos) y Google Fonts (tipografías de la web). Cada uno trata los datos solo para esa función.</p>",
+          },
+          {
+            title: "5. Publicidad en la aplicación móvil",
+            content:
+              "<p>La web no tiene publicidad. La aplicación móvil muestra anuncios de Google AdMob en su plan gratuito. Antes de activarlos te pedimos tu consentimiento cuando la ley lo exige; si no lo das, verás anuncios no personalizados. Google puede usar identificadores de tu dispositivo según su propia política de privacidad.</p>",
+          },
+          {
+            title: "6. Datos guardados en tu dispositivo",
+            content:
+              "<p>Guardamos en tu navegador o teléfono tu sesión, el idioma, el tema claro u oscuro y el grupo activo. Son datos propios y necesarios para que la app funcione: no hay cookies de rastreo ni publicidad en la web.</p>",
+          },
+          {
+            title: "7. Cuánto tiempo los conservamos",
+            content:
+              "<p>Mientras tengas la cuenta activa. Si sales de un grupo, los gastos que registraste permanecen en él, porque forman parte de las cuentas de las demás personas.</p>",
+          },
+          {
+            title: "8. Tus derechos y cómo borrar tu cuenta",
+            content:
+              "<p>Puedes pedir acceso, corrección o eliminación de tus datos escribiendo a support@davidyero.com desde el correo de tu cuenta. Todavía no hay un botón para borrar la cuenta dentro de la app: la eliminamos manualmente y te confirmamos cuando esté hecha.</p>",
+          },
+          {
+            title: "9. Menores de edad",
+            content:
+              "<p>Splitio no está dirigido a menores de 14 años y no recogemos datos de forma consciente de ellos.</p>",
+          },
+          {
+            title: "10. Cambios en esta política",
+            content:
+              "<p>Si cambia algo relevante, actualizamos esta página y su fecha. El uso de la app después de un cambio significa que aceptas la versión vigente.</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "September 17, 2026",
+        sections: [
+          {
+            title: "1. Controller",
+            content:
+              "<p>Splitio is an app for splitting expenses among the people in a group. The controller is David Yepes (@Davidyero). For anything privacy related: support@davidyero.com.</p>",
+          },
+          {
+            title: "2. What we store",
+            content:
+              "<p>About your account: name, email address, avatar colour and your encrypted password (it is never stored as you typed it).</p><ul><li>About what you record: groups (name, icon, colour and currency), members, monthly incomes, expenses (description, amount, date, category, who paid and how it is split), debt payments and invitations sent</li><li>About your requests: the type and message you send from the Requests section</li><li>Minimal technical data: server logs with the date and type of request</li></ul><p>We use no trackers and no analytics tools.</p>",
+          },
+          {
+            title: "3. What we use it for",
+            content:
+              "<p>Only to run the service: create your account, calculate group balances, send invitations and password-reset emails, and answer your requests. We do not sell your data and we do not profile you.</p>",
+          },
+          {
+            title: "4. Who sees your information",
+            content:
+              "<p><strong>The members of a group see your name, your avatar and everything you record in that group</strong>: your monthly income, the expenses you pay and the balances. Only share a group with people you trust.</p><p>Providers that keep the service running: Render (servers and database), AWS Amplify (web hosting), Resend (email delivery) and Google Fonts (web typefaces). Each one handles the data only for that purpose.</p>",
+          },
+          {
+            title: "5. Advertising in the mobile app",
+            content:
+              "<p>The website has no advertising. The mobile app shows Google AdMob ads on its free plan. We ask for your consent before enabling them where the law requires it; if you decline, you will see non-personalised ads. Google may use your device identifiers under its own privacy policy.</p>",
+          },
+          {
+            title: "6. Data stored on your device",
+            content:
+              "<p>We store your session, language, light or dark theme and active group in your browser or phone. They are our own data and necessary for the app to work: there are no tracking or advertising cookies on the website.</p>",
+          },
+          {
+            title: "7. How long we keep it",
+            content:
+              "<p>For as long as your account is active. If you leave a group, the expenses you recorded stay there, because they are part of other people's accounts.</p>",
+          },
+          {
+            title: "8. Your rights and how to delete your account",
+            content:
+              "<p>You can request access, correction or deletion of your data by writing to support@davidyero.com from your account's email address. There is no in-app delete button yet: we delete the account manually and confirm once it is done.</p>",
+          },
+          {
+            title: "9. Minors",
+            content:
+              "<p>Splitio is not aimed at children under 14 and we do not knowingly collect their data.</p>",
+          },
+          {
+            title: "10. Changes to this policy",
+            content:
+              "<p>If something relevant changes, we update this page and its date. Using the app after a change means you accept the current version.</p>",
+          },
+        ],
+      },
+    },
   },
   {
-    id: '13',
-    name: 'Mis Pagos',
-    slug: 'mis-pagos',
+    id: "13",
+    name: "Mis Pagos",
+    slug: "mis-pagos",
     description:
-      'Todos tus medios de cobro digitales de Colombia y tus redes, en un solo link.',
-    icon: '',
+      "Todos tus medios de cobro digitales de Colombia y tus redes, en un solo link.",
+    icon: "",
     logo: MisPagosIcon,
   },
   {
-    id: '14',
-    name: 'HabitFlow',
-    slug: 'habitflow',
+    id: "14",
+    name: "HabitFlow",
+    slug: "habitflow",
     description:
-      'Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones. Local-first, con sincronización opcional en la nube para Lite y Pro.',
-    icon: '',
+      "Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones. Local-first, con sincronización opcional en la nube para Lite y Pro.",
+    icon: "",
     logo: HabitFlowIcon,
     fullDescription:
-      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Puedes usarlo como invitado con todos tus datos en el dispositivo, o crear una cuenta con correo y contraseña. Con los planes Lite y Pro, tus hábitos, check-ins y estados de ánimo se sincronizan en la nube entre tus dispositivos; en el plan gratuito tus datos permanecen 100% en el dispositivo.',
+      "HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Puedes usarlo como invitado con todos tus datos en el dispositivo, o crear una cuenta con correo y contraseña. Con los planes Lite y Pro, tus hábitos, check-ins y estados de ánimo se sincronizan en la nube entre tus dispositivos; en el plan gratuito tus datos permanecen 100% en el dispositivo.",
     features: [
-      'Rastrea hábitos binarios, de cantidad o de abandono',
-      'Rachas visuales estilo grilla de contribuciones',
-      'Recordatorios con notificaciones locales',
-      'Tema oscuro y claro con acentos de color por hábito',
-      'Sincronización opcional en la nube con Lite o Pro',
-      'Exporta, importa o elimina todos tus datos cuando quieras',
+      "Rastrea hábitos binarios, de cantidad o de abandono",
+      "Rachas visuales estilo grilla de contribuciones",
+      "Recordatorios con notificaciones locales",
+      "Tema oscuro y claro con acentos de color por hábito",
+      "Sincronización opcional en la nube con Lite o Pro",
+      "Exporta, importa o elimina todos tus datos cuando quieras",
     ],
-    appStoreUrl: '',
-    playStoreUrl: '',
+    appStoreUrl: "",
+    playStoreUrl: "",
     changelog: [
       {
-        version: '1.0.0',
-        date: '8 de julio de 2026',
-        type: 'new',
-        changes: ['Lanzamiento inicial de HabitFlow.'],
+        version: "1.0.0",
+        date: "8 de julio de 2026",
+        type: "new",
+        changes: ["Lanzamiento inicial de HabitFlow."],
       },
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: '19 de julio de 2026',
+        lastUpdated: "19 de julio de 2026",
         sections: [
           {
-            title: '1. Aceptación de los Términos',
+            title: "1. Aceptación de los Términos",
             content:
               '<p>Al descargar, instalar o usar HabitFlow ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con ellos, no uses la Aplicación.</p>',
           },
           {
-            title: '2. Descripción del Servicio',
+            title: "2. Descripción del Servicio",
             content:
-              '<p>HabitFlow es una aplicación para crear y seguir hábitos personales, disponible en iOS y Android. La Aplicación es local-first: puedes usarla como invitado y todos tus datos permanecen en tu dispositivo. De forma opcional puedes crear una cuenta. En los planes de pago (Lite y Pro), tus hábitos, check-ins y estados de ánimo se sincronizan en nuestros servidores para mantenerlos actualizados entre tus dispositivos; en el plan gratuito tus datos permanecen 100% en el dispositivo.</p>',
+              "<p>HabitFlow es una aplicación para crear y seguir hábitos personales, disponible en iOS y Android. La Aplicación es local-first: puedes usarla como invitado y todos tus datos permanecen en tu dispositivo. De forma opcional puedes crear una cuenta. En los planes de pago (Lite y Pro), tus hábitos, check-ins y estados de ánimo se sincronizan en nuestros servidores para mantenerlos actualizados entre tus dispositivos; en el plan gratuito tus datos permanecen 100% en el dispositivo.</p>",
           },
           {
-            title: '3. Cuentas',
+            title: "3. Cuentas",
             content:
-              '<p>Puedes usar la Aplicación como invitado (100% en el dispositivo) o crear una cuenta con tu nombre, correo electrónico y contraseña en nuestro backend. No ofrecemos inicio de sesión con redes sociales. Eres responsable de mantener la confidencialidad de tus credenciales y de toda actividad realizada bajo tu cuenta. Puedes eliminar tu cuenta en cualquier momento desde la Aplicación.</p>',
+              "<p>Puedes usar la Aplicación como invitado (100% en el dispositivo) o crear una cuenta con tu nombre, correo electrónico y contraseña en nuestro backend. No ofrecemos inicio de sesión con redes sociales. Eres responsable de mantener la confidencialidad de tus credenciales y de toda actividad realizada bajo tu cuenta. Puedes eliminar tu cuenta en cualquier momento desde la Aplicación.</p>",
           },
           {
-            title: '4. Suscripciones y Pagos',
+            title: "4. Suscripciones y Pagos",
             content:
-              '<p>HabitFlow ofrece un plan gratuito y planes de pago que desbloquean el nivel Pro. Las compras dentro de la aplicación (mensual, anual o de por vida) se gestionan con RevenueCat y se cobran a través de la tienda correspondiente (App Store de Apple o Google Play), sujetas a sus términos. Las suscripciones se renuevan automáticamente salvo que las canceles antes del final del período. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda, y no ofrecemos reembolsos más allá de la política de la tienda. El estado de tu suscripción se valida en nuestros servidores.</p>',
+              "<p>HabitFlow ofrece un plan gratuito y planes de pago que desbloquean el nivel Pro. Las compras dentro de la aplicación (mensual, anual o de por vida) se gestionan con RevenueCat y se cobran a través de la tienda correspondiente (App Store de Apple o Google Play), sujetas a sus términos. Las suscripciones se renuevan automáticamente salvo que las canceles antes del final del período. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda, y no ofrecemos reembolsos más allá de la política de la tienda. El estado de tu suscripción se valida en nuestros servidores.</p>",
           },
           {
-            title: '5. Códigos de Canje',
+            title: "5. Códigos de Canje",
             content:
-              '<p>Podemos crear códigos de canje que otorgan acceso al nivel Lite o Pro. Cada código es de un solo uso, personal e intransferible. Nos reservamos el derecho de revocar cualquier código o el acceso concedido por él en caso de uso indebido o fraude.</p>',
+              "<p>Podemos crear códigos de canje que otorgan acceso al nivel Lite o Pro. Cada código es de un solo uso, personal e intransferible. Nos reservamos el derecho de revocar cualquier código o el acceso concedido por él en caso de uso indebido o fraude.</p>",
           },
           {
-            title: '6. Uso Aceptable',
+            title: "6. Uso Aceptable",
             content:
-              '<p>Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines personales y legales</li><li>No intentar modificar, descompilar ni realizar ingeniería inversa sobre la Aplicación</li><li>No interferir con el funcionamiento de la Aplicación, con nuestros servidores ni con la seguridad de otros usuarios</li></ul>',
+              "<p>Te comprometes a:</p><ul><li>Usar la Aplicación únicamente con fines personales y legales</li><li>No intentar modificar, descompilar ni realizar ingeniería inversa sobre la Aplicación</li><li>No interferir con el funcionamiento de la Aplicación, con nuestros servidores ni con la seguridad de otros usuarios</li></ul>",
           },
           {
-            title: '7. Publicidad',
+            title: "7. Publicidad",
             content:
-              '<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob (un banner inferior y algún anuncio intersticial ocasional). El plan Pro elimina los anuncios. El uso de la publicidad se rige también por la Política de Privacidad.</p>',
+              "<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob (un banner inferior y algún anuncio intersticial ocasional). El plan Pro elimina los anuncios. El uso de la publicidad se rige también por la Política de Privacidad.</p>",
           },
           {
-            title: '8. Propiedad Intelectual',
+            title: "8. Propiedad Intelectual",
             content:
-              '<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. El contenido que registras (hábitos, notas, fotos) es tuyo; nosotros no reclamamos ningún derecho sobre él.</p>',
+              "<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. El contenido que registras (hábitos, notas, fotos) es tuyo; nosotros no reclamamos ningún derecho sobre él.</p>",
           },
           {
-            title: '9. Limitación de Responsabilidad',
+            title: "9. Limitación de Responsabilidad",
             content:
               '<p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de la pérdida de datos almacenados localmente o sincronizados, de errores o incompatibilidades con determinados dispositivos, ni de daños derivados del uso o imposibilidad de uso de la Aplicación. Te recomendamos exportar tus datos periódicamente.</p>',
           },
           {
-            title: '10. Modificaciones',
+            title: "10. Modificaciones",
             content:
-              '<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>',
+              "<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>",
           },
           {
-            title: '11. Contacto',
+            title: "11. Contacto",
             content:
-              '<p>Si tienes preguntas sobre estos Términos, contáctanos en: support@davidyero.com</p>',
+              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 19, 2026',
+        lastUpdated: "July 19, 2026",
         sections: [
           {
-            title: '1. Acceptance of Terms',
+            title: "1. Acceptance of Terms",
             content:
               '<p>By downloading, installing, or using HabitFlow ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with them, do not use the Application.</p>',
           },
           {
-            title: '2. Description of the Service',
+            title: "2. Description of the Service",
             content:
-              '<p>HabitFlow is an app for creating and tracking personal habits, available on iOS and Android. The Application is local-first: you can use it as a guest and all your data stays on your device. Optionally, you may create an account. On paid plans (Lite and Pro), your habits, check-ins, and moods are synced to our servers to keep them up to date across your devices; on the free plan your data stays 100% on the device.</p>',
+              "<p>HabitFlow is an app for creating and tracking personal habits, available on iOS and Android. The Application is local-first: you can use it as a guest and all your data stays on your device. Optionally, you may create an account. On paid plans (Lite and Pro), your habits, check-ins, and moods are synced to our servers to keep them up to date across your devices; on the free plan your data stays 100% on the device.</p>",
           },
           {
-            title: '3. Accounts',
+            title: "3. Accounts",
             content:
-              '<p>You can use the Application as a guest (100% on-device) or create an account with your name, email, and password on our backend. We do not offer social login. You are responsible for keeping your credentials confidential and for all activity under your account. You can delete your account at any time from within the Application.</p>',
+              "<p>You can use the Application as a guest (100% on-device) or create an account with your name, email, and password on our backend. We do not offer social login. You are responsible for keeping your credentials confidential and for all activity under your account. You can delete your account at any time from within the Application.</p>",
           },
           {
-            title: '4. Subscriptions and Payments',
+            title: "4. Subscriptions and Payments",
             content:
-              '<p>HabitFlow offers a free plan and paid plans that unlock the Pro tier. In-app purchases (monthly, annual, or lifetime) are managed with RevenueCat and billed through the relevant app store (Apple App Store or Google Play), subject to their terms. Subscriptions renew automatically unless canceled before the end of the period. Renewal, cancellation, and refunds are managed from your store account, and we do not offer refunds beyond the store policy. Your subscription status is validated on our servers.</p>',
+              "<p>HabitFlow offers a free plan and paid plans that unlock the Pro tier. In-app purchases (monthly, annual, or lifetime) are managed with RevenueCat and billed through the relevant app store (Apple App Store or Google Play), subject to their terms. Subscriptions renew automatically unless canceled before the end of the period. Renewal, cancellation, and refunds are managed from your store account, and we do not offer refunds beyond the store policy. Your subscription status is validated on our servers.</p>",
           },
           {
-            title: '5. Redeem Codes',
+            title: "5. Redeem Codes",
             content:
-              '<p>We may create redeem codes that grant access to the Lite or Pro tier. Each code is single-use, personal, and non-transferable. We reserve the right to revoke any code or the access it granted in the event of misuse or fraud.</p>',
+              "<p>We may create redeem codes that grant access to the Lite or Pro tier. Each code is single-use, personal, and non-transferable. We reserve the right to revoke any code or the access it granted in the event of misuse or fraud.</p>",
           },
           {
-            title: '6. Acceptable Use',
+            title: "6. Acceptable Use",
             content:
-              '<p>You agree to:</p><ul><li>Use the Application only for personal and lawful purposes</li><li>Not attempt to modify, decompile, or reverse engineer the Application</li><li>Not interfere with the operation of the Application, our servers, or the security of other users</li></ul>',
+              "<p>You agree to:</p><ul><li>Use the Application only for personal and lawful purposes</li><li>Not attempt to modify, decompile, or reverse engineer the Application</li><li>Not interfere with the operation of the Application, our servers, or the security of other users</li></ul>",
           },
           {
-            title: '7. Advertising',
+            title: "7. Advertising",
             content:
-              '<p>The Free and Lite plans show ads through Google AdMob (a bottom banner and an occasional interstitial). The Pro plan removes ads. Advertising is also governed by the Privacy Policy.</p>',
+              "<p>The Free and Lite plans show ads through Google AdMob (a bottom banner and an occasional interstitial). The Pro plan removes ads. Advertising is also governed by the Privacy Policy.</p>",
           },
           {
-            title: '8. Intellectual Property',
+            title: "8. Intellectual Property",
             content:
-              '<p>All rights to the Application, including its code, design, and interface, belong to its author. The content you record (habits, notes, photos) is yours; we claim no rights over it.</p>',
+              "<p>All rights to the Application, including its code, design, and interface, belong to its author. The content you record (habits, notes, photos) is yours; we claim no rights over it.</p>",
           },
           {
-            title: '9. Limitation of Liability',
+            title: "9. Limitation of Liability",
             content:
               '<p>The Application is provided "as is" and "as available", without warranties of any kind. We are not responsible for loss of locally stored or synced data, errors or incompatibilities with certain devices, or damages arising from use of or inability to use the Application. We recommend exporting your data periodically.</p>',
           },
           {
-            title: '10. Modifications',
+            title: "10. Modifications",
             content:
-              '<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>',
+              "<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>",
           },
           {
-            title: '11. Contact',
+            title: "11. Contact",
             content:
-              '<p>If you have questions about these Terms, contact us at: support@davidyero.com</p>',
+              "<p>If you have questions about these Terms, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: '19 de julio de 2026',
+        lastUpdated: "19 de julio de 2026",
         sections: [
           {
-            title: '1. Introducción',
+            title: "1. Introducción",
             content:
-              '<p>Esta Política de Privacidad describe cómo HabitFlow maneja tu información. HabitFlow es una aplicación local-first: puedes usarla como invitado con todos tus datos en el dispositivo, o crear una cuenta y activar la sincronización en la nube en los planes de pago.</p>',
+              "<p>Esta Política de Privacidad describe cómo HabitFlow maneja tu información. HabitFlow es una aplicación local-first: puedes usarla como invitado con todos tus datos en el dispositivo, o crear una cuenta y activar la sincronización en la nube en los planes de pago.</p>",
           },
           {
-            title: '2. Datos que Recopilamos',
+            title: "2. Datos que Recopilamos",
             content:
-              '<p>Podemos tratar los siguientes datos:</p><ul><li><strong>Cuenta:</strong> tu nombre y correo electrónico, junto con una versión cifrada de tu contraseña, almacenados en nuestro backend.</li><li><strong>Contenido de hábitos:</strong> tus hábitos, check-ins y estados de ánimo. Solo se sincronizan en nuestros servidores en los planes Lite y Pro; en el plan gratuito permanecen 100% en tu dispositivo.</li><li><strong>Historial de compras:</strong> gestionado a través de RevenueCat para validar tu suscripción.</li><li><strong>Identificadores de publicidad:</strong> recopilados por Google AdMob (con tu consentimiento) para mostrar anuncios.</li><li><strong>Fotos:</strong> la foto opcional que adjuntes a un check-in se guarda únicamente en tu dispositivo.</li></ul>',
+              "<p>Podemos tratar los siguientes datos:</p><ul><li><strong>Cuenta:</strong> tu nombre y correo electrónico, junto con una versión cifrada de tu contraseña, almacenados en nuestro backend.</li><li><strong>Contenido de hábitos:</strong> tus hábitos, check-ins y estados de ánimo. Solo se sincronizan en nuestros servidores en los planes Lite y Pro; en el plan gratuito permanecen 100% en tu dispositivo.</li><li><strong>Historial de compras:</strong> gestionado a través de RevenueCat para validar tu suscripción.</li><li><strong>Identificadores de publicidad:</strong> recopilados por Google AdMob (con tu consentimiento) para mostrar anuncios.</li><li><strong>Fotos:</strong> la foto opcional que adjuntes a un check-in se guarda únicamente en tu dispositivo.</li></ul>",
           },
           {
-            title: '3. Cómo Usamos tus Datos',
+            title: "3. Cómo Usamos tus Datos",
             content:
-              '<p>Usamos tus datos para: crear y autenticar tu cuenta; sincronizar tus hábitos entre dispositivos en los planes de pago; validar tu suscripción; mostrar publicidad en los planes Gratuito y Lite; y enviarte recordatorios locales. No usamos tu contenido de hábitos con fines publicitarios.</p>',
+              "<p>Usamos tus datos para: crear y autenticar tu cuenta; sincronizar tus hábitos entre dispositivos en los planes de pago; validar tu suscripción; mostrar publicidad en los planes Gratuito y Lite; y enviarte recordatorios locales. No usamos tu contenido de hábitos con fines publicitarios.</p>",
           },
           {
-            title: '4. Sincronización en la Nube (solo planes de pago)',
+            title: "4. Sincronización en la Nube (solo planes de pago)",
             content:
-              '<p>La sincronización en la nube está disponible únicamente para los planes Lite y Pro. Cuando está activa, tus hábitos, check-ins y estados de ánimo se copian a nuestros servidores para mantenerlos actualizados entre tus dispositivos. <strong>En el plan gratuito, estos datos permanecen 100% en tu dispositivo y nunca se envían a nuestros servidores.</strong> Las fotos adjuntas a un check-in nunca se suben; se guardan solo en el dispositivo.</p>',
+              "<p>La sincronización en la nube está disponible únicamente para los planes Lite y Pro. Cuando está activa, tus hábitos, check-ins y estados de ánimo se copian a nuestros servidores para mantenerlos actualizados entre tus dispositivos. <strong>En el plan gratuito, estos datos permanecen 100% en tu dispositivo y nunca se envían a nuestros servidores.</strong> Las fotos adjuntas a un check-in nunca se suben; se guardan solo en el dispositivo.</p>",
           },
           {
-            title: '5. Publicidad y Seguimiento (Google AdMob)',
+            title: "5. Publicidad y Seguimiento (Google AdMob)",
             content:
-              '<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob. AdMob puede recopilar identificadores de publicidad y datos del dispositivo para mostrar anuncios. En iOS usamos la Transparencia de Seguimiento de Apps (ATT) y, en general, una plataforma de gestión de consentimiento (UMP/GDPR) para pedir tu consentimiento; solo mostramos publicidad personalizada si lo aceptas, y puedes rechazarlo. Consulta la política de privacidad de Google para más detalles.</p>',
+              "<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob. AdMob puede recopilar identificadores de publicidad y datos del dispositivo para mostrar anuncios. En iOS usamos la Transparencia de Seguimiento de Apps (ATT) y, en general, una plataforma de gestión de consentimiento (UMP/GDPR) para pedir tu consentimiento; solo mostramos publicidad personalizada si lo aceptas, y puedes rechazarlo. Consulta la política de privacidad de Google para más detalles.</p>",
           },
           {
-            title: '6. Notificaciones Locales',
+            title: "6. Notificaciones Locales",
             content:
-              '<p>La Aplicación usa notificaciones locales en tu dispositivo para enviarte recordatorios de tus hábitos. Estas notificaciones se generan en el dispositivo y no implican el envío de tus datos a nuestros servidores.</p>',
+              "<p>La Aplicación usa notificaciones locales en tu dispositivo para enviarte recordatorios de tus hábitos. Estas notificaciones se generan en el dispositivo y no implican el envío de tus datos a nuestros servidores.</p>",
           },
           {
-            title: '7. No Vendemos tus Datos',
+            title: "7. No Vendemos tus Datos",
             content:
-              '<p>No vendemos ni alquilamos tu información personal a terceros.</p>',
+              "<p>No vendemos ni alquilamos tu información personal a terceros.</p>",
           },
           {
-            title: '8. Tus Derechos y Control',
+            title: "8. Tus Derechos y Control",
             content:
-              '<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar e importar todos tus datos (JSON o CSV)</li><li>Eliminar tus datos de hábitos</li><li>Eliminar tu cuenta, lo que también elimina los datos que tengas sincronizados en la nube</li></ul>',
+              "<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar e importar todos tus datos (JSON o CSV)</li><li>Eliminar tus datos de hábitos</li><li>Eliminar tu cuenta, lo que también elimina los datos que tengas sincronizados en la nube</li></ul>",
           },
           {
-            title: '9. Conservación y Eliminación de Datos',
+            title: "9. Conservación y Eliminación de Datos",
             content:
-              '<p>Conservamos los datos de tu cuenta y los datos sincronizados mientras tu cuenta esté activa. Cuando eliminas tu cuenta, eliminamos tu información de cuenta y los datos asociados sincronizados en la nube. Los datos que solo existen en tu dispositivo se eliminan al desinstalar la Aplicación.</p>',
+              "<p>Conservamos los datos de tu cuenta y los datos sincronizados mientras tu cuenta esté activa. Cuando eliminas tu cuenta, eliminamos tu información de cuenta y los datos asociados sincronizados en la nube. Los datos que solo existen en tu dispositivo se eliminan al desinstalar la Aplicación.</p>",
           },
           {
-            title: '10. Cambios en esta Política',
+            title: "10. Cambios en esta Política",
             content:
-              '<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>',
+              "<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>",
           },
           {
-            title: '11. Contacto',
+            title: "11. Contacto",
             content:
-              '<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: support@davidyero.com</p>',
+              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 19, 2026',
+        lastUpdated: "July 19, 2026",
         sections: [
           {
-            title: '1. Introduction',
+            title: "1. Introduction",
             content:
-              '<p>This Privacy Policy describes how HabitFlow handles your information. HabitFlow is a local-first app: you can use it as a guest with all your data on your device, or create an account and enable cloud sync on the paid plans.</p>',
+              "<p>This Privacy Policy describes how HabitFlow handles your information. HabitFlow is a local-first app: you can use it as a guest with all your data on your device, or create an account and enable cloud sync on the paid plans.</p>",
           },
           {
-            title: '2. Data We Collect',
+            title: "2. Data We Collect",
             content:
-              '<p>We may process the following data:</p><ul><li><strong>Account:</strong> your name and email address, along with an encrypted version of your password, stored on our backend.</li><li><strong>Habit content:</strong> your habits, check-ins, and moods. These are only synced to our servers on the Lite and Pro plans; on the free plan they stay 100% on your device.</li><li><strong>Purchase history:</strong> handled through RevenueCat to validate your subscription.</li><li><strong>Advertising identifiers:</strong> collected by Google AdMob (with your consent) to serve ads.</li><li><strong>Photos:</strong> the optional photo you attach to a check-in is stored only on your device.</li></ul>',
+              "<p>We may process the following data:</p><ul><li><strong>Account:</strong> your name and email address, along with an encrypted version of your password, stored on our backend.</li><li><strong>Habit content:</strong> your habits, check-ins, and moods. These are only synced to our servers on the Lite and Pro plans; on the free plan they stay 100% on your device.</li><li><strong>Purchase history:</strong> handled through RevenueCat to validate your subscription.</li><li><strong>Advertising identifiers:</strong> collected by Google AdMob (with your consent) to serve ads.</li><li><strong>Photos:</strong> the optional photo you attach to a check-in is stored only on your device.</li></ul>",
           },
           {
-            title: '3. How We Use Your Data',
+            title: "3. How We Use Your Data",
             content:
-              '<p>We use your data to: create and authenticate your account; sync your habits across devices on paid plans; validate your subscription; show advertising on the Free and Lite plans; and send you local reminders. We do not use your habit content for advertising purposes.</p>',
+              "<p>We use your data to: create and authenticate your account; sync your habits across devices on paid plans; validate your subscription; show advertising on the Free and Lite plans; and send you local reminders. We do not use your habit content for advertising purposes.</p>",
           },
           {
-            title: '4. Cloud Sync (paid plans only)',
+            title: "4. Cloud Sync (paid plans only)",
             content:
-              '<p>Cloud sync is available only for the Lite and Pro plans. When active, your habits, check-ins, and moods are copied to our servers to keep them up to date across your devices. <strong>On the free plan, this data stays 100% on your device and is never sent to our servers.</strong> Photos attached to a check-in are never uploaded; they are stored on the device only.</p>',
+              "<p>Cloud sync is available only for the Lite and Pro plans. When active, your habits, check-ins, and moods are copied to our servers to keep them up to date across your devices. <strong>On the free plan, this data stays 100% on your device and is never sent to our servers.</strong> Photos attached to a check-in are never uploaded; they are stored on the device only.</p>",
           },
           {
-            title: '5. Advertising and Tracking (Google AdMob)',
+            title: "5. Advertising and Tracking (Google AdMob)",
             content:
-              '<p>The Free and Lite plans show ads through Google AdMob. AdMob may collect advertising identifiers and device data to serve ads. On iOS we use App Tracking Transparency (ATT) and, more generally, a consent management platform (UMP/GDPR) to ask for your consent; we only show personalized ads if you agree, and you may decline. See Google’s privacy policy for more detail.</p>',
+              "<p>The Free and Lite plans show ads through Google AdMob. AdMob may collect advertising identifiers and device data to serve ads. On iOS we use App Tracking Transparency (ATT) and, more generally, a consent management platform (UMP/GDPR) to ask for your consent; we only show personalized ads if you agree, and you may decline. See Google’s privacy policy for more detail.</p>",
           },
           {
-            title: '6. Local Notifications',
+            title: "6. Local Notifications",
             content:
-              '<p>The Application uses local notifications on your device to send you habit reminders. These notifications are generated on the device and do not involve sending your data to our servers.</p>',
+              "<p>The Application uses local notifications on your device to send you habit reminders. These notifications are generated on the device and do not involve sending your data to our servers.</p>",
           },
           {
-            title: '7. We Do Not Sell Your Data',
+            title: "7. We Do Not Sell Your Data",
             content:
-              '<p>We do not sell or rent your personal information to third parties.</p>',
+              "<p>We do not sell or rent your personal information to third parties.</p>",
           },
           {
-            title: '8. Your Rights and Control',
+            title: "8. Your Rights and Control",
             content:
-              '<p>You are in control of your data. From within the Application you can:</p><ul><li>Export and import all your data (JSON or CSV)</li><li>Delete your habit data</li><li>Delete your account, which also removes any data you have synced to the cloud</li></ul>',
+              "<p>You are in control of your data. From within the Application you can:</p><ul><li>Export and import all your data (JSON or CSV)</li><li>Delete your habit data</li><li>Delete your account, which also removes any data you have synced to the cloud</li></ul>",
           },
           {
-            title: '9. Data Retention and Deletion',
+            title: "9. Data Retention and Deletion",
             content:
-              '<p>We keep your account data and synced data while your account is active. When you delete your account, we delete your account information and the associated data synced to the cloud. Data that exists only on your device is removed when you uninstall the Application.</p>',
+              "<p>We keep your account data and synced data while your account is active. When you delete your account, we delete your account information and the associated data synced to the cloud. Data that exists only on your device is removed when you uninstall the Application.</p>",
           },
           {
-            title: '10. Changes to This Policy',
+            title: "10. Changes to This Policy",
             content:
-              '<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>',
+              "<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>",
           },
           {
-            title: '11. Contact',
+            title: "11. Contact",
             content:
-              '<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>',
+              "<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
   },
   {
-    id: '15',
-    name: 'TrainFlow AI',
-    slug: 'trainflow-ai',
+    id: "15",
+    name: "TrainFlow AI",
+    slug: "trainflow-ai",
     description:
-      'Convierte los planes de entrenamiento que genera la IA en una app clara y legible. Tus planes viven en tu dispositivo.',
-    icon: '',
+      "Convierte los planes de entrenamiento que genera la IA en una app clara y legible. Tus planes viven en tu dispositivo.",
+    icon: "",
     logo: TrainFlowAIIcon,
     fullDescription:
-      'TrainFlow AI es la capa de presentación para planes de entrenamiento generados por inteligencia artificial (ChatGPT, Claude, Gemini…). Pides un plan en JSON o CSV, lo importas, y la app lo muestra con una interfaz editorial clara. Tus planes se guardan en tu dispositivo; con Lite o Pro se respaldan en la nube. Inicia sesión con Google o entra como invitado.',
+      "TrainFlow AI es la capa de presentación para planes de entrenamiento generados por inteligencia artificial (ChatGPT, Claude, Gemini…). Pides un plan en JSON o CSV, lo importas, y la app lo muestra con una interfaz editorial clara. Tus planes se guardan en tu dispositivo; con Lite o Pro se respaldan en la nube. Inicia sesión con Google o entra como invitado.",
     features: [
-      'Importa planes de IA en JSON o CSV con parsing tolerante',
-      'Interfaz editorial clara para seguir tu rutina día a día',
-      'Planes ilimitados y copia en la nube con Lite/Pro',
-      'Exporta a PDF o imagen y compártelos',
-      'Inicia sesión con Google o entra como invitado',
-      'Tema oscuro y claro · Español e inglés',
+      "Importa planes de IA en JSON o CSV con parsing tolerante",
+      "Interfaz editorial clara para seguir tu rutina día a día",
+      "Planes ilimitados y copia en la nube con Lite/Pro",
+      "Exporta a PDF o imagen y compártelos",
+      "Inicia sesión con Google o entra como invitado",
+      "Tema oscuro y claro · Español e inglés",
     ],
-    appStoreUrl: '',
-    playStoreUrl: '',
+    appStoreUrl: "",
+    playStoreUrl: "",
     changelog: [
       {
-        version: '1.0.0',
-        date: '19 de julio de 2026',
-        type: 'new',
-        changes: ['Lanzamiento inicial de TrainFlow AI.'],
+        version: "1.0.0",
+        date: "19 de julio de 2026",
+        type: "new",
+        changes: ["Lanzamiento inicial de TrainFlow AI."],
       },
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: '19 de julio de 2026',
+        lastUpdated: "19 de julio de 2026",
         sections: [
           {
-            title: '1. Aceptación de los Términos',
+            title: "1. Aceptación de los Términos",
             content:
               '<p>Al descargar, instalar o usar TrainFlow AI ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con ellos, no uses la Aplicación.</p>',
           },
           {
-            title: '2. Descripción del Servicio',
+            title: "2. Descripción del Servicio",
             content:
-              '<p>TrainFlow AI es una capa de presentación para planes de entrenamiento generados por inteligencia artificial de terceros (como ChatGPT, Claude o Gemini). Tú generas o proporcionas un plan en formato JSON o CSV, lo importas, y la Aplicación lo muestra de forma clara y legible. La Aplicación no genera los planes ni presta un servicio de asesoría.</p>',
+              "<p>TrainFlow AI es una capa de presentación para planes de entrenamiento generados por inteligencia artificial de terceros (como ChatGPT, Claude o Gemini). Tú generas o proporcionas un plan en formato JSON o CSV, lo importas, y la Aplicación lo muestra de forma clara y legible. La Aplicación no genera los planes ni presta un servicio de asesoría.</p>",
           },
           {
-            title: '3. No es Asesoría Médica ni Profesional',
+            title: "3. No es Asesoría Médica ni Profesional",
             content:
-              '<p><strong>Importante:</strong> los planes de entrenamiento provienen de fuentes de IA de terceros o de ti, no de TrainFlow AI. La Aplicación no proporciona asesoría médica, de salud, nutricional ni de acondicionamiento físico. Consulta a un profesional de la salud calificado antes de iniciar cualquier programa de entrenamiento. Usas los planes bajo tu propia responsabilidad y riesgo.</p>',
+              "<p><strong>Importante:</strong> los planes de entrenamiento provienen de fuentes de IA de terceros o de ti, no de TrainFlow AI. La Aplicación no proporciona asesoría médica, de salud, nutricional ni de acondicionamiento físico. Consulta a un profesional de la salud calificado antes de iniciar cualquier programa de entrenamiento. Usas los planes bajo tu propia responsabilidad y riesgo.</p>",
           },
           {
-            title: '4. Cuentas',
+            title: "4. Cuentas",
             content:
-              '<p>Puedes usar la Aplicación como invitado o iniciar sesión con Google. La cuenta se usa para identificarte, administrar tu plan y, en los planes de pago, respaldar tus planes en la nube. Eres responsable de la seguridad de tu cuenta de Google. Puedes eliminar tu cuenta y sus datos en cualquier momento desde la Aplicación.</p>',
+              "<p>Puedes usar la Aplicación como invitado o iniciar sesión con Google. La cuenta se usa para identificarte, administrar tu plan y, en los planes de pago, respaldar tus planes en la nube. Eres responsable de la seguridad de tu cuenta de Google. Puedes eliminar tu cuenta y sus datos en cualquier momento desde la Aplicación.</p>",
           },
           {
-            title: '5. Suscripciones y Planes de Pago',
+            title: "5. Suscripciones y Planes de Pago",
             content:
-              '<p>TrainFlow AI ofrece un plan gratuito y planes de pago (Lite y Pro) que desbloquean funciones adicionales. Las suscripciones se contratan y se cobran a través de la tienda correspondiente (App Store de Apple o Google Play) y se gestionan con RevenueCat, sujetas a sus términos. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda. Las suscripciones se renuevan automáticamente salvo que las canceles antes del final del período.</p>',
+              "<p>TrainFlow AI ofrece un plan gratuito y planes de pago (Lite y Pro) que desbloquean funciones adicionales. Las suscripciones se contratan y se cobran a través de la tienda correspondiente (App Store de Apple o Google Play) y se gestionan con RevenueCat, sujetas a sus términos. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda. Las suscripciones se renuevan automáticamente salvo que las canceles antes del final del período.</p>",
           },
           {
-            title: '6. Publicidad',
+            title: "6. Publicidad",
             content:
-              '<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob. El plan Pro elimina los anuncios. El uso de la publicidad se rige también por la Política de Privacidad.</p>',
+              "<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob. El plan Pro elimina los anuncios. El uso de la publicidad se rige también por la Política de Privacidad.</p>",
           },
           {
-            title: '7. Propiedad Intelectual',
+            title: "7. Propiedad Intelectual",
             content:
-              '<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. El contenido que importas (tus planes de entrenamiento) es tuyo; no reclamamos ningún derecho sobre él.</p>',
+              "<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. El contenido que importas (tus planes de entrenamiento) es tuyo; no reclamamos ningún derecho sobre él.</p>",
           },
           {
-            title: '8. Limitación de Responsabilidad',
+            title: "8. Limitación de Responsabilidad",
             content:
               '<p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de lesiones o daños derivados de seguir un plan de entrenamiento, de la pérdida de datos almacenados localmente, de errores de importación ni de incompatibilidades con determinados dispositivos. Te recomendamos exportar tus planes periódicamente.</p>',
           },
           {
-            title: '9. Modificaciones',
+            title: "9. Modificaciones",
             content:
-              '<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>',
+              "<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>",
           },
           {
-            title: '10. Contacto',
+            title: "10. Contacto",
             content:
-              '<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>',
+              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 19, 2026',
+        lastUpdated: "July 19, 2026",
         sections: [
           {
-            title: '1. Acceptance of Terms',
+            title: "1. Acceptance of Terms",
             content:
               '<p>By downloading, installing, or using TrainFlow AI ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with them, do not use the Application.</p>',
           },
           {
-            title: '2. Description of the Service',
+            title: "2. Description of the Service",
             content:
-              '<p>TrainFlow AI is a presentation layer for training plans generated by third-party artificial intelligence (such as ChatGPT, Claude, or Gemini). You generate or provide a plan in JSON or CSV format, import it, and the Application displays it in a clean, readable way. The Application does not generate the plans and does not provide advisory services.</p>',
+              "<p>TrainFlow AI is a presentation layer for training plans generated by third-party artificial intelligence (such as ChatGPT, Claude, or Gemini). You generate or provide a plan in JSON or CSV format, import it, and the Application displays it in a clean, readable way. The Application does not generate the plans and does not provide advisory services.</p>",
           },
           {
-            title: '3. Not Medical or Professional Advice',
+            title: "3. Not Medical or Professional Advice",
             content:
-              '<p><strong>Important:</strong> training plans come from third-party AI sources or from you, not from TrainFlow AI. The Application does not provide medical, health, nutritional, or fitness advice. Consult a qualified health professional before starting any training program. You use the plans at your own responsibility and risk.</p>',
+              "<p><strong>Important:</strong> training plans come from third-party AI sources or from you, not from TrainFlow AI. The Application does not provide medical, health, nutritional, or fitness advice. Consult a qualified health professional before starting any training program. You use the plans at your own responsibility and risk.</p>",
           },
           {
-            title: '4. Accounts',
+            title: "4. Accounts",
             content:
-              '<p>You can use the Application as a guest or sign in with Google. The account is used to identify you, manage your plan, and — on paid plans — back up your plans to the cloud. You are responsible for the security of your Google account. You can delete your account and its data at any time from within the Application.</p>',
+              "<p>You can use the Application as a guest or sign in with Google. The account is used to identify you, manage your plan, and — on paid plans — back up your plans to the cloud. You are responsible for the security of your Google account. You can delete your account and its data at any time from within the Application.</p>",
           },
           {
-            title: '5. Subscriptions and Paid Plans',
+            title: "5. Subscriptions and Paid Plans",
             content:
-              '<p>TrainFlow AI offers a free plan and paid plans (Lite and Pro) that unlock additional features. Subscriptions are purchased and billed through the relevant app store (Apple App Store or Google Play) and managed with RevenueCat, subject to their terms. Renewal, cancellation, and refunds are managed from your store account. Subscriptions renew automatically unless canceled before the end of the period.</p>',
+              "<p>TrainFlow AI offers a free plan and paid plans (Lite and Pro) that unlock additional features. Subscriptions are purchased and billed through the relevant app store (Apple App Store or Google Play) and managed with RevenueCat, subject to their terms. Renewal, cancellation, and refunds are managed from your store account. Subscriptions renew automatically unless canceled before the end of the period.</p>",
           },
           {
-            title: '6. Advertising',
+            title: "6. Advertising",
             content:
-              '<p>The Free and Lite plans show ads through Google AdMob. The Pro plan removes ads. Advertising is also governed by the Privacy Policy.</p>',
+              "<p>The Free and Lite plans show ads through Google AdMob. The Pro plan removes ads. Advertising is also governed by the Privacy Policy.</p>",
           },
           {
-            title: '7. Intellectual Property',
+            title: "7. Intellectual Property",
             content:
-              '<p>All rights to the Application, including its code, design, and interface, belong to its author. The content you import (your training plans) is yours; we claim no rights over it.</p>',
+              "<p>All rights to the Application, including its code, design, and interface, belong to its author. The content you import (your training plans) is yours; we claim no rights over it.</p>",
           },
           {
-            title: '8. Limitation of Liability',
+            title: "8. Limitation of Liability",
             content:
               '<p>The Application is provided "as is" and "as available", without warranties of any kind. We are not responsible for injury or damages arising from following a training plan, loss of locally stored data, import errors, or incompatibilities with certain devices. We recommend exporting your plans periodically.</p>',
           },
           {
-            title: '9. Modifications',
+            title: "9. Modifications",
             content:
-              '<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>',
+              "<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>",
           },
           {
-            title: '10. Contact',
+            title: "10. Contact",
             content:
-              '<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>',
+              "<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: '19 de julio de 2026',
+        lastUpdated: "19 de julio de 2026",
         sections: [
           {
-            title: '1. Introducción',
+            title: "1. Introducción",
             content:
-              '<p>Esta Política de Privacidad describe cómo TrainFlow AI maneja tu información. TrainFlow AI está diseñado para que tus planes de entrenamiento vivan en tu dispositivo; solo los planes de pago los respaldan en la nube.</p>',
+              "<p>Esta Política de Privacidad describe cómo TrainFlow AI maneja tu información. TrainFlow AI está diseñado para que tus planes de entrenamiento vivan en tu dispositivo; solo los planes de pago los respaldan en la nube.</p>",
           },
           {
-            title: '2. Tus Planes se Guardan en tu Dispositivo',
+            title: "2. Tus Planes se Guardan en tu Dispositivo",
             content:
-              '<p>Tus planes de entrenamiento y tu progreso se almacenan de forma local en tu dispositivo. Si usas un plan de pago (Lite o Pro) se activa la copia en la nube (ver la sección de Copia en la Nube). <strong>Si desinstalas la Aplicación, los datos locales se eliminan de tu dispositivo.</strong></p>',
+              "<p>Tus planes de entrenamiento y tu progreso se almacenan de forma local en tu dispositivo. Si usas un plan de pago (Lite o Pro) se activa la copia en la nube (ver la sección de Copia en la Nube). <strong>Si desinstalas la Aplicación, los datos locales se eliminan de tu dispositivo.</strong></p>",
           },
           {
-            title: '3. Cuenta e Inicio de Sesión',
+            title: "3. Cuenta e Inicio de Sesión",
             content:
-              '<p>Puedes usar la Aplicación como invitado; en ese caso usamos un identificador anónimo de dispositivo que no te identifica como persona. Si inicias sesión con Google, guardamos en nuestro backend tu correo electrónico, nombre y foto de perfil de Google, con el fin de identificarte y administrar tu plan. Puedes eliminar tu cuenta y la información asociada en cualquier momento desde la Aplicación.</p>',
+              "<p>Puedes usar la Aplicación como invitado; en ese caso usamos un identificador anónimo de dispositivo que no te identifica como persona. Si inicias sesión con Google, guardamos en nuestro backend tu correo electrónico, nombre y foto de perfil de Google, con el fin de identificarte y administrar tu plan. Puedes eliminar tu cuenta y la información asociada en cualquier momento desde la Aplicación.</p>",
           },
           {
-            title: '4. Copia en la Nube (planes de pago)',
+            title: "4. Copia en la Nube (planes de pago)",
             content:
-              '<p>Si tienes un plan Lite o Pro, tus planes de entrenamiento se respaldan en nuestros servidores para poder sincronizarlos entre tus dispositivos. <strong>El plan Gratuito no sube ningún plan a la nube.</strong> Puedes eliminar esta copia eliminando tu cuenta desde la Aplicación.</p>',
+              "<p>Si tienes un plan Lite o Pro, tus planes de entrenamiento se respaldan en nuestros servidores para poder sincronizarlos entre tus dispositivos. <strong>El plan Gratuito no sube ningún plan a la nube.</strong> Puedes eliminar esta copia eliminando tu cuenta desde la Aplicación.</p>",
           },
           {
-            title: '5. Suscripciones (RevenueCat)',
+            title: "5. Suscripciones (RevenueCat)",
             content:
-              '<p>Usamos RevenueCat para gestionar las compras dentro de la Aplicación. RevenueCat procesa un identificador de usuario y el estado de tu suscripción para determinar tu plan. No recibimos los datos de tu tarjeta: los pagos los procesa la tienda (Apple o Google).</p>',
+              "<p>Usamos RevenueCat para gestionar las compras dentro de la Aplicación. RevenueCat procesa un identificador de usuario y el estado de tu suscripción para determinar tu plan. No recibimos los datos de tu tarjeta: los pagos los procesa la tienda (Apple o Google).</p>",
           },
           {
-            title: '6. Publicidad (Google AdMob)',
+            title: "6. Publicidad (Google AdMob)",
             content:
-              '<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob, que puede usar identificadores del dispositivo o de publicidad. En los dispositivos que lo requieren, la Aplicación te solicitará tu consentimiento antes de habilitar publicidad personalizada; puedes rechazarlo. Consulta la política de privacidad de Google para más detalles.</p>',
+              "<p>Los planes Gratuito y Lite muestran anuncios a través de Google AdMob, que puede usar identificadores del dispositivo o de publicidad. En los dispositivos que lo requieren, la Aplicación te solicitará tu consentimiento antes de habilitar publicidad personalizada; puedes rechazarlo. Consulta la política de privacidad de Google para más detalles.</p>",
           },
           {
-            title: '7. Sugerencias y Soporte',
+            title: "7. Sugerencias y Soporte",
             content:
-              '<p>Si nos envías una sugerencia o solicitud desde la Aplicación, recibimos tu mensaje y, si has iniciado sesión, tu nombre y correo, en davidyero@davidyero.com para poder responderte.</p>',
+              "<p>Si nos envías una sugerencia o solicitud desde la Aplicación, recibimos tu mensaje y, si has iniciado sesión, tu nombre y correo, en davidyero@davidyero.com para poder responderte.</p>",
           },
           {
-            title: '8. No Vendemos tus Datos',
+            title: "8. No Vendemos tus Datos",
             content:
-              '<p>No vendemos ni alquilamos tu información personal a terceros.</p>',
+              "<p>No vendemos ni alquilamos tu información personal a terceros.</p>",
           },
           {
-            title: '9. Tus Derechos y Control',
+            title: "9. Tus Derechos y Control",
             content:
-              '<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar tus planes de entrenamiento a PDF o imagen</li><li>Eliminar tus planes</li><li>Eliminar tu cuenta y toda la información asociada, incluida la copia en la nube</li></ul>',
+              "<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar tus planes de entrenamiento a PDF o imagen</li><li>Eliminar tus planes</li><li>Eliminar tu cuenta y toda la información asociada, incluida la copia en la nube</li></ul>",
           },
           {
-            title: '10. Cambios en esta Política',
+            title: "10. Cambios en esta Política",
             content:
-              '<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>',
+              "<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>",
           },
           {
-            title: '11. Contacto',
+            title: "11. Contacto",
             content:
-              '<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>',
+              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 19, 2026',
+        lastUpdated: "July 19, 2026",
         sections: [
           {
-            title: '1. Introduction',
+            title: "1. Introduction",
             content:
-              '<p>This Privacy Policy describes how TrainFlow AI handles your information. TrainFlow AI is designed so your training plans live on your device; only paid plans back them up to the cloud.</p>',
+              "<p>This Privacy Policy describes how TrainFlow AI handles your information. TrainFlow AI is designed so your training plans live on your device; only paid plans back them up to the cloud.</p>",
           },
           {
-            title: '2. Your Plans Are Stored on Your Device',
+            title: "2. Your Plans Are Stored on Your Device",
             content:
-              '<p>Your training plans and progress are stored locally on your device. If you use a paid plan (Lite or Pro), cloud backup is enabled (see the Cloud Backup section). <strong>If you uninstall the Application, local data is deleted from your device.</strong></p>',
+              "<p>Your training plans and progress are stored locally on your device. If you use a paid plan (Lite or Pro), cloud backup is enabled (see the Cloud Backup section). <strong>If you uninstall the Application, local data is deleted from your device.</strong></p>",
           },
           {
-            title: '3. Account and Sign-In',
+            title: "3. Account and Sign-In",
             content:
-              '<p>You can use the Application as a guest; in that case we use an anonymous device identifier that does not identify you as a person. If you sign in with Google, we store on our backend your email address, name, and Google profile picture, in order to identify you and manage your plan. You can delete your account and associated information at any time from within the Application.</p>',
+              "<p>You can use the Application as a guest; in that case we use an anonymous device identifier that does not identify you as a person. If you sign in with Google, we store on our backend your email address, name, and Google profile picture, in order to identify you and manage your plan. You can delete your account and associated information at any time from within the Application.</p>",
           },
           {
-            title: '4. Cloud Backup (paid plans)',
+            title: "4. Cloud Backup (paid plans)",
             content:
-              '<p>If you have a Lite or Pro plan, your training plans are backed up to our servers so they can sync across your devices. <strong>The Free plan does not upload any plan to the cloud.</strong> You can delete this backup by deleting your account from within the Application.</p>',
+              "<p>If you have a Lite or Pro plan, your training plans are backed up to our servers so they can sync across your devices. <strong>The Free plan does not upload any plan to the cloud.</strong> You can delete this backup by deleting your account from within the Application.</p>",
           },
           {
-            title: '5. Subscriptions (RevenueCat)',
+            title: "5. Subscriptions (RevenueCat)",
             content:
-              '<p>We use RevenueCat to manage in-app purchases. RevenueCat processes a user identifier and your subscription status to determine your plan. We do not receive your card details: payments are processed by the store (Apple or Google).</p>',
+              "<p>We use RevenueCat to manage in-app purchases. RevenueCat processes a user identifier and your subscription status to determine your plan. We do not receive your card details: payments are processed by the store (Apple or Google).</p>",
           },
           {
-            title: '6. Advertising (Google AdMob)',
+            title: "6. Advertising (Google AdMob)",
             content:
-              '<p>The Free and Lite plans show ads through Google AdMob, which may use device or advertising identifiers. On devices that require it, the Application will ask for your consent before enabling personalized ads; you may decline. See Google’s privacy policy for more detail.</p>',
+              "<p>The Free and Lite plans show ads through Google AdMob, which may use device or advertising identifiers. On devices that require it, the Application will ask for your consent before enabling personalized ads; you may decline. See Google’s privacy policy for more detail.</p>",
           },
           {
-            title: '7. Suggestions and Support',
+            title: "7. Suggestions and Support",
             content:
-              '<p>If you send us a suggestion or request from within the Application, we receive your message and, if you are signed in, your name and email, at davidyero@davidyero.com so we can respond.</p>',
+              "<p>If you send us a suggestion or request from within the Application, we receive your message and, if you are signed in, your name and email, at davidyero@davidyero.com so we can respond.</p>",
           },
           {
-            title: '8. We Do Not Sell Your Data',
+            title: "8. We Do Not Sell Your Data",
             content:
-              '<p>We do not sell or rent your personal information to third parties.</p>',
+              "<p>We do not sell or rent your personal information to third parties.</p>",
           },
           {
-            title: '9. Your Rights and Control',
+            title: "9. Your Rights and Control",
             content:
-              '<p>You are in control of your data. From within the Application you can:</p><ul><li>Export your training plans to PDF or image</li><li>Delete your plans</li><li>Delete your account and all associated information, including the cloud backup</li></ul>',
+              "<p>You are in control of your data. From within the Application you can:</p><ul><li>Export your training plans to PDF or image</li><li>Delete your plans</li><li>Delete your account and all associated information, including the cloud backup</li></ul>",
           },
           {
-            title: '10. Changes to This Policy',
+            title: "10. Changes to This Policy",
             content:
-              '<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>',
+              "<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>",
           },
           {
-            title: '11. Contact',
+            title: "11. Contact",
             content:
-              '<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>',
+              "<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>",
           },
         ],
       },
     },
   },
   {
-    id: '16',
-    name: 'COP Moneda Colombiana',
-    slug: 'cop-moneda-colombiana',
+    id: "16",
+    name: "COP Moneda Colombiana",
+    slug: "cop-moneda-colombiana",
     description:
-      'Tasas de cambio de todas las monedas del mundo frente al peso colombiano, actualizadas cada día. Con conversor, favoritas y detalle por moneda.',
-    icon: '',
+      "Tasas de cambio de todas las monedas del mundo frente al peso colombiano, actualizadas cada día. Con conversor, favoritas y detalle por moneda.",
+    icon: "",
     logo: CopMonedaColombianaIcon,
     fullDescription:
-      'COP Moneda Colombiana muestra el valor de más de 160 monedas del mundo frente al peso colombiano, con datos que se actualizan una vez al día. Busca y filtra por región, marca tus monedas favoritas, convierte cualquier monto con la calculadora y abre cada moneda para ver su detalle y su histórico. Funciona sin conexión con los últimos datos guardados. No necesita cuenta: todo vive en tu dispositivo. Gratis, con publicidad.',
+      "COP Moneda Colombiana muestra el valor de más de 160 monedas del mundo frente al peso colombiano, con datos que se actualizan una vez al día. Busca y filtra por región, marca tus monedas favoritas, convierte cualquier monto con la calculadora y abre cada moneda para ver su detalle y su histórico. Funciona sin conexión con los últimos datos guardados. No necesita cuenta: todo vive en tu dispositivo. Gratis, con publicidad.",
     features: [
-      'Más de 160 monedas frente al peso colombiano (COP)',
-      'Buscador y filtros por región; favoritas guardadas en el dispositivo',
-      'Conversor de cualquier monto entre dos monedas',
-      'Detalle por moneda con histórico y variación diaria',
-      'Recordatorio diario cuando llegan las tasas del día',
-      'Funciona sin conexión con los últimos datos guardados',
-      'Tema oscuro y claro · Español e inglés',
+      "Más de 160 monedas frente al peso colombiano (COP)",
+      "Buscador y filtros por región; favoritas guardadas en el dispositivo",
+      "Conversor de cualquier monto entre dos monedas",
+      "Detalle por moneda con histórico y variación diaria",
+      "Recordatorio diario cuando llegan las tasas del día",
+      "Funciona sin conexión con los últimos datos guardados",
+      "Tema oscuro y claro · Español e inglés",
     ],
-    appStoreUrl: '',
-    playStoreUrl: '',
+    appStoreUrl: "",
+    playStoreUrl: "",
     changelog: [
       {
-        version: '0.1.0',
-        date: '20 de julio de 2026',
-        type: 'new',
-        changes: ['Lanzamiento inicial de COP Moneda Colombiana.'],
+        version: "0.1.0",
+        date: "20 de julio de 2026",
+        type: "new",
+        changes: ["Lanzamiento inicial de COP Moneda Colombiana."],
       },
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: '20 de julio de 2026',
+        lastUpdated: "20 de julio de 2026",
         sections: [
           {
-            title: '1. Aceptación de los Términos',
+            title: "1. Aceptación de los Términos",
             content:
               '<p>Al descargar, instalar o usar COP Moneda Colombiana ("la Aplicación"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
           },
           {
-            title: '2. Descripción del Servicio',
+            title: "2. Descripción del Servicio",
             content:
-              '<p>La Aplicación muestra tasas de cambio de distintas monedas frente al peso colombiano con fines informativos. Los datos provienen de un proveedor externo (Exchange Rate API) y se actualizan una vez al día.</p>',
+              "<p>La Aplicación muestra tasas de cambio de distintas monedas frente al peso colombiano con fines informativos. Los datos provienen de un proveedor externo (Exchange Rate API) y se actualizan una vez al día.</p>",
           },
           {
-            title: '3. No es Asesoría Financiera',
+            title: "3. No es Asesoría Financiera",
             content:
-              '<p><strong>Importante:</strong> las tasas se ofrecen solo con fines informativos y pueden diferir de las de tu banco o casa de cambio. La Aplicación no presta asesoría financiera, de inversión ni cambiaria, y no debe usarse como única base para decisiones económicas. Verifica siempre con una fuente oficial antes de operar.</p>',
+              "<p><strong>Importante:</strong> las tasas se ofrecen solo con fines informativos y pueden diferir de las de tu banco o casa de cambio. La Aplicación no presta asesoría financiera, de inversión ni cambiaria, y no debe usarse como única base para decisiones económicas. Verifica siempre con una fuente oficial antes de operar.</p>",
           },
           {
-            title: '4. Sin Cuenta de Usuario',
+            title: "4. Sin Cuenta de Usuario",
             content:
-              '<p>La Aplicación no requiere registro ni inicio de sesión. Tus favoritas, idioma y tema se guardan únicamente en tu dispositivo.</p>',
+              "<p>La Aplicación no requiere registro ni inicio de sesión. Tus favoritas, idioma y tema se guardan únicamente en tu dispositivo.</p>",
           },
           {
-            title: '5. Publicidad',
+            title: "5. Publicidad",
             content:
-              '<p>La Aplicación es gratuita y se financia con publicidad de Google AdMob. Al usarla aceptas la visualización de anuncios. Puedes gestionar el consentimiento de anuncios personalizados desde los ajustes de tu dispositivo.</p>',
+              "<p>La Aplicación es gratuita y se financia con publicidad de Google AdMob. Al usarla aceptas la visualización de anuncios. Puedes gestionar el consentimiento de anuncios personalizados desde los ajustes de tu dispositivo.</p>",
           },
           {
-            title: '6. Disponibilidad y Cambios',
+            title: "6. Disponibilidad y Cambios",
             content:
-              '<p>Podemos modificar, suspender o descontinuar la Aplicación o estos Términos en cualquier momento. El uso continuado tras un cambio implica su aceptación.</p>',
+              "<p>Podemos modificar, suspender o descontinuar la Aplicación o estos Términos en cualquier momento. El uso continuado tras un cambio implica su aceptación.</p>",
           },
           {
-            title: '7. Contacto',
+            title: "7. Contacto",
             content:
-              '<p>Para dudas sobre estos Términos, escribe a davidyero@davidyero.com.</p>',
+              "<p>Para dudas sobre estos Términos, escribe a davidyero@davidyero.com.</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 20, 2026',
+        lastUpdated: "July 20, 2026",
         sections: [
           {
-            title: '1. Acceptance of Terms',
+            title: "1. Acceptance of Terms",
             content:
               '<p>By downloading, installing or using COP Moneda Colombiana ("the App"), you agree to these Terms and Conditions. If you do not agree, do not use the App.</p>',
           },
           {
-            title: '2. Service Description',
+            title: "2. Service Description",
             content:
-              '<p>The App shows exchange rates of various currencies against the Colombian peso for informational purposes. Data comes from a third-party provider (Exchange Rate API) and is updated once a day.</p>',
+              "<p>The App shows exchange rates of various currencies against the Colombian peso for informational purposes. Data comes from a third-party provider (Exchange Rate API) and is updated once a day.</p>",
           },
           {
-            title: '3. Not Financial Advice',
+            title: "3. Not Financial Advice",
             content:
-              '<p><strong>Important:</strong> rates are provided for information only and may differ from those of your bank or exchange house. The App does not provide financial, investment or currency-exchange advice and must not be your sole basis for economic decisions. Always verify with an official source before transacting.</p>',
+              "<p><strong>Important:</strong> rates are provided for information only and may differ from those of your bank or exchange house. The App does not provide financial, investment or currency-exchange advice and must not be your sole basis for economic decisions. Always verify with an official source before transacting.</p>",
           },
           {
-            title: '4. No User Account',
+            title: "4. No User Account",
             content:
-              '<p>The App requires no sign-up or login. Your favorites, language and theme are stored only on your device.</p>',
+              "<p>The App requires no sign-up or login. Your favorites, language and theme are stored only on your device.</p>",
           },
           {
-            title: '5. Advertising',
+            title: "5. Advertising",
             content:
-              '<p>The App is free and supported by Google AdMob advertising. By using it you accept the display of ads. You can manage personalized-ads consent from your device settings.</p>',
+              "<p>The App is free and supported by Google AdMob advertising. By using it you accept the display of ads. You can manage personalized-ads consent from your device settings.</p>",
           },
           {
-            title: '6. Availability and Changes',
+            title: "6. Availability and Changes",
             content:
-              '<p>We may modify, suspend or discontinue the App or these Terms at any time. Continued use after a change means you accept it.</p>',
+              "<p>We may modify, suspend or discontinue the App or these Terms at any time. Continued use after a change means you accept it.</p>",
           },
           {
-            title: '7. Contact',
+            title: "7. Contact",
             content:
-              '<p>For questions about these Terms, email davidyero@davidyero.com.</p>',
+              "<p>For questions about these Terms, email davidyero@davidyero.com.</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: '20 de julio de 2026',
+        lastUpdated: "20 de julio de 2026",
         sections: [
           {
-            title: '1. Resumen',
+            title: "1. Resumen",
             content:
-              '<p>COP Moneda Colombiana no te pide cuenta ni recopila datos personales para funcionar. Tus preferencias viven en tu dispositivo. La publicidad de Google puede procesar identificadores del dispositivo según se describe abajo.</p>',
+              "<p>COP Moneda Colombiana no te pide cuenta ni recopila datos personales para funcionar. Tus preferencias viven en tu dispositivo. La publicidad de Google puede procesar identificadores del dispositivo según se describe abajo.</p>",
           },
           {
-            title: '2. Datos que NO recopilamos',
+            title: "2. Datos que NO recopilamos",
             content:
-              '<p>No recopilamos nombre, correo, teléfono ni ubicación. No hay registro ni inicio de sesión. Tus favoritas, idioma, tema y ajustes de notificación se guardan solo en tu dispositivo (almacenamiento local) y no se envían a ningún servidor nuestro.</p>',
+              "<p>No recopilamos nombre, correo, teléfono ni ubicación. No hay registro ni inicio de sesión. Tus favoritas, idioma, tema y ajustes de notificación se guardan solo en tu dispositivo (almacenamiento local) y no se envían a ningún servidor nuestro.</p>",
           },
           {
-            title: '3. Datos de tasas',
+            title: "3. Datos de tasas",
             content:
-              '<p>Para mostrar las tasas, la Aplicación consulta un proveedor externo (Exchange Rate API, exchangerate-api.com). Esa consulta no incluye información personal tuya.</p>',
+              "<p>Para mostrar las tasas, la Aplicación consulta un proveedor externo (Exchange Rate API, exchangerate-api.com). Esa consulta no incluye información personal tuya.</p>",
           },
           {
-            title: '4. Publicidad (Google AdMob)',
+            title: "4. Publicidad (Google AdMob)",
             content:
-              '<p>La Aplicación muestra anuncios mediante Google AdMob. Para servir anuncios, Google puede recopilar y procesar identificadores del dispositivo (como el identificador de publicidad) conforme a su política de privacidad. En dispositivos compatibles se te pide consentimiento (GDPR) y permiso de seguimiento (App Tracking Transparency en iOS); puedes rechazarlo y la Aplicación sigue funcionando con anuncios no personalizados. Consulta la política de Google en policies.google.com/technologies/ads.</p>',
+              "<p>La Aplicación muestra anuncios mediante Google AdMob. Para servir anuncios, Google puede recopilar y procesar identificadores del dispositivo (como el identificador de publicidad) conforme a su política de privacidad. En dispositivos compatibles se te pide consentimiento (GDPR) y permiso de seguimiento (App Tracking Transparency en iOS); puedes rechazarlo y la Aplicación sigue funcionando con anuncios no personalizados. Consulta la política de Google en policies.google.com/technologies/ads.</p>",
           },
           {
-            title: '5. Notificaciones',
+            title: "5. Notificaciones",
             content:
-              '<p>Si activas los recordatorios, las notificaciones se programan localmente en tu dispositivo. No usamos servidores de push ni recopilamos datos para ello.</p>',
+              "<p>Si activas los recordatorios, las notificaciones se programan localmente en tu dispositivo. No usamos servidores de push ni recopilamos datos para ello.</p>",
           },
           {
-            title: '6. Menores',
+            title: "6. Menores",
             content:
-              '<p>La Aplicación no está dirigida a menores de 13 años y no recopila conscientemente datos de ellos.</p>',
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopila conscientemente datos de ellos.</p>",
           },
           {
-            title: '7. Cambios y Contacto',
+            title: "7. Cambios y Contacto",
             content:
-              '<p>Podemos actualizar esta política; los cambios se publican aquí. Para dudas, escribe a davidyero@davidyero.com.</p>',
+              "<p>Podemos actualizar esta política; los cambios se publican aquí. Para dudas, escribe a davidyero@davidyero.com.</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 20, 2026',
+        lastUpdated: "July 20, 2026",
         sections: [
           {
-            title: '1. Summary',
+            title: "1. Summary",
             content:
-              '<p>COP Moneda Colombiana requires no account and collects no personal data to work. Your preferences live on your device. Google advertising may process device identifiers as described below.</p>',
+              "<p>COP Moneda Colombiana requires no account and collects no personal data to work. Your preferences live on your device. Google advertising may process device identifiers as described below.</p>",
           },
           {
-            title: '2. Data we do NOT collect',
+            title: "2. Data we do NOT collect",
             content:
-              '<p>We do not collect your name, email, phone or location. There is no sign-up or login. Your favorites, language, theme and notification settings are stored only on your device (local storage) and are not sent to any server of ours.</p>',
+              "<p>We do not collect your name, email, phone or location. There is no sign-up or login. Your favorites, language, theme and notification settings are stored only on your device (local storage) and are not sent to any server of ours.</p>",
           },
           {
-            title: '3. Rate data',
+            title: "3. Rate data",
             content:
-              '<p>To show rates, the App queries a third-party provider (Exchange Rate API, exchangerate-api.com). That request does not include any personal information about you.</p>',
+              "<p>To show rates, the App queries a third-party provider (Exchange Rate API, exchangerate-api.com). That request does not include any personal information about you.</p>",
           },
           {
-            title: '4. Advertising (Google AdMob)',
+            title: "4. Advertising (Google AdMob)",
             content:
-              '<p>The App shows ads via Google AdMob. To serve ads, Google may collect and process device identifiers (such as the advertising identifier) under its privacy policy. On supported devices you are asked for consent (GDPR) and tracking permission (App Tracking Transparency on iOS); you may decline and the App keeps working with non-personalized ads. See Google policy at policies.google.com/technologies/ads.</p>',
+              "<p>The App shows ads via Google AdMob. To serve ads, Google may collect and process device identifiers (such as the advertising identifier) under its privacy policy. On supported devices you are asked for consent (GDPR) and tracking permission (App Tracking Transparency on iOS); you may decline and the App keeps working with non-personalized ads. See Google policy at policies.google.com/technologies/ads.</p>",
           },
           {
-            title: '5. Notifications',
+            title: "5. Notifications",
             content:
-              '<p>If you enable reminders, notifications are scheduled locally on your device. We use no push servers and collect no data for them.</p>',
+              "<p>If you enable reminders, notifications are scheduled locally on your device. We use no push servers and collect no data for them.</p>",
           },
           {
-            title: '6. Children',
+            title: "6. Children",
             content:
-              '<p>The App is not directed to children under 13 and does not knowingly collect data from them.</p>',
+              "<p>The App is not directed to children under 13 and does not knowingly collect data from them.</p>",
           },
           {
-            title: '7. Changes and Contact',
+            title: "7. Changes and Contact",
             content:
-              '<p>We may update this policy; changes are posted here. For questions, email davidyero@davidyero.com.</p>',
+              "<p>We may update this policy; changes are posted here. For questions, email davidyero@davidyero.com.</p>",
           },
         ],
       },
     },
   },
   {
-    id: '17',
-    name: 'Player Radar',
-    slug: 'player-radar',
+    id: "17",
+    name: "Player Radar",
+    slug: "player-radar",
     description:
-      'Sigue a tus jugadores de fútbol favoritos: partidos de hoy, ficha completa (club, selección y carrera) y datos al instante.',
-    icon: '',
+      "Sigue a tus jugadores de fútbol favoritos: partidos de hoy, ficha completa (club, selección y carrera) y datos al instante.",
+    icon: "",
     logo: PlayerRadarIcon,
-    appStoreUrl: '',
-    playStoreUrl: '',
+    appStoreUrl: "",
+    playStoreUrl: "",
     termsAndConditions: {
       es: {
-        lastUpdated: '25 de julio de 2026',
+        lastUpdated: "25 de julio de 2026",
         sections: [
           {
-            title: '1. Aceptación de los Términos',
+            title: "1. Aceptación de los Términos",
             content:
               '<p>Al descargar, instalar o usar Player Radar ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo con ellos, no uses la Aplicación.</p>',
           },
           {
-            title: '2. Descripción del Servicio',
+            title: "2. Descripción del Servicio",
             content:
-              '<p>Player Radar es una aplicación para aficionados al fútbol que te permite seguir jugadores, crear tu propia selección y consultar los partidos del día, así como fichas detalladas de cada jugador (club actual, selección nacional, trayectoria y partidos). La Aplicación muestra información deportiva con fines informativos y de entretenimiento.</p>',
+              "<p>Player Radar es una aplicación para aficionados al fútbol que te permite seguir jugadores, crear tu propia selección y consultar los partidos del día, así como fichas detalladas de cada jugador (club actual, selección nacional, trayectoria y partidos). La Aplicación muestra información deportiva con fines informativos y de entretenimiento.</p>",
           },
           {
-            title: '3. Fuente de Datos y Ausencia de Afiliación',
+            title: "3. Fuente de Datos y Ausencia de Afiliación",
             content:
-              '<p>Los datos de jugadores, equipos, competiciones y partidos provienen de proveedores de datos deportivos de terceros (principalmente API-Football). Player Radar <strong>no está afiliada, asociada ni respaldada</strong> por la FIFA, la UEFA, ninguna liga, club, selección ni jugador. Los nombres, escudos y marcas pertenecen a sus respectivos titulares y se usan únicamente con fines identificativos e informativos. Los datos pueden contener errores, retrasos o imprecisiones; no garantizamos su exactitud, integridad ni disponibilidad en tiempo real.</p>',
+              "<p>Los datos de jugadores, equipos, competiciones y partidos provienen de proveedores de datos deportivos de terceros (principalmente API-Football). Player Radar <strong>no está afiliada, asociada ni respaldada</strong> por la FIFA, la UEFA, ninguna liga, club, selección ni jugador. Los nombres, escudos y marcas pertenecen a sus respectivos titulares y se usan únicamente con fines identificativos e informativos. Los datos pueden contener errores, retrasos o imprecisiones; no garantizamos su exactitud, integridad ni disponibilidad en tiempo real.</p>",
           },
           {
-            title: '4. Cuentas',
+            title: "4. Cuentas",
             content:
-              '<p>Puedes usar la Aplicación como invitado o crear una cuenta con tu correo electrónico o iniciando sesión con Google o Apple. La cuenta se usa para identificarte, guardar tus jugadores seguidos y tu selección y, en el plan Pro, sincronizarlos en la nube. Eres responsable de mantener la confidencialidad de tus credenciales. Puedes eliminar tu cuenta y sus datos en cualquier momento desde los Ajustes de la Aplicación.</p>',
+              "<p>Puedes usar la Aplicación como invitado o crear una cuenta con tu correo electrónico o iniciando sesión con Google o Apple. La cuenta se usa para identificarte, guardar tus jugadores seguidos y tu selección y, en el plan Pro, sincronizarlos en la nube. Eres responsable de mantener la confidencialidad de tus credenciales. Puedes eliminar tu cuenta y sus datos en cualquier momento desde los Ajustes de la Aplicación.</p>",
           },
           {
-            title: '5. Suscripciones y Plan Pro',
+            title: "5. Suscripciones y Plan Pro",
             content:
-              '<p>Player Radar ofrece un plan Gratuito (con anuncios) y un plan Pro por suscripción que elimina los anuncios y desbloquea funciones adicionales (seguimiento ilimitado, historial completo de partidos, sincronización en la nube y acceso prioritario a datos). Las suscripciones (mensual y anual) se contratan y se cobran a través de Google Play o la App Store de Apple y se gestionan con RevenueCat, sujetas a sus términos. Se renuevan automáticamente salvo que las canceles al menos 24 horas antes del final del período. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda.</p>',
+              "<p>Player Radar ofrece un plan Gratuito (con anuncios) y un plan Pro por suscripción que elimina los anuncios y desbloquea funciones adicionales (seguimiento ilimitado, historial completo de partidos, sincronización en la nube y acceso prioritario a datos). Las suscripciones (mensual y anual) se contratan y se cobran a través de Google Play o la App Store de Apple y se gestionan con RevenueCat, sujetas a sus términos. Se renuevan automáticamente salvo que las canceles al menos 24 horas antes del final del período. La renovación, cancelación y reembolsos se gestionan desde tu cuenta de la tienda.</p>",
           },
           {
-            title: '6. Publicidad',
+            title: "6. Publicidad",
             content:
-              '<p>El plan Gratuito muestra anuncios a través de Google AdMob. El plan Pro elimina los anuncios. El tratamiento de datos asociado a la publicidad se describe en la Política de Privacidad.</p>',
+              "<p>El plan Gratuito muestra anuncios a través de Google AdMob. El plan Pro elimina los anuncios. El tratamiento de datos asociado a la publicidad se describe en la Política de Privacidad.</p>",
           },
           {
-            title: '7. Uso Aceptable',
+            title: "7. Uso Aceptable",
             content:
-              '<p>Te comprometes a usar la Aplicación solo para fines personales y lícitos. No puedes extraer, copiar de forma masiva, revender ni redistribuir los datos deportivos mostrados, ni intentar acceder a la Aplicación o a nuestros servidores de forma no autorizada, ni interferir con su funcionamiento.</p>',
+              "<p>Te comprometes a usar la Aplicación solo para fines personales y lícitos. No puedes extraer, copiar de forma masiva, revender ni redistribuir los datos deportivos mostrados, ni intentar acceder a la Aplicación o a nuestros servidores de forma no autorizada, ni interferir con su funcionamiento.</p>",
           },
           {
-            title: '8. Propiedad Intelectual',
+            title: "8. Propiedad Intelectual",
             content:
-              '<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. Los datos deportivos y las marcas de terceros pertenecen a sus respectivos titulares.</p>',
+              "<p>Todos los derechos sobre la Aplicación, incluyendo su código, diseño e interfaz, pertenecen a su autor. Los datos deportivos y las marcas de terceros pertenecen a sus respectivos titulares.</p>",
           },
           {
-            title: '9. Limitación de Responsabilidad',
+            title: "9. Limitación de Responsabilidad",
             content:
               '<p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo. No nos hacemos responsables de decisiones tomadas a partir de la información mostrada, de imprecisiones o retrasos en los datos, de la pérdida de datos almacenados localmente ni de incompatibilidades con determinados dispositivos.</p>',
           },
           {
-            title: '10. Modificaciones',
+            title: "10. Modificaciones",
             content:
-              '<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>',
+              "<p>Podemos modificar estos Términos y las funciones de la Aplicación en cualquier momento. Los cambios entrarán en vigor desde su publicación. El uso continuado de la Aplicación implica la aceptación de los Términos vigentes.</p>",
           },
           {
-            title: '11. Contacto',
+            title: "11. Contacto",
             content:
-              '<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>',
+              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 25, 2026',
+        lastUpdated: "July 25, 2026",
         sections: [
           {
-            title: '1. Acceptance of Terms',
+            title: "1. Acceptance of Terms",
             content:
               '<p>By downloading, installing, or using Player Radar ("the Application"), you agree to be bound by these Terms and Conditions. If you do not agree with them, do not use the Application.</p>',
           },
           {
-            title: '2. Description of the Service',
+            title: "2. Description of the Service",
             content:
-              '<p>Player Radar is an app for football fans that lets you follow players, build your own selection, and check the day’s matches, as well as detailed profiles for each player (current club, national team, career, and matches). The Application shows sports information for informational and entertainment purposes.</p>',
+              "<p>Player Radar is an app for football fans that lets you follow players, build your own selection, and check the day’s matches, as well as detailed profiles for each player (current club, national team, career, and matches). The Application shows sports information for informational and entertainment purposes.</p>",
           },
           {
-            title: '3. Data Source and No Affiliation',
+            title: "3. Data Source and No Affiliation",
             content:
-              '<p>Player, team, competition, and match data come from third-party sports data providers (primarily API-Football). Player Radar is <strong>not affiliated with, associated with, or endorsed by</strong> FIFA, UEFA, any league, club, national team, or player. Names, crests, and trademarks belong to their respective owners and are used solely for identification and informational purposes. Data may contain errors, delays, or inaccuracies; we do not guarantee its accuracy, completeness, or real-time availability.</p>',
+              "<p>Player, team, competition, and match data come from third-party sports data providers (primarily API-Football). Player Radar is <strong>not affiliated with, associated with, or endorsed by</strong> FIFA, UEFA, any league, club, national team, or player. Names, crests, and trademarks belong to their respective owners and are used solely for identification and informational purposes. Data may contain errors, delays, or inaccuracies; we do not guarantee its accuracy, completeness, or real-time availability.</p>",
           },
           {
-            title: '4. Accounts',
+            title: "4. Accounts",
             content:
-              '<p>You can use the Application as a guest or create an account with your email or by signing in with Google or Apple. The account is used to identify you, save your followed players and selection, and — on the Pro plan — sync them to the cloud. You are responsible for keeping your credentials confidential. You can delete your account and its data at any time from the Application’s Settings.</p>',
+              "<p>You can use the Application as a guest or create an account with your email or by signing in with Google or Apple. The account is used to identify you, save your followed players and selection, and — on the Pro plan — sync them to the cloud. You are responsible for keeping your credentials confidential. You can delete your account and its data at any time from the Application’s Settings.</p>",
           },
           {
-            title: '5. Subscriptions and Pro Plan',
+            title: "5. Subscriptions and Pro Plan",
             content:
-              '<p>Player Radar offers a Free plan (with ads) and a Pro subscription that removes ads and unlocks additional features (unlimited follows, full match history, cloud sync, and priority access to data). Subscriptions (monthly and yearly) are purchased and billed through Google Play or the Apple App Store and managed with RevenueCat, subject to their terms. They renew automatically unless canceled at least 24 hours before the end of the period. Renewal, cancellation, and refunds are managed from your store account.</p>',
+              "<p>Player Radar offers a Free plan (with ads) and a Pro subscription that removes ads and unlocks additional features (unlimited follows, full match history, cloud sync, and priority access to data). Subscriptions (monthly and yearly) are purchased and billed through Google Play or the Apple App Store and managed with RevenueCat, subject to their terms. They renew automatically unless canceled at least 24 hours before the end of the period. Renewal, cancellation, and refunds are managed from your store account.</p>",
           },
           {
-            title: '6. Advertising',
+            title: "6. Advertising",
             content:
-              '<p>The Free plan shows ads through Google AdMob. The Pro plan removes ads. The data handling associated with advertising is described in the Privacy Policy.</p>',
+              "<p>The Free plan shows ads through Google AdMob. The Pro plan removes ads. The data handling associated with advertising is described in the Privacy Policy.</p>",
           },
           {
-            title: '7. Acceptable Use',
+            title: "7. Acceptable Use",
             content:
-              '<p>You agree to use the Application only for personal and lawful purposes. You may not scrape, bulk-copy, resell, or redistribute the sports data shown, attempt to access the Application or our servers in an unauthorized way, or interfere with its operation.</p>',
+              "<p>You agree to use the Application only for personal and lawful purposes. You may not scrape, bulk-copy, resell, or redistribute the sports data shown, attempt to access the Application or our servers in an unauthorized way, or interfere with its operation.</p>",
           },
           {
-            title: '8. Intellectual Property',
+            title: "8. Intellectual Property",
             content:
-              '<p>All rights to the Application, including its code, design, and interface, belong to its author. Sports data and third-party trademarks belong to their respective owners.</p>',
+              "<p>All rights to the Application, including its code, design, and interface, belong to its author. Sports data and third-party trademarks belong to their respective owners.</p>",
           },
           {
-            title: '9. Limitation of Liability',
+            title: "9. Limitation of Liability",
             content:
               '<p>The Application is provided "as is" and "as available", without warranties of any kind. We are not responsible for decisions made based on the information shown, for inaccuracies or delays in the data, for loss of locally stored data, or for incompatibilities with certain devices.</p>',
           },
           {
-            title: '10. Modifications',
+            title: "10. Modifications",
             content:
-              '<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>',
+              "<p>We may modify these Terms and the features of the Application at any time. Changes take effect upon publication. Continued use of the Application implies acceptance of the current Terms.</p>",
           },
           {
-            title: '11. Contact',
+            title: "11. Contact",
             content:
-              '<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>',
+              "<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: '25 de julio de 2026',
+        lastUpdated: "25 de julio de 2026",
         sections: [
           {
-            title: '1. Introducción',
+            title: "1. Introducción",
             content:
-              '<p>Esta Política de Privacidad describe qué información maneja Player Radar y cómo. Al usar la Aplicación aceptas las prácticas aquí descritas.</p>',
+              "<p>Esta Política de Privacidad describe qué información maneja Player Radar y cómo. Al usar la Aplicación aceptas las prácticas aquí descritas.</p>",
           },
           {
-            title: '2. Datos que Recopilamos',
+            title: "2. Datos que Recopilamos",
             content:
-              '<p>Recopilamos el mínimo necesario para que la Aplicación funcione:</p><ul><li><strong>Cuenta:</strong> tu correo electrónico y, si inicias sesión con Google o Apple, tu nombre y foto de perfil. Las contraseñas se guardan cifradas.</li><li><strong>Preferencias:</strong> los jugadores que sigues, tu selección, el idioma y el tema.</li><li><strong>Datos técnicos:</strong> un identificador de dispositivo e información básica del dispositivo para el funcionamiento, los anuncios y el diagnóstico.</li></ul>',
+              "<p>Recopilamos el mínimo necesario para que la Aplicación funcione:</p><ul><li><strong>Cuenta:</strong> tu correo electrónico y, si inicias sesión con Google o Apple, tu nombre y foto de perfil. Las contraseñas se guardan cifradas.</li><li><strong>Preferencias:</strong> los jugadores que sigues, tu selección, el idioma y el tema.</li><li><strong>Datos técnicos:</strong> un identificador de dispositivo e información básica del dispositivo para el funcionamiento, los anuncios y el diagnóstico.</li></ul>",
           },
           {
-            title: '3. Cuenta e Inicio de Sesión',
+            title: "3. Cuenta e Inicio de Sesión",
             content:
-              '<p>Puedes usar la Aplicación como invitado; en ese caso usamos un identificador anónimo que no te identifica como persona. Si creas una cuenta con correo o inicias sesión con Google o Apple, guardamos en nuestro backend tu correo, nombre y foto de perfil para identificarte y guardar tus preferencias. El restablecimiento de contraseña se realiza mediante un código enviado a tu correo.</p>',
+              "<p>Puedes usar la Aplicación como invitado; en ese caso usamos un identificador anónimo que no te identifica como persona. Si creas una cuenta con correo o inicias sesión con Google o Apple, guardamos en nuestro backend tu correo, nombre y foto de perfil para identificarte y guardar tus preferencias. El restablecimiento de contraseña se realiza mediante un código enviado a tu correo.</p>",
           },
           {
-            title: '4. Sincronización en la Nube (plan Pro)',
+            title: "4. Sincronización en la Nube (plan Pro)",
             content:
-              '<p>Si tienes el plan Pro, tus jugadores seguidos, tu selección y tus preferencias se respaldan en nuestros servidores para sincronizarlos entre tus dispositivos. <strong>El plan Gratuito no sincroniza estos datos en la nube</strong> (se guardan solo en tu dispositivo). Puedes eliminar esta copia eliminando tu cuenta desde los Ajustes.</p>',
+              "<p>Si tienes el plan Pro, tus jugadores seguidos, tu selección y tus preferencias se respaldan en nuestros servidores para sincronizarlos entre tus dispositivos. <strong>El plan Gratuito no sincroniza estos datos en la nube</strong> (se guardan solo en tu dispositivo). Puedes eliminar esta copia eliminando tu cuenta desde los Ajustes.</p>",
           },
           {
-            title: '5. Datos de Fútbol',
+            title: "5. Datos de Fútbol",
             content:
-              '<p>La información de jugadores, equipos y partidos que muestra la Aplicación proviene de proveedores de datos deportivos de terceros (principalmente API-Football). Estos datos son información pública deportiva y no constituyen datos personales tuyos.</p>',
+              "<p>La información de jugadores, equipos y partidos que muestra la Aplicación proviene de proveedores de datos deportivos de terceros (principalmente API-Football). Estos datos son información pública deportiva y no constituyen datos personales tuyos.</p>",
           },
           {
-            title: '6. Suscripciones (RevenueCat)',
+            title: "6. Suscripciones (RevenueCat)",
             content:
-              '<p>Usamos RevenueCat para gestionar las compras dentro de la Aplicación. RevenueCat procesa un identificador de usuario y el estado de tu suscripción para determinar tu plan. No recibimos los datos de tu tarjeta: los pagos los procesa la tienda (Google Play o Apple).</p>',
+              "<p>Usamos RevenueCat para gestionar las compras dentro de la Aplicación. RevenueCat procesa un identificador de usuario y el estado de tu suscripción para determinar tu plan. No recibimos los datos de tu tarjeta: los pagos los procesa la tienda (Google Play o Apple).</p>",
           },
           {
-            title: '7. Publicidad (Google AdMob)',
+            title: "7. Publicidad (Google AdMob)",
             content:
-              '<p>El plan Gratuito muestra anuncios a través de Google AdMob, que puede usar identificadores del dispositivo o de publicidad y señales de ubicación aproximada para mostrar anuncios. En los dispositivos que lo requieren, la Aplicación te pedirá tu consentimiento antes de habilitar publicidad personalizada; puedes rechazarlo. El plan Pro no muestra anuncios. Consulta la política de privacidad de Google para más detalles.</p>',
+              "<p>El plan Gratuito muestra anuncios a través de Google AdMob, que puede usar identificadores del dispositivo o de publicidad y señales de ubicación aproximada para mostrar anuncios. En los dispositivos que lo requieren, la Aplicación te pedirá tu consentimiento antes de habilitar publicidad personalizada; puedes rechazarlo. El plan Pro no muestra anuncios. Consulta la política de privacidad de Google para más detalles.</p>",
           },
           {
-            title: '8. Diagnóstico y Rendimiento (Sentry)',
+            title: "8. Diagnóstico y Rendimiento (Sentry)",
             content:
-              '<p>Usamos Sentry para detectar fallos y errores y mejorar la estabilidad. Cuando ocurre un error puede recopilarse el modelo del dispositivo, la versión del sistema operativo y el registro técnico del fallo. No usamos esta información para identificarte ni con fines publicitarios.</p>',
+              "<p>Usamos Sentry para detectar fallos y errores y mejorar la estabilidad. Cuando ocurre un error puede recopilarse el modelo del dispositivo, la versión del sistema operativo y el registro técnico del fallo. No usamos esta información para identificarte ni con fines publicitarios.</p>",
           },
           {
-            title: '9. Notificaciones',
+            title: "9. Notificaciones",
             content:
-              '<p>Si activas las notificaciones, podemos enviarte avisos relacionados con partidos y jugadores que sigues. Puedes desactivarlas en cualquier momento desde los ajustes de tu dispositivo.</p>',
+              "<p>Si activas las notificaciones, podemos enviarte avisos relacionados con partidos y jugadores que sigues. Puedes desactivarlas en cualquier momento desde los ajustes de tu dispositivo.</p>",
           },
           {
-            title: '10. Permisos',
+            title: "10. Permisos",
             content:
-              '<p>En Android, la Aplicación solo usa acceso a Internet y a la facturación de Google Play (para las suscripciones). <strong>No accede a tu ubicación precisa, cámara, contactos, micrófono ni fotos.</strong> En iOS, la Aplicación puede solicitarte permiso de seguimiento (ATT) únicamente para la publicidad; puedes rechazarlo y la Aplicación seguirá funcionando.</p>',
+              "<p>En Android, la Aplicación solo usa acceso a Internet y a la facturación de Google Play (para las suscripciones). <strong>No accede a tu ubicación precisa, cámara, contactos, micrófono ni fotos.</strong> En iOS, la Aplicación puede solicitarte permiso de seguimiento (ATT) únicamente para la publicidad; puedes rechazarlo y la Aplicación seguirá funcionando.</p>",
           },
           {
-            title: '11. No Vendemos tus Datos',
+            title: "11. No Vendemos tus Datos",
             content:
-              '<p>No vendemos ni alquilamos tu información personal a terceros.</p>',
+              "<p>No vendemos ni alquilamos tu información personal a terceros.</p>",
           },
           {
-            title: '12. Tus Derechos y Control',
+            title: "12. Tus Derechos y Control",
             content:
-              '<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Editar tus jugadores seguidos y tu selección</li><li>Restaurar tus compras</li><li>Cambiar el idioma y el tema</li><li>Eliminar tu cuenta y toda la información asociada, incluida la copia en la nube</li></ul>',
+              "<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Editar tus jugadores seguidos y tu selección</li><li>Restaurar tus compras</li><li>Cambiar el idioma y el tema</li><li>Eliminar tu cuenta y toda la información asociada, incluida la copia en la nube</li></ul>",
           },
           {
-            title: '13. Menores de Edad',
+            title: "13. Menores de Edad",
             content:
-              '<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos de forma consciente datos de menores de esa edad.</p>',
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos de forma consciente datos de menores de esa edad.</p>",
           },
           {
-            title: '14. Cambios en esta Política',
+            title: "14. Cambios en esta Política",
             content:
-              '<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>',
+              "<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>",
           },
           {
-            title: '15. Contacto',
+            title: "15. Contacto",
             content:
-              '<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>',
+              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: 'July 25, 2026',
+        lastUpdated: "July 25, 2026",
         sections: [
           {
-            title: '1. Introduction',
+            title: "1. Introduction",
             content:
-              '<p>This Privacy Policy describes what information Player Radar handles and how. By using the Application you accept the practices described here.</p>',
+              "<p>This Privacy Policy describes what information Player Radar handles and how. By using the Application you accept the practices described here.</p>",
           },
           {
-            title: '2. Data We Collect',
+            title: "2. Data We Collect",
             content:
-              '<p>We collect the minimum needed for the Application to work:</p><ul><li><strong>Account:</strong> your email and, if you sign in with Google or Apple, your name and profile picture. Passwords are stored encrypted.</li><li><strong>Preferences:</strong> the players you follow, your selection, language, and theme.</li><li><strong>Technical data:</strong> a device identifier and basic device information for operation, ads, and diagnostics.</li></ul>',
+              "<p>We collect the minimum needed for the Application to work:</p><ul><li><strong>Account:</strong> your email and, if you sign in with Google or Apple, your name and profile picture. Passwords are stored encrypted.</li><li><strong>Preferences:</strong> the players you follow, your selection, language, and theme.</li><li><strong>Technical data:</strong> a device identifier and basic device information for operation, ads, and diagnostics.</li></ul>",
           },
           {
-            title: '3. Account and Sign-In',
+            title: "3. Account and Sign-In",
             content:
-              '<p>You can use the Application as a guest; in that case we use an anonymous identifier that does not identify you as a person. If you create an account with email or sign in with Google or Apple, we store on our backend your email, name, and profile picture to identify you and save your preferences. Password reset is done via a code sent to your email.</p>',
+              "<p>You can use the Application as a guest; in that case we use an anonymous identifier that does not identify you as a person. If you create an account with email or sign in with Google or Apple, we store on our backend your email, name, and profile picture to identify you and save your preferences. Password reset is done via a code sent to your email.</p>",
           },
           {
-            title: '4. Cloud Sync (Pro plan)',
+            title: "4. Cloud Sync (Pro plan)",
             content:
-              '<p>If you have the Pro plan, your followed players, selection, and preferences are backed up to our servers to sync across your devices. <strong>The Free plan does not sync this data to the cloud</strong> (it is stored only on your device). You can delete this backup by deleting your account from Settings.</p>',
+              "<p>If you have the Pro plan, your followed players, selection, and preferences are backed up to our servers to sync across your devices. <strong>The Free plan does not sync this data to the cloud</strong> (it is stored only on your device). You can delete this backup by deleting your account from Settings.</p>",
           },
           {
-            title: '5. Football Data',
+            title: "5. Football Data",
             content:
-              '<p>The player, team, and match information shown in the Application comes from third-party sports data providers (primarily API-Football). This data is public sports information and does not constitute your personal data.</p>',
+              "<p>The player, team, and match information shown in the Application comes from third-party sports data providers (primarily API-Football). This data is public sports information and does not constitute your personal data.</p>",
           },
           {
-            title: '6. Subscriptions (RevenueCat)',
+            title: "6. Subscriptions (RevenueCat)",
             content:
-              '<p>We use RevenueCat to manage in-app purchases. RevenueCat processes a user identifier and your subscription status to determine your plan. We do not receive your card details: payments are processed by the store (Google Play or Apple).</p>',
+              "<p>We use RevenueCat to manage in-app purchases. RevenueCat processes a user identifier and your subscription status to determine your plan. We do not receive your card details: payments are processed by the store (Google Play or Apple).</p>",
           },
           {
-            title: '7. Advertising (Google AdMob)',
+            title: "7. Advertising (Google AdMob)",
             content:
-              '<p>The Free plan shows ads through Google AdMob, which may use device or advertising identifiers and approximate location signals to serve ads. On devices that require it, the Application will ask for your consent before enabling personalized ads; you may decline. The Pro plan shows no ads. See Google’s privacy policy for more detail.</p>',
+              "<p>The Free plan shows ads through Google AdMob, which may use device or advertising identifiers and approximate location signals to serve ads. On devices that require it, the Application will ask for your consent before enabling personalized ads; you may decline. The Pro plan shows no ads. See Google’s privacy policy for more detail.</p>",
           },
           {
-            title: '8. Diagnostics and Performance (Sentry)',
+            title: "8. Diagnostics and Performance (Sentry)",
             content:
-              '<p>We use Sentry to detect crashes and errors and improve stability. When an error occurs, the device model, operating system version, and the technical error log may be collected. We do not use this information to identify you or for advertising purposes.</p>',
+              "<p>We use Sentry to detect crashes and errors and improve stability. When an error occurs, the device model, operating system version, and the technical error log may be collected. We do not use this information to identify you or for advertising purposes.</p>",
           },
           {
-            title: '9. Notifications',
+            title: "9. Notifications",
             content:
-              '<p>If you enable notifications, we may send you alerts related to matches and players you follow. You can disable them at any time from your device settings.</p>',
+              "<p>If you enable notifications, we may send you alerts related to matches and players you follow. You can disable them at any time from your device settings.</p>",
           },
           {
-            title: '10. Permissions',
+            title: "10. Permissions",
             content:
-              '<p>On Android, the Application only uses Internet access and Google Play billing (for subscriptions). <strong>It does not access your precise location, camera, contacts, microphone, or photos.</strong> On iOS, the Application may request tracking permission (ATT) solely for advertising; you can decline and the Application will continue to work.</p>',
+              "<p>On Android, the Application only uses Internet access and Google Play billing (for subscriptions). <strong>It does not access your precise location, camera, contacts, microphone, or photos.</strong> On iOS, the Application may request tracking permission (ATT) solely for advertising; you can decline and the Application will continue to work.</p>",
           },
           {
-            title: '11. We Do Not Sell Your Data',
+            title: "11. We Do Not Sell Your Data",
             content:
-              '<p>We do not sell or rent your personal information to third parties.</p>',
+              "<p>We do not sell or rent your personal information to third parties.</p>",
           },
           {
-            title: '12. Your Rights and Control',
+            title: "12. Your Rights and Control",
             content:
-              '<p>You are in control of your data. From within the Application you can:</p><ul><li>Edit your followed players and your selection</li><li>Restore your purchases</li><li>Change the language and theme</li><li>Delete your account and all associated information, including the cloud backup</li></ul>',
+              "<p>You are in control of your data. From within the Application you can:</p><ul><li>Edit your followed players and your selection</li><li>Restore your purchases</li><li>Change the language and theme</li><li>Delete your account and all associated information, including the cloud backup</li></ul>",
           },
           {
-            title: '13. Children',
+            title: "13. Children",
             content:
-              '<p>The Application is not directed to children under 13, and we do not knowingly collect data from children under that age.</p>',
+              "<p>The Application is not directed to children under 13, and we do not knowingly collect data from children under that age.</p>",
           },
           {
-            title: '14. Changes to This Policy',
+            title: "14. Changes to This Policy",
             content:
-              '<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>',
+              "<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>",
           },
           {
-            title: '15. Contact',
+            title: "15. Contact",
             content:
-              '<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>',
+              "<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>",
           },
         ],
       },
     },
   },
   {
-    id: '18',
-    name: 'Agenda Pilates',
-    slug: 'agenda-pilates',
+    id: "18",
+    name: "Agenda Pilates",
+    slug: "agenda-pilates",
     description:
-      'Los estudios de pilates gestionan sus clases y planes, y sus alumnos reservan desde la web o el móvil.',
-    icon: '',
+      "Los estudios de pilates gestionan sus clases y planes, y sus alumnos reservan desde la web o el móvil.",
+    icon: "",
     logo: AgendaPilatesIcon,
   },
 ];
