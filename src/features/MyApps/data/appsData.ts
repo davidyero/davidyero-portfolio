@@ -1755,6 +1755,78 @@ export const appsData: App[] = [
       "Gastos compartidos por grupo: reparte cada gasto y calcula quién debe cuánto a quién, mes a mes.",
     icon: "",
     logo: SplitioIcon,
+    accountDeletion: {
+      es: {
+        lastUpdated: "18 de Septiembre, 2026",
+        sections: [
+          {
+            title: "1. De qué aplicación hablamos",
+            content:
+              "<p>Esta página explica cómo eliminar tu cuenta de <strong>Splitio</strong>, desarrollada por David Yepes (@Davidyero), disponible en <strong>www.splitio.net</strong> y en Google Play con el identificador <code>com.davidyero.splitio</code>.</p>",
+          },
+          {
+            title: "2. Cómo pedir la eliminación",
+            content:
+              "<p>Escríbenos a <strong>support@davidyero.com</strong> <em>desde la misma dirección de correo con la que te registraste</em>, con el asunto <strong>Eliminar cuenta - Splitio</strong>.</p><p>Usamos esa dirección para comprobar que la cuenta es tuya. Procesamos la solicitud en un plazo máximo de <strong>30 días</strong> y te confirmamos por correo cuando esté hecha. No necesitas tener la aplicación instalada.</p>",
+          },
+          {
+            title: "3. Qué datos se eliminan",
+            content:
+              "<p>Se borran de forma permanente de nuestros servidores:</p><ul><li>Los datos de tu cuenta: correo electrónico, nombre, color de avatar y la versión cifrada de tu contraseña.</li><li>Los grupos en los que eras la única persona, con todos sus ingresos, gastos, categorías y pagos.</li><li>Las invitaciones que hayas enviado y que sigan pendientes.</li><li>Las solicitudes que nos hayas escrito desde la sección Solicitudes.</li></ul>",
+          },
+          {
+            title: "4. Qué se conserva y por qué",
+            content:
+              "<p><strong>Los gastos e ingresos que registraste en grupos compartidos permanecen en esos grupos</strong>, porque forman parte de las cuentas de las demás personas: borrarlos les cambiaría el saldo sin que ellas puedan evitarlo.</p><p>En esos grupos tu usuario deja de tener datos personales y aparece como <strong>Usuario eliminado</strong>: ni tu nombre ni tu correo siguen asociados a esos registros.</p><p><strong>Copias de seguridad.</strong> Nuestras copias cifradas de la base de datos pueden conservar una copia hasta <strong>30 días</strong> desde el borrado, tras los cuales se sobrescriben.</p>",
+          },
+          {
+            title: "5. Si prefieres borrar solo una parte",
+            content:
+              "<p>No hace falta eliminar la cuenta para borrar datos concretos: desde la aplicación puedes borrar gastos, categorías y grupos, o salir de un grupo cuando quieras.</p>",
+          },
+          {
+            title: "6. Contacto",
+            content:
+              "<p>Cualquier duda sobre la eliminación de tu cuenta o de tus datos: <strong>support@davidyero.com</strong>.</p>",
+          },
+        ],
+      },
+      en: {
+        lastUpdated: "September 18, 2026",
+        sections: [
+          {
+            title: "1. Which app this is about",
+            content:
+              "<p>This page explains how to delete your <strong>Splitio</strong> account. Splitio is developed by David Yepes (@Davidyero) and is available at <strong>www.splitio.net</strong> and on Google Play under the identifier <code>com.davidyero.splitio</code>.</p>",
+          },
+          {
+            title: "2. How to request deletion",
+            content:
+              "<p>Write to <strong>support@davidyero.com</strong> <em>from the same email address you registered with</em>, using the subject <strong>Delete account - Splitio</strong>.</p><p>We use that address to verify the account is yours. We process the request within <strong>30 days</strong> at most and confirm by email once it is done. You do not need to have the app installed.</p>",
+          },
+          {
+            title: "3. What gets deleted",
+            content:
+              "<p>The following is permanently removed from our servers:</p><ul><li>Your account details: email address, name, avatar colour and the encrypted version of your password.</li><li>Groups where you were the only member, including every income, expense, category and payment in them.</li><li>Invitations you sent that are still pending.</li><li>Requests you sent us from the Requests section.</li></ul>",
+          },
+          {
+            title: "4. What is kept and why",
+            content:
+              "<p><strong>Expenses and incomes you recorded in shared groups stay in those groups</strong>, because they are part of other people's accounts: deleting them would change their balances with no say from them.</p><p>In those groups your user no longer holds personal data and shows as <strong>Deleted user</strong>: neither your name nor your email remains attached to those records.</p><p><strong>Backups.</strong> Our encrypted database backups may keep a copy for up to <strong>30 days</strong> after deletion, after which they are overwritten.</p>",
+          },
+          {
+            title: "5. If you only want part of it gone",
+            content:
+              "<p>You do not need to delete your account to remove specific data: from the app you can delete expenses, categories and groups, or leave a group whenever you want.</p>",
+          },
+          {
+            title: "6. Contact",
+            content:
+              "<p>Any question about deleting your account or your data: <strong>support@davidyero.com</strong>.</p>",
+          },
+        ],
+      },
+    },
     termsAndConditions: {
       es: {
         lastUpdated: "17 de Septiembre, 2026",
