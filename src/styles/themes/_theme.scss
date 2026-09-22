@@ -5,14 +5,13 @@
   @include themed;
 }
 
-// Shared page shell used by every screen.
+// Shell compartido por todas las vistas. Fondo plano: el sistema prohibe
+// degradados decorativos, asi que el color de fondo es un color, no una escena.
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background:
-    radial-gradient(1200px 600px at 80% -10%, var(--gradient-soft), transparent 60%),
-    var(--bg);
+  background: var(--bg);
 }
 
 .page__main {
@@ -33,6 +32,49 @@
   }
 }
 
+// Columna de lectura: la home, el catalogo y las fichas viven aqui. El sitio se
+// lee de arriba abajo en una sola columna; ensancharla lo convertiria en un
+// tablero, que es justo lo que no es.
+.container--reading {
+  max-width: $container-reading;
+}
+
+// Documentos legales: algo mas anchos, porque son texto largo y la medida
+// optima ronda los 65-75 caracteres.
+.container--doc {
+  max-width: 860px;
+}
+
+// Panel: la superficie base de todo lo que se agrupa (tarjetas, bloques de
+// contacto, paneles de contenido). Borde de 1px, sin sombra.
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-lg;
+}
+
+// Fila de destino: el patron de navegacion del sitio (icono, titulo, subtitulo,
+// chevron). Lo implementa SuperRow; esto es solo su superficie.
+.row-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-md;
+}
+
+// Entrada de pagina: un fundido y nada mas. Sin desplazamientos ni escalas.
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page__main > * {
+  animation: page-fade-in $transition-normal ease both;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
 // Official App Store / Google Play badges rendered at an identical footprint so
 // the two download buttons always match in size. The Google Play PNG ships with
 // built-in transparent padding, so its image is scaled up to visually match the
@@ -45,8 +87,8 @@
   height: 56px;
   flex: 0 0 auto;
   overflow: hidden;
-  border-radius: $radius-md;
-  transition: transform $transition-fast;
+  border-radius: $radius-btn;
+  transition: opacity $transition-fast;
 
   img {
     width: 100%;
@@ -58,7 +100,7 @@
     transform: scale(1.42);
   }
 
-  &:hover { transform: translateY(-2px); }
+  &:hover { opacity: 0.85; }
 
   @include mobile {
     width: 160px;

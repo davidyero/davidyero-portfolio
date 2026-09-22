@@ -2,95 +2,45 @@
 @import '../../../../styles/abstracts/mixins';
 
 .changelog-item {
-  position: relative;
   display: flex;
-  gap: $space-5;
-  padding-bottom: $space-8;
+  flex-direction: column;
+  gap: $space-3;
+  padding: $space-5 0;
+  border-bottom: 1px solid var(--border);
 
-  &:last-child { padding-bottom: 0; }
-
-  // vertical line
-  &::before {
-    content: '';
-    position: absolute;
-    left: 5px;
-    top: 14px;
-    bottom: 0;
-    width: 1px;
-    background: var(--border-strong);
-  }
-
-  &:last-child::before { display: none; }
-
-  &__dot {
-    position: relative;
-    z-index: 1;
-    flex-shrink: 0;
-    width: 11px;
-    height: 11px;
-    margin-top: 5px;
-    border-radius: 50%;
-    background: var(--mauve);
-    box-shadow: 0 0 0 4px var(--bg);
-  }
-
-  &__body { flex: 1; }
+  &:first-child { border-top: 1px solid var(--border); }
 
   &__head {
     display: flex;
-    align-items: center;
-    gap: $space-3;
+    align-items: baseline;
     flex-wrap: wrap;
-    margin-bottom: $space-3;
+    gap: $space-3;
   }
 
   &__version {
-    font-family: $font-sans;
+    font-family: $font-mono;
     font-size: $fs-h3;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 0;
     color: var(--text);
   }
 
-  &__tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+  // El tipo es un dato, no un adorno: texto en mayusculas, sin icono ni pastilla.
+  &__type {
     font-family: $font-mono;
     font-size: $fs-tiny;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: $radius-pill;
+    letter-spacing: $tracking-label;
+    text-transform: uppercase;
 
-    &--new { background: var(--live-bg); color: var(--live-fg); }
-    &--improvement { background: var(--soon-bg); color: var(--soon-fg); }
-    &--fix { background: var(--beta-bg); color: var(--beta-fg); }
+    &--new { color: var(--accent); }
+    &--improvement { color: var(--subtext); }
+    &--fix { color: var(--yellow); }
   }
 
   &__date {
+    margin-left: auto;
     font-family: $font-mono;
-    font-size: $fs-small;
+    font-size: $fs-tiny;
     color: var(--muted);
-  }
-
-  &__changes {
-    display: flex;
-    flex-direction: column;
-    gap: $space-2;
-  }
-
-  &__change {
-    position: relative;
-    padding-left: $space-4;
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--subtext);
-    line-height: 1.5;
-
-    &::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: var(--overlay);
-    }
   }
 }

@@ -2,172 +2,107 @@
 @import '../../../../styles/abstracts/mixins';
 
 .about {
-  padding-top: $space-8;
+  display: flex;
+  flex-direction: column;
+  gap: $space-11;
+  padding-top: $space-11;
   padding-bottom: $space-8;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: $space-8;
 
-  @include from-fold {
-    grid-template-columns: 280px minmax(0, 1fr);
-    gap: $space-8;
-    align-items: start;
+  &__identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-4;
+    text-align: center;
   }
 
-  @include from-lg {
-    grid-template-columns: 320px minmax(0, 1fr);
-    gap: $space-11;
-  }
-
-  &__profile {
-    @include from-fold {
-      position: sticky;
-      top: 108px;
-    }
-  }
-
-  // Sizing and elevation come from BrandMark--large; only the spacing
-  // to the name below belongs to this screen.
   &__avatar {
-    margin-bottom: $space-5;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--accent);
   }
 
-  &__name { font-size: $fs-h1; margin-bottom: $space-2; }
+  &__name {
+    font-size: $fs-h2;
+    letter-spacing: $tracking-wordmark;
+    text-transform: uppercase;
+  }
 
   &__role {
-    font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--subtext);
-    margin-bottom: $space-5;
-  }
-
-  &__links {
-    display: flex;
-    gap: $space-3;
-    margin-bottom: $space-5;
-  }
-
-  &__link {
-    flex: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: $space-2;
-    font-family: $font-sans;
-    font-weight: 600;
-    font-size: $fs-small;
-    color: var(--text);
-    padding: $space-3;
-    border: 1px solid var(--border-strong);
-    border-radius: $radius-md;
-    transition: all $transition-fast;
-
-    &:hover { border-color: var(--accent); color: var(--accent); }
-  }
-
-  // ---- AI / Claude highlight ----
-  &__ai {
-    @include card;
-    background:
-      radial-gradient(500px 200px at 100% 0%, var(--gradient-soft), transparent 70%),
-      var(--surface);
-    padding: $space-6;
-    margin-bottom: $space-8;
-  }
-
-  &__ai-head {
-    display: flex;
-    align-items: flex-start;
-    gap: $space-3;
-    margin-bottom: $space-4;
-  }
-
-  &__ai-icon {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-    border-radius: $radius-md;
-    background: var(--gradient);
-    color: var(--on-accent);
-    box-shadow: var(--shadow-md);
-  }
-
-  &__ai-title { font-size: $fs-h2; margin-top: 2px; }
-
-  &__ai-description {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--subtext);
-    line-height: 1.7;
-    margin-bottom: $space-5;
-  }
-
-  &__ai-chips { display: flex; flex-wrap: wrap; gap: $space-2; }
-
-  &__ai-chip {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--text);
-    padding: 7px 14px;
-    border: 1px solid var(--border-strong);
-    border-radius: $radius-pill;
-    background: var(--surface-0);
+    color: var(--accent);
+    margin: 0 auto;
   }
 
   &__bio {
-    font-family: $font-mono;
-    font-size: $fs-small;
+    font-size: $fs-body;
     color: var(--subtext);
-    line-height: 1.7;
+    max-width: 56ch;
+    margin: 0 auto;
   }
 
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+  }
+
+  // Historial, no tarjetas: el periodo a la izquierda alineado en columna, que
+  // es lo que deja comparar las etapas de un vistazo.
   &__timeline {
     display: flex;
     flex-direction: column;
+    list-style: none;
+  }
+
+  &__entry {
+    display: grid;
+    grid-template-columns: 132px minmax(0, 1fr);
     gap: $space-4;
-    margin-top: $space-4;
+    padding: $space-4 0;
+    border-bottom: 1px solid var(--border);
+
+    &:first-of-type { border-top: 1px solid var(--border); }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $space-2;
+    }
   }
 
-  &__exp-card {
-    @include card;
-    background: var(--surface);
-    padding: $space-6;
-    transition: border-color $transition-fast, transform $transition-fast;
-
-    &:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-  }
-
-  &__exp-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: $space-3;
-    flex-wrap: wrap;
-    margin-bottom: $space-3;
-  }
-
-  &__exp-role {
-    font-family: $font-sans;
-    font-size: $fs-h3;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  &__exp-org { color: var(--subtext); font-weight: 500; }
-
-  &__exp-period {
+  &__period {
     font-family: $font-mono;
     font-size: $fs-small;
     color: var(--muted);
   }
 
-  &__exp-desc {
+  &__entry-body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    min-width: 0;
+  }
+
+  &__entry-role {
     font-family: $font-mono;
+    font-size: $fs-body;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--text);
+  }
+
+  &__entry-org { color: var(--muted); font-weight: 400; }
+
+  &__entry-desc {
     font-size: $fs-small;
     color: var(--subtext);
-    line-height: 1.7;
-    margin: 0;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }

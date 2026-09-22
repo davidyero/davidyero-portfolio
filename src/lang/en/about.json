@@ -1,18 +1,13 @@
 {
   "about.eyebrow": "// experience",
-  "about.role": "Full Stack Developer · @Davidyero",
-  "about.bio": "I build product end to end: from design and architecture to deploy. My own ecosystem with a design system, i18n and infinite apps.",
-  "about.linkedin": "LinkedIn",
-  "about.github": "GitHub",
-  "about.now": "Now",
-  "about.exp.fullstack.role": "Full Stack Developer",
-  "about.exp.fullstack.desc": "Own ecosystem of apps with Vertical Slice, a design system, a domain-based backend and automated publishing.",
-  "about.exp.frontend.role": "Frontend Engineer",
-  "about.exp.frontend.desc": "React/TypeScript interfaces at scale, design tokens and a reusable component system.",
+  "about.role": "Full-stack developer · @Davidyero",
+  "about.bio": "I design, code and publish my own apps end to end: interface, backend, signing, stores and deploy. I started on 2017-10-02 and today it is 17 apps with one shared backend and one design system.",
+  "about.now": "today",
+  "about.links.eyebrow": "// links",
+  "about.exp.fullstack.role": "Full-stack developer",
+  "about.exp.fullstack.desc": "My own app ecosystem: vertical slice architecture, shared design system, backend split by domain, and releases on the App Store and Google Play.",
+  "about.exp.frontend.role": "Frontend engineer",
+  "about.exp.frontend.desc": "React and TypeScript interfaces at scale, design tokens and a reusable component system.",
   "about.exp.freelance.role": "Developer",
-  "about.exp.freelance.desc": "Web and mobile apps for clients, from prototype to the App Store.",
-  "about.ai.eyebrow": "// ai · claude",
-  "about.ai.title": "Building with AI & Claude",
-  "about.ai.description": "Experienced building with AI and Claude: agentic workflows, prompt engineering, the Anthropic API, custom skills and MCP integrations. I ship faster by pairing with Claude across design, code and automation.",
-  "about.ai.chips": "Agentic workflows · Prompt engineering · Anthropic API · Custom skills · MCP"
+  "about.exp.freelance.desc": "Web and mobile apps for clients, from prototype to published listing."
 }

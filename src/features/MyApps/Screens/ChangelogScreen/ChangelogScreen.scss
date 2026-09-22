@@ -2,74 +2,58 @@
 @import '../../../../styles/abstracts/mixins';
 
 .changelog {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
   padding-top: $space-6;
   padding-bottom: $space-8;
-  max-width: 820px;
 
   &__back {
+    align-self: flex-start;
     font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--subtext);
-    margin-bottom: $space-6;
+    color: var(--muted);
     transition: color $transition-fast;
-    &:hover { color: var(--text); }
+
+    &:hover { color: var(--accent); }
   }
 
   &__header {
     display: flex;
     flex-direction: column;
-    gap: $space-4;
-    margin-bottom: $space-8;
-
-    @include from-md {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
+    gap: $space-2;
   }
 
-  &__title { font-size: $fs-h1; margin: $space-2 0; }
+  &__title { font-size: $fs-h2; }
 
   &__subtitle {
-    font-family: $font-mono;
     font-size: $fs-small;
     color: var(--muted);
-    margin: 0;
   }
 
   &__search {
-    display: flex;
-    align-items: center;
-    gap: $space-2;
-    padding: 0 $space-3;
-    background: var(--surface);
-    border: 1px solid var(--border-strong);
-    border-radius: $radius-md;
-    min-width: 240px;
-  }
-
-  &__search-icon { color: var(--muted); font-size: 1rem; }
-
-  &__search-input {
-    flex: 1;
-    background: none;
-    border: none;
-    outline: none;
-    padding: $space-3 0;
+    width: 100%;
+    max-width: 320px;
+    background: var(--field);
+    border: 1px solid var(--border);
+    color: var(--text);
     font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--text);
+    padding: 11px 14px;
+    border-radius: $radius-btn;
+    outline: none;
 
     &::placeholder { color: var(--muted); }
+    &:focus { border-color: var(--accent); }
   }
 
-  &__timeline {
-    padding-top: $space-2;
+  &__list {
+    display: flex;
+    flex-direction: column;
   }
 
   &__empty {
-    font-family: $font-mono;
+    font-size: $fs-small;
     color: var(--muted);
-    padding: $space-8 0;
   }
 }

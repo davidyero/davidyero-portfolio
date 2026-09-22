@@ -1,97 +1,120 @@
 @import '../../../../styles/abstracts/variables';
 @import '../../../../styles/abstracts/mixins';
 
+// Documento legal: texto largo y nada mas. Google Play exige poder leer el de
+// borrado de cuenta sin instalar nada, asi que pesa poco y se lee en movil.
 .legal {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
   padding-top: $space-6;
-  padding-bottom: $space-8;
-  max-width: 780px;
+  padding-bottom: $space-16;
 
   &__topbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: $space-6;
+    gap: $space-3;
   }
 
   &__nav {
     font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--subtext);
+    color: var(--muted);
     transition: color $transition-fast;
-    &:hover { color: var(--text); }
+
+    &:hover { color: var(--accent); }
   }
 
   &__header {
-    margin-bottom: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding-bottom: $space-5;
+    border-bottom: 1px solid var(--border);
   }
 
-  &__title { font-size: $fs-h1; margin-bottom: $space-2; }
+  &__title { font-size: $fs-h2; }
 
   &__subtitle {
     font-family: $font-mono;
+    font-size: $fs-small;
     color: var(--subtext);
-    margin: 0 0 $space-1;
   }
 
   &__updated {
     font-family: $font-mono;
-    font-size: $fs-small;
+    font-size: $fs-tiny;
     color: var(--muted);
-    margin: 0;
   }
 
   &__card {
-    @include card;
-    background: var(--surface);
-    padding: $space-8;
-
-    @include mobile { padding: $space-5; }
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
   }
 
   &__section {
-    padding-bottom: $space-6;
-    margin-bottom: $space-6;
-    border-bottom: 1px solid var(--border);
-
-    &:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border-bottom: none;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
   }
 
   &__section-title {
-    font-family: $font-sans;
+    font-family: $font-mono;
     font-size: $fs-h3;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text);
-    margin-bottom: $space-3;
   }
 
+  // El contenido llega como HTML desde los datos de cada app: los estilos se
+  // aplican por descendencia porque no hay clases que poner en ese markup.
   &__section-content {
     font-family: $font-mono;
-    font-size: $fs-small;
+    font-size: $fs-body;
+    line-height: 1.8;
     color: var(--subtext);
-    line-height: 1.7;
+    max-width: $measure-legal;
 
-    p { color: var(--subtext); font-size: $fs-small; margin-bottom: $space-3; &:last-child { margin-bottom: 0; } }
+    p { margin-bottom: $space-4; max-width: none; }
+    p:last-child { margin-bottom: 0; }
 
-    ul {
-      list-style: none;
-      margin: $space-3 0;
-      padding: 0;
+    strong { color: var(--text); font-weight: 600; }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
+    ul, ol {
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+      margin: $space-3 0 $space-4;
+      list-style: none;
+    }
+
+    // Mismo marcador que .doc-list: un solo simbolo de lista en todo el sitio.
     li {
       position: relative;
-      padding-left: $space-4;
-      margin-bottom: $space-2;
+      padding-left: $space-5;
 
       &::before {
-        content: '—';
+        content: '–';
         position: absolute;
         left: 0;
-        color: var(--overlay);
+        color: var(--accent);
       }
     }
   }
+}
+
+// Estado "este documento no existe para esta app". Vive aqui y no en cada
+// pantalla legal porque las tres (terminos, privacidad y borrado) lo comparten.
+.legal__empty {
+  font-family: $font-mono;
+  font-size: $fs-body;
+  color: var(--muted);
+  margin: $space-8 0;
 }

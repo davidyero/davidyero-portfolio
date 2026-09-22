@@ -2,84 +2,131 @@
 @import '../../../../styles/abstracts/mixins';
 
 .catalog {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
   padding-top: $space-8;
   padding-bottom: $space-8;
 
   &__header {
     display: flex;
     flex-direction: column;
-    gap: $space-5;
-    margin-bottom: $space-8;
-
-    @include from-md {
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
+    gap: $space-2;
   }
 
   &__title {
-    font-size: $fs-h1;
-    margin-bottom: $space-2;
+    font-size: $fs-h2;
   }
 
   &__subtitle {
-    font-family: $font-mono;
     font-size: $fs-small;
     color: var(--muted);
-    margin: 0;
+    max-width: none;
   }
 
+  // Filtros como flags de comando: [ todas ] [ mobile ]. Sin pastillas de
+  // color; el activo se distingue por el acento, no por un fondo.
   &__filters {
     display: flex;
     flex-wrap: wrap;
-    gap: $space-2;
+    gap: $space-2 $space-3;
   }
 
   &__filter {
     font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--subtext);
-    padding: 8px 16px;
-    border: 1px solid var(--border-strong);
-    border-radius: $radius-pill;
-    transition: all $transition-fast;
+    color: var(--muted);
+    transition: color $transition-fast;
 
-    &:hover { color: var(--text); border-color: var(--overlay); }
+    &:hover { color: var(--subtext); }
+    &--active { color: var(--accent); }
+  }
 
-    &--active {
-      color: var(--on-accent);
-      background: var(--gradient);
-      border-color: transparent;
+  &__scroll {
+    overflow-x: auto;
+  }
+
+  &__table {
+    min-width: 560px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head,
+  &__row {
+    display: grid;
+    grid-template-columns: 24px 168px minmax(0, 1fr) 108px 64px;
+    gap: $space-3;
+    align-items: center;
+    text-align: left;
+  }
+
+  &__head {
+    padding-bottom: $space-2;
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__col-status { text-align: right; }
+
+  &__row {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: $fs-small;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background: var(--surface);
+
+      .catalog__name { color: var(--accent); }
     }
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: $space-5;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    border-radius: $radius-xs;
+    object-fit: cover;
+    flex: 0 0 auto;
 
-    @include from-sm { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    @include from-lg { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    &--initials {
+      display: grid;
+      place-items: center;
+      background: var(--surface-0);
+      color: var(--subtext);
+      font-family: $font-mono;
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+
+  &__name {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--text);
+    transition: color $transition-fast;
+  }
+
+  // Una linea por app: si el tagline no cabe, se recorta. Dos lineas romperian
+  // la alineacion de la rejilla, que es lo que hace escaneable la tabla.
+  &__what {
+    color: var(--subtext);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__platforms {
+    font-size: $fs-tiny;
+    color: var(--muted);
+  }
+
+  &__status {
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: $space-3;
-    padding: $space-16 $space-4;
-    border: 1px dashed var(--border-strong);
-    border-radius: $radius-xl;
+    font-size: $fs-small;
     color: var(--muted);
-
-    p { color: var(--muted); font-family: $font-mono; }
-  }
-
-  &__empty-mark {
-    font-family: $font-mono;
-    font-size: 2rem;
-    color: var(--overlay);
   }
 }

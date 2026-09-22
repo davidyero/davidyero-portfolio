@@ -67,12 +67,16 @@ $spacing-xl: $space-8;
 $spacing-2xl: 3rem;
 
 // ---- Radius ----
-$radius-xs: 7px;
+// El sistema asigna un radio por tipo de objeto, no una escala libre:
+// boton 2 · icono 7 · fila 11 · panel 14 · badge pill. Un boton casi recto
+// junto a un panel redondeado es lo que da la lectura de herramienta.
+$radius-btn: 2px;   // botones y campos: esquina recta
+$radius-xs: 7px;    // iconos de app
 $radius-sm: 9px;
-$radius-md: 11px;
-$radius-lg: 14px;
+$radius-md: 11px;   // filas de destino
+$radius-lg: 14px;   // paneles y tarjetas
 $radius-xl: 16px;
-$radius-pill: 999px;
+$radius-pill: 999px; // badges
 
 $border-radius-sm: $radius-xs;
 $border-radius-md: $radius-md;
@@ -101,6 +105,18 @@ $font-size-xl: 1.25rem;
 $font-size-2xl: $fs-h2;
 $font-size-3xl: 2rem;
 
+// ---- Tracking ----
+// El wordmark y las etiquetas en mayusculas necesitan aire entre letras; los
+// titulares en Inter lo necesitan negativo para no parecer sueltos.
+$tracking-tight: -0.02em;  // titulares Inter 700
+$tracking-label: 0.08em;   // etiquetas mono en mayusculas (11px)
+$tracking-wordmark: 0.14em; // DAVID YEPES
+
+// ---- Medida de linea ----
+// Un parrafo mas ancho que esto obliga al ojo a saltar de renglon y se relee.
+$measure-body: 60ch;  // cuerpo normal
+$measure-legal: 72ch; // documentos legales (65-75)
+
 // ---- Breakpoints (0 / 480 / 720 / 1100 / 1480) ----
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 720px;
@@ -119,3 +135,6 @@ $shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.30);
 
 // ---- Layout ----
 $container-max: 1200px;
+// El sitio es una columna de lectura, no un tablero: el ancho util es el de un
+// documento. 1200 se queda para lo que de verdad necesita extenderse.
+$container-reading: 760px;

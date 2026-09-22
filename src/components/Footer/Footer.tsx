@@ -2,11 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { paths } from '../../shared/paths';
-import { BrandMark } from '../BrandMark/BrandMark';
+import { SOCIAL_LINKS } from '../../shared/contact';
 import { FooterProps } from './Footer.types';
 import { APP_VERSION } from '../../shared/appVersion';
 import './Footer.scss';
 
+// Pie de una sola linea util: quien y donde a la izquierda, y a la derecha la
+// misma navegacion mas los datos de version. Nada de columnas de enlaces.
 export const Footer: React.FC<FooterProps> = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -14,55 +16,44 @@ export const Footer: React.FC<FooterProps> = () => {
 
   return (
     <footer className="footer">
-      <div className="footer__inner">
-        <div className="footer__top">
-          <button className="footer__brand" onClick={() => navigate('/')}>
-            <BrandMark size="small" />
-            <span className="footer__brand-name">David Yepes</span>
+      <div className="footer__inner container">
+        <span className="footer__identity">{t('common.footer.line')}</span>
+
+        <nav className="footer__meta">
+          <button className="footer__link" onClick={() => navigate(paths.home)}>
+            {t('common.nav.home')}
           </button>
-
-          <nav className="footer__nav">
-            <button className="footer__link" onClick={() => navigate(paths.home)}>
-              {t('common.nav.home')}
-            </button>
-            <button className="footer__link" onClick={() => navigate(paths.apps)}>
-              {t('common.nav.apps')}
-            </button>
-            <button className="footer__link" onClick={() => navigate(paths.aboutMe)}>
-              {t('common.nav.about')}
-            </button>
-          </nav>
-
-          <div className="footer__social">
-            <a
-              className="footer__social-link"
-              href="https://github.com/davidyero"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              GitHub
-            </a>
-            <a
-              className="footer__social-link"
-              href="https://www.linkedin.com/in/davidyero"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-
-        <div className="footer__bottom">
-          <p className="footer__copyright">
-            © {currentYear} · {t('common.footer.builtBy')} David Yepes
-          </p>
-          <span className="footer__version" title={t('common.footer.version')}>
-            v{APP_VERSION}
-          </span>
-        </div>
+          <span className="footer__dot">·</span>
+          <button className="footer__link" onClick={() => navigate(paths.apps)}>
+            {t('common.nav.apps')}
+          </button>
+          <span className="footer__dot">·</span>
+          <button className="footer__link" onClick={() => navigate(paths.aboutMe)}>
+            {t('common.nav.about')}
+          </button>
+          <span className="footer__dot">·</span>
+          <a
+            className="footer__link"
+            href={SOCIAL_LINKS.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github
+          </a>
+          <span className="footer__dot">·</span>
+          <a
+            className="footer__link"
+            href={SOCIAL_LINKS.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin
+          </a>
+          <span className="footer__dot">·</span>
+          <span>© {currentYear}</span>
+          <span className="footer__dot">·</span>
+          <span title={t('common.footer.version')}>v{APP_VERSION}</span>
+        </nav>
       </div>
     </footer>
   );

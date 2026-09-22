@@ -55,6 +55,13 @@
     --red:       #{$dark-red};
 
     --accent:    #{$dark-accent};
+    // Hover del unico boton solido del sitio. En oscuro aclara; en claro
+    // oscurece: en ambos casos el contraste con --on-accent se mantiene.
+    --accent-hover: #{$brand-olive-glow};
+    // Fondo de los campos de formulario. En oscuro se hunde por debajo del
+    // panel; en claro sube a blanco, porque un gris ahi dejaba el placeholder
+    // en 3.6:1 contra su fondo.
+    --field:     #{$dark-crust};
     --gradient:  linear-gradient(135deg, #{$dark-accent} 0%, #{$brand-olive-glow} 100%);
     --gradient-soft: linear-gradient(135deg, #{rgba($dark-accent, 0.20)} 0%, #{rgba($brand-olive-glow, 0.14)} 100%);
     --on-accent: #{$brand-ink};
@@ -96,6 +103,8 @@
     --red:       #{$light-red};
 
     --accent:    #{$light-accent};
+    --accent-hover: #{darken($light-accent, 6%)};
+    --field:     #{$brand-white};
     --gradient:  linear-gradient(135deg, #{$light-accent} 0%, #{$brand-olive-mid} 100%);
     --gradient-soft: linear-gradient(135deg, #{rgba($light-accent, 0.14)} 0%, #{rgba($brand-olive-mid, 0.10)} 100%);
     --on-accent: #{$brand-white};

@@ -1,7 +1,7 @@
 {
-  "common.nav.home": "Inicio",
-  "common.nav.apps": "Apps",
-  "common.nav.about": "Sobre mí",
-  "common.footer.builtBy": "Hecho por",
+  "common.nav.home": "inicio",
+  "common.nav.apps": "apps",
+  "common.nav.about": "sobre-mí",
+  "common.footer.line": "David Yepes · Bogotá, Colombia",
   "common.footer.version": "Versión de la app"
 }

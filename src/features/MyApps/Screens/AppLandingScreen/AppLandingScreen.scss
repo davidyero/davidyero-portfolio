@@ -2,33 +2,39 @@
 @import '../../../../styles/abstracts/mixins';
 
 .detail {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
   padding-top: $space-6;
   padding-bottom: $space-8;
-  max-width: 860px;
 
   &__back {
+    align-self: flex-start;
     font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--subtext);
-    margin-bottom: $space-6;
+    color: var(--muted);
     transition: color $transition-fast;
-    &:hover { color: var(--text); }
+
+    &:hover { color: var(--accent); }
   }
 
-  &__hero {
+  &__head {
     display: flex;
     align-items: center;
     gap: $space-5;
-    margin-bottom: $space-6;
 
-    @include mobile { gap: $space-4; }
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $space-4;
+    }
   }
 
-  &__title-row {
+  &__head-body {
     display: flex;
-    align-items: center;
-    gap: $space-3;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: $space-2;
+    min-width: 0;
   }
 
   &__title {
@@ -36,68 +42,31 @@
   }
 
   &__tagline {
-    font-family: $font-mono;
-    color: var(--subtext);
-    margin: $space-2 0 $space-2;
+    font-size: $fs-body;
+    color: var(--accent);
   }
 
-  &__meta {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--muted);
-    margin: 0;
-  }
-
-  &__description {
-    font-family: $font-mono;
-    color: var(--subtext);
-    line-height: 1.7;
-    margin-bottom: $space-6;
-    max-width: 60ch;
-  }
-
-  &__stack {
-    margin-bottom: $space-6;
-  }
-
-  &__stack-chips {
+  &__badges {
     display: flex;
     flex-wrap: wrap;
     gap: $space-2;
-    margin-top: $space-3;
   }
 
-  &__stack-chip {
-    font-family: $font-mono;
-    font-size: $fs-small;
+  &__description {
+    font-size: $fs-body;
     color: var(--subtext);
-    padding: 6px 12px;
-    background: var(--surface-0);
-    border-radius: $radius-pill;
   }
 
   &__ctas {
     display: flex;
     flex-direction: column;
     gap: $space-4;
-    margin-bottom: $space-6;
   }
 
   &__stores {
     display: flex;
     flex-wrap: wrap;
     gap: $space-3;
-    align-items: center;
-  }
-
-  &__store-badge {
-    height: 48px;
-    width: auto;
-    border-radius: $radius-sm;
-    transition: transform $transition-fast;
-    &:hover { transform: translateY(-2px); }
-
-    &--play { height: 48px; }
   }
 
   &__web-ctas {
@@ -109,104 +78,24 @@
   &__coming-soon {
     font-family: $font-mono;
     font-size: $fs-small;
-    color: var(--soon-fg);
-    padding: $space-3 $space-4;
-    background: var(--soon-bg);
-    border-radius: $radius-md;
-    width: fit-content;
+    color: var(--muted);
   }
 
-  // Explore group: View landing · Changelog · Terms · Privacy — one style
-  &__nav {
+  &__block {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: $space-3;
-    padding-bottom: $space-8;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: $space-8;
   }
 
-  &__nav-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: $space-2;
-    padding: $space-3 $space-5;
-    font-family: $font-sans;
-    font-weight: 600;
-    font-size: $fs-body;
-    color: var(--text);
-    background: var(--surface-0);
-    border: 1px solid var(--border-strong);
-    border-radius: $radius-md;
-    transition: transform $transition-fast, border-color $transition-fast,
-      background-color $transition-fast, box-shadow $transition-fast;
-
-    svg {
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    &:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      background: var(--surface-hover);
-      box-shadow: var(--shadow-md);
-    }
-  }
-
-  &__features { margin-bottom: $space-8; }
-
-  &__features-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: $space-3;
-    margin-top: $space-4;
-
-    @include from-sm { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-
-  &__feature {
+  &__rows {
     display: flex;
-    gap: $space-3;
-    padding: $space-4;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: $radius-lg;
-  }
-
-  &__feature-icon {
-    display: inline-flex;
-    align-items: center;
-    color: var(--mauve);
-    margin-top: 2px;
-  }
-
-  &__feature-text {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--subtext);
-    margin: 0;
-  }
-
-  &__screenshots-row {
-    display: flex;
-    gap: $space-4;
-    overflow-x: auto;
-    padding: $space-4 0;
-    margin-top: $space-2;
-  }
-
-  &__screenshot {
-    height: 380px;
-    width: auto;
-    border-radius: $radius-lg;
-    border: 1px solid var(--border);
-    flex-shrink: 0;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__empty {
-    font-family: $font-mono;
+    font-size: $fs-body;
     color: var(--muted);
-    margin: $space-8 0 $space-4;
+    margin-bottom: $space-5;
   }
 }
