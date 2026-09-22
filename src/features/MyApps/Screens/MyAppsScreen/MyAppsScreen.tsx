@@ -2,13 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { Badge } from '../../../../components/Badge/Badge';
+import { statusTone } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
 import { useMyAppsScreen } from './useMyAppsScreen';
 import { MyAppsScreenProps } from './MyAppsScreen.types';
 import './MyAppsScreen.scss';
 
-const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
-  status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
 
 // El catalogo es un listado, no una rejilla de tarjetas: 17 filas alineadas se
 // recorren de un vistazo y aguantan 40 sin cambiar de forma.
@@ -18,7 +17,7 @@ export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
 
   return (
     <PageLayout>
-      <div className="catalog container container--reading">
+      <div className="catalog container container--catalog">
         <header className="catalog__header">
           <span className="mono-eyebrow">{t('apps.catalog.eyebrow')}</span>
           <h1 className="catalog__title">{t('apps.catalog.title', { count: counts.total })}</h1>

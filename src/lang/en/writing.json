@@ -1,0 +1,16 @@
+{
+  "writing.blog.eyebrow": "$ cat blog/",
+  "writing.blog.title": "Blog",
+  "writing.blog.subtitle": "What I learn building and shipping my own apps.",
+  "writing.blog.empty": "No entries published yet.",
+  "writing.log.eyebrow": "$ tail -f build-in-public",
+  "writing.log.title": "Build in public",
+  "writing.log.subtitle": "Session log: what I built, what I broke and what I learned.",
+  "writing.log.empty": "No entries published yet.",
+  "writing.loading": "Loading…",
+  "writing.error": "Could not load the entries.",
+  "writing.retry": "Retry",
+  "writing.notFound": "This entry does not exist or is no longer published.",
+  "writing.onlySpanish": "Spanish only",
+  "writing.onlySpanishNotice": "This entry is not translated to English yet: you are reading it in Spanish."
+}

@@ -9,6 +9,8 @@ import { ChangelogScreen } from './features/MyApps/Screens/ChangelogScreen/Chang
 import { TermsScreen } from './features/MyApps/Screens/TermsScreen/TermsScreen';
 import { PrivacyScreen } from './features/MyApps/Screens/PrivacyScreen/PrivacyScreen';
 import { DeleteAccountScreen } from './features/MyApps/Screens/DeleteAccountScreen/DeleteAccountScreen';
+import { PostListScreen } from './features/Writing/Screens/PostListScreen/PostListScreen';
+import { PostDetailScreen } from './features/Writing/Screens/PostDetailScreen/PostDetailScreen';
 import './styles/main.scss';
 
 // Keeps legacy /apps/:slug[...] links alive (store legal links, old shares)
@@ -32,6 +34,12 @@ function App() {
         <Route path="/app/:slug/privacy" element={<PrivacyScreen />} />
         <Route path="/app/:slug/delete-account" element={<DeleteAccountScreen />} />
         <Route path="/about-me" element={<AboutScreen />} />
+
+        {/* Blog y build-in-public comparten pantalla: solo cambia `kind`. */}
+        <Route path="/blog" element={<PostListScreen kind="BLOG" />} />
+        <Route path="/blog/:slug" element={<PostDetailScreen kind="BLOG" />} />
+        <Route path="/build-in-public" element={<PostListScreen kind="LOG" />} />
+        <Route path="/build-in-public/:slug" element={<PostDetailScreen kind="LOG" />} />
 
         {/* Legacy → canonical redirects (keep old URLs working) */}
         <Route path="/about" element={<Navigate to="/about-me" replace />} />

@@ -6,10 +6,18 @@
 // contacto de la home es lo unico que cambia.
 export const CONTACT_EMAIL = 'davidyero@davidyero.com';
 
+// Perfiles públicos, en un solo sitio. El orden es el de la fila de iconos de
+// la home. Si cambia un handle, se cambia aquí y no en cada vista.
 export const SOCIAL_LINKS = {
   github: 'https://github.com/davidyero',
+  instagram: 'https://www.instagram.com/davidyero',
+  tiktok: 'https://www.tiktok.com/@davidyero',
+  youtube: 'https://www.youtube.com/@davidyero',
+  twitter: 'https://x.com/davidyero',
   linkedin: 'https://www.linkedin.com/in/davidyero',
 } as const;
+
+export type SocialNetwork = keyof typeof SOCIAL_LINKS;
 
 /**
  * Construye el `mailto:` del bloque de contacto. La direccion que teclea el

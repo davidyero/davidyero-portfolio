@@ -1,18 +1,19 @@
 {
-  "home.hero.title": "I publish my own apps. 17 of them are in the stores.",
-  "home.hero.facts": "I design, code and publish 17 apps of my own: 12 in production, 3 in beta, 2 unreleased. 11 Android · 7 iOS · 6 web. 13 live listings on the App Store and Google Play, a backend with ~20 domains and one backoffice for all of them.",
+  "home.hero.title": "I build software, ship products and experiment with AI.",
+  "home.hero.facts": "Frontend Tech Lead by day, indie developer the rest of the time. I design, build and publish real applications for iOS, Android and Web, and I explore AI, automation and self-hosted products along the way.",
   "home.featured.eyebrow": "// featured",
   "home.index.eyebrow": "// go to",
-  "home.index.apps": "All {{total}} apps: {{live}} live · {{beta}} beta · {{soon}} soon",
+  "home.index.apps": "All {{total}} apps: {{live}} live · {{beta}} beta · {{soon}} soon · {{offline}} offline",
   "home.index.about": "2017 → today · three stages",
   "home.contact.title": "Need an app shipped?",
   "home.contact.text": "Write to me and I answer the way I work on my own apps: scope, version and release date. No 20-page proposal.",
   "home.contact.placeholder": "you@email.com",
-  "home.contact.cta": "writeMe",
+  "home.contact.cta": "WriteMe",
   "home.contact.subject": "Shipping an app",
-  "home.meta.since": "active since:",
+  "home.meta.since": "developer slave since:",
   "home.meta.location": "location:",
   "home.meta.locationValue": "Bogotá, Colombia",
   "home.meta.work": "work:",
-  "home.meta.workValue": "solo · design, backend, stores and deploy"
+  "home.meta.workValue": "solo · design, backend, stores and deploy",
+  "home.hero.counts": "{{total}} products of my own · {{live}} in production · {{beta}} in beta · {{soon}} coming · {{offline}} out of service"
 }

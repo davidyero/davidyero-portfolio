@@ -6,16 +6,7 @@ import { buildContactMailto } from '../../../../shared/contact';
 
 // Tira de tecnologias de la home. Son nombres propios: no pasan por i18n
 // porque se escriben igual en los dos idiomas.
-const STACK = [
-  'React Native',
-  'TypeScript',
-  'Node',
-  'Postgres',
-  'RevenueCat',
-  'AdMob',
-  'Render',
-  'AWS Amplify',
-];
+const STACK = ['React Native', 'TypeScript', 'Node', 'AI', 'Postgres', 'RevenueCat', 'AWS'];
 
 export interface FeaturedRow {
   slug: string;
@@ -35,14 +26,17 @@ export const useHomeScreen = () => {
       featuredApps.map((app: EnrichedApp) => {
         const tagline = getAppContent(app.slug, i18n.language)?.tagline ?? '';
         const platforms = app.platforms.map((p) => platformLabels[p]).join(' · ');
+        // Una destacada sin servicio se dice en la propia fila: presentarla
+        // igual que las vivas seria vender algo que hoy no funciona.
+        const offline = app.status === 'offline' ? t('apps.status.offline') : '';
         return {
           slug: app.slug,
           name: app.name,
           ...(app.logo !== undefined ? { icon: app.logo } : {}),
-          subtitle: [tagline, platforms].filter(Boolean).join(' · '),
+          subtitle: [tagline, platforms, offline].filter(Boolean).join(' · '),
         };
       }),
-    [i18n.language]
+    [i18n.language, t]
   );
 
   // Recuento del catalogo, calculado del registro y no escrito a mano: si
@@ -54,6 +48,7 @@ export const useHomeScreen = () => {
       live: byStatus('live'),
       beta: byStatus('beta'),
       soon: byStatus('soon'),
+      offline: byStatus('offline'),
     };
   }, []);
 

@@ -73,6 +73,10 @@
     --beta-fg:   #{$dark-amber};
     --soon-bg:   #{rgba($dark-subtext, 0.14)};
     --soon-fg:   #{$dark-subtext};
+    // Offline usa el rojo del sistema: es un estado de error, no un matiz de
+    // "todavia no". Tiene que distinguirse de soon de un vistazo.
+    --offline-bg: #{rgba($dark-red, 0.16)};
+    --offline-fg: #{$dark-red};
 
     --shadow-md: #{$shadow-md};
     --shadow-lg: #{$shadow-lg};
@@ -115,6 +119,8 @@
     --beta-fg:   #{$light-amber};
     --soon-bg:   #{rgba($light-subtext, 0.12)};
     --soon-fg:   #{$light-subtext};
+    --offline-bg: #{rgba($light-red, 0.14)};
+    --offline-fg: #{$light-red};
 
     --shadow-md: 0 8px 24px rgba(32, 30, 29, 0.10);
     --shadow-lg: 0 18px 48px rgba(32, 30, 29, 0.14);

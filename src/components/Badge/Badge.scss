@@ -46,6 +46,14 @@
     font-weight: 600;
   }
 
+  &--offline {
+    background: var(--offline-bg);
+    color: var(--offline-fg);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+
   &--neutral {
     background: transparent;
     color: var(--subtext);

@@ -12,6 +12,7 @@ import {
   getAppKind,
   kindI18nKey,
   resolveAppCtas,
+  statusTone,
 } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
 import { AppShowcaseScreenProps } from './AppShowcaseScreen.types';
@@ -21,8 +22,6 @@ import googlePlayEN from '../../../../assets/images/stores/googlePlayIconEN.png'
 import googlePlayES from '../../../../assets/images/stores/googleplayIconES.png';
 import './AppShowcaseScreen.scss';
 
-const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
-  status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
 
 // Landing de la app: la unica pantalla que puede respirar mas. Aun asi no hay
 // maqueta de telefono ni ventana de navegador falsa — el sistema las prohibe:

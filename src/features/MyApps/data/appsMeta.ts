@@ -5,11 +5,10 @@ import { AppMeta } from '../Screens/MyAppsScreen/MyAppsScreen.types';
 export const appsMeta: Record<string, AppMeta> = {
   gazella: {
     platforms: ['ios', 'android'],
-    status: 'live',
+    status: 'offline',
     category: 'sports',
     tech: ['React Native', 'Expo', 'TypeScript'],
     version: '2.1.0',
-    featured: true,
     accent: 'linear-gradient(135deg, #f5c2a7 0%, #f38ba8 100%)',
   },
   youtime: {
@@ -18,7 +17,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'utility',
     tech: ['React Native', 'TypeScript'],
     version: '1.2.0',
-    featured: true,
     accent: 'linear-gradient(135deg, #89b4fa 0%, #94e2d5 100%)',
   },
   'festivos-del-mundo': {
@@ -39,11 +37,10 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   pronostigol: {
     platforms: ['ios', 'android'],
-    status: 'live',
+    status: 'offline',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Node'],
     version: '1.0.0',
-    featured: true,
     accent: 'linear-gradient(135deg, #cba6f7 0%, #b4befe 100%)',
   },
   superlineup: {
@@ -60,6 +57,7 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['React Native', 'TypeScript', 'Zustand'],
     version: '4.0.1',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #89b4fa 100%)',
+    featured: true,
   },
   'encuentra-tu-mascota': {
     platforms: ['web'],
@@ -69,6 +67,7 @@ export const appsMeta: Record<string, AppMeta> = {
     version: '0.7.0',
     webUrl: 'https://www.encuentra-tu-mascota.com/',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #f9e2af 100%)',
+    featured: true,
   },
   chamiapp: {
     platforms: ['web'],
@@ -103,6 +102,7 @@ export const appsMeta: Record<string, AppMeta> = {
     version: '0.1.50',
     webUrl: 'https://www.mispagos.co/',
     accent: 'linear-gradient(135deg, #cba6f7 0%, #f38ba8 100%)',
+    featured: true,
   },
   habitflow: {
     platforms: ['ios', 'android'],
