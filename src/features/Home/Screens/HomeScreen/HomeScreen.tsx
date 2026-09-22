@@ -3,11 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
-import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
+import { SuperIdentity } from '../../../../components/SuperIdentity/SuperIdentity';
+import { SuperProfileMeta } from '../../../../components/SuperProfileMeta/SuperProfileMeta';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { SuperSocialRow } from '../../../../components/SuperSocialRow/SuperSocialRow';
-import { SuperTypewriter } from '../../../../components/SuperTypewriter/SuperTypewriter';
-import { BrandMark } from '../../../../components/BrandMark/BrandMark';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
 import { paths } from '../../../../shared/paths';
 import { useHomeScreen } from './useHomeScreen';
@@ -19,22 +18,18 @@ import './HomeScreen.scss';
 export const HomeScreen: React.FC<HomeScreenProps> = () => {
   const navigate = useNavigate();
   const view = useHomeScreen();
-  const { t, stack, role, company, isStill, featured, countsLine, appsRowLine } = view;
+  const { t, stack, featured, countsLine, appsRowLine } = view;
 
   return (
     <PageLayout>
       <div className="home container container--reading">
-        <section className="home__identity">
-          <BrandMark size="large" className="home__avatar" />
-          <h1 className="home__name">David Yepes</h1>
-          <p className="home__line">{t('home.hero.title')}</p>
-          <p className="home__facts">{t('home.hero.facts')}</p>
+        <SuperIdentity tagline={t('home.hero.title')} description={t('home.hero.facts')}>
           {/* Las cifras salen del catalogo, no escritas a mano: al cambiar el
               estado de una app la home no se queda mintiendo. */}
           <p className="home__counts">{countsLine}</p>
           <p className="home__counts">{t('home.hero.reach')}</p>
           <SuperTagList tags={stack} />
-        </section>
+        </SuperIdentity>
 
         <section className="home__block">
           <span className="mono-eyebrow mono-eyebrow--section">{t('home.featured.eyebrow')}</span>
@@ -127,19 +122,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
 
         <SuperSocialRow />
 
-        <SuperMetaList
-          entries={[
-            { label: t('home.meta.since'), value: '2017-10-02' },
-            {
-              label: t('home.meta.position'),
-              value: <SuperTypewriter text={role} showCaret={!isStill} />,
-            },
-            {
-              label: t('home.meta.experience'),
-              value: <SuperTypewriter text={company} showCaret={!isStill} />,
-            },
-          ]}
-        />
+        <SuperProfileMeta />
       </div>
     </PageLayout>
   );

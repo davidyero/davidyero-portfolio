@@ -8,39 +8,10 @@
   padding-top: $space-4;
   padding-bottom: $space-8;
 
-  // ---- Identidad ----
-  &__identity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $space-4;
-    text-align: center;
-  }
 
-  &__avatar {
-    width: 96px;
-    height: 96px;
-    border-radius: 30px;
-    object-fit: cover;
-    border: 1px solid var(--accent);
-  }
 
   // El nombre es un rotulo, no un titular: va en la pixelada, que ya trae su
-  // propio espaciado. El tracking del sistema aqui sobra y la separaria de mas.
-  &__name {
-    font-family: $font-pixel;
-    font-size: $fs-h2;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
 
-  &__line {
-    font-size: $fs-body;
-    color: var(--accent);
-    max-width: 56ch;
-    margin: 0 auto;
-  }
 
   &__counts {
     font-family: $font-mono;
@@ -50,13 +21,6 @@
   }
 
   // Dos puntos por debajo del cuerpo: es el parrafo mas largo de la pagina y
-  // asi no compite con la linea de identidad que tiene encima.
-  &__facts {
-    font-size: $fs-small;
-    color: var(--subtext);
-    max-width: 56ch;
-    margin: 0 auto;
-  }
 
   // ---- Bloques de filas ----
   &__block {
