@@ -138,12 +138,11 @@ $shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.30);
 
 // ---- Layout ----
 $container-max: 1200px;
-// El sitio es una columna de lectura, no un tablero: el ancho util es el de un
-// documento. 1200 se queda para lo que de verdad necesita extenderse.
-$container-reading: 600px;
-// Los listados (apps, blog, build-in-public) comparten ancho: en la columna de
-// lectura la tabla del catalogo se vuelve ilegible, y las tres vistas tienen
-// que parecerse entre si.
-$container-list: 760px;
-// Texto largo: legales y entradas del blog.
-$container-doc: 860px;
+// TODAS las pantallas miden lo mismo. Antes habia tres anchos —lectura,
+// listado y documento— y el sitio parecia tres sitios: al pasar de la home al
+// catalogo, el contenido cambiaba de sitio en la pantalla.
+//
+// Se toma el mas ancho de los tres que habia, el de los listados: es el que
+// necesita la tabla del catalogo, y ninguna de las otras pantallas sufre por
+// tener ese espacio.
+$container-page: 760px;

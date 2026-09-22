@@ -62,6 +62,9 @@
     // panel; en claro sube a blanco, porque un gris ahi dejaba el placeholder
     // en 3.6:1 contra su fondo.
     --field:     #{$dark-crust};
+    // Linea del fondo CRT. En oscuro se dibuja con negro; en claro con negro
+    // mucho mas suave, porque sobre hueso la misma opacidad se ve sucia.
+    --scanline:  #{rgba(0, 0, 0, 0.26)};
     --gradient:  linear-gradient(135deg, #{$dark-accent} 0%, #{$brand-olive-glow} 100%);
     --gradient-soft: linear-gradient(135deg, #{rgba($dark-accent, 0.20)} 0%, #{rgba($brand-olive-glow, 0.14)} 100%);
     --on-accent: #{$brand-ink};
@@ -109,6 +112,7 @@
     --accent:    #{$light-accent};
     --accent-hover: #{darken($light-accent, 6%)};
     --field:     #{$brand-white};
+    --scanline:  #{rgba(32, 30, 29, 0.05)};
     --gradient:  linear-gradient(135deg, #{$light-accent} 0%, #{$brand-olive-mid} 100%);
     --gradient-soft: linear-gradient(135deg, #{rgba($light-accent, 0.14)} 0%, #{rgba($brand-olive-mid, 0.10)} 100%);
     --on-accent: #{$brand-white};
