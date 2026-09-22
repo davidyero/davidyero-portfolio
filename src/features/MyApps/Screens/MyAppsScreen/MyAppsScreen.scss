@@ -8,21 +8,8 @@
   padding-top: $space-4;
   padding-bottom: $space-8;
 
-  &__header {
-    display: flex;
-    flex-direction: column;
-    gap: $space-2;
-  }
 
-  &__title {
-    font-size: $fs-h2;
-  }
 
-  &__subtitle {
-    font-size: $fs-small;
-    color: var(--muted);
-    max-width: none;
-  }
 
   // Filtros como flags de comando: [ todas ] [ mobile ]. Sin pastillas de
   // color; el activo se distingue por el acento, no por un fondo.
@@ -30,6 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: $space-2 $space-3;
+    margin-top: $space-2;
   }
 
   &__filter {
