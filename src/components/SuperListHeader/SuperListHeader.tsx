@@ -1,4 +1,5 @@
 import React from 'react';
+import { SuperTypography } from '../SuperTypography/SuperTypography';
 import { SuperListHeaderProps } from './SuperListHeader.types';
 import './SuperListHeader.scss';
 
@@ -14,9 +15,15 @@ export const SuperListHeader: React.FC<SuperListHeaderProps> = ({
   children,
 }) => (
   <header className="list-header">
-    <span className="mono-eyebrow">{eyebrow}</span>
-    <h1 className="list-header__title">{title}</h1>
-    <p className="list-header__subtitle">{subtitle}</p>
+    <SuperTypography as="span" variant="eyebrow" color="muted">
+      {eyebrow}
+    </SuperTypography>
+    <SuperTypography as="h1" variant="display">
+      {title}
+    </SuperTypography>
+    <SuperTypography variant="small" color="muted">
+      {subtitle}
+    </SuperTypography>
     {children}
   </header>
 );

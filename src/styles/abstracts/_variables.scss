@@ -140,7 +140,10 @@ $shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.30);
 $container-max: 1200px;
 // El sitio es una columna de lectura, no un tablero: el ancho util es el de un
 // documento. 1200 se queda para lo que de verdad necesita extenderse.
-$container-reading: 500px;
-// Los listados (apps, blog, build-in-public) comparten ancho: a 500px la tabla
-// del catalogo se vuelve ilegible, y las tres vistas tienen que parecerse.
+$container-reading: 600px;
+// Los listados (apps, blog, build-in-public) comparten ancho: en la columna de
+// lectura la tabla del catalogo se vuelve ilegible, y las tres vistas tienen
+// que parecerse entre si.
 $container-list: 760px;
+// Texto largo: legales y entradas del blog.
+$container-doc: 860px;

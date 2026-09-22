@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrandMark } from '../BrandMark/BrandMark';
+import { SuperTypography } from '../SuperTypography/SuperTypography';
 import { SuperIdentityProps } from './SuperIdentity.types';
 import './SuperIdentity.scss';
 
@@ -15,9 +16,15 @@ export const SuperIdentity: React.FC<SuperIdentityProps> = ({
 }) => (
   <section className="identity">
     <BrandMark size="large" className="identity__avatar" />
-    <h1 className="identity__name">David Yepes</h1>
-    <p className="identity__tagline">{tagline}</p>
-    <p className="identity__description">{description}</p>
+    <SuperTypography as="h1" variant="display" align="center">
+      David Yepes
+    </SuperTypography>
+    <SuperTypography variant="tagline" color="accent" align="center" className="identity__measure">
+      {tagline}
+    </SuperTypography>
+    <SuperTypography variant="body" color="subtext" align="center" className="identity__measure">
+      {description}
+    </SuperTypography>
     {children}
   </section>
 );

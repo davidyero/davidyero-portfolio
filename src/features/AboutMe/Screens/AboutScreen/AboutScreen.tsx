@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperIdentity } from '../../../../components/SuperIdentity/SuperIdentity';
 import { SuperProfileMeta } from '../../../../components/SuperProfileMeta/SuperProfileMeta';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
@@ -21,8 +21,8 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
   };
 
   return (
-    <PageLayout>
-      <div className="about container container--reading">
+    <SuperPageTemplate variant="reading">
+      <div className="about">
         <SuperIdentity tagline={t('about.role')} description={t('about.bio')} />
 
         <section className="about__block">
@@ -88,6 +88,6 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
 
         <SuperProfileMeta />
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

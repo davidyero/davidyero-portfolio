@@ -23,7 +23,7 @@ export const LegalDoc: React.FC<LegalDocProps> = ({
   const { t } = useTranslation();
 
   return (
-    <div className="legal container container--doc">
+    <div className="legal">
       <div className="legal__topbar">
         <button className="legal__nav" onClick={onBack}>
           ‹ {t('apps.legal.backToApps')}

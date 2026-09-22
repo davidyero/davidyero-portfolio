@@ -1,0 +1,68 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.typo {
+  margin: 0;
+  max-width: none;
+
+  // ---- Papeles ----
+  // Rótulo de pantalla. Pixelada: es un letrero, no un titular de texto.
+  &--display {
+    font-family: $font-pixel;
+    font-size: $fs-h2;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  &--section {
+    font-family: $font-mono;
+    font-size: $fs-h3;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &--eyebrow {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    letter-spacing: 0.02em;
+  }
+
+  &--tagline {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    line-height: 1.7;
+  }
+
+  // Cuerpo y secundario comparten interlínea con la lista del sitio, para que
+  // un párrafo seguido de una lista no cambie de ritmo a media lectura.
+  &--body {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    line-height: 1.6;
+    max-width: $measure-body;
+  }
+
+  &--small {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    line-height: 1.6;
+  }
+
+  &--meta {
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    line-height: 1.5;
+  }
+
+  // ---- Color ----
+  &--color-text { color: var(--text); }
+  &--color-subtext { color: var(--subtext); }
+  &--color-muted { color: var(--muted); }
+  &--color-accent { color: var(--accent); }
+  &--color-warning { color: var(--yellow); }
+  &--color-danger { color: var(--red); }
+
+  &--center { text-align: center; }
+}

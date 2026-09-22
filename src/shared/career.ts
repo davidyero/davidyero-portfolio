@@ -108,8 +108,8 @@ export interface FreelanceEntry {
 }
 
 export const FREELANCE: readonly FreelanceEntry[] = [
-  { company: 'VASS', roleKey: 'about.role.freelance' },
-  { company: 'Cencosud', roleKey: 'about.role.freelance' },
+  { company: 'VASS', roleKey: 'about.role.seniorFrontend' },
+  { company: 'Cencosud', roleKey: 'about.role.seniorFrontend' },
   { company: 'Leonisa', roleKey: 'about.role.seniorFrontend' },
 ];
 

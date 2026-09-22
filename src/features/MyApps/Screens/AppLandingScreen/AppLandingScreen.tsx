@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
+import { SuperTypography } from '../../../../components/SuperTypography/SuperTypography';
 import { Badge } from '../../../../components/Badge/Badge';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
@@ -40,14 +41,14 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
 
   if (!app) {
     return (
-      <PageLayout>
-        <div className="detail container container--reading">
+      <SuperPageTemplate variant="reading">
+        <div className="detail">
           <p className="detail__empty">{t('apps.notFound')}</p>
           <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.detail.back')}
           </SuperButton>
         </div>
-      </PageLayout>
+      </SuperPageTemplate>
     );
   }
 
@@ -59,8 +60,8 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   const hasChangelog = (content?.changelog?.length ?? 0) > 0;
 
   return (
-    <PageLayout>
-      <div className="detail container container--reading">
+    <SuperPageTemplate variant="reading">
+      <div className="detail">
         <button className="detail__back" onClick={() => navigate(paths.apps)}>
           ‹ {t('apps.detail.back')}
         </button>
@@ -68,8 +69,14 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
         <header className="detail__head">
           <AppIcon app={app} size="lg" />
           <div className="detail__head-body">
-            <h1 className="detail__title">{app.name}</h1>
-            {content?.tagline && <p className="detail__tagline">{content.tagline}</p>}
+            <SuperTypography as="h1" variant="display">
+              {app.name}
+            </SuperTypography>
+            {content?.tagline && (
+              <SuperTypography variant="tagline" color="accent">
+                {content.tagline}
+              </SuperTypography>
+            )}
             <div className="detail__badges">
               <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
               <SuperStatusBadge status={app.status} />
@@ -88,7 +95,11 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           ]}
         />
 
-        {content?.description && <p className="detail__description">{content.description}</p>}
+        {content?.description && (
+          <SuperTypography variant="body" color="subtext">
+            {content.description}
+          </SuperTypography>
+        )}
 
         <div className="detail__ctas">
           {(cta.showAppStore || cta.showGooglePlay) && (
@@ -132,10 +143,14 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           )}
 
           {app.status === 'offline' ? (
-            <p className="detail__notice">{t('apps.detail.offlineNotice')}</p>
+            <SuperTypography variant="small" className="detail__notice">
+              {t('apps.detail.offlineNotice')}
+            </SuperTypography>
           ) : (
             !cta.hasAny && (
-              <span className="detail__coming-soon">{t('apps.detail.comingSoon')}</span>
+              <SuperTypography as="span" variant="small" color="muted">
+                {t('apps.detail.comingSoon')}
+              </SuperTypography>
             )
           )}
         </div>
@@ -202,6 +217,6 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           </div>
         </section>
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

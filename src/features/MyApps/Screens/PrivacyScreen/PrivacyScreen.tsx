@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
 import { getAppBySlug } from '../../data/registry';
@@ -18,8 +18,8 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
 
   if (!app || !app.privacyPolicy) {
     return (
-      <PageLayout>
-        <div className="legal container container--doc">
+      <SuperPageTemplate variant="doc">
+        <div className="legal">
           <p className="legal__empty">
             {app ? t('apps.legal.notAvailable') : t('apps.notFound')}
           </p>
@@ -27,14 +27,14 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
             ‹ {t('apps.legal.backToApps')}
           </SuperButton>
         </div>
-      </PageLayout>
+      </SuperPageTemplate>
     );
   }
 
   const data = app.privacyPolicy[lang];
 
   return (
-    <PageLayout>
+    <SuperPageTemplate variant="doc">
       <LegalDoc
         title={t('apps.legal.privacy.title')}
         subtitle={t('apps.legal.privacySubtitle', { app: app.name })}
@@ -43,6 +43,6 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
         onBack={() => navigate(paths.apps)}
         onGoToApp={() => navigate(paths.app(slug ?? ''))}
       />
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

@@ -8,6 +8,13 @@
   gap: $space-4;
   text-align: center;
 
+  // Medida de lectura de la cabecera. El tamano y el color los pone
+  // SuperTypography; aqui solo cuanto se ensancha.
+  &__measure {
+    max-width: 56ch;
+    margin: 0 auto;
+  }
+
   &__avatar {
     width: 96px;
     height: 96px;
@@ -26,19 +33,5 @@
     text-transform: uppercase;
   }
 
-  &__tagline {
-    font-size: $fs-body;
-    color: var(--accent);
-    max-width: 56ch;
-    margin: 0 auto;
-  }
 
-  // Dos puntos por debajo del cuerpo: es el párrafo más largo de la página y
-  // así no compite con la línea que tiene encima.
-  &__description {
-    font-size: $fs-small;
-    color: var(--subtext);
-    max-width: 56ch;
-    margin: 0 auto;
-  }
 }

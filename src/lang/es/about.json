@@ -6,9 +6,9 @@
   "about.client": "Cliente",
   "about.links.eyebrow": "// enlaces",
   "about.role.fullstackSpecialist": "Full Stack Specialist",
-  "about.role.reactNativeSenior": "React Native Senior",
+  "about.role.reactNativeSenior": "Senior React Native Developer",
   "about.role.techLeadFrontend": "Tech Lead Frontend",
-  "about.role.seniorFrontendLead": "Senior Frontend · Tech Lead Frontend",
+  "about.role.seniorFrontendLead": "Senior Frontend Developer · Tech Lead",
   "about.role.fullstackDeveloper": "Full Stack Developer",
   "about.task.payments": "Desarrollo de aplicación de pagos",
   "about.task.banking": "Desarrollo de aplicación bancaria",
@@ -22,6 +22,5 @@
   "about.task.playFramework": "Desarrollo de aplicaciones web con Java, Scala y Javascript (Play Framework)",
   "about.freelance.eyebrow": "// freelance",
   "about.freelance.text": "Clientes con los que he trabajado por mi cuenta.",
-  "about.role.freelance": "Freelance",
-  "about.role.seniorFrontend": "Senior Frontend"
+  "about.role.seniorFrontend": "Senior Frontend Developer"
 }

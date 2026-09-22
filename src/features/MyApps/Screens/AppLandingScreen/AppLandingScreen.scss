@@ -5,8 +5,6 @@
   display: flex;
   flex-direction: column;
   gap: $space-8;
-  padding-top: $space-6;
-  padding-bottom: $space-8;
 
   &__back {
     align-self: flex-start;
@@ -37,14 +35,7 @@
     min-width: 0;
   }
 
-  &__title {
-    font-size: $fs-h1;
-  }
 
-  &__tagline {
-    font-size: $fs-body;
-    color: var(--accent);
-  }
 
   &__badges {
     display: flex;
@@ -52,10 +43,6 @@
     gap: $space-2;
   }
 
-  &__description {
-    font-size: $fs-body;
-    color: var(--subtext);
-  }
 
   &__ctas {
     display: flex;
@@ -75,22 +62,16 @@
     gap: $space-3;
   }
 
-  // Aviso de app sin servicio. Usa los tokens del badge offline para que el
-  // texto contraste con su propio fondo en claro y en oscuro.
+  // Aviso de app sin servicio. El tamano lo pone SuperTypography; aqui solo el
+  // fondo y el color, con los tokens del badge offline para que contraste en
+  // claro y en oscuro.
   &__notice {
-    font-size: $fs-small;
     color: var(--offline-fg);
     background: var(--offline-bg);
     border-radius: $radius-md;
     padding: $space-3 $space-4;
-    max-width: none;
   }
 
-  &__coming-soon {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--muted);
-  }
 
   &__block {
     display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperIdentity } from '../../../../components/SuperIdentity/SuperIdentity';
@@ -21,8 +21,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
   const { t, stack, featured, countsLine, appsRowLine } = view;
 
   return (
-    <PageLayout>
-      <div className="home container container--reading">
+    <SuperPageTemplate variant="reading">
+      <div className="home">
         <SuperIdentity tagline={t('home.hero.title')} description={t('home.hero.facts')}>
           {/* Las cifras salen del catalogo, no escritas a mano: al cambiar el
               estado de una app la home no se queda mintiendo. */}
@@ -124,6 +124,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
 
         <SuperProfileMeta />
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

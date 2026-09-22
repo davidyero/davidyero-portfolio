@@ -1,8 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
-import { SuperListHeader } from '../../../../components/SuperListHeader/SuperListHeader';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { PostRow } from '../../Components/PostRow/PostRow';
 import { usePostListScreen } from './usePostListScreen';
 import { PostListScreenProps } from './PostListScreen.types';
@@ -18,13 +17,13 @@ export const PostListScreen: React.FC<PostListScreenProps> = ({ kind }) => {
   const toPost = kind === 'BLOG' ? paths.blogPost : paths.logPost;
 
   return (
-    <PageLayout>
-      <div className="writing container container--list">
-        <SuperListHeader
-          eyebrow={t(`writing.${ns}.eyebrow`)}
-          title={t(`writing.${ns}.title`)}
-          subtitle={t(`writing.${ns}.subtitle`)}
-        />
+    <SuperPageTemplate
+      variant="list"
+      eyebrow={t(`writing.${ns}.eyebrow`)}
+      title={t(`writing.${ns}.title`)}
+      subtitle={t(`writing.${ns}.subtitle`)}
+    >
+      <div className="writing">
 
         {isLoading && <p className="writing__state">{t('writing.loading')}</p>}
 
@@ -47,6 +46,6 @@ export const PostListScreen: React.FC<PostListScreenProps> = ({ kind }) => {
           </div>
         )}
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

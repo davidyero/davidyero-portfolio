@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { Badge } from '../../../../components/Badge/Badge';
@@ -38,14 +38,14 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
 
   if (!app) {
     return (
-      <PageLayout>
-        <div className="showcase container container--reading">
+      <SuperPageTemplate variant="reading">
+        <div className="showcase">
           <p className="showcase__empty">{t('apps.notFound')}</p>
           <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.detail.back')}
           </SuperButton>
         </div>
-      </PageLayout>
+      </SuperPageTemplate>
     );
   }
 
@@ -56,8 +56,8 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
   const screenshots = app.screenshots ?? [];
 
   return (
-    <PageLayout>
-      <div className="showcase container container--reading">
+    <SuperPageTemplate variant="reading">
+      <div className="showcase">
         <button className="showcase__back" onClick={() => navigate(paths.app(app.slug))}>
           ‹ {app.name}
         </button>
@@ -158,6 +158,6 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
           </div>
         </section>
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };
