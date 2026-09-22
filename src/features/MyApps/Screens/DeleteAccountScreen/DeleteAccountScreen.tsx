@@ -43,8 +43,8 @@ export const DeleteAccountScreen: React.FC<DeleteAccountScreenProps> = () => {
         subtitle={t('apps.legal.deleteAccountSubtitle', { app: app.name })}
         lastUpdated={data.lastUpdated}
         sections={data.sections}
-        onBack={() => navigate(paths.apps)}
-        onGoToApp={() => navigate(paths.app(slug ?? ''))}
+        appName={app.name}
+        onBack={() => navigate(paths.app(app.slug))}
       />
     </SuperPageTemplate>
   );

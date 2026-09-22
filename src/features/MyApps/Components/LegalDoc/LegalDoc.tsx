@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { SuperTypography } from '../../../../components/SuperTypography/SuperTypography';
 import { TermsSection } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
 import './LegalDoc.scss';
 
@@ -8,8 +9,9 @@ interface LegalDocProps {
   subtitle: string;
   lastUpdated?: string;
   sections: TermsSection[];
+  /** Nombre de la app a la que pertenece el documento, para el enlace de vuelta. */
+  appName: string;
   onBack: () => void;
-  onGoToApp: () => void;
 }
 
 export const LegalDoc: React.FC<LegalDocProps> = ({
@@ -17,29 +19,30 @@ export const LegalDoc: React.FC<LegalDocProps> = ({
   subtitle,
   lastUpdated,
   sections,
+  appName,
   onBack,
-  onGoToApp,
 }) => {
   const { t } = useTranslation();
 
   return (
     <div className="legal">
-      <div className="legal__topbar">
-        <button className="legal__nav" onClick={onBack}>
-          ‹ {t('apps.legal.backToApps')}
-        </button>
-        <button className="legal__nav" onClick={onGoToApp}>
-          {t('apps.legal.goToApp')} ›
-        </button>
-      </div>
+      {/* Una sola salida: al detalle de la app de la que cuelga el documento.
+          Es de donde se viene, y es lo que hace el boton atras del navegador. */}
+      <button className="legal__nav" onClick={onBack}>
+        ‹ {appName}
+      </button>
 
       <header className="legal__header">
-        <h1 className="legal__title">{title}</h1>
-        <p className="legal__subtitle">{subtitle}</p>
+        <SuperTypography as="h1" variant="display">
+          {title}
+        </SuperTypography>
+        <SuperTypography variant="small" color="subtext">
+          {subtitle}
+        </SuperTypography>
         {lastUpdated && (
-          <p className="legal__updated">
+          <SuperTypography variant="meta" color="muted">
             {t('apps.legal.lastUpdated')}: {lastUpdated}
-          </p>
+          </SuperTypography>
         )}
       </header>
 

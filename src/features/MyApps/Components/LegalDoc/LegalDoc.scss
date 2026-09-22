@@ -8,14 +8,9 @@
   flex-direction: column;
   gap: $space-6;
 
-  &__topbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: $space-3;
-  }
 
   &__nav {
+    align-self: flex-start;
     font-family: $font-mono;
     font-size: $fs-small;
     color: var(--muted);
@@ -32,19 +27,7 @@
     border-bottom: 1px solid var(--border);
   }
 
-  &__title { font-size: $fs-h2; }
 
-  &__subtitle {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--subtext);
-  }
-
-  &__updated {
-    font-family: $font-mono;
-    font-size: $fs-tiny;
-    color: var(--muted);
-  }
 
   &__card {
     display: flex;
