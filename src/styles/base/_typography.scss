@@ -74,15 +74,18 @@ code, pre {
 .doc-list {
   display: flex;
   flex-direction: column;
-  gap: $space-2;
+  // Son listas de items cortos —tareas, cambios, caracteristicas—, no parrafos:
+  // con el aire del cuerpo se leian como cuatro bloques sueltos en vez de una
+  // lista. Menos hueco entre items y un punto menos de tamaño las agrupa.
+  gap: $space-1;
   list-style: none;
 
   > li {
     position: relative;
     padding-left: $space-5;
     font-family: $font-mono;
-    font-size: $fs-body;
-    line-height: 1.8;
+    font-size: $fs-small;
+    line-height: 1.6;
     color: var(--subtext);
     max-width: $measure-body;
 
