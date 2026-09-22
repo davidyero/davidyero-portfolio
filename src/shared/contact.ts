@@ -10,10 +10,10 @@ export const CONTACT_EMAIL = 'davidyero@davidyero.com';
 // la home. Si cambia un handle, se cambia aquí y no en cada vista.
 export const SOCIAL_LINKS = {
   github: 'https://github.com/davidyero',
-  instagram: 'https://www.instagram.com/davidyero',
-  tiktok: 'https://www.tiktok.com/@davidyero',
+  instagram: 'https://www.instagram.com/DavidyeroDev',
+  tiktok: 'https://www.tiktok.com/@davidyerodev',
   youtube: 'https://www.youtube.com/@davidyero',
-  twitter: 'https://x.com/davidyero',
+  twitter: 'https://x.com/davidyeroDev',
   linkedin: 'https://www.linkedin.com/in/davidyero',
 } as const;
 
