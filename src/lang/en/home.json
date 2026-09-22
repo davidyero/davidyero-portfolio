@@ -15,6 +15,7 @@
   "home.subscribe.text": "Every week: what I shipped, what broke and how I fixed it. Enough detail to repeat it. One email, no spam.",
   "home.subscribe.placeholder": "you@email.com",
   "home.subscribe.cta": "Subscribe",
-  "home.subscribe.done": "Done. I'll write when the next entry is out.",
-  "home.subscribe.error": "Could not save your email. Try again in a moment."
+  "home.subscribe.done": "Thanks for joining. I'll write when the next entry is out.",
+  "home.subscribe.error": "Could not save your email. Try again in a moment.",
+  "home.subscribe.invalid": "Enter a valid email, for example name@domain.com"
 }

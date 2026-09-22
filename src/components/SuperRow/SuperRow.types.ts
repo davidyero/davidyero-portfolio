@@ -1,13 +1,13 @@
 import { ReactNode } from 'react';
 
 export interface SuperRowProps {
+  /** Imagen del icono de una app. */
+  image?: string;
   /**
-   * Glifo de la izquierda. Una imagen (icono de app) o un texto corto de
-   * terminal (`ls`, `~/`, `git`): el sistema no admite iconos decorativos
-   * dentro de circulos con degradado.
+   * Icono de la fila. Un nodo, no un texto: las filas de destino llevan icono
+   * de verdad, no las dos primeras letras de la palabra.
    */
-  icon?: string;
-  glyph?: string;
+  icon?: ReactNode;
   title: string;
   subtitle?: string;
   /** Navegacion interna. Excluyente con `href`. */

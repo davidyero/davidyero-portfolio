@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { FileText, ShieldCheck } from 'lucide-react';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
@@ -141,7 +142,7 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
           <div className="showcase__rows">
             {app.termsAndConditions && (
               <SuperRow
-                glyph="doc"
+                icon={<FileText size={16} />}
                 title={t('apps.detail.terms')}
                 subtitle={paths.appTerms(app.slug)}
                 onClick={() => navigate(paths.appTerms(app.slug))}
@@ -149,7 +150,7 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
             )}
             {app.privacyPolicy && (
               <SuperRow
-                glyph="doc"
+                icon={<ShieldCheck size={16} />}
                 title={t('apps.detail.privacy')}
                 subtitle={paths.appPrivacy(app.slug)}
                 onClick={() => navigate(paths.appPrivacy(app.slug))}

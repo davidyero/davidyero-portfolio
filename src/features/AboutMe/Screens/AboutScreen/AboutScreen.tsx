@@ -4,6 +4,7 @@ import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/Supe
 import { SuperIdentity } from '../../../../components/SuperIdentity/SuperIdentity';
 import { SuperProfileMeta } from '../../../../components/SuperProfileMeta/SuperProfileMeta';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
+import { BrandGlyph } from '../../../../components/SuperSocialRow/BrandGlyph';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
 import { CAREER, FREELANCE, durationOf } from '../../../../shared/career';
@@ -72,13 +73,13 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
           <span className="mono-eyebrow mono-eyebrow--section">{t('about.links.eyebrow')}</span>
           <div className="about__rows">
             <SuperRow
-              glyph="git"
+              icon={<BrandGlyph network="github" size={16} />}
               title="GitHub"
               subtitle="github.com/davidyero"
               href={SOCIAL_LINKS.github}
             />
             <SuperRow
-              glyph="in"
+              icon={<BrandGlyph network="linkedin" size={16} />}
               title="LinkedIn"
               subtitle="in/davidyero"
               href={SOCIAL_LINKS.linkedin}

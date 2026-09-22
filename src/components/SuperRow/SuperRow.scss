@@ -20,15 +20,14 @@
     .super-row__chevron { color: var(--accent); }
   }
 
-  &__icon {
+  &__image {
     width: 32px;
     height: 32px;
     border-radius: $radius-xs;
     object-fit: cover;
   }
 
-  // Glifo de terminal en lugar de icono: `ls`, `~/`, `git`, `in`.
-  &__glyph {
+  &__icon {
     width: 32px;
     height: 32px;
     display: grid;
@@ -36,8 +35,8 @@
     border-radius: $radius-xs;
     background: var(--live-bg);
     color: var(--accent);
-    font-family: $font-mono;
-    font-size: $fs-small;
+
+    svg { display: block; }
   }
 
   &__body {

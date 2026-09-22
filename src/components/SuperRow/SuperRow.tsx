@@ -2,12 +2,12 @@ import React from 'react';
 import { SuperRowProps } from './SuperRow.types';
 import './SuperRow.scss';
 
-// Fila de destino: el unico patron de navegacion del sitio. Icono o glifo,
-// titulo, subtitulo y chevron. Sustituye a las tarjetas: una lista de filas
-// aguanta 17 elementos sin cansar, una rejilla de tarjetas no.
+// Fila de destino: el unico patron de navegacion del sitio. Icono, titulo,
+// subtitulo y chevron. Sustituye a las tarjetas: una lista de filas aguanta 17
+// elementos sin cansar, una rejilla de tarjetas no.
 export const SuperRow: React.FC<SuperRowProps> = ({
+  image,
   icon,
-  glyph,
   title,
   subtitle,
   onClick,
@@ -15,10 +15,10 @@ export const SuperRow: React.FC<SuperRowProps> = ({
 }) => {
   const inner = (
     <>
-      {icon ? (
-        <img src={icon} alt="" className="super-row__icon" />
+      {image ? (
+        <img src={image} alt="" className="super-row__image" />
       ) : (
-        <span className="super-row__glyph">{glyph}</span>
+        <span className="super-row__icon">{icon}</span>
       )}
       <span className="super-row__body">
         <span className="super-row__title">{title}</span>
