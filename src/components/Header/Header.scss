@@ -81,7 +81,10 @@
   &__lang-slash { color: var(--muted); }
 
   &__theme {
-    font-size: $fs-tiny;
+    // El icono es un glifo SVG, no texto: necesita caja propia para quedar en
+    // la linea base del resto de la barra.
+    display: inline-flex;
+    align-items: center;
     color: var(--muted);
     transition: color $transition-fast;
 
