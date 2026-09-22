@@ -4,7 +4,7 @@ import { appCounts, featuredApps, getAppContent, platformLabels } from '../../..
 import { useTypewriterCycle } from '../../../../shared/useTypewriterCycle';
 import { heroCountsLine, indexCountsLine } from '../../../../shared/countLines';
 import { EnrichedApp } from '../../../MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
-import { buildContactMailto } from '../../../../shared/contact';
+import { subscribe } from '../../../Writing/api/postsApi';
 
 // Trayectoria: cada paso es un cargo y la empresa donde se ejerció. Las
 // empresas son nombres propios y no pasan por i18n; el cargo sí, por eso viaja
@@ -24,7 +24,20 @@ const CAREER: ReadonlyArray<{ roleKey: string; company: string }> = [
 
 // Tira de tecnologias de la home. Son nombres propios: no pasan por i18n
 // porque se escriben igual en los dos idiomas.
-const STACK = ['React Native', 'TypeScript', 'Node', 'AI', 'Postgres', 'RevenueCat', 'AWS'];
+const STACK = [
+  'React',
+  'React Native',
+  'TypeScript',
+  'Node JS',
+  'AI',
+  'Postgres',
+  'SQL',
+  'GraphQL',
+  'RevenueCat',
+  'AWS',
+  'Firebase',
+  'SignalR',
+];
 
 export interface FeaturedRow {
   slug: string;
@@ -70,7 +83,20 @@ export const useHomeScreen = () => {
   const countsLine = heroCountsLine(appCounts, t);
   const appsRowLine = indexCountsLine(appCounts, t);
 
-  const contactHref = buildContactMailto(email, t('home.contact.subject'));
+  // Estados del formulario. `sent` no distingue alta nueva de alta repetida:
+  // para quien se suscribe es el mismo resultado, y el backend responde igual.
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
+  const submitSubscription = (): void => {
+    if (status === 'sending') return;
+    setStatus('sending');
+    subscribe(email, i18n.language)
+      .then(() => {
+        setStatus('sent');
+        setEmail('');
+      })
+      .catch(() => setStatus('error'));
+  };
 
   return {
     t,
@@ -82,7 +108,13 @@ export const useHomeScreen = () => {
     countsLine,
     appsRowLine,
     email,
-    setEmail,
-    contactHref,
+    setEmail: (value: string) => {
+      // Al volver a escribir se limpia el aviso anterior: dejarlo mientras se
+      // corrige el correo es ruido.
+      if (status !== 'idle') setStatus('idle');
+      setEmail(value);
+    },
+    status,
+    submitSubscription,
   };
 };

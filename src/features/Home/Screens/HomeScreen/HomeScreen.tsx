@@ -32,6 +32,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
           {/* Las cifras salen del catalogo, no escritas a mano: al cambiar el
               estado de una app la home no se queda mintiendo. */}
           <p className="home__counts">{countsLine}</p>
+          <p className="home__counts">{t('home.hero.reach')}</p>
           <SuperTagList tags={stack} />
         </section>
 
@@ -82,30 +83,46 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
         </section>
 
         <section className="home__contact panel">
-          <h2 className="home__contact-title">{t('home.contact.title')}</h2>
-          <p className="home__contact-text">{t('home.contact.text')}</p>
+          <h2 className="home__contact-title">{t('home.subscribe.title')}</h2>
+          <p className="home__contact-text">{t('home.subscribe.text')}</p>
 
-          {/* El unico CTA de la pagina. Sin backend detras: abre el cliente de
-              correo con la direccion del visitante ya escrita en el cuerpo. */}
+          {/* El unico CTA de la pagina. Guarda el correo en el dominio
+              portfolio del backend; no abre el cliente de correo. */}
           <form
             className="home__contact-form"
             onSubmit={(event) => {
               event.preventDefault();
-              window.location.href = view.contactHref;
+              view.submitSubscription();
             }}
           >
             <input
               type="email"
+              required
               className="home__contact-input"
-              placeholder={t('home.contact.placeholder')}
-              aria-label={t('home.contact.placeholder')}
+              placeholder={t('home.subscribe.placeholder')}
+              aria-label={t('home.subscribe.placeholder')}
               value={view.email}
               onChange={(event) => view.setEmail(event.target.value)}
             />
-            <SuperButton type="submit" variant="primary">
-              {t('home.contact.cta')}
+            <SuperButton
+              type="submit"
+              variant="primary"
+              isLoading={view.status === 'sending'}
+            >
+              {t('home.subscribe.cta')}
             </SuperButton>
           </form>
+
+          {view.status === 'sent' && (
+            <p className="home__contact-note home__contact-note--ok">
+              {t('home.subscribe.done')}
+            </p>
+          )}
+          {view.status === 'error' && (
+            <p className="home__contact-note home__contact-note--error">
+              {t('home.subscribe.error')}
+            </p>
+          )}
         </section>
 
         <SuperSocialRow />
