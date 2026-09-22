@@ -24,6 +24,9 @@
     display: inline-flex;
     align-items: center;
     gap: $space-2;
+    // El rótulo cambia de largo mientras se escribe. Sin un ancho mínimo, la
+    // marca encogería y crecería en cada ciclo y la barra parecería viva.
+    min-width: 168px;
     font-family: $font-mono;
     font-weight: 700;
     font-size: $fs-small;
@@ -51,8 +54,8 @@
       right: 0;
       flex-direction: column;
       align-items: flex-start;
-      gap: $space-3;
-      padding: $space-4;
+      gap: 0;
+      padding: $space-3 $space-6 $space-5;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
       display: none;
@@ -71,6 +74,31 @@
 
     &:hover { color: var(--text); }
     &--active { color: var(--text); }
+
+    // En el desplegable, cada opción ocupa la fila entera: pulsar al lado de la
+    // palabra tiene que abrirla igual que pulsar encima.
+    @include tablet {
+      width: 100%;
+      text-align: left;
+      padding: $space-3 0;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+
+    // Idioma y tema no son navegación: en el desplegable se separan del resto
+    // con una regla y se van al extremo derecho de su fila.
+    @include tablet {
+      width: 100%;
+      justify-content: flex-end;
+      gap: $space-5;
+      margin-top: $space-4;
+      padding-top: $space-4;
+      border-top: 1px solid var(--border);
+    }
   }
 
   &__sep {

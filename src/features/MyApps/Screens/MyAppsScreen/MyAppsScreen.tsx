@@ -1,8 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
-import { Badge } from '../../../../components/Badge/Badge';
-import { statusTone } from '../../data/registry';
+import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { paths } from '../../../../shared/paths';
 import { useMyAppsScreen } from './useMyAppsScreen';
 import { MyAppsScreenProps } from './MyAppsScreen.types';
@@ -66,7 +65,7 @@ export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
                 <span className="catalog__what">{row.what}</span>
                 <span className="catalog__platforms">{row.platforms}</span>
                 <span className="catalog__status">
-                  <Badge tone={statusTone(row.status)}>{t(`apps.status.short.${row.status}`)}</Badge>
+                  <SuperStatusBadge status={row.status} short />
                 </span>
               </button>
             ))}

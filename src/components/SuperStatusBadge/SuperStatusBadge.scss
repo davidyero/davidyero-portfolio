@@ -1,0 +1,7 @@
+@import '../../styles/abstracts/variables';
+
+.status-badge__label {
+  // El icono y la palabra van en la misma línea base; sin esto el SVG empuja
+  // el texto un pixel hacia abajo dentro de la pastilla.
+  line-height: 1;
+}

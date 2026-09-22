@@ -5,7 +5,7 @@ import { AppMeta } from '../Screens/MyAppsScreen/MyAppsScreen.types';
 export const appsMeta: Record<string, AppMeta> = {
   gazella: {
     platforms: ['ios', 'android'],
-    status: 'live',
+    status: 'offline',
     category: 'sports',
     tech: ['React Native', 'Expo', 'TypeScript'],
     version: '2.1.0',
@@ -37,7 +37,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   pronostigol: {
     platforms: ['ios', 'android'],
-    status: 'live',
+    status: 'offline',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Node'],
     version: '1.0.0',

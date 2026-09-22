@@ -52,6 +52,7 @@
     flex-direction: column;
   }
 
+
   &__head,
   &__row {
     display: grid;
@@ -129,4 +130,32 @@
     font-size: $fs-small;
     color: var(--muted);
   }
+  // Por debajo del ancho del fold la tabla deja de ser una tabla: cada app pasa
+  // a dos filas —nombre + plataformas arriba, qué hace + estado abajo— y así no
+  // hay que desplazarla en horizontal para leer el estado.
+  @include tablet {
+    &__scroll { overflow-x: visible; }
+    &__table { min-width: 0; }
+
+    // La cabecera nombra columnas que ya no existen en esta forma.
+    &__head { display: none; }
+
+    &__row {
+      grid-template-columns: 24px minmax(0, 1fr) auto;
+      grid-template-areas:
+        'icon name platforms'
+        'icon what status';
+      column-gap: $space-3;
+      row-gap: 2px;
+      align-items: start;
+      padding: $space-4 0;
+    }
+
+    &__icon { grid-area: icon; margin-top: 2px; }
+    &__name { grid-area: name; }
+    &__what { grid-area: what; }
+    &__platforms { grid-area: platforms; text-align: right; }
+    &__status { grid-area: status; justify-content: flex-end; margin-top: 4px; }
+  }
+
 }

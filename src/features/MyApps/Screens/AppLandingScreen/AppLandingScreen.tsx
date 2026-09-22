@@ -7,6 +7,7 @@ import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaLis
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { Badge } from '../../../../components/Badge/Badge';
+import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
 import {
   getAppBySlug,
@@ -14,7 +15,6 @@ import {
   getAppKind,
   kindI18nKey,
   resolveAppCtas,
-  statusTone,
   platformLabels,
 } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
@@ -72,7 +72,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             {content?.tagline && <p className="detail__tagline">{content.tagline}</p>}
             <div className="detail__badges">
               <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
-              <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
+              <SuperStatusBadge status={app.status} />
             </div>
           </div>
         </header>
