@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
 import { paths } from '../../shared/paths';
 import { HeaderProps } from './Header.types';
@@ -76,7 +77,9 @@ export const Header: React.FC<HeaderProps> = () => {
             onClick={toggleTheme}
             aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
           >
-            ◐
+            {/* Se muestra el estado actual, no el destino: el aria-label ya
+                dice a donde lleva pulsarlo. */}
+            {isDark ? <Moon size={15} /> : <Sun size={15} />}
           </button>
         </nav>
 
