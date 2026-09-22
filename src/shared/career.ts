@@ -96,9 +96,28 @@ export const durationOf = (from: string, to?: string): { years: number; months: 
   return { years: Math.floor(total / 12), months: total % 12 };
 };
 
+// Clientes por cuenta propia. Van aparte y SIN fechas a propósito: la
+// trayectoria de arriba no deja huecos, así que estos proyectos convivieron con
+// un puesto en plantilla y meterlos en la misma línea de tiempo daría a
+// entender una cronología que no es.
+// Cada cliente lleva su cargo: no todos fueron el mismo trabajo, y el rótulo
+// de la home los escribe con él.
+export interface FreelanceEntry {
+  company: string;
+  roleKey: string;
+}
+
+export const FREELANCE: readonly FreelanceEntry[] = [
+  { company: 'VASS', roleKey: 'about.role.freelance' },
+  { company: 'Cencosud', roleKey: 'about.role.freelance' },
+  { company: 'Leonisa', roleKey: 'about.role.seniorFrontend' },
+];
+
 /** Pares cargo + empresa para el rótulo que se escribe solo en la home. */
-export const careerTicker = (): ReadonlyArray<{ roleKey: string; label: string }> =>
-  CAREER.map((entry) => ({
+export const careerTicker = (): ReadonlyArray<{ roleKey: string; label: string }> => [
+  ...CAREER.map((entry) => ({
     roleKey: entry.roleKey,
     label: entry.client ? `${entry.company} · ${entry.client}` : entry.company,
-  }));
+  })),
+  ...FREELANCE.map(({ company, roleKey }) => ({ roleKey, label: company })),
+];

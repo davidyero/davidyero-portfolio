@@ -6,7 +6,7 @@ import { SuperProfileMeta } from '../../../../components/SuperProfileMeta/SuperP
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
-import { CAREER, durationOf } from '../../../../shared/career';
+import { CAREER, FREELANCE, durationOf } from '../../../../shared/career';
 import { AboutScreenProps } from './AboutScreen.types';
 import './AboutScreen.scss';
 
@@ -58,6 +58,14 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section className="about__block">
+          <span className="mono-eyebrow mono-eyebrow--section">
+            {t('about.freelance.eyebrow')}
+          </span>
+          <p className="about__freelance-text">{t('about.freelance.text')}</p>
+          <SuperTagList tags={FREELANCE.map((entry) => entry.company)} align="start" />
         </section>
 
         <section className="about__block">
