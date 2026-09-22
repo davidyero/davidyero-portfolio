@@ -40,8 +40,8 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
         subtitle={t('apps.legal.privacySubtitle', { app: app.name })}
         lastUpdated={data.lastUpdated}
         sections={data.sections}
-        onBack={() => navigate(paths.apps)}
-        onGoToApp={() => navigate(paths.app(slug ?? ''))}
+        appName={app.name}
+        onBack={() => navigate(paths.app(app.slug))}
       />
     </SuperPageTemplate>
   );

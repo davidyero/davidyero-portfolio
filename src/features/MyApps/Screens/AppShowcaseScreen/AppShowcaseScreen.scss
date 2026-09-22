@@ -25,13 +25,6 @@
     padding: $space-8 0;
   }
 
-  &__title { font-size: $fs-h1; }
-
-  &__tagline {
-    font-size: $fs-body;
-    color: var(--accent);
-    max-width: 48ch;
-  }
 
   &__badges,
   &__cta {
@@ -41,17 +34,7 @@
     gap: $space-3;
   }
 
-  &__coming-soon {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--muted);
-  }
 
-  &__description {
-    font-size: $fs-body;
-    color: var(--subtext);
-    margin: 0 auto;
-  }
 
   &__block {
     display: flex;
@@ -79,9 +62,4 @@
     gap: 10px;
   }
 
-  &__empty {
-    font-size: $fs-body;
-    color: var(--muted);
-    margin-bottom: $space-5;
-  }
 }

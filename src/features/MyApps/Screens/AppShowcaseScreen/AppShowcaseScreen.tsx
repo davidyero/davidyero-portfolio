@@ -5,6 +5,7 @@ import { FileText, ShieldCheck } from 'lucide-react';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
+import { SuperTypography } from '../../../../components/SuperTypography/SuperTypography';
 import { Badge } from '../../../../components/Badge/Badge';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
@@ -41,7 +42,9 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
     return (
       <SuperPageTemplate variant="reading">
         <div className="showcase">
-          <p className="showcase__empty">{t('apps.notFound')}</p>
+          <SuperTypography variant="body" color="muted">
+            {t('apps.notFound')}
+          </SuperTypography>
           <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.detail.back')}
           </SuperButton>
@@ -65,8 +68,14 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
 
         <section className="showcase__hero">
           <AppIcon app={app} size="xl" />
-          <h1 className="showcase__title">{app.name}</h1>
-          {content?.tagline && <p className="showcase__tagline">{content.tagline}</p>}
+          <SuperTypography as="h1" variant="display" align="center">
+            {app.name}
+          </SuperTypography>
+          {content?.tagline && (
+            <SuperTypography variant="tagline" color="accent" align="center">
+              {content.tagline}
+            </SuperTypography>
+          )}
           <div className="showcase__badges">
             <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
             <SuperStatusBadge status={app.status} />
@@ -99,12 +108,18 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
               </a>
             )}
             {!cta.hasAny && (
-              <span className="showcase__coming-soon">{t('apps.detail.comingSoon')}</span>
+              <SuperTypography as="span" variant="small" color="muted">
+                {t('apps.detail.comingSoon')}
+              </SuperTypography>
             )}
           </div>
         </section>
 
-        {content?.description && <p className="showcase__description">{content.description}</p>}
+        {content?.description && (
+          <SuperTypography variant="body" color="subtext">
+            {content.description}
+          </SuperTypography>
+        )}
 
         {features.length > 0 && (
           <section className="showcase__block">

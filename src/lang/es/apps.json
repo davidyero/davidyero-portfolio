@@ -44,7 +44,6 @@
   "apps.legal.deleteAccountSubtitle": "{{app}} · Eliminación de cuenta",
   "apps.legal.lastUpdated": "Última actualización",
   "apps.legal.backToApps": "Volver a apps",
-  "apps.legal.goToApp": "Ir a la app",
   "apps.legal.notAvailable": "Este documento no está disponible para esta app.",
   "apps.notFound": "App no encontrada.",
   "apps.catalog.eyebrow": "$ ls apps/",
