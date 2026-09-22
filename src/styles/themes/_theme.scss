@@ -32,37 +32,6 @@
   }
 }
 
-// Columna de lectura: la home, el catalogo y las fichas viven aqui. El sitio se
-// lee de arriba abajo en una sola columna; ensancharla lo convertiria en un
-// tablero, que es justo lo que no es.
-.container--reading {
-  max-width: $container-reading;
-}
-
-// Listados (apps, blog, build-in-public): los tres comparten ancho para que se
-// lean como la misma pantalla. Es mas ancho que la columna de lectura porque la
-// tabla del catalogo no cabe en 500px sin volverse ilegible.
-.container--list {
-  max-width: $container-list;
-}
-
-// Por debajo del ancho de un Z Fold abierto, ninguna columna se limita: a 800px
-// de pantalla, una columna de 500 deja 150px muertos a cada lado. El unico
-// margen que queda es el del propio .container.
-@media (max-width: 859px) {
-  .container--reading,
-  .container--list,
-  .container--doc {
-    max-width: 100%;
-  }
-}
-
-// Documentos legales: algo mas anchos, porque son texto largo y la medida
-// optima ronda los 65-75 caracteres.
-.container--doc {
-  max-width: 860px;
-}
-
 // Panel: la superficie base de todo lo que se agrupa (tarjetas, bloques de
 // contacto, paneles de contenido). Borde de 1px, sin sombra.
 .panel {

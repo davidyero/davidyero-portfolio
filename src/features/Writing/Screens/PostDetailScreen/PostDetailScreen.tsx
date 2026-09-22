@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { usePostDetailScreen } from './usePostDetailScreen';
 import { PostDetailScreenProps } from './PostDetailScreen.types';
@@ -16,8 +16,8 @@ export const PostDetailScreen: React.FC<PostDetailScreenProps> = ({ kind }) => {
   const backTo = kind === 'BLOG' ? paths.blog : paths.log;
 
   return (
-    <PageLayout>
-      <div className="post container container--doc">
+    <SuperPageTemplate variant="doc">
+      <div className="post">
         <button className="post__back" onClick={() => navigate(backTo)}>
           ‹ {t(`writing.${ns}.title`)}
         </button>
@@ -59,6 +59,6 @@ export const PostDetailScreen: React.FC<PostDetailScreenProps> = ({ kind }) => {
           </article>
         )}
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

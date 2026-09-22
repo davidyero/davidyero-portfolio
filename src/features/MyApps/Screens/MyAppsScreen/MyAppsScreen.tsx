@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
-import { SuperListHeader } from '../../../../components/SuperListHeader/SuperListHeader';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { paths } from '../../../../shared/paths';
 import { useMyAppsScreen } from './useMyAppsScreen';
@@ -16,25 +15,26 @@ export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
   const { t, filter, setFilter, filters, rows, total, subtitle } = useMyAppsScreen();
 
   return (
-    <PageLayout>
-      <div className="catalog container container--list">
-        <SuperListHeader
-          eyebrow={t('apps.catalog.eyebrow')}
-          title={t('apps.catalog.title', { count: total })}
-          subtitle={subtitle}
-        >
-          <div className="catalog__filters">
-            {filters.map((f) => (
-              <button
-                key={f.key}
-                className={`catalog__filter ${filter === f.key ? 'catalog__filter--active' : ''}`}
-                onClick={() => setFilter(f.key)}
-              >
-                [ {t(f.labelKey)} ]
-              </button>
-            ))}
-          </div>
-        </SuperListHeader>
+    <SuperPageTemplate
+      variant="list"
+      eyebrow={t('apps.catalog.eyebrow')}
+      title={t('apps.catalog.title', { count: total })}
+      subtitle={subtitle}
+      headerExtra={
+        <div className="catalog__filters">
+          {filters.map((f) => (
+            <button
+              key={f.key}
+              className={`catalog__filter ${filter === f.key ? 'catalog__filter--active' : ''}`}
+              onClick={() => setFilter(f.key)}
+            >
+              [ {t(f.labelKey)} ]
+            </button>
+          ))}
+        </div>
+      }
+    >
+      <div className="catalog">
 
         {/* La tabla es el unico elemento del sitio que puede desplazarse en
             horizontal: por debajo de su ancho minimo las columnas dejarian de
@@ -75,6 +75,6 @@ export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
 
         {rows.length === 0 && <p className="catalog__empty">{t('apps.catalog.empty')}</p>}
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

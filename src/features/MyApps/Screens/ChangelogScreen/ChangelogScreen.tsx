@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { ChangelogItem } from '../../Components/ChangelogItem/ChangelogItem';
 import { getAppBySlug, getAppContent } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
@@ -21,11 +21,11 @@ export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
 
   if (!app) {
     return (
-      <PageLayout>
-        <div className="changelog container container--reading">
+      <SuperPageTemplate variant="reading">
+        <div className="changelog">
           <p className="changelog__empty">{t('apps.notFound')}</p>
         </div>
-      </PageLayout>
+      </SuperPageTemplate>
     );
   }
 
@@ -35,8 +35,8 @@ export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
   );
 
   return (
-    <PageLayout>
-      <div className="changelog container container--reading">
+    <SuperPageTemplate variant="reading">
+      <div className="changelog">
         <button className="changelog__back" onClick={() => navigate(paths.app(slug ?? ''))}>
           ‹ {app.name}
         </button>
@@ -74,6 +74,6 @@ export const ChangelogScreen: React.FC<ChangelogScreenProps> = () => {
           <p className="changelog__empty">{t('apps.changelog.empty')}</p>
         )}
       </div>
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };

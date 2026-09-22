@@ -55,9 +55,12 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
-      padding: $space-3 $space-6 $space-5;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
+      padding: $space-2 $space-6 $space-4;
+      // Superficie propia, no el fondo de la pagina: el desplegable se abre
+      // ENCIMA del contenido y con el mismo color no se sabia donde acababa.
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-md);
       display: none;
     }
 
@@ -80,7 +83,7 @@
     @include tablet {
       width: 100%;
       text-align: left;
-      padding: $space-3 0;
+      padding: $space-2 0;
     }
   }
 
@@ -95,8 +98,8 @@
       width: 100%;
       justify-content: flex-end;
       gap: $space-5;
-      margin-top: $space-4;
-      padding-top: $space-4;
+      margin-top: $space-3;
+      padding-top: $space-3;
       border-top: 1px solid var(--border);
     }
   }
@@ -135,7 +138,7 @@
   &__burger {
     display: none;
     font-family: $font-mono;
-    font-size: $fs-h3;
+    font-size: 1.5rem;
     line-height: 1;
     color: var(--text);
 

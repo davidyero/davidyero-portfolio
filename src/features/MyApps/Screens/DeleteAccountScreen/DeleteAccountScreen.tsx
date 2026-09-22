@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
 import { getAppBySlug } from '../../data/registry';
@@ -21,8 +21,8 @@ export const DeleteAccountScreen: React.FC<DeleteAccountScreenProps> = () => {
 
   if (!app || !app.accountDeletion) {
     return (
-      <PageLayout>
-        <div className="legal container container--doc">
+      <SuperPageTemplate variant="doc">
+        <div className="legal">
           <p className="legal__empty">
             {app ? t('apps.legal.notAvailable') : t('apps.notFound')}
           </p>
@@ -30,14 +30,14 @@ export const DeleteAccountScreen: React.FC<DeleteAccountScreenProps> = () => {
             ‹ {t('apps.legal.backToApps')}
           </SuperButton>
         </div>
-      </PageLayout>
+      </SuperPageTemplate>
     );
   }
 
   const data = app.accountDeletion[lang];
 
   return (
-    <PageLayout>
+    <SuperPageTemplate variant="doc">
       <LegalDoc
         title={t('apps.legal.deleteAccount.title')}
         subtitle={t('apps.legal.deleteAccountSubtitle', { app: app.name })}
@@ -46,6 +46,6 @@ export const DeleteAccountScreen: React.FC<DeleteAccountScreenProps> = () => {
         onBack={() => navigate(paths.apps)}
         onGoToApp={() => navigate(paths.app(slug ?? ''))}
       />
-    </PageLayout>
+    </SuperPageTemplate>
   );
 };
