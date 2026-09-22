@@ -10,7 +10,7 @@
   "home.contact.placeholder": "you@email.com",
   "home.contact.cta": "WriteMe",
   "home.contact.subject": "Shipping an app",
-  "home.meta.since": "developer since:",
+  "home.meta.since": "building since:",
   "home.meta.experience": "experience:",
   "home.hero.counts.total": "{{count}} products of my own",
   "home.hero.counts.live": "{{count}} in production",
