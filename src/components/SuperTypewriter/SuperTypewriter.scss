@@ -1,0 +1,28 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.typewriter {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: $font-mono;
+
+  // Barra vertical fina, como el cursor de un editor de texto. Parpadea a un
+  // ritmo lento: a 530ms (el del terminal) compite con la lectura.
+  &__caret {
+    display: inline-block;
+    width: 1px;
+    height: 1.05em;
+    background: var(--accent);
+    animation: typewriter-caret 1s step-end infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+}
+
+@keyframes typewriter-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

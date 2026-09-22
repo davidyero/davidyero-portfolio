@@ -4,6 +4,21 @@ import { appsRegistry, featuredApps, getAppContent, platformLabels } from '../..
 import { EnrichedApp } from '../../../MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
 import { buildContactMailto } from '../../../../shared/contact';
 
+// Empresas por las que ha pasado. Son nombres propios: no pasan por i18n.
+// La fila de experiencia las escribe y las borra una a una porque las nueve
+// juntas no caben en una linea de metadatos.
+const COMPANIES = [
+  'Integra IT',
+  'Ceiba',
+  'Scotiabank Colpatria',
+  'Mercado Libre',
+  'Conekta',
+  'Qik - Banco República Dominicana',
+  'Cencosud',
+  'Rappi',
+  'VASS',
+];
+
 // Tira de tecnologias de la home. Son nombres propios: no pasan por i18n
 // porque se escriben igual en los dos idiomas.
 const STACK = ['React Native', 'TypeScript', 'Node', 'AI', 'Postgres', 'RevenueCat', 'AWS'];
@@ -54,5 +69,5 @@ export const useHomeScreen = () => {
 
   const contactHref = buildContactMailto(email, t('home.contact.subject'));
 
-  return { t, stack: STACK, featured, counts, email, setEmail, contactHref };
+  return { t, stack: STACK, companies: COMPANIES, featured, counts, email, setEmail, contactHref };
 };

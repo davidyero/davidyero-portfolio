@@ -11,9 +11,6 @@
   "home.contact.cta": "WriteMe",
   "home.contact.subject": "Shipping an app",
   "home.meta.since": "developer slave since:",
-  "home.meta.location": "location:",
-  "home.meta.locationValue": "Bogotá, Colombia",
-  "home.meta.work": "work:",
-  "home.meta.workValue": "solo · design, backend, stores and deploy",
-  "home.hero.counts": "{{total}} products of my own · {{live}} in production · {{beta}} in beta · {{soon}} coming · {{offline}} out of service"
+  "home.hero.counts": "{{total}} products of my own · {{live}} in production · {{beta}} in beta · {{soon}} coming · {{offline}} out of service",
+  "home.meta.experience": "experience:"
 }

@@ -10,7 +10,9 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 118px 1fr;
+    // La columna se ajusta a la etiqueta mas larga en vez de a un ancho fijo:
+    // con 118px, "esclavo desarrollador desde:" se partia en tres lineas.
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: $space-3;
 
     // La columna fija deja de tener sentido cuando no cabe: en movil la

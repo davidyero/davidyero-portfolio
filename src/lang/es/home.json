@@ -11,9 +11,6 @@
   "home.contact.cta": "EscribeMe",
   "home.contact.subject": "Una app publicada",
   "home.meta.since": "esclavo desarrollador desde:",
-  "home.meta.location": "ubicación:",
-  "home.meta.locationValue": "Bogotá, Colombia",
-  "home.meta.work": "trabajo:",
-  "home.meta.workValue": "solo · diseño, backend, tiendas y deploy",
-  "home.hero.counts": "{{total}} productos propios · {{live}} en producción · {{beta}} en beta · {{soon}} próximos · {{offline}} sin servicio"
+  "home.hero.counts": "{{total}} productos propios · {{live}} en producción · {{beta}} en beta · {{soon}} próximos · {{offline}} sin servicio",
+  "home.meta.experience": "experiencia:"
 }
