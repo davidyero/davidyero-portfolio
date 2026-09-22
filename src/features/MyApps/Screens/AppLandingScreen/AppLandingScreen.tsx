@@ -14,6 +14,7 @@ import {
   getAppKind,
   kindI18nKey,
   resolveAppCtas,
+  statusTone,
   platformLabels,
 } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
@@ -24,8 +25,6 @@ import googlePlayEN from '../../../../assets/images/stores/googlePlayIconEN.png'
 import googlePlayES from '../../../../assets/images/stores/googleplayIconES.png';
 import './AppLandingScreen.scss';
 
-const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
-  status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
 
 // Ficha de app leida como el manifest de un paquete: identidad arriba,
 // metadatos en filas clave:valor, descarga, y luego el contenido largo.
@@ -132,7 +131,13 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             </div>
           )}
 
-          {!cta.hasAny && <span className="detail__coming-soon">{t('apps.detail.comingSoon')}</span>}
+          {app.status === 'offline' ? (
+            <p className="detail__notice">{t('apps.detail.offlineNotice')}</p>
+          ) : (
+            !cta.hasAny && (
+              <span className="detail__coming-soon">{t('apps.detail.comingSoon')}</span>
+            )
+          )}
         </div>
 
         {tech.length > 0 && (
@@ -157,7 +162,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           <span className="mono-eyebrow mono-eyebrow--section">{t('apps.detail.more')}</span>
           <div className="detail__rows">
             <SuperRow
-              glyph="↗"
+              glyph="web"
               title={t('apps.detail.viewLanding')}
               subtitle={paths.appLanding(app.slug)}
               onClick={() => navigate(paths.appLanding(app.slug))}

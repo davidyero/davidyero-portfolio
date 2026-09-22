@@ -1,0 +1,33 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space-2;
+
+  &__glyph {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: $radius-md;
+    transition: color $transition-fast, border-color $transition-fast;
+
+    svg { display: block; }
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  }
+}

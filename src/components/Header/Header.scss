@@ -18,12 +18,23 @@
     height: 56px;
   }
 
+  // La marca va en mono como el resto de la barra: era el unico texto en Inter
+  // fuera de los titulares, y se leia como de otro sitio.
   &__brand {
-    font-family: $font-sans;
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    font-family: $font-mono;
     font-weight: 700;
-    font-size: $fs-body;
-    letter-spacing: $tracking-tight;
+    font-size: $fs-small;
+    letter-spacing: 0;
     color: var(--text);
+  }
+
+  &__brand-mark {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
   }
 
   &__nav {

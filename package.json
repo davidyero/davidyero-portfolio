@@ -1,6 +1,6 @@
 {
   "name": "davidyero",
-  "version": "0.15.1",
+  "version": "0.16.0",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -17,6 +17,7 @@
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-i18next": "^16.4.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.10.1",
     "react-scripts": "5.0.1",
     "sass": "^1.95.0",

@@ -137,4 +137,8 @@ $shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.30);
 $container-max: 1200px;
 // El sitio es una columna de lectura, no un tablero: el ancho util es el de un
 // documento. 1200 se queda para lo que de verdad necesita extenderse.
-$container-reading: 760px;
+$container-reading: 500px;
+// El catalogo es la excepcion: es una tabla de cinco columnas. A 500px la
+// columna "que hace" se corta a tres palabras y las plataformas parten en dos
+// lineas, asi que tiene su propio ancho.
+$container-catalog: 760px;

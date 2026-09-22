@@ -4,8 +4,10 @@ import {
   AppKind,
   AppMeta,
   AppPlatform,
+  AppStatus,
   EnrichedApp,
 } from '../Screens/MyAppsScreen/MyAppsScreen.types';
+import { BadgeTone } from '../../../components/Badge/Badge.types';
 import { appsData } from './appsData';
 import { appsMeta } from './appsMeta';
 import { AppLocalizedContent, appContentEn, appContentEs } from './content/appContent';
@@ -60,6 +62,14 @@ export const availableCategories = (): AppCategory[] => {
   return order.filter((c) => present.has(c));
 };
 
+// Tono del badge para cada estado. Vive aqui y no en cada pantalla: estaba
+// copiado en el catalogo, la ficha y la landing, y al añadir `offline` las tres
+// habrian tenido que cambiar a la vez.
+export const statusTone = (status: AppStatus): BadgeTone => status;
+
+/** Una app sin servicio no se ofrece para descargar aunque siga en la tienda. */
+export const isOffline = (app: EnrichedApp): boolean => app.status === 'offline';
+
 // A link counts only if it is a real, non-placeholder URL.
 export const isRealUrl = (url?: string): boolean =>
   !!url && url.trim() !== '' && url.trim() !== '#';
@@ -93,6 +103,13 @@ export interface AppCtaState {
 
 // Adaptive CTAs: stores for mobile, "open app" for web, repo when present.
 export const resolveAppCtas = (app: EnrichedApp): AppCtaState => {
+  // Offline: se ocultan tienda y "abrir app". Mandar a alguien a descargar algo
+  // que no funciona es peor que no ofrecer nada. El repo si se mantiene.
+  if (isOffline(app)) {
+    const showRepo = isRealUrl(app.repoUrl);
+    return { showAppStore: false, showGooglePlay: false, showWeb: false, showRepo, hasAny: showRepo };
+  }
+
   const showAppStore = app.platforms.includes('ios') && isRealUrl(app.appStoreUrl);
   const showGooglePlay =
     app.platforms.includes('android') && isRealUrl(app.playStoreUrl);

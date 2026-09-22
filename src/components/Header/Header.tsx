@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
+import { BrandMark } from '../BrandMark/BrandMark';
 import { paths } from '../../shared/paths';
 import { HeaderProps } from './Header.types';
 import './Header.scss';
@@ -15,6 +16,8 @@ interface NavItem {
 const navItems: NavItem[] = [
   { key: 'common.nav.home', path: paths.home },
   { key: 'common.nav.apps', path: paths.apps },
+  { key: 'common.nav.blog', path: paths.blog },
+  { key: 'common.nav.log', path: paths.log },
   { key: 'common.nav.about', path: paths.aboutMe },
 ];
 
@@ -44,6 +47,7 @@ export const Header: React.FC<HeaderProps> = () => {
     <header className="header">
       <div className="header__inner container">
         <button className="header__brand" onClick={() => go(paths.home)}>
+          <BrandMark size="small" className="header__brand-mark" />
           David Yepes
         </button>
 

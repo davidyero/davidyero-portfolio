@@ -45,7 +45,9 @@ export interface App {
 
 // ---- App hub metadata (registry layer) ----
 export type AppPlatform = 'ios' | 'android' | 'web';
-export type AppStatus = 'live' | 'beta' | 'soon';
+// `offline` = publicada en su dia pero hoy sin servicio: la ficha de tienda
+// puede seguir viva, la app no funciona. No se ofrece descargarla.
+export type AppStatus = 'live' | 'beta' | 'soon' | 'offline';
 export type AppCategory = 'sports' | 'productivity' | 'utility' | 'entertainment';
 export type AppKind = 'web' | 'mobile' | 'both';
 

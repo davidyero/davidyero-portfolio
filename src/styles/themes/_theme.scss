@@ -39,6 +39,11 @@
   max-width: $container-reading;
 }
 
+// Catalogo: una tabla no cabe en la columna de lectura sin volverse ilegible.
+.container--catalog {
+  max-width: $container-catalog;
+}
+
 // Documentos legales: algo mas anchos, porque son texto largo y la medida
 // optima ronda los 65-75 caracteres.
 .container--doc {
@@ -75,19 +80,20 @@
   }
 }
 
-// Official App Store / Google Play badges rendered at an identical footprint so
-// the two download buttons always match in size. The Google Play PNG ships with
-// built-in transparent padding, so its image is scaled up to visually match the
-// tighter App Store SVG.
+// Badges oficiales de App Store y Google Play. Las dos piezas vienen con su
+// propia esquina redondeada dibujada dentro de la imagen, y no coinciden entre
+// si: el contenedor las recorta a un mismo radio para que se lean como un par.
+// El PNG de Google trae margen transparente de fabrica, por eso su imagen se
+// escala hasta igualar visualmente al SVG de Apple, mas ajustado.
 .store-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 184px;
-  height: 56px;
+  width: 148px;
+  height: 46px;
   flex: 0 0 auto;
   overflow: hidden;
-  border-radius: $radius-btn;
+  border-radius: $radius-sm;
   transition: opacity $transition-fast;
 
   img {
@@ -103,7 +109,8 @@
   &:hover { opacity: 0.85; }
 
   @include mobile {
-    width: 160px;
-    height: 50px;
+    width: 132px;
+    height: 41px;
   }
 }
+

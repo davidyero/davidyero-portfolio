@@ -5,6 +5,7 @@ import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
+import { SuperSocialRow } from '../../../../components/SuperSocialRow/SuperSocialRow';
 import { BrandMark } from '../../../../components/BrandMark/BrandMark';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
 import { paths } from '../../../../shared/paths';
@@ -26,6 +27,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
           <h1 className="home__name">David Yepes</h1>
           <p className="home__line">{t('home.hero.title')}</p>
           <p className="home__facts">{t('home.hero.facts')}</p>
+          {/* Las cifras salen del catalogo, no escritas a mano: al cambiar el
+              estado de una app la home no se queda mintiendo. */}
+          <p className="home__counts">{t('home.hero.counts', { ...counts })}</p>
           <SuperTagList tags={stack} />
         </section>
 
@@ -101,6 +105,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
             </SuperButton>
           </form>
         </section>
+
+        <SuperSocialRow />
 
         <SuperMetaList
           entries={[

@@ -85,6 +85,7 @@ export const useMyAppsScreen = () => {
       live: byStatus('live'),
       beta: byStatus('beta'),
       soon: byStatus('soon'),
+      offline: byStatus('offline'),
       android: byPlatform('android'),
       ios: byPlatform('ios'),
       web: byPlatform('web'),

@@ -1,18 +1,19 @@
 {
-  "home.hero.title": "Publico mis propias apps. Hay 17 en las tiendas.",
-  "home.hero.facts": "Diseño, programo y publico 17 apps propias: 12 en producción, 3 en beta, 2 por salir. 11 Android · 7 iOS · 6 web. 13 fichas vivas en App Store y Google Play, un backend de ~20 dominios y un backoffice para todas.",
+  "home.hero.title": "Construyo software, publico productos y experimento con IA.",
+  "home.hero.facts": "Frontend Tech Lead de día, indie developer el resto del tiempo. Diseño, desarrollo y publico aplicaciones reales para iOS, Android y Web, explorando además IA, automatización y productos self-hosted.",
   "home.featured.eyebrow": "// destacadas",
   "home.index.eyebrow": "// ir a",
-  "home.index.apps": "Las {{total}} apps: {{live}} live · {{beta}} beta · {{soon}} soon",
+  "home.index.apps": "Las {{total}} apps: {{live}} live · {{beta}} beta · {{soon}} soon · {{offline}} offline",
   "home.index.about": "2017 → hoy · tres etapas",
   "home.contact.title": "¿Necesitas una app publicada?",
   "home.contact.text": "Escríbeme y te respondo con lo mismo que hago en mis apps: alcance, versión y fecha de publicación. Sin propuesta de 20 páginas.",
   "home.contact.placeholder": "tu@correo.com",
-  "home.contact.cta": "escribeMe",
+  "home.contact.cta": "EscribeMe",
   "home.contact.subject": "Una app publicada",
-  "home.meta.since": "activo desde:",
+  "home.meta.since": "esclavo desarrollador desde:",
   "home.meta.location": "ubicación:",
   "home.meta.locationValue": "Bogotá, Colombia",
   "home.meta.work": "trabajo:",
-  "home.meta.workValue": "solo · diseño, backend, tiendas y deploy"
+  "home.meta.workValue": "solo · diseño, backend, tiendas y deploy",
+  "home.hero.counts": "{{total}} productos propios · {{live}} en producción · {{beta}} en beta · {{soon}} próximos · {{offline}} sin servicio"
 }

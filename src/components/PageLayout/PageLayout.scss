@@ -1,22 +1,8 @@
-@import '../../styles/abstracts/variables';
-@import '../../styles/abstracts/mixins';
-
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background:
-    radial-gradient(1100px 520px at 82% -8%, var(--gradient-soft), transparent 62%),
-    var(--bg);
-}
-
-.page__main {
-  flex: 1;
-  width: 100%;
-  // room for the fixed header
-  padding-top: 84px;
-
-  @include mobile {
-    padding-top: 72px;
-  }
-}
+// El shell (.page y .page__main) se define UNA vez, en styles/themes/_theme.scss.
+// Aquí se redefinía con valores del diseño anterior —84px de hueco para un
+// header que era `fixed` y ya no lo es, y un degradado radial de fondo— y como
+// este archivo se carga después, ganaba: el fondo plano del sistema no llegaba
+// a verse en ninguna pantalla.
+//
+// Este componente no aporta estilos propios; se deja el archivo con la nota
+// para que nadie vuelva a duplicar el shell aquí.

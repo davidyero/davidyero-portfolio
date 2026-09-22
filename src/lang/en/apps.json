@@ -1,6 +1,6 @@
 {
   "apps.catalog.title": "{{count}} apps",
-  "apps.catalog.subtitle": "{{live}} live · {{beta}} beta · {{soon}} soon — {{android}} Android · {{ios}} iOS · {{web}} web",
+  "apps.catalog.subtitle": "{{live}} live · {{beta}} beta · {{soon}} soon · {{offline}} offline — {{android}} Android · {{ios}} iOS · {{web}} web",
   "apps.catalog.filter.all": "all",
   "apps.catalog.filter.mobile": "mobile",
   "apps.catalog.filter.web": "web",
@@ -20,8 +20,8 @@
   "apps.showcase.featuresTitle": "// everything it does",
   "apps.showcase.screenshotsTitle": "// screenshots",
   "apps.showcase.legal": "// legal",
-  "apps.detail.openApp": "Open app",
-  "apps.detail.viewRepo": "View repo",
+  "apps.detail.openApp": "OpenApp",
+  "apps.detail.viewRepo": "ViewRepo",
   "apps.detail.changelog": "Changelog",
   "apps.detail.terms": "Terms",
   "apps.detail.privacy": "Privacy",
@@ -60,5 +60,8 @@
   "apps.changelog.count": "{{count}} released versions",
   "apps.status.short.live": "LIVE",
   "apps.status.short.beta": "BETA",
-  "apps.status.short.soon": "SOON"
+  "apps.status.short.soon": "SOON",
+  "apps.status.offline": "No service",
+  "apps.status.short.offline": "OFFLINE",
+  "apps.detail.offlineNotice": "This app is out of service: its store listing is still up, but it does not work today. That is why there is no download button."
 }

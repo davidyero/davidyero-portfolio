@@ -3,6 +3,10 @@
 export const paths = {
   home: '/',
   aboutMe: '/about-me',
+  blog: '/blog',
+  blogPost: (slug: string) => `/blog/${slug}`,
+  log: '/build-in-public',
+  logPost: (slug: string) => `/build-in-public/${slug}`,
   apps: '/apps',
   app: (slug: string) => `/app/${slug}`,
   appLanding: (slug: string) => `/app/${slug}/landing`,

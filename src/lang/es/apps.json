@@ -1,6 +1,6 @@
 {
   "apps.catalog.title": "{{count}} apps",
-  "apps.catalog.subtitle": "{{live}} live · {{beta}} beta · {{soon}} soon — {{android}} Android · {{ios}} iOS · {{web}} web",
+  "apps.catalog.subtitle": "{{live}} live · {{beta}} beta · {{soon}} soon · {{offline}} offline — {{android}} Android · {{ios}} iOS · {{web}} web",
   "apps.catalog.filter.all": "todas",
   "apps.catalog.filter.mobile": "mobile",
   "apps.catalog.filter.web": "web",
@@ -20,8 +20,8 @@
   "apps.showcase.featuresTitle": "// todo lo que hace",
   "apps.showcase.screenshotsTitle": "// capturas",
   "apps.showcase.legal": "// legales",
-  "apps.detail.openApp": "Abrir app",
-  "apps.detail.viewRepo": "Ver repo",
+  "apps.detail.openApp": "AbrirApp",
+  "apps.detail.viewRepo": "VerRepo",
   "apps.detail.changelog": "Changelog",
   "apps.detail.terms": "Términos",
   "apps.detail.privacy": "Privacidad",
@@ -60,5 +60,8 @@
   "apps.changelog.count": "{{count}} versiones publicadas",
   "apps.status.short.live": "LIVE",
   "apps.status.short.beta": "BETA",
-  "apps.status.short.soon": "SOON"
+  "apps.status.short.soon": "SOON",
+  "apps.status.offline": "Sin servicio",
+  "apps.status.short.offline": "OFFLINE",
+  "apps.detail.offlineNotice": "Esta app está fuera de servicio: su ficha sigue en la tienda, pero hoy no funciona. Por eso no hay botón de descarga."
 }

@@ -75,6 +75,17 @@
     gap: $space-3;
   }
 
+  // Aviso de app sin servicio. Usa los tokens del badge offline para que el
+  // texto contraste con su propio fondo en claro y en oscuro.
+  &__notice {
+    font-size: $fs-small;
+    color: var(--offline-fg);
+    background: var(--offline-bg);
+    border-radius: $radius-md;
+    padding: $space-3 $space-4;
+    max-width: none;
+  }
+
   &__coming-soon {
     font-family: $font-mono;
     font-size: $fs-small;

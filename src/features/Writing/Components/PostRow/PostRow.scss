@@ -1,0 +1,56 @@
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/abstracts/mixins';
+
+.post-row {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  width: 100%;
+  text-align: left;
+  padding: $space-4;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-md;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: var(--accent);
+    .post-row__title { color: var(--accent); }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-2;
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    color: var(--muted);
+  }
+
+  &__date { color: var(--subtext); }
+
+  &__tag {
+    padding: 2px 6px;
+    border-radius: $radius-btn;
+    background: var(--surface-0);
+  }
+
+  &__lang { color: var(--yellow); }
+
+  &__title {
+    font-family: $font-mono;
+    font-size: $fs-h3;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text);
+    transition: color $transition-fast;
+  }
+
+  &__summary {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    line-height: 1.7;
+    color: var(--subtext);
+  }
+}
