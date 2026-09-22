@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
 import { BrandMark } from '../BrandMark/BrandMark';
+import { SuperTypewriter } from '../SuperTypewriter/SuperTypewriter';
+import { useTypewriterCycle } from '../../shared/useTypewriterCycle';
 import { paths } from '../../shared/paths';
 import { HeaderProps } from './Header.types';
 import './Header.scss';
@@ -21,12 +23,24 @@ const navItems: NavItem[] = [
   { key: 'common.nav.about', path: paths.aboutMe },
 ];
 
+// Rótulos que se turnan en la marca. El nombre es un nombre propio y no pasa
+// por i18n; los cargos sí.
+const BRAND_KEYS = [
+  'header.brand.name',
+  'header.brand.frontend',
+  'header.brand.techLead',
+  'header.brand.indie',
+];
+
 export const Header: React.FC<HeaderProps> = () => {
   const { toggleTheme, isDark } = useTheme();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const brandSteps = React.useMemo(() => BRAND_KEYS.map((key) => [t(key)]), [t]);
+  const { lines: brandLines, isStill: brandStill } = useTypewriterCycle(brandSteps);
 
   const isActive = (path: string): boolean =>
     path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
@@ -48,7 +62,7 @@ export const Header: React.FC<HeaderProps> = () => {
       <div className="header__inner container">
         <button className="header__brand" onClick={() => go(paths.home)}>
           <BrandMark size="small" className="header__brand-mark" />
-          David Yepes
+          <SuperTypewriter text={brandLines[0] ?? ''} showCaret={!brandStill} />
         </button>
 
         <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
@@ -62,29 +76,33 @@ export const Header: React.FC<HeaderProps> = () => {
             </button>
           ))}
 
-          <span className="header__sep" aria-hidden="true">
-            |
-          </span>
+          {/* Idioma y tema van juntos: en el menú desplegable se separan del
+              resto con una regla y se alinean a la derecha de la fila. */}
+          <div className="header__controls">
+            <span className="header__sep" aria-hidden="true">
+              |
+            </span>
 
-          <button
-            className="header__lang"
-            onClick={toggleLang}
-            aria-label={currentLang === 'es' ? 'Switch to English' : 'Cambiar a español'}
-          >
-            <span className={currentLang === 'es' ? 'header__lang-on' : ''}>ES</span>
-            <span className="header__lang-slash">/</span>
-            <span className={currentLang === 'en' ? 'header__lang-on' : ''}>EN</span>
-          </button>
+            <button
+              className="header__lang"
+              onClick={toggleLang}
+              aria-label={currentLang === 'es' ? 'Switch to English' : 'Cambiar a español'}
+            >
+              <span className={currentLang === 'es' ? 'header__lang-on' : ''}>ES</span>
+              <span className="header__lang-slash">/</span>
+              <span className={currentLang === 'en' ? 'header__lang-on' : ''}>EN</span>
+            </button>
 
-          <button
-            className="header__theme"
-            onClick={toggleTheme}
-            aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
-          >
-            {/* Se muestra el estado actual, no el destino: el aria-label ya
-                dice a donde lleva pulsarlo. */}
-            {isDark ? <Moon size={15} /> : <Sun size={15} />}
-          </button>
+            <button
+              className="header__theme"
+              onClick={toggleTheme}
+              aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+            >
+              {/* Se muestra el estado actual, no el destino: el aria-label ya
+                  dice a donde lleva pulsarlo. */}
+              {isDark ? <Moon size={15} /> : <Sun size={15} />}
+            </button>
+          </div>
         </nav>
 
         <button

@@ -5,6 +5,7 @@ import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { Badge } from '../../../../components/Badge/Badge';
+import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
 import {
   getAppBySlug,
@@ -12,7 +13,6 @@ import {
   getAppKind,
   kindI18nKey,
   resolveAppCtas,
-  statusTone,
 } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
 import { AppShowcaseScreenProps } from './AppShowcaseScreen.types';
@@ -68,7 +68,7 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
           {content?.tagline && <p className="showcase__tagline">{content.tagline}</p>}
           <div className="showcase__badges">
             <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
-            <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
+            <SuperStatusBadge status={app.status} />
           </div>
 
           <div className="showcase__cta">

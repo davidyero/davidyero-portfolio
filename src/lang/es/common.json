@@ -6,7 +6,17 @@
   "common.footer.version": "Versión de la app",
   "common.nav.blog": "blog",
   "common.nav.log": "log",
-  "profile.meta.since": "usuario.desde",
-  "profile.meta.role": "usuario.cargo",
-  "profile.meta.experience": "usuario.experiencia"
+  "header.brand.name": "David Yepes",
+  "header.brand.frontend": "Frontend",
+  "header.brand.techLead": "Líder técnico",
+  "header.brand.indie": "Indie Creator",
+  "profile.meta.since": "usuario.trabajo.desde",
+  "profile.meta.role": "usuario.trabajo.cargo",
+  "profile.meta.experience": "usuario.trabajo.experiencia",
+  "profile.meta.year": "año",
+  "profile.meta.years": "años",
+  "profile.meta.month": "mes",
+  "profile.meta.months": "meses",
+  "profile.meta.day": "día",
+  "profile.meta.days": "días"
 }

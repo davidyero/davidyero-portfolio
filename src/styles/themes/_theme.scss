@@ -44,6 +44,17 @@
   max-width: $container-catalog;
 }
 
+// Por debajo del ancho de un Z Fold abierto, ninguna columna se limita: a 800px
+// de pantalla, una columna de 500 deja 150px muertos a cada lado. El unico
+// margen que queda es el del propio .container.
+@media (max-width: 859px) {
+  .container--reading,
+  .container--catalog,
+  .container--doc {
+    max-width: 100%;
+  }
+}
+
 // Documentos legales: algo mas anchos, porque son texto largo y la medida
 // optima ronda los 65-75 caracteres.
 .container--doc {
