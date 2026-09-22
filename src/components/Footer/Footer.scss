@@ -2,6 +2,9 @@
 @import '../../styles/abstracts/mixins';
 
 .footer {
+  // Fondo solido como el del header: sin el, las scanlines de la pagina se ven
+  // a traves y el pie no cierra, se confunde con el contenido.
+  background: var(--bg);
   border-top: 1px solid var(--border);
   margin-top: $space-16;
 
