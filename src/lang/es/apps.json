@@ -69,6 +69,6 @@
   "apps.catalog.count.android": "{{count}} Android",
   "apps.catalog.count.ios": "{{count}} iOS",
   "apps.catalog.count.web": "{{count}} web",
-  "apps.reach.footballCupSimulator": "+3.500 descargas · +1.500 usuarios registrados",
+  "apps.reach.footballCupSimulator": "**+3.500** descargas · **+1.500** usuarios registrados · **5** suscripciones",
   "apps.detail.meta.reach": "alcance:"
 }

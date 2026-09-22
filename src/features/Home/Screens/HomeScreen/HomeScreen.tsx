@@ -11,6 +11,7 @@ import { SuperTypography } from '../../../../components/SuperTypography/SuperTyp
 import { SuperSocialRow } from '../../../../components/SuperSocialRow/SuperSocialRow';
 import { BrandGlyph } from '../../../../components/SuperSocialRow/BrandGlyph';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
+import { withEmphasis } from '../../../../shared/emphasis';
 import { paths } from '../../../../shared/paths';
 import { useHomeScreen } from './useHomeScreen';
 import { HomeScreenProps } from './HomeScreen.types';
@@ -43,7 +44,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
                 icon={<Smartphone size={16} />}
                 title={app.name}
                 subtitle={app.subtitle}
-                {...(app.reachKey ? { meta: t(app.reachKey) } : {})}
+                {...(app.reachKey ? { meta: withEmphasis(t(app.reachKey)) } : {})}
                 onClick={() => navigate(paths.app(app.slug))}
               />
             ))}

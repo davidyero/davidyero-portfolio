@@ -75,5 +75,11 @@
   margin-top: 2px;
   font-family: $font-mono;
   font-size: $fs-small;
-  color: var(--text-muted);
+  color: var(--muted);
+
+  // La cifra es el dato; el resto de la frase solo la explica.
+  strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
 }

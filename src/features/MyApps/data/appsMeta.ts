@@ -140,4 +140,14 @@ export const appsMeta: Record<string, AppMeta> = {
     webUrl: 'https://www.agendapilates.com/landing',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #f5c2a7 100%)',
   },
+  'presidente-simulator': {
+    // Sin webUrl todavia: el repo esta publicado pero la app de Amplify aun no
+    // existe, y anunciar un enlace que no abre es peor que decir "pronto".
+    platforms: ['web'],
+    status: 'soon',
+    category: 'entertainment',
+    tech: ['React', 'TypeScript', 'Vite', 'Zustand'],
+    version: '0.2.0',
+    accent: 'linear-gradient(135deg, #f9e2af 0%, #fab387 100%)',
+  },
 };

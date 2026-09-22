@@ -405,6 +405,29 @@ export const appContentEs: AppContentMap = {
     ],
     changelog: [],
   },
+  'presidente-simulator': {
+    tagline: 'Gobierna cuatro años. Cada decisión pasa factura.',
+    description:
+      'Presidente Simulator es un juego de estrategia por decisiones: asumes el gobierno de un país y tienes 48 meses por delante. Cada mes eliges entre varias opciones y el motor propaga el efecto por nueve sistemas conectados —economía, seguridad, salud, educación, corrupción, popularidad...—, de modo que una medida cómoda hoy puede reventarte el presupuesto dentro de un año. Sin conexión y sin cuenta: la partida se guarda en tu propio navegador.',
+    features: [
+      'Nueve sistemas interconectados que reaccionan entre ellos',
+      'Consecuencias diferidas: lo que decides hoy llega meses después',
+      'Mapa del país con el estado de cada región',
+      'Historial de decisiones y resultados al terminar el mandato',
+      'Funciona sin conexión y sin cuenta',
+    ],
+    changelog: [
+      {
+        version: '0.2.0',
+        date: '22 de septiembre de 2026',
+        type: 'new',
+        changes: [
+          'Mapa del país con el estado de cada región',
+          'Panel lateral de indicadores y transiciones entre decisiones',
+        ],
+      },
+    ],
+  },
 };
 
 export const appContentEn: AppContentMap = {
@@ -798,5 +821,28 @@ export const appContentEn: AppContentMap = {
       'Light and dark mode · English & Spanish',
     ],
     changelog: [],
+  },
+  'presidente-simulator': {
+    tagline: 'Govern for four years. Every decision comes back to you.',
+    description:
+      'Presidente Simulator is a decision-driven strategy game: you take office and have 48 months ahead of you. Each month you pick between several options and the engine propagates the effect across nine connected systems —economy, security, health, education, corruption, approval...—, so a comfortable move today can blow up your budget a year from now. Offline and account-free: the run is saved in your own browser.',
+    features: [
+      'Nine interconnected systems that feed back into each other',
+      'Delayed consequences: what you decide today lands months later',
+      'Country map with the state of every region',
+      'Decision history and end-of-term results',
+      'Works offline, no account needed',
+    ],
+    changelog: [
+      {
+        version: '0.2.0',
+        date: 'September 22, 2026',
+        type: 'new',
+        changes: [
+          'Country map showing the state of each region',
+          'Side panel with indicators and transitions between decisions',
+        ],
+      },
+    ],
   },
 };

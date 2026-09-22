@@ -15,5 +15,6 @@ export interface SuperRowProps {
   /** Enlace externo; se abre en pestaña nueva. */
   href?: string;
   /** Línea extra bajo el subtítulo: cifras de la app, por ejemplo. */
-  meta?: string;
+  /** Línea de cifras bajo el subtítulo. Nodo, no texto: lleva resaltes. */
+  meta?: ReactNode;
 }

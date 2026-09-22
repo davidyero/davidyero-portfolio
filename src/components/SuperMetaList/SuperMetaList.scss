@@ -33,5 +33,10 @@
     font-family: $font-mono;
     font-size: $fs-small;
     color: var(--subtext);
+
+    strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
   }
 }

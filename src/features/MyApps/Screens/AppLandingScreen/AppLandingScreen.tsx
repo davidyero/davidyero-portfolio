@@ -19,6 +19,7 @@ import {
   resolveAppCtas,
   platformLabels,
 } from '../../data/registry';
+import { withEmphasis } from '../../../../shared/emphasis';
 import { paths } from '../../../../shared/paths';
 import { AppLandingScreenProps } from './AppLandingScreen.types';
 import appStoreEN from '../../../../assets/images/stores/appStoreEN.svg';
@@ -95,7 +96,9 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             ...(app.version ? [{ label: t('apps.detail.meta.version'), value: `v${app.version}` }] : []),
             // Solo las apps con cifras propias las enseñan, y sale la misma
             // frase que en la fila de la home: un unico texto, dos sitios.
-            ...(app.reachKey ? [{ label: t('apps.detail.meta.reach'), value: t(app.reachKey) }] : []),
+            ...(app.reachKey
+              ? [{ label: t('apps.detail.meta.reach'), value: withEmphasis(t(app.reachKey)) }]
+              : []),
           ]}
         />
 
