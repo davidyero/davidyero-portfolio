@@ -3,3 +3,6 @@
 // (e.g. tests) working if the env var is not injected.
 export const APP_VERSION: string =
   process.env.REACT_APP_VERSION ?? '0.10.0';
+
+/** Primer día escribiendo software. Se muestra en el perfil, en ISO. */
+export const CAREER_START_ISO = '2017-10-02';

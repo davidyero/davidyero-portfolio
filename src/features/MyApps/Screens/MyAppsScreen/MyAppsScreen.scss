@@ -106,13 +106,13 @@
     transition: color $transition-fast;
   }
 
-  // Una linea por app: si el tagline no cabe, se recorta. Dos lineas romperian
-  // la alineacion de la rejilla, que es lo que hace escaneable la tabla.
+  // El tagline se parte en dos lineas antes que cortarse: media frase con
+  // puntos suspensivos no dice lo que hace la app, que es el punto de la
+  // columna. La rejilla sigue alineada porque las celdas se centran.
   &__what {
+    font-size: $fs-tiny;
+    line-height: 1.5;
     color: var(--subtext);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   &__platforms {

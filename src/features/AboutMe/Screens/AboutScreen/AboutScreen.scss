@@ -5,43 +5,8 @@
   display: flex;
   flex-direction: column;
   gap: $space-11;
-  padding-top: $space-11;
+  padding-top: $space-4;
   padding-bottom: $space-8;
-
-  &__identity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $space-4;
-    text-align: center;
-  }
-
-  &__avatar {
-    width: 96px;
-    height: 96px;
-    border-radius: 30px;
-    object-fit: cover;
-    border: 1px solid var(--accent);
-  }
-
-  &__name {
-    font-size: $fs-h2;
-    letter-spacing: $tracking-wordmark;
-    text-transform: uppercase;
-  }
-
-  &__role {
-    font-size: $fs-small;
-    color: var(--accent);
-    margin: 0 auto;
-  }
-
-  &__bio {
-    font-size: $fs-body;
-    color: var(--subtext);
-    max-width: 56ch;
-    margin: 0 auto;
-  }
 
   &__block {
     display: flex;
@@ -49,8 +14,8 @@
     gap: $space-3;
   }
 
-  // Historial, no tarjetas: el periodo a la izquierda alineado en columna, que
-  // es lo que deja comparar las etapas de un vistazo.
+  // Historial, no tarjetas: cada puesto es un bloque separado por una regla de
+  // 1px, igual que el changelog.
   &__timeline {
     display: flex;
     flex-direction: column;
@@ -58,46 +23,44 @@
   }
 
   &__entry {
-    display: grid;
-    grid-template-columns: 132px minmax(0, 1fr);
-    gap: $space-4;
-    padding: $space-4 0;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    padding: $space-5 0;
     border-bottom: 1px solid var(--border);
 
     &:first-of-type { border-top: 1px solid var(--border); }
-
-    @include mobile {
-      grid-template-columns: 1fr;
-      gap: $space-2;
-    }
   }
 
-  &__period {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--muted);
-  }
-
-  &__entry-body {
+  &__entry-head {
     display: flex;
     flex-direction: column;
-    gap: $space-2;
-    min-width: 0;
+    gap: 2px;
   }
 
   &__entry-role {
     font-family: $font-mono;
-    font-size: $fs-body;
+    font-size: $fs-h3;
     font-weight: 600;
     letter-spacing: 0;
     color: var(--text);
   }
 
-  &__entry-org { color: var(--muted); font-weight: 400; }
-
-  &__entry-desc {
+  &__entry-org {
     font-size: $fs-small;
-    color: var(--subtext);
+    color: var(--accent);
+    max-width: none;
+  }
+
+  &__entry-client { color: var(--muted); }
+
+  // El periodo va en ISO como el resto de fechas del sitio, con la duración
+  // calculada al lado: el puesto actual crece solo y nadie tiene que tocarlo.
+  &__entry-period {
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    color: var(--muted);
+    max-width: none;
   }
 
   &__rows {

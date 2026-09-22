@@ -5,5 +5,8 @@
   "common.footer.line": "Bogotá, Colombia",
   "common.footer.version": "Versión de la app",
   "common.nav.blog": "blog",
-  "common.nav.log": "log"
+  "common.nav.log": "log",
+  "profile.meta.since": "usuario.desde",
+  "profile.meta.role": "usuario.cargo",
+  "profile.meta.experience": "usuario.experiencia"
 }

@@ -1,0 +1,44 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-4;
+  text-align: center;
+
+  &__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 30px;
+    object-fit: cover;
+    border: 1px solid var(--accent);
+  }
+
+  // El nombre es un rótulo, no un titular: va en la pixelada, que ya trae su
+  // propio espaciado entre letras.
+  &__name {
+    font-family: $font-pixel;
+    font-size: $fs-h2;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__tagline {
+    font-size: $fs-body;
+    color: var(--accent);
+    max-width: 56ch;
+    margin: 0 auto;
+  }
+
+  // Dos puntos por debajo del cuerpo: es el párrafo más largo de la página y
+  // así no compite con la línea que tiene encima.
+  &__description {
+    font-size: $fs-small;
+    color: var(--subtext);
+    max-width: 56ch;
+    margin: 0 auto;
+  }
+}
