@@ -5,13 +5,27 @@
   @include themed;
 }
 
-// Shell compartido por todas las vistas. Fondo plano: el sistema prohibe
-// degradados decorativos, asi que el color de fondo es un color, no una escena.
+// Shell compartido por todas las vistas.
+//
+// El fondo lleva scanlines de monitor CRT: lineas de 2px cada 5px, quietas. Es
+// una textura, no una escena: no hay degradados ni color de mas, solo la misma
+// linea repetida sobre el color de fondo.
+//
+// Va en `background-attachment: fixed` para que el patron no se desplace con el
+// scroll. Si se moviera, la pagina entera pareceria vibrar al bajar.
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--scanline) 0,
+    var(--scanline) 2px,
+    transparent 2px,
+    transparent 5px
+  );
+  background-attachment: fixed;
 }
 
 .page__main {

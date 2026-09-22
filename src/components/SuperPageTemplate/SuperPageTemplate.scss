@@ -11,14 +11,19 @@
 
   // Doble clase a proposito: el elemento tambien lleva .container, que define
   // max-width 1200 y se carga despues (main.scss entra al final en App.tsx).
-  // Con una sola clase, el ancho de la variante perdia por orden y todas las
-  // pantallas salian a 1200 pegadas a la izquierda.
-  &.page-template--reading { max-width: $container-reading; }
-  &.page-template--list { max-width: $container-list; }
-  &.page-template--doc { max-width: $container-doc; }
+  // Con una sola clase, el ancho perdia por orden y todas las pantallas salian
+  // a 1200 pegadas a la izquierda.
+  //
+  // Las tres variantes comparten medida: la variante ya no decide el ancho,
+  // solo queda como nombre de lo que es cada pantalla.
+  &.page-template--reading,
+  &.page-template--list,
+  &.page-template--doc {
+    max-width: $container-page;
+  }
 
-  // Por debajo del ancho de un Z Fold abierto ninguna variante se limita: a
-  // 800px de pantalla, una columna de 600 deja 100px muertos a cada lado.
+  // Por debajo del ancho de un Z Fold abierto ninguna se limita: a 800px de
+  // pantalla, una columna fija deja hueco muerto a los lados.
   @include tablet {
     &.page-template--reading,
     &.page-template--list,
