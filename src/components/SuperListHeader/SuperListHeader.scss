@@ -1,0 +1,25 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.list-header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  // Mismo rótulo pixelado que el nombre de la home: es el título de la
+  // pantalla, no un titular de texto.
+  &__title {
+    font-family: $font-pixel;
+    font-size: $fs-h2;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  &__subtitle {
+    font-size: $fs-small;
+    color: var(--muted);
+    max-width: none;
+  }
+}

@@ -39,9 +39,11 @@
   max-width: $container-reading;
 }
 
-// Catalogo: una tabla no cabe en la columna de lectura sin volverse ilegible.
-.container--catalog {
-  max-width: $container-catalog;
+// Listados (apps, blog, build-in-public): los tres comparten ancho para que se
+// lean como la misma pantalla. Es mas ancho que la columna de lectura porque la
+// tabla del catalogo no cabe en 500px sin volverse ilegible.
+.container--list {
+  max-width: $container-list;
 }
 
 // Por debajo del ancho de un Z Fold abierto, ninguna columna se limita: a 800px
@@ -49,7 +51,7 @@
 // margen que queda es el del propio .container.
 @media (max-width: 859px) {
   .container--reading,
-  .container--catalog,
+  .container--list,
   .container--doc {
     max-width: 100%;
   }

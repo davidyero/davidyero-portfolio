@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
+import { SuperListHeader } from '../../../../components/SuperListHeader/SuperListHeader';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { paths } from '../../../../shared/paths';
 import { useMyAppsScreen } from './useMyAppsScreen';
@@ -16,24 +17,24 @@ export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
 
   return (
     <PageLayout>
-      <div className="catalog container container--catalog">
-        <header className="catalog__header">
-          <span className="mono-eyebrow">{t('apps.catalog.eyebrow')}</span>
-          <h1 className="catalog__title">{t('apps.catalog.title', { count: total })}</h1>
-          <p className="catalog__subtitle">{subtitle}</p>
-        </header>
-
-        <div className="catalog__filters">
-          {filters.map((f) => (
-            <button
-              key={f.key}
-              className={`catalog__filter ${filter === f.key ? 'catalog__filter--active' : ''}`}
-              onClick={() => setFilter(f.key)}
-            >
-              [ {t(f.labelKey)} ]
-            </button>
-          ))}
-        </div>
+      <div className="catalog container container--list">
+        <SuperListHeader
+          eyebrow={t('apps.catalog.eyebrow')}
+          title={t('apps.catalog.title', { count: total })}
+          subtitle={subtitle}
+        >
+          <div className="catalog__filters">
+            {filters.map((f) => (
+              <button
+                key={f.key}
+                className={`catalog__filter ${filter === f.key ? 'catalog__filter--active' : ''}`}
+                onClick={() => setFilter(f.key)}
+              >
+                [ {t(f.labelKey)} ]
+              </button>
+            ))}
+          </div>
+        </SuperListHeader>
 
         {/* La tabla es el unico elemento del sitio que puede desplazarse en
             horizontal: por debajo de su ancho minimo las columnas dejarian de

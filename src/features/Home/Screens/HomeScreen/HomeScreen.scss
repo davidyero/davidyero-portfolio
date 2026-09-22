@@ -82,11 +82,17 @@
     gap: 0;
 
     .super-button {
-      height: 100%;
+      // `align-self: stretch` en vez de `height`: la altura la impone la línea
+      // flex, que es exactamente la del campo. Con alturas propias, cualquier
+      // diferencia de caja entre <input> y <button> dejaba el botón un par de
+      // píxeles por fuera del borde del campo.
+      align-self: stretch;
+      height: auto;
+      min-height: 0;
       font-size: $fs-tiny;
-      // Mismo contorno que el campo, para que el conjunto tenga un borde
-      // continuo en vez de dos piezas con reglas distintas.
-      border: 1px solid var(--accent);
+      // Sin borde propio: el borde del campo es el del grupo. Un borde en el
+      // botón repintaba su contorno un pixel por fuera.
+      border: 0;
       border-radius: 0 $radius-btn $radius-btn 0;
     }
 
@@ -105,7 +111,8 @@
   &__contact-input {
     flex: 1 1 200px;
     min-width: 0;
-    height: 100%;
+    align-self: stretch;
+    height: auto;
     background: var(--field);
     border: 1px solid var(--border);
     border-right: 0;
