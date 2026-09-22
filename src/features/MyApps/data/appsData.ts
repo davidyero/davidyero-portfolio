@@ -1732,13 +1732,6 @@ export const appsData: App[] = [
     logo: EncuentraTuMascotaIcon,
   },
   {
-    id: "10",
-    name: "ChamiApp",
-    slug: "chamiapp",
-    description: "Quiniela del Mundial 2026 para competir con amigos.",
-    icon: "",
-  },
-  {
     id: "11",
     name: "My Link Hub",
     slug: "my-link-hub",

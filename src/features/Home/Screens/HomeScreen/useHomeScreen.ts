@@ -1,22 +1,25 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { appsRegistry, featuredApps, getAppContent, platformLabels } from '../../../MyApps/data/registry';
+import { appCounts, featuredApps, getAppContent, platformLabels } from '../../../MyApps/data/registry';
+import { useTypewriterCycle } from '../../../../shared/useTypewriterCycle';
+import { heroCountsLine, indexCountsLine } from '../../../../shared/countLines';
 import { EnrichedApp } from '../../../MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
 import { buildContactMailto } from '../../../../shared/contact';
 
-// Empresas por las que ha pasado. Son nombres propios: no pasan por i18n.
-// La fila de experiencia las escribe y las borra una a una porque las nueve
-// juntas no caben en una linea de metadatos.
-const COMPANIES = [
-  'Integra IT',
-  'Ceiba',
-  'Scotiabank Colpatria',
-  'Mercado Libre',
-  'Conekta',
-  'Qik - Banco República Dominicana',
-  'Cencosud',
-  'Rappi',
-  'VASS',
+// Trayectoria: cada paso es un cargo y la empresa donde se ejerció. Las
+// empresas son nombres propios y no pasan por i18n; el cargo sí, por eso viaja
+// como clave. Rappi aparece dos veces, con dos cargos distintos.
+const CAREER: ReadonlyArray<{ roleKey: string; company: string }> = [
+  { roleKey: 'home.meta.role.lead', company: 'Scotiabank Colpatria' },
+  { roleKey: 'home.meta.role.lead', company: 'Mercado Libre' },
+  { roleKey: 'home.meta.role.lead', company: 'Conekta' },
+  { roleKey: 'home.meta.role.lead', company: 'VASS' },
+  { roleKey: 'home.meta.role.fullstack', company: 'Integra IT' },
+  { roleKey: 'home.meta.role.fullstack', company: 'Rappi' },
+  { roleKey: 'home.meta.role.frontend', company: 'Ceiba' },
+  { roleKey: 'home.meta.role.frontend', company: 'Qik - Banco República Dominicana' },
+  { roleKey: 'home.meta.role.frontend', company: 'Cencosud' },
+  { roleKey: 'home.meta.role.frontend', company: 'Rappi' },
 ];
 
 // Tira de tecnologias de la home. Son nombres propios: no pasan por i18n
@@ -54,20 +57,32 @@ export const useHomeScreen = () => {
     [i18n.language, t]
   );
 
-  // Recuento del catalogo, calculado del registro y no escrito a mano: si
-  // mañana hay 18 apps, la home no se queda mintiendo.
-  const counts = useMemo(() => {
-    const byStatus = (status: string) => appsRegistry.filter((a) => a.status === status).length;
-    return {
-      total: appsRegistry.length,
-      live: byStatus('live'),
-      beta: byStatus('beta'),
-      soon: byStatus('soon'),
-      offline: byStatus('offline'),
-    };
-  }, []);
+  // Cargo y empresa se escriben a la vez: son una sola frase partida en dos
+  // filas, y verlas aparecer por separado las desconectaria.
+  const career = useMemo(
+    () => CAREER.map(({ roleKey, company }) => [t(roleKey), company]),
+    [t]
+  );
+  const { lines: careerLines, isStill } = useTypewriterCycle(career);
+
+  // Las cifras salen del registro, no escritas a mano: si mañana hay 18 apps,
+  // la home no se queda mintiendo.
+  const countsLine = heroCountsLine(appCounts, t);
+  const appsRowLine = indexCountsLine(appCounts, t);
 
   const contactHref = buildContactMailto(email, t('home.contact.subject'));
 
-  return { t, stack: STACK, companies: COMPANIES, featured, counts, email, setEmail, contactHref };
+  return {
+    t,
+    stack: STACK,
+    role: careerLines[0] ?? '',
+    company: careerLines[1] ?? '',
+    isStill,
+    featured,
+    countsLine,
+    appsRowLine,
+    email,
+    setEmail,
+    contactHref,
+  };
 };

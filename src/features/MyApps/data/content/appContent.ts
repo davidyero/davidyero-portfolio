@@ -267,18 +267,6 @@ export const appContentEs: AppContentMap = {
     ],
     changelog: [],
   },
-  chamiapp: {
-    tagline: 'La quiniela del Mundial 2026 con tus amigos.',
-    description:
-      'ChamiApp es la quiniela del Mundial 2026: predice los resultados de cada partido, compite con tus amigos en grupos privados y sube en la tabla de posiciones.',
-    features: [
-      'Predice los resultados de cada partido del Mundial',
-      'Crea grupos privados y compite con amigos',
-      'Tabla de posiciones en tiempo real',
-      'Sistema de puntos por acierto',
-    ],
-    changelog: [],
-  },
   'my-link-hub': {
     tagline: 'Tu portafolio profesional en un solo link.',
     description:
@@ -670,18 +658,6 @@ export const appContentEn: AppContentMap = {
       'Contact whoever published the report directly',
       'Adoptions section and foundations that help',
       'Installable as an app (PWA), in Spanish and English',
-    ],
-    changelog: [],
-  },
-  chamiapp: {
-    tagline: 'The 2026 World Cup pool with your friends.',
-    description:
-      'ChamiApp is the 2026 World Cup prediction pool: predict every match result, compete with your friends in private groups and climb the leaderboard.',
-    features: [
-      'Predict the result of every World Cup match',
-      'Create private groups and compete with friends',
-      'Real-time leaderboard',
-      'Points system for correct picks',
     ],
     changelog: [],
   },
