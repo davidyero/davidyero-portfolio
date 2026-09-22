@@ -63,6 +63,11 @@
     max-width: none;
   }
 
+  &__freelance-text {
+    font-size: $fs-small;
+    color: var(--subtext);
+  }
+
   &__rows {
     display: flex;
     flex-direction: column;

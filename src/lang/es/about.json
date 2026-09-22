@@ -19,5 +19,9 @@
   "about.task.planning": "Planeación de nuevas implementaciones",
   "about.task.estimation": "Estimación de nuevas implementaciones",
   "about.task.techLead": "Líder técnico",
-  "about.task.playFramework": "Desarrollo de aplicaciones web con Java, Scala y Javascript (Play Framework)"
+  "about.task.playFramework": "Desarrollo de aplicaciones web con Java, Scala y Javascript (Play Framework)",
+  "about.freelance.eyebrow": "// freelance",
+  "about.freelance.text": "Clientes con los que he trabajado por mi cuenta.",
+  "about.role.freelance": "Freelance",
+  "about.role.seniorFrontend": "Senior Frontend"
 }
