@@ -1,0 +1,23 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.super-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  list-style: none;
+
+  &--center { justify-content: center; }
+  &--start { justify-content: flex-start; }
+
+  &__tag {
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    letter-spacing: $tracking-label;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: $radius-btn;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.super-row {
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  gap: $space-3 14px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 14px $space-4;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-md;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: var(--accent);
+
+    .super-row__chevron { color: var(--accent); }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-xs;
+    object-fit: cover;
+  }
+
+  // Glifo de terminal en lugar de icono: `ls`, `~/`, `git`, `in`.
+  &__glyph {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: $radius-xs;
+    background: var(--live-bg);
+    color: var(--accent);
+    font-family: $font-mono;
+    font-size: $fs-small;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: $font-mono;
+    font-size: $fs-body;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  &__subtitle {
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  &__chevron {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--muted);
+    transition: color $transition-fast;
+  }
+}

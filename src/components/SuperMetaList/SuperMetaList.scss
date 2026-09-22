@@ -1,0 +1,35 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.super-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: $space-5;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: $space-3;
+
+    // La columna fija deja de tener sentido cuando no cabe: en movil la
+    // etiqueta pasa arriba en vez de partirse en dos lineas.
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+  }
+
+  &__label {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--muted);
+  }
+
+  &__value {
+    font-family: $font-mono;
+    font-size: $fs-small;
+    color: var(--subtext);
+  }
+}

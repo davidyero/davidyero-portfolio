@@ -3,81 +3,38 @@
 
 .footer {
   border-top: 1px solid var(--border);
-  background: var(--bg-mantle);
   margin-top: $space-16;
 
   &__inner {
-    max-width: $container-max;
-    margin: 0 auto;
-    padding: $space-8 $space-6;
-
-    @include mobile { padding: $space-6 $space-4; }
-  }
-
-  &__top {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: $space-3;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    color: var(--muted);
+  }
+
+  &__identity { color: var(--muted); }
+
+  &__meta {
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: $space-5;
-    padding-bottom: $space-6;
-    border-bottom: 1px solid var(--border);
+    gap: 6px;
   }
-
-  &__brand { display: flex; align-items: center; gap: $space-3; }
-
-  &__brand-name {
-    font-family: $font-sans;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  &__nav { display: flex; gap: $space-6; flex-wrap: wrap; }
 
   &__link {
-    font-family: $font-sans;
-    font-size: $fs-body;
-    color: var(--subtext);
-    transition: color $transition-fast;
-    &:hover { color: var(--text); }
-  }
-
-  &__social { display: flex; gap: $space-4; }
-
-  &__social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
     font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--subtext);
+    font-size: $fs-tiny;
+    color: var(--muted);
     transition: color $transition-fast;
+
     &:hover { color: var(--accent); }
   }
 
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: $space-3;
-    padding-top: $space-5;
-  }
-
-  &__copyright {
-    font-family: $font-mono;
-    font-size: $fs-small;
-    color: var(--muted);
-    margin: 0;
-  }
-
-  &__version {
-    font-family: $font-mono;
-    font-size: $fs-tiny;
-    font-weight: 600;
-    color: var(--subtext);
-    padding: 4px 10px;
-    border: 1px solid var(--border-strong);
-    border-radius: $radius-pill;
-  }
+  &__dot { color: var(--border-strong); }
 }

@@ -1,9 +1,11 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, Sparkles, Rocket, History, FileText, ShieldCheck } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
+import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
+import { SuperRow } from '../../../../components/SuperRow/SuperRow';
+import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
 import {
@@ -25,6 +27,8 @@ import './AppLandingScreen.scss';
 const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
   status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
 
+// Ficha de app leida como el manifest de un paquete: identidad arriba,
+// metadatos en filas clave:valor, descarga, y luego el contenido largo.
 export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -38,7 +42,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   if (!app) {
     return (
       <PageLayout>
-        <div className="detail container">
+        <div className="detail container container--reading">
           <p className="detail__empty">{t('apps.notFound')}</p>
           <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.detail.back')}
@@ -54,35 +58,39 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
   const content = getAppContent(app.slug, i18n.language);
   const features = content?.features ?? [];
   const hasChangelog = (content?.changelog?.length ?? 0) > 0;
-  const metaBits = [
-    ...app.platforms.map((p) => platformLabels[p]),
-    app.version ? `v${app.version}` : null,
-    t(`apps.category.${app.category}`),
-  ].filter(Boolean);
 
   return (
     <PageLayout>
-      <div className="detail container">
+      <div className="detail container container--reading">
         <button className="detail__back" onClick={() => navigate(paths.apps)}>
           ‹ {t('apps.detail.back')}
         </button>
 
-        <section className="detail__hero">
-          <AppIcon app={app} size="xl" />
-          <div className="detail__hero-info">
-            <div className="detail__title-row">
-              <h1 className="detail__title">{app.name}</h1>
+        <header className="detail__head">
+          <AppIcon app={app} size="lg" />
+          <div className="detail__head-body">
+            <h1 className="detail__title">{app.name}</h1>
+            {content?.tagline && <p className="detail__tagline">{content.tagline}</p>}
+            <div className="detail__badges">
               <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
               <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
             </div>
-            {content?.tagline && <p className="detail__tagline">{content.tagline}</p>}
-            <p className="detail__meta">{metaBits.join(' · ')}</p>
           </div>
-        </section>
+        </header>
 
-        <p className="detail__description">{content?.description ?? ''}</p>
+        <SuperMetaList
+          entries={[
+            {
+              label: t('apps.detail.meta.platforms'),
+              value: app.platforms.map((p) => platformLabels[p]).join(' · '),
+            },
+            { label: t('apps.detail.meta.category'), value: t(`apps.category.${app.category}`) },
+            ...(app.version ? [{ label: t('apps.detail.meta.version'), value: `v${app.version}` }] : []),
+          ]}
+        />
 
-        {/* Adaptive CTAs */}
+        {content?.description && <p className="detail__description">{content.description}</p>}
+
         <div className="detail__ctas">
           {(cta.showAppStore || cta.showGooglePlay) && (
             <div className="detail__stores">
@@ -113,9 +121,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             <div className="detail__web-ctas">
               {cta.showWeb && (
                 <a href={app.webUrl} target="_blank" rel="noopener noreferrer">
-                  <SuperButton variant="primary">
-                    {t('apps.detail.openApp')} <ArrowUpRight size={16} />
-                  </SuperButton>
+                  <SuperButton variant="primary">{t('apps.detail.openApp')}</SuperButton>
                 </a>
               )}
               {cta.showRepo && (
@@ -126,87 +132,70 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             </div>
           )}
 
-          {!cta.hasAny && (
-            <span className="detail__coming-soon">{t('apps.detail.comingSoon')}</span>
-          )}
+          {!cta.hasAny && <span className="detail__coming-soon">{t('apps.detail.comingSoon')}</span>}
         </div>
 
-        {/* Tech stack */}
         {tech.length > 0 && (
-          <div className="detail__stack">
-            <span className="mono-eyebrow">{t('apps.detail.stack')}</span>
-            <div className="detail__stack-chips">
-              {tech.map((item) => (
-                <span key={item} className="detail__stack-chip">{item}</span>
-              ))}
-            </div>
-          </div>
+          <section className="detail__block">
+            <span className="mono-eyebrow mono-eyebrow--section">{t('apps.detail.stack')}</span>
+            <SuperTagList tags={tech} align="start" />
+          </section>
         )}
 
-        {/* Explore: landing + docs — one consistent, evident button group */}
-        <div className="detail__nav">
-          <button
-            className="detail__nav-btn"
-            onClick={() => navigate(paths.appLanding(app.slug))}
-          >
-            <Rocket size={17} />
-            {t('apps.detail.viewLanding')}
-          </button>
-          {hasChangelog && (
-            <button
-              className="detail__nav-btn"
-              onClick={() => navigate(paths.appChangelog(app.slug))}
-            >
-              <History size={17} />
-              {t('apps.detail.changelog')}
-            </button>
-          )}
-          {app.termsAndConditions && (
-            <button
-              className="detail__nav-btn"
-              onClick={() => navigate(paths.appTerms(app.slug))}
-            >
-              <FileText size={17} />
-              {t('apps.detail.terms')}
-            </button>
-          )}
-          {app.privacyPolicy && (
-            <button
-              className="detail__nav-btn"
-              onClick={() => navigate(paths.appPrivacy(app.slug))}
-            >
-              <ShieldCheck size={17} />
-              {t('apps.detail.privacy')}
-            </button>
-          )}
-        </div>
-
-        {/* Features */}
         {features.length > 0 && (
-          <section className="detail__features">
-            <span className="mono-eyebrow">{t('apps.detail.features')}</span>
-            <div className="detail__features-grid">
-              {features.map((feature, index) => (
-                <div key={index} className="detail__feature">
-                  <span className="detail__feature-icon"><Sparkles size={16} /></span>
-                  <p className="detail__feature-text">{feature}</p>
-                </div>
+          <section className="detail__block">
+            <span className="mono-eyebrow mono-eyebrow--section">{t('apps.detail.features')}</span>
+            <ul className="doc-list">
+              {features.map((feature) => (
+                <li key={feature}>{feature}</li>
               ))}
-            </div>
+            </ul>
           </section>
         )}
 
-        {/* Screenshots */}
-        {app.screenshots && app.screenshots.length > 0 && (
-          <section className="detail__screenshots">
-            <span className="mono-eyebrow">{t('apps.detail.screenshots')}</span>
-            <div className="detail__screenshots-row">
-              {app.screenshots.map((shot, index) => (
-                <img key={index} src={shot} alt={`${app.name} ${index + 1}`} className="detail__screenshot" />
-              ))}
-            </div>
-          </section>
-        )}
+        <section className="detail__block">
+          <span className="mono-eyebrow mono-eyebrow--section">{t('apps.detail.more')}</span>
+          <div className="detail__rows">
+            <SuperRow
+              glyph="↗"
+              title={t('apps.detail.viewLanding')}
+              subtitle={paths.appLanding(app.slug)}
+              onClick={() => navigate(paths.appLanding(app.slug))}
+            />
+            {hasChangelog && (
+              <SuperRow
+                glyph="log"
+                title={t('apps.detail.changelog')}
+                subtitle={paths.appChangelog(app.slug)}
+                onClick={() => navigate(paths.appChangelog(app.slug))}
+              />
+            )}
+            {app.termsAndConditions && (
+              <SuperRow
+                glyph="doc"
+                title={t('apps.detail.terms')}
+                subtitle={paths.appTerms(app.slug)}
+                onClick={() => navigate(paths.appTerms(app.slug))}
+              />
+            )}
+            {app.privacyPolicy && (
+              <SuperRow
+                glyph="doc"
+                title={t('apps.detail.privacy')}
+                subtitle={paths.appPrivacy(app.slug)}
+                onClick={() => navigate(paths.appPrivacy(app.slug))}
+              />
+            )}
+            {app.accountDeletion && (
+              <SuperRow
+                glyph="rm"
+                title={t('apps.legal.deleteAccount.title')}
+                subtitle={paths.appDeleteAccount(app.slug)}
+                onClick={() => navigate(paths.appDeleteAccount(app.slug))}
+              />
+            )}
+          </div>
+        </section>
       </div>
     </PageLayout>
   );

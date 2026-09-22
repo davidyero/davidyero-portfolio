@@ -9,6 +9,8 @@
   // background — only the corner radius of whatever slot it sits in.
   border-radius: $radius-md;
 
+  // Sin sombras: la unica del sitio es la del boton primario. Aqui el objeto se
+  // separa del fondo con el borde de 1px que le pone quien lo usa.
   &--small {
     width: 32px;
     height: 32px;
@@ -18,13 +20,11 @@
   &--medium {
     width: 38px;
     height: 38px;
-    box-shadow: var(--shadow-md);
   }
 
   &--large {
-    width: 128px;
-    height: 128px;
-    border-radius: $radius-xl;
-    box-shadow: var(--shadow-lg);
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
   }
 }

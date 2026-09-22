@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { PageLayout } from '../../../../components/PageLayout/PageLayout';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
+import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { Badge } from '../../../../components/Badge/Badge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
 import {
@@ -24,6 +24,9 @@ import './AppShowcaseScreen.scss';
 const statusTone = (status: string): 'live' | 'beta' | 'soon' =>
   status === 'beta' ? 'beta' : status === 'soon' ? 'soon' : 'live';
 
+// Landing de la app: la unica pantalla que puede respirar mas. Aun asi no hay
+// maqueta de telefono ni ventana de navegador falsa — el sistema las prohibe:
+// no aportan un dato y envejecen peor que la propia app.
 export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -37,7 +40,7 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
   if (!app) {
     return (
       <PageLayout>
-        <div className="showcase container">
+        <div className="showcase container container--reading">
           <p className="showcase__empty">{t('apps.notFound')}</p>
           <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>
             ‹ {t('apps.detail.back')}
@@ -49,155 +52,112 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
 
   const cta = resolveAppCtas(app);
   const kind = getAppKind(app);
-  const isWeb = kind === 'web';
   const content = getAppContent(app.slug, i18n.language);
   const features = content?.features ?? [];
-
-  let webDomain = '';
-  if (app.webUrl) {
-    try {
-      webDomain = new URL(app.webUrl).hostname.replace(/^www\./, '');
-    } catch {
-      webDomain = '';
-    }
-  }
+  const screenshots = app.screenshots ?? [];
 
   return (
     <PageLayout>
-      <div className="showcase">
-        {/* Immersive hero with the app's own accent */}
-        <section
-          className="showcase__hero"
-          style={{ '--app-accent': app.accent ?? 'var(--gradient)' } as React.CSSProperties}
-        >
-          <div className="showcase__hero-inner container">
-            <button className="showcase__back" onClick={() => navigate(paths.app(app.slug))}>
-              ‹ {app.name}
-            </button>
+      <div className="showcase container container--reading">
+        <button className="showcase__back" onClick={() => navigate(paths.app(app.slug))}>
+          ‹ {app.name}
+        </button>
 
-            {isWeb ? (
-              <div className="showcase__browser">
-                <div className="showcase__browser-bar">
-                  <span className="showcase__dot" />
-                  <span className="showcase__dot" />
-                  <span className="showcase__dot" />
-                  <span className="showcase__url">{webDomain || 'web app'}</span>
-                </div>
-                <div
-                  className="showcase__browser-body"
-                  style={{ background: app.accent ?? 'var(--gradient)' }}
-                >
-                  <AppIcon app={app} size="xl" />
-                </div>
-              </div>
-            ) : (
-              <div className="showcase__phone">
-                <span className="showcase__phone-notch" />
-                <div className="showcase__phone-screen">
-                  <AppIcon app={app} size="xl" />
-                </div>
-              </div>
+        <section className="showcase__hero">
+          <AppIcon app={app} size="xl" />
+          <h1 className="showcase__title">{app.name}</h1>
+          {content?.tagline && <p className="showcase__tagline">{content.tagline}</p>}
+          <div className="showcase__badges">
+            <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
+            <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
+          </div>
+
+          <div className="showcase__cta">
+            {cta.showAppStore && (
+              <a
+                href={app.appStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="store-badge"
+              >
+                <img src={appStoreImg} alt={t('apps.detail.appStore')} />
+              </a>
             )}
-
-            <div className="showcase__badges">
-              <Badge tone="neutral">{t(kindI18nKey[kind])}</Badge>
-              <Badge tone={statusTone(app.status)}>{t(`apps.status.${app.status}`)}</Badge>
-            </div>
-            <h1 className="showcase__title">{app.name}</h1>
-            {content?.tagline && <p className="showcase__tagline">{content.tagline}</p>}
-
-            <div className="showcase__cta">
-              {cta.showAppStore && (
-                <a
-                  href={app.appStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="store-badge"
-                >
-                  <img src={appStoreImg} alt={t('apps.detail.appStore')} />
-                </a>
-              )}
-              {cta.showGooglePlay && (
-                <a
-                  href={app.playStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="store-badge store-badge--play"
-                >
-                  <img src={googlePlayImg} alt={t('apps.detail.googlePlay')} />
-                </a>
-              )}
-              {cta.showWeb && (
-                <a href={app.webUrl} target="_blank" rel="noopener noreferrer">
-                  <SuperButton variant="primary" size="large">
-                    {t('apps.detail.openApp')} <ArrowUpRight size={18} />
-                  </SuperButton>
-                </a>
-              )}
-              {!cta.hasAny && (
-                <span className="showcase__soon">{t('apps.detail.comingSoon')}</span>
-              )}
-            </div>
+            {cta.showGooglePlay && (
+              <a
+                href={app.playStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="store-badge store-badge--play"
+              >
+                <img src={googlePlayImg} alt={t('apps.detail.googlePlay')} />
+              </a>
+            )}
+            {cta.showWeb && (
+              <a href={app.webUrl} target="_blank" rel="noopener noreferrer">
+                <SuperButton variant="primary">{t('apps.detail.openApp')}</SuperButton>
+              </a>
+            )}
+            {!cta.hasAny && (
+              <span className="showcase__coming-soon">{t('apps.detail.comingSoon')}</span>
+            )}
           </div>
         </section>
 
-        <div className="showcase__body container">
-          <p className="showcase__description">{content?.description ?? ''}</p>
+        {content?.description && <p className="showcase__description">{content.description}</p>}
 
-          {app.tech && app.tech.length > 0 && (
-            <div className="showcase__tech">
-              {app.tech.map((item) => (
-                <span key={item} className="showcase__tech-chip">{item}</span>
+        {features.length > 0 && (
+          <section className="showcase__block">
+            <span className="mono-eyebrow mono-eyebrow--section">
+              {t('apps.showcase.featuresTitle')}
+            </span>
+            <ul className="doc-list">
+              {features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {screenshots.length > 0 && (
+          <section className="showcase__block">
+            <span className="mono-eyebrow mono-eyebrow--section">
+              {t('apps.showcase.screenshotsTitle')}
+            </span>
+            <div className="showcase__shots">
+              {screenshots.map((shot, index) => (
+                <img
+                  key={shot}
+                  src={shot}
+                  alt={`${app.name} ${index + 1}`}
+                  className="showcase__shot"
+                />
               ))}
             </div>
-          )}
+          </section>
+        )}
 
-          {/* Screenshots */}
-          {app.screenshots && app.screenshots.length > 0 && (
-            <section className="showcase__section">
-              <h2 className="showcase__section-title">{t('apps.showcase.screenshotsTitle')}</h2>
-              <div className="showcase__shots">
-                {app.screenshots.map((shot, index) => (
-                  <img key={index} src={shot} alt={`${app.name} ${index + 1}`} className="showcase__shot" />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Features */}
-          {features.length > 0 && (
-            <section className="showcase__section">
-              <h2 className="showcase__section-title">{t('apps.showcase.featuresTitle')}</h2>
-              <div className="showcase__features">
-                {features.map((feature, index) => (
-                  <div key={index} className="showcase__feature">
-                    <span className="showcase__feature-icon"><Sparkles size={18} /></span>
-                    <p className="showcase__feature-text">{feature}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Legal footer */}
-          {(app.termsAndConditions || app.privacyPolicy) && (
-            <div className="showcase__legal">
-              <span className="mono-eyebrow">{t('apps.showcase.legal')}</span>
-              <div className="showcase__legal-links">
-                {app.termsAndConditions && (
-                  <button onClick={() => navigate(paths.appTerms(app.slug))}>
-                    {t('apps.detail.terms')}
-                  </button>
-                )}
-                {app.privacyPolicy && (
-                  <button onClick={() => navigate(paths.appPrivacy(app.slug))}>
-                    {t('apps.detail.privacy')}
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
+        <section className="showcase__block">
+          <span className="mono-eyebrow mono-eyebrow--section">{t('apps.showcase.legal')}</span>
+          <div className="showcase__rows">
+            {app.termsAndConditions && (
+              <SuperRow
+                glyph="doc"
+                title={t('apps.detail.terms')}
+                subtitle={paths.appTerms(app.slug)}
+                onClick={() => navigate(paths.appTerms(app.slug))}
+              />
+            )}
+            {app.privacyPolicy && (
+              <SuperRow
+                glyph="doc"
+                title={t('apps.detail.privacy')}
+                subtitle={paths.appPrivacy(app.slug)}
+                onClick={() => navigate(paths.appPrivacy(app.slug))}
+              />
+            )}
+          </div>
+        </section>
       </div>
     </PageLayout>
   );

@@ -1,42 +1,40 @@
 @import '../../styles/abstracts/variables';
 @import '../../styles/abstracts/mixins';
 
+// Boton del sistema: esquina recta (2px), etiqueta en mono y relleno plano.
+// El acento es un color solido, no un degradado: el degradado es justo lo que
+// delata una plantilla.
 .super-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: $space-2;
   padding: $space-3 $space-5;
-  border-radius: $radius-md;
-  font-family: $font-sans;
-  font-size: $fs-body;
-  font-weight: 600;
+  border-radius: $radius-btn;
+  font-family: $font-mono;
+  font-size: $fs-small;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1;
   white-space: nowrap;
   border: 1px solid transparent;
-  transition: transform $transition-fast, box-shadow $transition-fast,
-    background-color $transition-fast, border-color $transition-fast,
-    filter $transition-fast;
+  transition: background-color $transition-fast, border-color $transition-fast,
+    color $transition-fast, opacity $transition-fast;
 
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
 
-  &:not(:disabled):active {
-    transform: translateY(1px);
-  }
-
   // ---- Variants ----
+  // La sombra del primario es la unica del sitio: separa el unico boton que
+  // dispara una accion del resto de la pagina, que es todo bordes de 1px.
   &--primary {
-    background: var(--gradient);
+    background: var(--accent);
     color: var(--on-accent);
     box-shadow: var(--shadow-md);
 
-    &:not(:disabled):hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
-    }
+    &:not(:disabled):hover { background: var(--accent-hover); }
   }
 
   &--secondary {
@@ -44,10 +42,7 @@
     color: var(--text);
     border-color: var(--border);
 
-    &:not(:disabled):hover {
-      background: var(--surface-hover);
-      border-color: var(--border-strong);
-    }
+    &:not(:disabled):hover { border-color: var(--border-strong); }
   }
 
   &--outline {
@@ -55,53 +50,32 @@
     color: var(--text);
     border-color: var(--border-strong);
 
-    &:not(:disabled):hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
+    &:not(:disabled):hover { border-color: var(--accent); color: var(--accent); }
   }
 
   &--ghost {
     background: transparent;
     color: var(--subtext);
 
-    &:not(:disabled):hover {
-      color: var(--text);
-      background: var(--surface-0);
-    }
+    &:not(:disabled):hover { color: var(--text); }
   }
 
   // ---- Sizes ----
-  &--small {
-    padding: $space-2 $space-3;
-    font-size: $fs-small;
-  }
+  &--small  { padding: $space-2 $space-3; font-size: $fs-tiny; }
+  &--medium { padding: $space-3 $space-5; }
+  &--large  { padding: $space-4 $space-6; font-size: $fs-body; }
 
-  &--medium {
-    padding: $space-3 $space-5;
-  }
-
-  &--large {
-    padding: $space-4 $space-6;
-    font-size: $fs-h3;
-  }
-
-  &--full-width {
-    width: 100%;
-  }
+  &--full-width { width: 100%; }
 
   &--loading {
     position: relative;
-
-    .super-button__content {
-      opacity: 0;
-    }
+    .super-button__content { opacity: 0; }
   }
 
   &__loader {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border: 2px solid color-mix(in srgb, currentColor 35%, transparent);
     border-top-color: currentColor;
     border-radius: 50%;

@@ -19,8 +19,8 @@ export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
   if (!app || !app.privacyPolicy) {
     return (
       <PageLayout>
-        <div className="legal container">
-          <p style={{ fontFamily: 'var(--mono)', color: 'var(--muted)', margin: '2rem 0' }}>
+        <div className="legal container container--doc">
+          <p className="legal__empty">
             {app ? t('apps.legal.notAvailable') : t('apps.notFound')}
           </p>
           <SuperButton variant="outline" onClick={() => navigate(paths.apps)}>

@@ -1,18 +1,13 @@
 {
   "about.eyebrow": "// experiencia",
-  "about.role": "Desarrollador Full Stack · @Davidyero",
-  "about.bio": "Construyo producto de punta a punta: del diseño y la arquitectura al deploy. Ecosistema propio con design system, i18n y apps infinitas.",
-  "about.linkedin": "LinkedIn",
-  "about.github": "GitHub",
-  "about.now": "Ahora",
-  "about.exp.fullstack.role": "Desarrollador Full Stack",
-  "about.exp.fullstack.desc": "Ecosistema de apps propias con Vertical Slice, design system, backend por dominios y publicación automatizada.",
-  "about.exp.frontend.role": "Frontend Engineer",
-  "about.exp.frontend.desc": "Interfaces React/TypeScript a escala, design tokens y sistema de componentes reutilizable.",
+  "about.role": "Desarrollador full-stack · @Davidyero",
+  "about.bio": "Diseño, programo y publico apps propias de punta a punta: interfaz, backend, firma, tiendas y deploy. Empecé el 2017-10-02 y hoy son 17 apps con un backend y un design system compartidos.",
+  "about.now": "hoy",
+  "about.links.eyebrow": "// enlaces",
+  "about.exp.fullstack.role": "Desarrollador full-stack",
+  "about.exp.fullstack.desc": "Ecosistema de apps propias: arquitectura vertical slice, design system compartido, backend por dominios y publicación en App Store y Google Play.",
+  "about.exp.frontend.role": "Frontend engineer",
+  "about.exp.frontend.desc": "Interfaces React y TypeScript a escala, tokens de diseño y un sistema de componentes reutilizable.",
   "about.exp.freelance.role": "Desarrollador",
-  "about.exp.freelance.desc": "Apps web y mobile para clientes, del prototipo al App Store.",
-  "about.ai.eyebrow": "// ia · claude",
-  "about.ai.title": "Construyendo con IA y Claude",
-  "about.ai.description": "Experiencia construyendo con IA y Claude: flujos agénticos, prompt engineering, la API de Anthropic, skills a medida e integraciones MCP. Entrego más rápido apoyándome en Claude en diseño, código y automatización.",
-  "about.ai.chips": "Flujos agénticos · Prompt engineering · API de Anthropic · Skills a medida · MCP"
+  "about.exp.freelance.desc": "Apps web y mobile para clientes, del prototipo a la ficha publicada."
 }

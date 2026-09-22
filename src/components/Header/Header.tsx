@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
-import { BrandMark } from '../BrandMark/BrandMark';
 import { paths } from '../../shared/paths';
 import { HeaderProps } from './Header.types';
 import './Header.scss';
@@ -34,15 +32,18 @@ export const Header: React.FC<HeaderProps> = () => {
     setMenuOpen(false);
   };
 
-  const setLang = (lng: 'en' | 'es') => i18n.changeLanguage(lng);
   const currentLang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  // Un solo control para dos idiomas: pulsarlo lleva al otro. Dos botones
+  // ocupaban el doble para la misma decision binaria.
+  const toggleLang = () => {
+    void i18n.changeLanguage(currentLang === 'es' ? 'en' : 'es');
+  };
 
   return (
     <header className="header">
-      <div className="header__inner">
-        <button className="header__brand" onClick={() => go('/')} aria-label="David Yepes">
-          <BrandMark size="medium" />
-          <span className="header__brand-name">David Yepes</span>
+      <div className="header__inner container">
+        <button className="header__brand" onClick={() => go(paths.home)}>
+          David Yepes
         </button>
 
         <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
@@ -56,31 +57,27 @@ export const Header: React.FC<HeaderProps> = () => {
             </button>
           ))}
 
-          <div className="header__controls">
-            <div className="header__lang" role="group" aria-label="Language">
-              <button
-                className={`header__lang-btn ${currentLang === 'en' ? 'header__lang-btn--active' : ''}`}
-                onClick={() => setLang('en')}
-              >
-                EN
-              </button>
-              <span className="header__lang-sep">/</span>
-              <button
-                className={`header__lang-btn ${currentLang === 'es' ? 'header__lang-btn--active' : ''}`}
-                onClick={() => setLang('es')}
-              >
-                ES
-              </button>
-            </div>
+          <span className="header__sep" aria-hidden="true">
+            |
+          </span>
 
-            <button
-              className="header__theme"
-              onClick={toggleTheme}
-              aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
-            >
-              {isDark ? <Moon size={18} /> : <Sun size={18} />}
-            </button>
-          </div>
+          <button
+            className="header__lang"
+            onClick={toggleLang}
+            aria-label={currentLang === 'es' ? 'Switch to English' : 'Cambiar a español'}
+          >
+            <span className={currentLang === 'es' ? 'header__lang-on' : ''}>ES</span>
+            <span className="header__lang-slash">/</span>
+            <span className={currentLang === 'en' ? 'header__lang-on' : ''}>EN</span>
+          </button>
+
+          <button
+            className="header__theme"
+            onClick={toggleTheme}
+            aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+          >
+            ◐
+          </button>
         </nav>
 
         <button
@@ -89,9 +86,7 @@ export const Header: React.FC<HeaderProps> = () => {
           aria-label="Menu"
           aria-expanded={menuOpen}
         >
-          <span className={`header__burger-line ${menuOpen ? 'is-open-1' : ''}`} />
-          <span className={`header__burger-line ${menuOpen ? 'is-open-2' : ''}`} />
-          <span className={`header__burger-line ${menuOpen ? 'is-open-3' : ''}`} />
+          {menuOpen ? '×' : '≡'}
         </button>
       </div>
     </header>
