@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../shared/useTheme';
+import { useFeatureFlags } from '../../shared/useFeatureFlags';
 import { BrandMark } from '../BrandMark/BrandMark';
 import { SuperTypewriter } from '../SuperTypewriter/SuperTypewriter';
 import { useTypewriterCycle } from '../../shared/useTypewriterCycle';
@@ -13,13 +14,15 @@ import './Header.scss';
 interface NavItem {
   key: string;
   path: string;
+  /** Interruptor que lo gobierna; sin él, el item siempre se muestra. */
+  flag?: 'blog' | 'logs';
 }
 
 const navItems: NavItem[] = [
   { key: 'common.nav.home', path: paths.home },
   { key: 'common.nav.apps', path: paths.apps },
-  { key: 'common.nav.blog', path: paths.blog },
-  { key: 'common.nav.log', path: paths.log },
+  { key: 'common.nav.blog', path: paths.blog, flag: 'blog' },
+  { key: 'common.nav.log', path: paths.log, flag: 'logs' },
   { key: 'common.nav.about', path: paths.aboutMe },
 ];
 
@@ -34,10 +37,15 @@ const BRAND_KEYS = [
 
 export const Header: React.FC<HeaderProps> = () => {
   const { toggleTheme, isDark } = useTheme();
+  // Blog y Logs solo aparecen cuando estan encendidos en el backoffice: hasta
+  // que haya entradas publicadas, llevaban a una lista vacia.
+  const flags = useFeatureFlags();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const visibleNavItems = navItems.filter((item) => !item.flag || flags[item.flag]);
 
   const brandSteps = React.useMemo(() => BRAND_KEYS.map((key) => [t(key)]), [t]);
   const { lines: brandLines, isStill: brandStill } = useTypewriterCycle(brandSteps);
@@ -66,7 +74,7 @@ export const Header: React.FC<HeaderProps> = () => {
         </button>
 
         <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
-          {navItems.map((item) => (
+          {visibleNavItems.map((item) => (
             <button
               key={item.path}
               className={`header__link ${isActive(item.path) ? 'header__link--active' : ''}`}

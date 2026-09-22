@@ -30,7 +30,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
           {/* Las cifras salen del catalogo, no escritas a mano: al cambiar el
               estado de una app la home no se queda mintiendo. */}
           <p className="home__counts">{countsLine}</p>
-          <p className="home__counts">{t('home.hero.reach')}</p>
           <SuperTagList tags={stack} />
         </SuperIdentity>
 
@@ -44,6 +43,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
                 icon={<Smartphone size={16} />}
                 title={app.name}
                 subtitle={app.subtitle}
+                {...(app.reachKey ? { meta: t(app.reachKey) } : {})}
                 onClick={() => navigate(paths.app(app.slug))}
               />
             ))}

@@ -10,7 +10,6 @@
   "home.hero.counts.beta": "{{count}} in beta",
   "home.hero.counts.soon": "{{count}} coming",
   "home.hero.counts.offline": "{{count}} out of service",
-  "home.hero.reach": "+2,500 downloads · +1,500 registered users",
   "home.subscribe.title": "Get what I build, not just the result.",
   "home.subscribe.text": "Every week: what I shipped, what broke and how I fixed it. Enough detail to repeat it. One email, no spam.",
   "home.subscribe.placeholder": "you@email.com",

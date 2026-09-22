@@ -10,7 +10,6 @@
   "home.hero.counts.beta": "{{count}} en beta",
   "home.hero.counts.soon": "{{count}} próximos",
   "home.hero.counts.offline": "{{count}} sin servicio",
-  "home.hero.reach": "+2.500 descargas · +1.500 usuarios registrados",
   "home.subscribe.title": "Recibe lo que construyo, no solo el resultado.",
   "home.subscribe.text": "Cada semana: qué publiqué, qué se rompió y cómo lo arreglé. Con el detalle suficiente para repetirlo. Un correo, sin spam.",
   "home.subscribe.placeholder": "tu@correo.com",

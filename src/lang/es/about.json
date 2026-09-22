@@ -22,5 +22,6 @@
   "about.task.playFramework": "Desarrollo de aplicaciones web con Java, Scala y Javascript (Play Framework)",
   "about.freelance.eyebrow": "// freelance",
   "about.freelance.text": "Clientes con los que he trabajado por mi cuenta.",
-  "about.role.seniorFrontend": "Senior Frontend Developer"
+  "about.role.seniorFrontend": "Senior Frontend Developer",
+  "about.role.seniorFullstack": "Senior Full Stack Developer"
 }

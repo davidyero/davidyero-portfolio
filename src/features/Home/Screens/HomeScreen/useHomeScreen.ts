@@ -42,6 +42,8 @@ const STACK = [
 export interface FeaturedRow {
   slug: string;
   name: string;
+  /** Clave i18n con las cifras de la app, si las tiene. */
+  reachKey?: string;
   icon?: string;
   subtitle: string;
 }
@@ -65,6 +67,7 @@ export const useHomeScreen = () => {
           name: app.name,
           ...(app.logo !== undefined ? { icon: app.logo } : {}),
           subtitle: [tagline, platforms, offline].filter(Boolean).join(' · '),
+          ...(app.reachKey !== undefined ? { reachKey: app.reachKey } : {}),
         };
       }),
     [i18n.language, t]

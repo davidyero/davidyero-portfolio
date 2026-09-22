@@ -67,3 +67,13 @@
     transition: color $transition-fast;
   }
 }
+
+// Cifras bajo el subtítulo (descargas, usuarios). Más tenue que el subtítulo:
+// es dato de apoyo, no la descripción.
+.super-row__meta {
+  display: block;
+  margin-top: 2px;
+  font-family: $font-mono;
+  font-size: $fs-small;
+  color: var(--text-muted);
+}

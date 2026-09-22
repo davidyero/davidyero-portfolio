@@ -58,6 +58,8 @@ export interface AppMeta {
   tech?: string[]; // stack chips, e.g. ['React Native', 'Expo', 'TypeScript']
   version?: string;
   featured?: boolean;
+  /** Clave i18n con las cifras reales de la app (descargas, usuarios). */
+  reachKey?: string;
   webUrl?: string;
   repoUrl?: string;
   accent?: string; // CSS gradient used behind the app icon

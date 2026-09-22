@@ -12,7 +12,7 @@ export const appsMeta: Record<string, AppMeta> = {
     accent: 'linear-gradient(135deg, #f5c2a7 0%, #f38ba8 100%)',
   },
   youtime: {
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
     status: 'live',
     category: 'utility',
     tech: ['React Native', 'TypeScript'],
@@ -44,20 +44,23 @@ export const appsMeta: Record<string, AppMeta> = {
     accent: 'linear-gradient(135deg, #cba6f7 0%, #b4befe 100%)',
   },
   superlineup: {
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
     status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript'],
     accent: 'linear-gradient(135deg, #89b4fa 0%, #74c7ec 100%)',
   },
   'football-cup-simulator': {
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
     status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Zustand'],
     version: '4.0.1',
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #89b4fa 100%)',
     featured: true,
+    // Las cifras van en la ficha de la app de la que salen, no en el hero:
+    // sueltas arriba parecian del portfolio entero.
+    reachKey: 'apps.reach.footballCupSimulator',
   },
   'encuentra-tu-mascota': {
     platforms: ['web'],

@@ -14,4 +14,6 @@ export interface SuperRowProps {
   onClick?: () => void;
   /** Enlace externo; se abre en pestaña nueva. */
   href?: string;
+  /** Línea extra bajo el subtítulo: cifras de la app, por ejemplo. */
+  meta?: string;
 }

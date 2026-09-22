@@ -10,6 +10,7 @@ export const SuperRow: React.FC<SuperRowProps> = ({
   icon,
   title,
   subtitle,
+  meta,
   onClick,
   href,
 }) => {
@@ -23,6 +24,7 @@ export const SuperRow: React.FC<SuperRowProps> = ({
       <span className="super-row__body">
         <span className="super-row__title">{title}</span>
         {subtitle && <span className="super-row__subtitle">{subtitle}</span>}
+        {meta && <span className="super-row__meta">{meta}</span>}
       </span>
       <span className="super-row__chevron" aria-hidden="true">
         ›

@@ -111,6 +111,8 @@ export const FREELANCE: readonly FreelanceEntry[] = [
   { company: 'VASS', roleKey: 'about.role.seniorFrontend' },
   { company: 'Cencosud', roleKey: 'about.role.seniorFrontend' },
   { company: 'Leonisa', roleKey: 'about.role.seniorFrontend' },
+  { company: 'Fuerza Aérea Colombiana', roleKey: 'about.role.seniorFullstack' },
+  { company: 'Gobernación del Meta', roleKey: 'about.role.seniorFrontend' },
 ];
 
 /** Pares cargo + empresa para el rótulo que se escribe solo en la home. */

@@ -69,5 +69,6 @@
   "apps.catalog.count.offline": "{{count}} offline",
   "apps.catalog.count.android": "{{count}} Android",
   "apps.catalog.count.ios": "{{count}} iOS",
-  "apps.catalog.count.web": "{{count}} web"
+  "apps.catalog.count.web": "{{count}} web",
+  "apps.reach.footballCupSimulator": "+3,500 downloads · +1,500 registered users"
 }
