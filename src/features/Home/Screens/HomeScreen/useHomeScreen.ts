@@ -85,12 +85,27 @@ export const useHomeScreen = () => {
 
   // Estados del formulario. `sent` no distingue alta nueva de alta repetida:
   // para quien se suscribe es el mismo resultado, y el backend responde igual.
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error' | 'invalid'>(
+    'idle'
+  );
+  // Campo trampa. Vive en el estado como cualquier otro input; lo que lo hace
+  // trampa es que el formulario lo esconde y nadie lo ve.
+  const [website, setWebsite] = useState('');
 
   const submitSubscription = (): void => {
     if (status === 'sending') return;
+
+    // Se valida aqui y no solo con `type="email"`: el navegador no bloquea el
+    // envio programatico, y una peticion con "hola" gastaria un intento del
+    // limite por IP para nada.
+    const looksLikeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
+    if (!looksLikeEmail) {
+      setStatus('invalid');
+      return;
+    }
+
     setStatus('sending');
-    subscribe(email, i18n.language)
+    subscribe(email, i18n.language, website)
       .then(() => {
         setStatus('sent');
         setEmail('');
@@ -115,6 +130,8 @@ export const useHomeScreen = () => {
       setEmail(value);
     },
     status,
+    website,
+    setWebsite,
     submitSubscription,
   };
 };

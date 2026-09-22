@@ -15,6 +15,7 @@
   "home.subscribe.text": "Cada semana: qué publiqué, qué se rompió y cómo lo arreglé. Con el detalle suficiente para repetirlo. Un correo, sin spam.",
   "home.subscribe.placeholder": "tu@correo.com",
   "home.subscribe.cta": "Suscribirme",
-  "home.subscribe.done": "Listo. Te escribo cuando publique la próxima entrada.",
-  "home.subscribe.error": "No se pudo guardar tu correo. Inténtalo de nuevo en un momento."
+  "home.subscribe.done": "Gracias por unirte. Te escribo cuando publique la próxima entrada.",
+  "home.subscribe.error": "No se pudo guardar tu correo. Inténtalo de nuevo en un momento.",
+  "home.subscribe.invalid": "Escribe un correo válido, por ejemplo nombre@dominio.com"
 }

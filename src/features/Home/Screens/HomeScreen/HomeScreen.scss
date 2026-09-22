@@ -56,15 +56,15 @@
     max-width: none;
   }
 
-  // Resultado del envio. Verde para el alta, rojo para el fallo; ambos con los
-  // tokens del tema, legibles en claro y en oscuro.
-  &__contact-note {
-    font-family: $font-mono;
-    font-size: $fs-tiny;
-    max-width: none;
-
-    &--ok { color: var(--accent); }
-    &--error { color: var(--red); }
+  // Trampa para bots: fuera de la pantalla en vez de display:none, porque
+  // algunos scripts descartan los campos ocultos con display.
+  &__contact-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
   }
 
   // El campo y el boton son una sola pieza: se tocan y miden lo mismo.
@@ -73,6 +73,7 @@
   // propio `height: 38px`, el boton acababa un par de pixeles mas alto que el
   // campo y el borde del campo dejaba ver el desajuste.
   &__contact-form {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;

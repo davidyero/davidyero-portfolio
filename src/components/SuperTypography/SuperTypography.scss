@@ -37,11 +37,13 @@
 
   // Cuerpo y secundario comparten interlínea con la lista del sitio, para que
   // un párrafo seguido de una lista no cambie de ritmo a media lectura.
+  // Sin medida propia: el ancho lo fija el template de la pantalla. Un
+  // max-width aqui dejaba el parrafo a 60ch dentro de un contenedor mas ancho,
+  // con un hueco muerto a la derecha.
   &--body {
     font-family: $font-mono;
     font-size: $fs-small;
     line-height: 1.6;
-    max-width: $measure-body;
   }
 
   &--small {

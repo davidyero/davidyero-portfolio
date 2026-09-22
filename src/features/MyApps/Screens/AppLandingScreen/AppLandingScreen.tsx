@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { FileText, History, MonitorSmartphone, ShieldCheck, UserMinus } from 'lucide-react';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
@@ -177,14 +178,14 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
           <span className="mono-eyebrow mono-eyebrow--section">{t('apps.detail.more')}</span>
           <div className="detail__rows">
             <SuperRow
-              glyph="web"
+              icon={<MonitorSmartphone size={16} />}
               title={t('apps.detail.viewLanding')}
               subtitle={paths.appLanding(app.slug)}
               onClick={() => navigate(paths.appLanding(app.slug))}
             />
             {hasChangelog && (
               <SuperRow
-                glyph="log"
+                icon={<History size={16} />}
                 title={t('apps.detail.changelog')}
                 subtitle={paths.appChangelog(app.slug)}
                 onClick={() => navigate(paths.appChangelog(app.slug))}
@@ -192,7 +193,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             )}
             {app.termsAndConditions && (
               <SuperRow
-                glyph="doc"
+                icon={<FileText size={16} />}
                 title={t('apps.detail.terms')}
                 subtitle={paths.appTerms(app.slug)}
                 onClick={() => navigate(paths.appTerms(app.slug))}
@@ -200,7 +201,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             )}
             {app.privacyPolicy && (
               <SuperRow
-                glyph="doc"
+                icon={<ShieldCheck size={16} />}
                 title={t('apps.detail.privacy')}
                 subtitle={paths.appPrivacy(app.slug)}
                 onClick={() => navigate(paths.appPrivacy(app.slug))}
@@ -208,7 +209,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
             )}
             {app.accountDeletion && (
               <SuperRow
-                glyph="rm"
+                icon={<UserMinus size={16} />}
                 title={t('apps.legal.deleteAccount.title')}
                 subtitle={paths.appDeleteAccount(app.slug)}
                 onClick={() => navigate(paths.appDeleteAccount(app.slug))}
