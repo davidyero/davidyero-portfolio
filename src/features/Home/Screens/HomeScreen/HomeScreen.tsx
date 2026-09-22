@@ -18,7 +18,8 @@ import './HomeScreen.scss';
 // como escribirme. Todo lo demas tiene su propia pantalla.
 export const HomeScreen: React.FC<HomeScreenProps> = () => {
   const navigate = useNavigate();
-  const { t, stack, companies, featured, counts, email, setEmail, contactHref } = useHomeScreen();
+  const view = useHomeScreen();
+  const { t, stack, role, company, isStill, featured, countsLine, appsRowLine } = view;
 
   return (
     <PageLayout>
@@ -30,7 +31,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
           <p className="home__facts">{t('home.hero.facts')}</p>
           {/* Las cifras salen del catalogo, no escritas a mano: al cambiar el
               estado de una app la home no se queda mintiendo. */}
-          <p className="home__counts">{t('home.hero.counts', { ...counts })}</p>
+          <p className="home__counts">{countsLine}</p>
           <SuperTagList tags={stack} />
         </section>
 
@@ -56,7 +57,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
             <SuperRow
               glyph="ls"
               title="apps/"
-              subtitle={t('home.index.apps', { ...counts })}
+              subtitle={appsRowLine}
               onClick={() => navigate(paths.apps)}
             />
             <SuperRow
@@ -90,7 +91,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
             className="home__contact-form"
             onSubmit={(event) => {
               event.preventDefault();
-              window.location.href = contactHref;
+              window.location.href = view.contactHref;
             }}
           >
             <input
@@ -98,8 +99,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
               className="home__contact-input"
               placeholder={t('home.contact.placeholder')}
               aria-label={t('home.contact.placeholder')}
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              value={view.email}
+              onChange={(event) => view.setEmail(event.target.value)}
             />
             <SuperButton type="submit" variant="primary">
               {t('home.contact.cta')}
@@ -113,8 +114,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
           entries={[
             { label: t('home.meta.since'), value: '2017-10-02' },
             {
+              label: t('home.meta.position'),
+              value: <SuperTypewriter text={role} showCaret={!isStill} />,
+            },
+            {
               label: t('home.meta.experience'),
-              value: <SuperTypewriter words={companies} />,
+              value: <SuperTypewriter text={company} showCaret={!isStill} />,
             },
           ]}
         />

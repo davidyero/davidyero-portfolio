@@ -89,21 +89,33 @@
     max-width: none;
   }
 
-  // El campo y el boton son una sola pieza: se tocan, sin hueco entre ellos.
+  // El campo y el boton son una sola pieza: se tocan y miden lo mismo.
+  //
+  // La altura la fija el GRUPO, no cada hijo. Cuando cada pieza llevaba su
+  // propio `height: 38px`, el boton acababa un par de pixeles mas alto que el
+  // campo y el borde del campo dejaba ver el desajuste.
   &__contact-form {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    height: 38px;
     gap: 0;
 
     .super-button {
+      height: 100%;
+      // Mismo contorno que el campo, para que el conjunto tenga un borde
+      // continuo en vez de dos piezas con reglas distintas.
+      border: 1px solid var(--accent);
       border-radius: 0 $radius-btn $radius-btn 0;
     }
 
     @include mobile {
+      height: auto;
       gap: $space-2;
 
       .super-button {
         width: 100%;
+        height: 38px;
         border-radius: $radius-btn;
       }
     }
@@ -112,13 +124,13 @@
   &__contact-input {
     flex: 1 1 200px;
     min-width: 0;
+    height: 100%;
     background: var(--field);
     border: 1px solid var(--border);
     border-right: 0;
     color: var(--text);
     font-family: $font-mono;
     font-size: $fs-small;
-    height: 38px;
     padding: 0 14px;
     border-radius: $radius-btn 0 0 $radius-btn;
     outline: none;
@@ -128,6 +140,7 @@
 
     @include mobile {
       flex-basis: 100%;
+      height: 38px;
       border-right: 1px solid var(--border);
       border-radius: $radius-btn;
     }

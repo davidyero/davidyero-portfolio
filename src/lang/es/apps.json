@@ -1,6 +1,5 @@
 {
   "apps.catalog.title": "{{count}} apps",
-  "apps.catalog.subtitle": "{{live}} live · {{beta}} beta · {{soon}} soon · {{offline}} offline — {{android}} Android · {{ios}} iOS · {{web}} web",
   "apps.catalog.filter.all": "todas",
   "apps.catalog.filter.mobile": "mobile",
   "apps.catalog.filter.web": "web",
@@ -63,5 +62,12 @@
   "apps.status.short.soon": "SOON",
   "apps.status.offline": "Sin servicio",
   "apps.status.short.offline": "OFFLINE",
-  "apps.detail.offlineNotice": "Esta app está fuera de servicio: su ficha sigue en la tienda, pero hoy no funciona. Por eso no hay botón de descarga."
+  "apps.detail.offlineNotice": "Esta app está fuera de servicio: su ficha sigue en la tienda, pero hoy no funciona. Por eso no hay botón de descarga.",
+  "apps.catalog.count.live": "{{count}} live",
+  "apps.catalog.count.beta": "{{count}} beta",
+  "apps.catalog.count.soon": "{{count}} soon",
+  "apps.catalog.count.offline": "{{count}} offline",
+  "apps.catalog.count.android": "{{count}} Android",
+  "apps.catalog.count.ios": "{{count}} iOS",
+  "apps.catalog.count.web": "{{count}} web"
 }

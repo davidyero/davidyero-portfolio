@@ -55,6 +55,36 @@ export const getAppContent = (
 
 export const featuredApps: EnrichedApp[] = appsRegistry.filter((a) => a.featured);
 
+export interface AppCounts {
+  total: number;
+  live: number;
+  beta: number;
+  soon: number;
+  offline: number;
+  android: number;
+  ios: number;
+  web: number;
+}
+
+// Recuento del catalogo. Se calcula una vez y vive aqui porque lo pintan la
+// home y el catalogo: estaba duplicado en los dos hooks y podian divergir.
+export const appCounts: AppCounts = (() => {
+  const byStatus = (status: EnrichedApp['status']): number =>
+    appsRegistry.filter((a) => a.status === status).length;
+  const byPlatform = (platform: AppPlatform): number =>
+    appsRegistry.filter((a) => a.platforms.includes(platform)).length;
+  return {
+    total: appsRegistry.length,
+    live: byStatus('live'),
+    beta: byStatus('beta'),
+    soon: byStatus('soon'),
+    offline: byStatus('offline'),
+    android: byPlatform('android'),
+    ios: byPlatform('ios'),
+    web: byPlatform('web'),
+  };
+})();
+
 // Distinct categories present across the catalog (stable order).
 export const availableCategories = (): AppCategory[] => {
   const order: AppCategory[] = ['sports', 'productivity', 'utility', 'entertainment'];

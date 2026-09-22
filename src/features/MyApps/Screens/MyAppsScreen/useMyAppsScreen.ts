@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
+  appCounts,
   appsRegistry,
   availableCategories,
   getAppContent,
@@ -8,6 +9,7 @@ import {
   hasWeb,
   platformLabels,
 } from '../../data/registry';
+import { catalogSubtitle } from '../../../../shared/countLines';
 import { AppCategory, EnrichedApp } from './MyAppsScreen.types';
 
 export type CatalogFilter = 'all' | 'mobile' | 'web' | AppCategory;
@@ -74,23 +76,9 @@ export const useMyAppsScreen = () => {
     [visible, i18n.language]
   );
 
-  // Recuentos del catalogo completo, no del filtro: describen el conjunto, y
-  // moverlos al filtrar haria parecer que el catalogo encoge.
-  const counts = useMemo(() => {
-    const byStatus = (status: string) => appsRegistry.filter((a) => a.status === status).length;
-    const byPlatform = (platform: 'ios' | 'android' | 'web') =>
-      appsRegistry.filter((a) => a.platforms.includes(platform)).length;
-    return {
-      total: appsRegistry.length,
-      live: byStatus('live'),
-      beta: byStatus('beta'),
-      soon: byStatus('soon'),
-      offline: byStatus('offline'),
-      android: byPlatform('android'),
-      ios: byPlatform('ios'),
-      web: byPlatform('web'),
-    };
-  }, []);
+  // Los recuentos describen el catalogo completo, no el filtro: moverlos al
+  // filtrar haria parecer que el catalogo encoge.
+  const subtitle = catalogSubtitle(appCounts, t);
 
-  return { t, filter, setFilter, filters, rows, counts };
+  return { t, filter, setFilter, filters, rows, total: appCounts.total, subtitle };
 };

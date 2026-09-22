@@ -13,15 +13,15 @@ import './MyAppsScreen.scss';
 // recorren de un vistazo y aguantan 40 sin cambiar de forma.
 export const MyAppsScreen: React.FC<MyAppsScreenProps> = () => {
   const navigate = useNavigate();
-  const { t, filter, setFilter, filters, rows, counts } = useMyAppsScreen();
+  const { t, filter, setFilter, filters, rows, total, subtitle } = useMyAppsScreen();
 
   return (
     <PageLayout>
       <div className="catalog container container--catalog">
         <header className="catalog__header">
           <span className="mono-eyebrow">{t('apps.catalog.eyebrow')}</span>
-          <h1 className="catalog__title">{t('apps.catalog.title', { count: counts.total })}</h1>
-          <p className="catalog__subtitle">{t('apps.catalog.subtitle', { ...counts })}</p>
+          <h1 className="catalog__title">{t('apps.catalog.title', { count: total })}</h1>
+          <p className="catalog__subtitle">{subtitle}</p>
         </header>
 
         <div className="catalog__filters">

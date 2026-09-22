@@ -5,7 +5,7 @@ import { AppMeta } from '../Screens/MyAppsScreen/MyAppsScreen.types';
 export const appsMeta: Record<string, AppMeta> = {
   gazella: {
     platforms: ['ios', 'android'],
-    status: 'offline',
+    status: 'live',
     category: 'sports',
     tech: ['React Native', 'Expo', 'TypeScript'],
     version: '2.1.0',
@@ -37,7 +37,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   pronostigol: {
     platforms: ['ios', 'android'],
-    status: 'offline',
+    status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Node'],
     version: '1.0.0',
@@ -69,14 +69,6 @@ export const appsMeta: Record<string, AppMeta> = {
     accent: 'linear-gradient(135deg, #a6e3a1 0%, #f9e2af 100%)',
     featured: true,
   },
-  chamiapp: {
-    platforms: ['web'],
-    status: 'live',
-    category: 'sports',
-    tech: ['React', 'TypeScript'],
-    webUrl: 'https://chamiapp-client.pages.dev/',
-    accent: 'linear-gradient(135deg, #cba6f7 0%, #89b4fa 100%)',
-  },
   'my-link-hub': {
     platforms: ['web'],
     status: 'live',
@@ -106,7 +98,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   habitflow: {
     platforms: ['ios', 'android'],
-    status: 'soon',
+    status: 'live',
     category: 'productivity',
     tech: ['React Native', 'TypeScript'],
     version: '1.0.0',
@@ -114,7 +106,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   'trainflow-ai': {
     platforms: ['ios', 'android'],
-    status: 'beta',
+    status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'RevenueCat'],
     version: '1.0.0',
@@ -122,7 +114,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   'cop-moneda-colombiana': {
     platforms: ['android', 'ios'],
-    status: 'soon',
+    status: 'live',
     category: 'utility',
     tech: ['React Native', 'TypeScript', 'AdMob'],
     version: '0.1.0',
@@ -130,7 +122,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   'player-radar': {
     platforms: ['android'],
-    status: 'beta',
+    status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'RevenueCat'],
     version: '1.0.0',
@@ -138,7 +130,7 @@ export const appsMeta: Record<string, AppMeta> = {
   },
   'agenda-pilates': {
     platforms: ['web'],
-    status: 'beta',
+    status: 'live',
     category: 'productivity',
     tech: ['React', 'TypeScript', 'Vite', 'React Native', 'Node'],
     version: '0.99.35',
