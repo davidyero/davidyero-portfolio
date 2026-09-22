@@ -6,6 +6,7 @@ import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { SuperSocialRow } from '../../../../components/SuperSocialRow/SuperSocialRow';
+import { SuperTypewriter } from '../../../../components/SuperTypewriter/SuperTypewriter';
 import { BrandMark } from '../../../../components/BrandMark/BrandMark';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
 import { paths } from '../../../../shared/paths';
@@ -17,7 +18,7 @@ import './HomeScreen.scss';
 // como escribirme. Todo lo demas tiene su propia pantalla.
 export const HomeScreen: React.FC<HomeScreenProps> = () => {
   const navigate = useNavigate();
-  const { t, stack, featured, counts, email, setEmail, contactHref } = useHomeScreen();
+  const { t, stack, companies, featured, counts, email, setEmail, contactHref } = useHomeScreen();
 
   return (
     <PageLayout>
@@ -111,8 +112,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
         <SuperMetaList
           entries={[
             { label: t('home.meta.since'), value: '2017-10-02' },
-            { label: t('home.meta.location'), value: t('home.meta.locationValue') },
-            { label: t('home.meta.work'), value: t('home.meta.workValue') },
+            {
+              label: t('home.meta.experience'),
+              value: <SuperTypewriter words={companies} />,
+            },
           ]}
         />
       </div>
