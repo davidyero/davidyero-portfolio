@@ -34,7 +34,9 @@
   &__brand-mark {
     width: 22px;
     height: 22px;
-    border-radius: 50%;
+    // Misma familia de esquina que el avatar de la home, a su escala: 30px en
+    // una pieza de 22 seria un circulo, que es justo lo que no se quiere.
+    border-radius: 7px;
   }
 
   &__nav {

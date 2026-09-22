@@ -1,15 +1,10 @@
 {
-  "home.hero.title": "I build software, ship products and experiment with AI.",
+  "home.hero.title": "I build software, ship products and experiment with AI and technology.",
   "home.hero.facts": "Frontend Tech Lead by day, indie developer the rest of the time. I design, build and publish real applications for iOS, Android and Web, and I explore AI, automation and self-hosted products along the way.",
   "home.featured.eyebrow": "// featured",
   "home.index.eyebrow": "// go to",
   "home.index.apps": "All {{count}} apps",
   "home.index.about": "2017 → today · three stages",
-  "home.contact.title": "Need an app shipped?",
-  "home.contact.text": "Write to me and I answer the way I work on my own apps: scope, version and release date. No 20-page proposal.",
-  "home.contact.placeholder": "you@email.com",
-  "home.contact.cta": "WriteMe",
-  "home.contact.subject": "Shipping an app",
   "home.meta.since": "building since:",
   "home.meta.experience": "experience:",
   "home.hero.counts.total": "{{count}} products of my own",
@@ -20,5 +15,12 @@
   "home.meta.position": "role:",
   "home.meta.role.lead": "Tech Lead",
   "home.meta.role.fullstack": "Full-stack developer",
-  "home.meta.role.frontend": "Senior Frontend"
+  "home.meta.role.frontend": "Senior Frontend",
+  "home.hero.reach": "+2,500 downloads · +1,500 registered users",
+  "home.subscribe.title": "Get what I build, not just the result.",
+  "home.subscribe.text": "Every week: what I shipped, what broke and how I fixed it. Enough detail to repeat it. One email, no spam.",
+  "home.subscribe.placeholder": "you@email.com",
+  "home.subscribe.cta": "Subscribe",
+  "home.subscribe.done": "Done. I'll write when the next entry is out.",
+  "home.subscribe.error": "Could not save your email. Try again in a moment."
 }

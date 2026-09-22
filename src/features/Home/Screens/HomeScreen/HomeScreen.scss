@@ -20,16 +20,18 @@
   &__avatar {
     width: 96px;
     height: 96px;
-    border-radius: 50%;
+    border-radius: 30px;
     object-fit: cover;
     border: 1px solid var(--accent);
   }
 
+  // El nombre es un rotulo, no un titular: va en la pixelada, que ya trae su
+  // propio espaciado. El tracking del sistema aqui sobra y la separaria de mas.
   &__name {
+    font-family: $font-pixel;
     font-size: $fs-h2;
-    // El wordmark es lo unico con tracking positivo del sitio: espaciar las
-    // letras de un nombre corto lo convierte en rotulo.
-    letter-spacing: $tracking-wordmark;
+    font-weight: 400;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
@@ -47,8 +49,10 @@
     max-width: none;
   }
 
+  // Dos puntos por debajo del cuerpo: es el parrafo mas largo de la pagina y
+  // asi no compite con la linea de identidad que tiene encima.
   &__facts {
-    font-size: $fs-body;
+    font-size: $fs-small;
     color: var(--subtext);
     max-width: 56ch;
     margin: 0 auto;
@@ -78,15 +82,27 @@
 
   &__contact-title {
     font-family: $font-mono;
-    font-size: $fs-body;
-    font-weight: 600;
+    font-size: $fs-small;
+    font-weight: 700;
     color: var(--text);
   }
 
   &__contact-text {
-    font-size: $fs-small;
+    font-size: $fs-tiny;
+    line-height: 1.7;
     color: var(--subtext);
     max-width: none;
+  }
+
+  // Resultado del envio. Verde para el alta, rojo para el fallo; ambos con los
+  // tokens del tema, legibles en claro y en oscuro.
+  &__contact-note {
+    font-family: $font-mono;
+    font-size: $fs-tiny;
+    max-width: none;
+
+    &--ok { color: var(--accent); }
+    &--error { color: var(--red); }
   }
 
   // El campo y el boton son una sola pieza: se tocan y miden lo mismo.
@@ -103,6 +119,7 @@
 
     .super-button {
       height: 100%;
+      font-size: $fs-tiny;
       // Mismo contorno que el campo, para que el conjunto tenga un borde
       // continuo en vez de dos piezas con reglas distintas.
       border: 1px solid var(--accent);
@@ -130,7 +147,7 @@
     border-right: 0;
     color: var(--text);
     font-family: $font-mono;
-    font-size: $fs-small;
+    font-size: $fs-tiny;
     padding: 0 14px;
     border-radius: $radius-btn 0 0 $radius-btn;
     outline: none;

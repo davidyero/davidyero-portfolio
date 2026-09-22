@@ -18,23 +18,8 @@
     color: var(--muted);
   }
 
-  &__identity { color: var(--muted); }
-
-  &__meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  &__link {
-    font-family: $font-mono;
-    font-size: $fs-tiny;
+  &__identity,
+  &__version {
     color: var(--muted);
-    transition: color $transition-fast;
-
-    &:hover { color: var(--accent); }
   }
-
-  &__dot { color: var(--border-strong); }
 }

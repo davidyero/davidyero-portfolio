@@ -1,15 +1,10 @@
 {
-  "home.hero.title": "Construyo software, publico productos y experimento con IA.",
+  "home.hero.title": "Construyo software, publico productos y experimento con IA y tecnología.",
   "home.hero.facts": "Frontend Tech Lead de día, indie developer el resto del tiempo. Diseño, desarrollo y publico aplicaciones reales para iOS, Android y Web, explorando además IA, automatización y productos self-hosted.",
   "home.featured.eyebrow": "// destacadas",
   "home.index.eyebrow": "// ir a",
   "home.index.apps": "Las {{count}} apps",
   "home.index.about": "2017 → hoy · tres etapas",
-  "home.contact.title": "¿Necesitas una app publicada?",
-  "home.contact.text": "Escríbeme y te respondo con lo mismo que hago en mis apps: alcance, versión y fecha de publicación. Sin propuesta de 20 páginas.",
-  "home.contact.placeholder": "tu@correo.com",
-  "home.contact.cta": "EscribeMe",
-  "home.contact.subject": "Una app publicada",
   "home.meta.since": "desarrollando desde:",
   "home.meta.experience": "experiencia:",
   "home.hero.counts.total": "{{count}} productos propios",
@@ -20,5 +15,12 @@
   "home.meta.position": "cargo:",
   "home.meta.role.lead": "Líder técnico",
   "home.meta.role.fullstack": "Desarrollador fullstack",
-  "home.meta.role.frontend": "Senior Frontend"
+  "home.meta.role.frontend": "Senior Frontend",
+  "home.hero.reach": "+2.500 descargas · +1.500 usuarios registrados",
+  "home.subscribe.title": "Recibe lo que construyo, no solo el resultado.",
+  "home.subscribe.text": "Cada semana: qué publiqué, qué se rompió y cómo lo arreglé. Con el detalle suficiente para repetirlo. Un correo, sin spam.",
+  "home.subscribe.placeholder": "tu@correo.com",
+  "home.subscribe.cta": "Suscribirme",
+  "home.subscribe.done": "Listo. Te escribo cuando publique la próxima entrada.",
+  "home.subscribe.error": "No se pudo guardar tu correo. Inténtalo de nuevo en un momento."
 }

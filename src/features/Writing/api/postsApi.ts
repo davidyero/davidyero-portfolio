@@ -42,3 +42,16 @@ export const fetchPosts = (kind: PostKind, lang?: string): Promise<ListResponse>
 
 export const fetchPost = (slug: string, lang?: string): Promise<Post> =>
   request<Post>(`/portfolio/posts/${encodeURIComponent(slug)}?lang=${normalizeLang(lang)}`);
+
+/**
+ * Alta en la lista de correo. El backend responde igual si ya estabas apuntado,
+ * así que aquí no hay caso "ya existe": o se guardó, o falló.
+ */
+export const subscribe = async (email: string, lang?: string): Promise<void> => {
+  const res = await fetch(`${API_BASE_URL}/portfolio/subscribers`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, language: normalizeLang(lang) }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+};

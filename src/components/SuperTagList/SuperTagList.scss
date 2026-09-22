@@ -15,9 +15,11 @@
     font-size: $fs-tiny;
     letter-spacing: $tracking-label;
     text-transform: uppercase;
-    color: var(--muted);
+    // Texto y borde suben un escalon de contraste: a 11px sobre el borde suave
+    // las etiquetas se leian como desactivadas.
+    color: var(--subtext);
     padding: 6px 10px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     border-radius: $radius-btn;
   }
 }
