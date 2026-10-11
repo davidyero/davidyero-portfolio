@@ -1,21 +1,10 @@
 import { App } from "../Screens/MyAppsScreen/MyAppsScreen.types";
-import GazellaIcon from "../../../assets/icons/apps/GazellaIcon.png";
-import YouTimeIcon from "../../../assets/icons/apps/YouTimeIcon.png";
-import HolidayIcon from "../../../assets/icons/apps/HolidayIcon.png";
-import TaskMasterIcon from "../../../assets/icons/apps/TaskMasterIcon.png";
-import PronostigolIcon from "../../../assets/icons/apps/PronostigolIcon.png";
-import SuperLineUpIcon from "../../../assets/icons/apps/SuperLineUp.png";
-import EncuentraTuMascotaIcon from "../../../assets/icons/apps/EncuentraTuMascotaIcon.png";
-import MyLinkHubIcon from "../../../assets/icons/apps/MyLinkHubIcon.png";
-import SplitioIcon from "../../../assets/icons/apps/SplitioIcon.png";
-import TrainFlowAIIcon from "../../../assets/icons/apps/TrainFlowAIIcon.png";
-import FootballCupIcon from "../../../assets/icons/apps/FootballCupIcon.png";
-import HabitFlowIcon from "../../../assets/icons/apps/HabitFlowIcon.png";
-import CopMonedaColombianaIcon from "../../../assets/icons/apps/CopMonedaColombianaIcon.png";
 
-import PlayerRadarIcon from "../../../assets/icons/apps/PlayerRadarIcon.png";
-import MisPagosIcon from "../../../assets/icons/apps/MisPagosIcon.png";
-import AgendaPilatesIcon from "../../../assets/icons/apps/AgendaPilatesIcon.png";
+// Los iconos viven en public/app-icons/<slug>.png con URL FIJA
+// (https://davidyero.com/app-icons/<slug>.png): el backoffice y el resto del
+// ecosistema los enlazan desde aquí. Importados en el bundle llevarían un hash
+// que cambia en cada build y nadie más podría usarlos.
+const appIcon = (slug: string): string => `/app-icons/${slug}.png`;
 
 export const appsData: App[] = [
   {
@@ -25,7 +14,7 @@ export const appsData: App[] = [
     description:
       "Con Gazella, puedes explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca.",
     icon: "🏃",
-    logo: GazellaIcon,
+    logo: appIcon("gazella"),
     iconBgColor: "#bfdbfe",
     fullDescription:
       "Con Gazella, puedes explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca. Descubre carreras, maratones y competencias cerca de ti.",
@@ -262,7 +251,7 @@ export const appsData: App[] = [
     description:
       'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
     icon: "⏰",
-    logo: YouTimeIcon,
+    logo: appIcon("youtime"),
     iconBgColor: "#a5b4fc",
     fullDescription:
       'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
@@ -446,7 +435,7 @@ export const appsData: App[] = [
     description:
       "Explora y celebra con los feriados mundiales: tu guía completa para los feriados globales",
     icon: "🌍",
-    logo: HolidayIcon,
+    logo: appIcon("festivos-del-mundo"),
     iconBgColor: "#bfdbfe",
     fullDescription:
       "Explora y celebra los feriados de todo el mundo. Una guía completa con información detallada de festividades, días festivos y celebraciones de diferentes países y culturas.",
@@ -645,7 +634,7 @@ export const appsData: App[] = [
     description:
       "TaskMaster es tu asistente personal de productividad. Organiza tus tareas, proyectos y objetivos en un solo lugar con una interfaz intuitiva y poderosas funciones de gestión.",
     icon: "✅",
-    logo: TaskMasterIcon,
+    logo: appIcon("taskmaster"),
     iconBgColor: "#fcd34d",
     fullDescription:
       "TaskMaster es la solución definitiva para gestionar tu productividad. Con funciones avanzadas de organización, recordatorios inteligentes y análisis de rendimiento, podrás alcanzar tus objetivos de manera eficiente.",
@@ -896,7 +885,7 @@ export const appsData: App[] = [
     description:
       "Pronostigol es la app definitiva para los amantes del fútbol. Crea quinielas, compite con amigos y demuestra tus conocimientos prediciendo resultados de ligas y torneos internacionales.",
     icon: "🎯",
-    logo: PronostigolIcon,
+    logo: appIcon("pronostigol"),
     iconBgColor: "#86efac",
     fullDescription:
       "Pronostigol te permite crear y participar en quinielas de fútbol de manera fácil y divertida. Compite con amigos, colegas o únete a ligas públicas. Sistema de puntos, rankings en tiempo real y premios virtuales te esperan.",
@@ -1156,7 +1145,7 @@ export const appsData: App[] = [
     description:
       "Crea alineaciones de fútbol increíbles en segundos. Equipo (11) o partido completo (22), formaciones clásicas, drag & drop y personalización total.",
     icon: "⚽",
-    logo: SuperLineUpIcon,
+    logo: appIcon("superlineup"),
     iconBgColor: "#86efac",
     fullDescription:
       "¡Bienvenido a SuperLineUp! Crea alineaciones de fútbol increíbles en segundos: equipo (11) o partido completo (22), más de 7 formaciones clásicas, drag & drop fluido, camisetas, césped y estadio personalizables, guarda y comparte como imagen, 100% sin conexión. Arma tu alineación, muestra tu táctica y comparte tu pasión.",
@@ -1379,7 +1368,7 @@ export const appsData: App[] = [
     description:
       "Simula torneos de copa de fútbol y vive cada ronda hasta la final.",
     icon: "",
-    logo: FootballCupIcon,
+    logo: appIcon("football-cup-simulator"),
     appStoreUrl:
       "https://apps.apple.com/us/app/football-tournament-simulator/id6756631490",
     playStoreUrl:
@@ -1729,7 +1718,7 @@ export const appsData: App[] = [
     description:
       "Reportes de mascotas perdidas y encontradas en Colombia. Gratis, sin publicidad.",
     icon: "",
-    logo: EncuentraTuMascotaIcon,
+    logo: appIcon("encuentra-tu-mascota"),
   },
   {
     id: "11",
@@ -1738,7 +1727,7 @@ export const appsData: App[] = [
     description:
       "Tu portafolio profesional y todos tus enlaces en un solo link.",
     icon: "",
-    logo: MyLinkHubIcon,
+    logo: appIcon("my-link-hub"),
   },
   {
     id: "12",
@@ -1747,7 +1736,7 @@ export const appsData: App[] = [
     description:
       "Gastos compartidos por grupo: reparte cada gasto y calcula quién debe cuánto a quién, mes a mes.",
     icon: "",
-    logo: SplitioIcon,
+    logo: appIcon("splitio"),
     accountDeletion: {
       es: {
         lastUpdated: "18 de Septiembre, 2026",
@@ -2042,7 +2031,7 @@ export const appsData: App[] = [
     description:
       "Todos tus medios de cobro digitales de Colombia y tus redes, en un solo link.",
     icon: "",
-    logo: MisPagosIcon,
+    logo: appIcon("mis-pagos"),
   },
   {
     id: "14",
@@ -2051,7 +2040,7 @@ export const appsData: App[] = [
     description:
       "Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones. Local-first, con sincronización opcional en la nube para Lite y Pro.",
     icon: "",
-    logo: HabitFlowIcon,
+    logo: appIcon("habitflow"),
     fullDescription:
       "HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Puedes usarlo como invitado con todos tus datos en el dispositivo, o crear una cuenta con correo y contraseña. Con los planes Lite y Pro, tus hábitos, check-ins y estados de ánimo se sincronizan en la nube entre tus dispositivos; en el plan gratuito tus datos permanecen 100% en el dispositivo.",
     features: [
@@ -2324,7 +2313,7 @@ export const appsData: App[] = [
     description:
       "Convierte los planes de entrenamiento que genera la IA en una app clara y legible. Tus planes viven en tu dispositivo.",
     icon: "",
-    logo: TrainFlowAIIcon,
+    logo: appIcon("trainflow-ai"),
     fullDescription:
       "TrainFlow AI es la capa de presentación para planes de entrenamiento generados por inteligencia artificial (ChatGPT, Claude, Gemini…). Pides un plan en JSON o CSV, lo importas, y la app lo muestra con una interfaz editorial clara. Tus planes se guardan en tu dispositivo; con Lite o Pro se respaldan en la nube. Inicia sesión con Google o entra como invitado.",
     features: [
@@ -2587,7 +2576,7 @@ export const appsData: App[] = [
     description:
       "Tasas de cambio de todas las monedas del mundo frente al peso colombiano, actualizadas cada día. Con conversor, favoritas y detalle por moneda.",
     icon: "",
-    logo: CopMonedaColombianaIcon,
+    logo: appIcon("cop-moneda-colombiana"),
     fullDescription:
       "COP Moneda Colombiana muestra el valor de más de 160 monedas del mundo frente al peso colombiano, con datos que se actualizan una vez al día. Busca y filtra por región, marca tus monedas favoritas, convierte cualquier monto con la calculadora y abre cada moneda para ver su detalle y su histórico. Funciona sin conexión con los últimos datos guardados. No necesita cuenta: todo vive en tu dispositivo. Gratis, con publicidad.",
     features: [
@@ -2781,7 +2770,7 @@ export const appsData: App[] = [
     description:
       "Sigue a tus jugadores de fútbol favoritos: partidos de hoy, ficha completa (club, selección y carrera) y datos al instante.",
     icon: "",
-    logo: PlayerRadarIcon,
+    logo: appIcon("player-radar"),
     appStoreUrl: "",
     playStoreUrl: "",
     termsAndConditions: {
@@ -3076,7 +3065,7 @@ export const appsData: App[] = [
     description:
       "Los estudios de pilates gestionan sus clases y planes, y sus miembros reservan desde la web o el móvil.",
     icon: "",
-    logo: AgendaPilatesIcon,
+    logo: appIcon("agenda-pilates"),
     termsAndConditions: {
       es: {
         lastUpdated: "17 de Septiembre, 2026",
