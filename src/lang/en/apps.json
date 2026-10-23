@@ -43,6 +43,7 @@
   "apps.legal.deleteAccount.title": "Account Deletion",
   "apps.legal.deleteAccountSubtitle": "{{app}} · Account Deletion",
   "apps.legal.lastUpdated": "Last updated",
+  "apps.legal.controller": "Data controller: David Yepes (@Davidyero), Colombia · support@davidyero.com",
   "apps.legal.backToApps": "Back to apps",
   "apps.legal.notAvailable": "This document is not available for this app.",
   "apps.notFound": "App not found.",

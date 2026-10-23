@@ -61,7 +61,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "1 de Diciembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -101,12 +101,12 @@ export const appsData: App[] = [
           {
             title: "8. Contacto",
             content:
-              "<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@gazella.com</p>",
+              "<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "December 1, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -146,14 +146,14 @@ export const appsData: App[] = [
           {
             title: "8. Contact",
             content:
-              "<p>If you have questions about these Terms and Conditions, contact us at: support@gazella.com</p>",
+              "<p>If you have questions about these Terms and Conditions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "1 de Diciembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -193,12 +193,12 @@ export const appsData: App[] = [
           {
             title: "8. Cambios y Contacto",
             content:
-              "<p>Podemos actualizar esta Política y te notificaremos cambios significativos a través de la Aplicación. Para preguntas sobre privacidad, contáctanos en: soporte@gazella.com</p>",
+              "<p>Podemos actualizar esta Política y te notificaremos cambios significativos a través de la Aplicación. Para preguntas sobre privacidad, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "December 1, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -238,7 +238,7 @@ export const appsData: App[] = [
           {
             title: "8. Changes and Contact",
             content:
-              "<p>We may update this Policy and will notify you of significant changes through the Application. For privacy questions, contact us at: support@gazella.com</p>",
+              "<p>We may update this Policy and will notify you of significant changes through the Application. For privacy questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -285,7 +285,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "1 de Octubre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -315,12 +315,12 @@ export const appsData: App[] = [
           {
             title: "6. Contacto",
             content:
-              "<p>Para preguntas o comentarios, contáctanos en: soporte@youtime.com</p>",
+              "<p>Para preguntas o comentarios, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "October 1, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -350,14 +350,14 @@ export const appsData: App[] = [
           {
             title: "6. Contact",
             content:
-              "<p>For questions or comments, contact us at: support@youtime.com</p>",
+              "<p>For questions or comments, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "1 de Octubre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -385,14 +385,19 @@ export const appsData: App[] = [
               "<p>Los enlaces que generas apuntan a YouTube (operado por Google), que tiene su propia política de privacidad. Te recomendamos consultarla para entender cómo trata tus datos cuando reproduces el video.</p>",
           },
           {
-            title: "6. Cambios y Contacto",
+            title: "6. Menores",
             content:
-              "<p>Podemos actualizar esta Política. Cualquier cambio se publicará en la Aplicación. Para preguntas, contáctanos en: soporte@youtime.com</p>",
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos a sabiendas datos de menores. Si crees que un menor a tu cargo nos ha facilitado datos, escríbenos a support@davidyero.com y los eliminaremos.</p>",
+          },
+          {
+            title: "7. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política. Cualquier cambio se publicará en la Aplicación. Para preguntas, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "October 1, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -420,9 +425,14 @@ export const appsData: App[] = [
               "<p>The links you generate point to YouTube (operated by Google), which has its own privacy policy. We recommend reviewing it to understand how Google handles your data when you play the video.</p>",
           },
           {
-            title: "6. Changes and Contact",
+            title: "6. Children",
             content:
-              "<p>We may update this Policy. Any changes will be published in the Application. For questions, contact us at: support@youtime.com</p>",
+              "<p>The App is not directed to children under 13 and we do not knowingly collect data from children. If you believe a child in your care has given us data, email support@davidyero.com and we will delete it.</p>",
+          },
+          {
+            title: "7. Changes and Contact",
+            content:
+              "<p>We may update this Policy. Any changes will be published in the Application. For questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -464,7 +474,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "15 de Noviembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -499,12 +509,12 @@ export const appsData: App[] = [
           {
             title: "7. Contacto",
             content:
-              "<p>Para reportar errores o sugerencias, contáctanos en: info@festivosdelmundo.com</p>",
+              "<p>Para reportar errores o sugerencias, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "November 15, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -539,14 +549,14 @@ export const appsData: App[] = [
           {
             title: "7. Contact",
             content:
-              "<p>To report errors or suggestions, contact us at: info@festivosdelmundo.com</p>",
+              "<p>To report errors or suggestions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "15 de Noviembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -579,14 +589,19 @@ export const appsData: App[] = [
               "<p>Puedes restablecer tus preferencias o desinstalar la Aplicación en cualquier momento, lo que removerá los datos almacenados localmente.</p>",
           },
           {
-            title: "7. Cambios y Contacto",
+            title: "7. Menores",
             content:
-              "<p>Esta Política puede actualizarse. Para preguntas sobre privacidad, contáctanos en: info@festivosdelmundo.com</p>",
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos a sabiendas datos de menores. Si crees que un menor a tu cargo nos ha facilitado datos, escríbenos a support@davidyero.com y los eliminaremos.</p>",
+          },
+          {
+            title: "8. Cambios y Contacto",
+            content:
+              "<p>Esta Política puede actualizarse. Para preguntas sobre privacidad, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "November 15, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -619,9 +634,14 @@ export const appsData: App[] = [
               "<p>You can reset your preferences or uninstall the Application at any time, which will remove locally stored data.</p>",
           },
           {
-            title: "7. Changes and Contact",
+            title: "7. Children",
             content:
-              "<p>This Policy may be updated. For privacy questions, contact us at: info@festivosdelmundo.com</p>",
+              "<p>The App is not directed to children under 13 and we do not knowingly collect data from children. If you believe a child in your care has given us data, email support@davidyero.com and we will delete it.</p>",
+          },
+          {
+            title: "8. Changes and Contact",
+            content:
+              "<p>This Policy may be updated. For privacy questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -685,7 +705,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "5 de Diciembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -730,12 +750,12 @@ export const appsData: App[] = [
           {
             title: "9. Contacto",
             content:
-              "<p>Para soporte o preguntas, contáctanos en: support@taskmaster.com</p>",
+              "<p>Para soporte o preguntas, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "December 5, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -780,14 +800,14 @@ export const appsData: App[] = [
           {
             title: "9. Contact",
             content:
-              "<p>For support or questions, contact us at: support@taskmaster.com</p>",
+              "<p>For support or questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "5 de Diciembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -827,12 +847,12 @@ export const appsData: App[] = [
           {
             title: "8. Cambios y Contacto",
             content:
-              "<p>Podemos actualizar esta Política. Te notificaremos cambios significativos por correo o dentro de la Aplicación. Para preguntas, contáctanos en: support@taskmaster.com</p>",
+              "<p>Podemos actualizar esta Política. Te notificaremos cambios significativos por correo o dentro de la Aplicación. Para preguntas, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "December 5, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -872,7 +892,7 @@ export const appsData: App[] = [
           {
             title: "8. Changes and Contact",
             content:
-              "<p>We may update this Policy. We will notify you of significant changes via email or in-app. For questions, contact us at: support@taskmaster.com</p>",
+              "<p>We may update this Policy. We will notify you of significant changes via email or in-app. For questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -935,7 +955,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "28 de Noviembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -985,12 +1005,12 @@ export const appsData: App[] = [
           {
             title: "10. Contacto",
             content:
-              "<p>Para soporte técnico o reportar problemas, contáctanos en: soporte@pronostigol.com</p>",
+              "<p>Para soporte técnico o reportar problemas, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "November 28, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -1040,14 +1060,14 @@ export const appsData: App[] = [
           {
             title: "10. Contact",
             content:
-              "<p>For technical support or to report issues, contact us at: support@pronostigol.com</p>",
+              "<p>For technical support or to report issues, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "28 de Noviembre, 2023",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -1087,12 +1107,12 @@ export const appsData: App[] = [
           {
             title: "8. Cambios y Contacto",
             content:
-              "<p>Podemos actualizar esta Política y notificaremos cambios relevantes en la Aplicación. Para preguntas, contáctanos en: soporte@pronostigol.com</p>",
+              "<p>Podemos actualizar esta Política y notificaremos cambios relevantes en la Aplicación. Para preguntas, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "November 28, 2023",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -1132,7 +1152,7 @@ export const appsData: App[] = [
           {
             title: "8. Changes and Contact",
             content:
-              "<p>We may update this Policy and will notify you of relevant changes in the Application. For questions, contact us at: support@pronostigol.com</p>",
+              "<p>We may update this Policy and will notify you of relevant changes in the Application. For questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -1178,7 +1198,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "6 de Mayo, 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -1223,12 +1243,12 @@ export const appsData: App[] = [
           {
             title: "9. Contacto",
             content:
-              "<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: soporte@superlineup.com</p>",
+              "<p>Si tienes preguntas sobre estos Términos y Condiciones, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "May 6, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -1273,14 +1293,14 @@ export const appsData: App[] = [
           {
             title: "9. Contact",
             content:
-              "<p>If you have questions about these Terms and Conditions, contact us at: support@superlineup.com</p>",
+              "<p>If you have questions about these Terms and Conditions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "6 de Mayo, 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -1313,14 +1333,19 @@ export const appsData: App[] = [
               "<p>SuperLineUp no integra servicios de analítica ni redes publicitarias que recopilen datos personales en esta versión. Si esto cambia en futuras versiones, actualizaremos esta Política.</p>",
           },
           {
-            title: "7. Cambios y Contacto",
+            title: "7. Menores",
             content:
-              "<p>Podemos actualizar esta Política y los cambios se publicarán en la Aplicación o en la tienda correspondiente. Para preguntas, contáctanos en: soporte@superlineup.com</p>",
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos a sabiendas datos de menores. Si crees que un menor a tu cargo nos ha facilitado datos, escríbenos a support@davidyero.com y los eliminaremos.</p>",
+          },
+          {
+            title: "8. Cambios y Contacto",
+            content:
+              "<p>Podemos actualizar esta Política y los cambios se publicarán en la Aplicación o en la tienda correspondiente. Para preguntas, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "May 6, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -1353,9 +1378,14 @@ export const appsData: App[] = [
               "<p>SuperLineUp does not integrate analytics or advertising networks that collect personal data in this version. If this changes in future versions, we will update this Policy.</p>",
           },
           {
-            title: "7. Changes and Contact",
+            title: "7. Children",
             content:
-              "<p>We may update this Policy, and changes will be published in the Application or relevant store. For questions, contact us at: support@superlineup.com</p>",
+              "<p>The App is not directed to children under 13 and we do not knowingly collect data from children. If you believe a child in your care has given us data, email support@davidyero.com and we will delete it.</p>",
+          },
+          {
+            title: "8. Changes and Contact",
+            content:
+              "<p>We may update this Policy, and changes will be published in the Application or relevant store. For questions, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -2185,7 +2215,7 @@ export const appsData: App[] = [
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "19 de julio de 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -2233,19 +2263,24 @@ export const appsData: App[] = [
               "<p>Conservamos los datos de tu cuenta y los datos sincronizados mientras tu cuenta esté activa. Cuando eliminas tu cuenta, eliminamos tu información de cuenta y los datos asociados sincronizados en la nube. Los datos que solo existen en tu dispositivo se eliminan al desinstalar la Aplicación.</p>",
           },
           {
-            title: "10. Cambios en esta Política",
+            title: "10. Menores",
+            content:
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos a sabiendas datos de menores. Si crees que un menor a tu cargo nos ha facilitado datos, escríbenos a support@davidyero.com y los eliminaremos.</p>",
+          },
+          {
+            title: "11. Cambios en esta Política",
             content:
               "<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>",
           },
           {
-            title: "11. Contacto",
+            title: "12. Contacto",
             content:
               "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "July 19, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -2293,12 +2328,17 @@ export const appsData: App[] = [
               "<p>We keep your account data and synced data while your account is active. When you delete your account, we delete your account information and the associated data synced to the cloud. Data that exists only on your device is removed when you uninstall the Application.</p>",
           },
           {
-            title: "10. Changes to This Policy",
+            title: "10. Children",
+            content:
+              "<p>The App is not directed to children under 13 and we do not knowingly collect data from children. If you believe a child in your care has given us data, email support@davidyero.com and we will delete it.</p>",
+          },
+          {
+            title: "11. Changes to This Policy",
             content:
               "<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>",
           },
           {
-            title: "11. Contact",
+            title: "12. Contact",
             content:
               "<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>",
           },
@@ -2448,7 +2488,7 @@ export const appsData: App[] = [
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "19 de julio de 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -2496,19 +2536,24 @@ export const appsData: App[] = [
               "<p>Tú controlas tus datos. Desde la Aplicación puedes:</p><ul><li>Exportar tus planes de entrenamiento a PDF o imagen</li><li>Eliminar tus planes</li><li>Eliminar tu cuenta y toda la información asociada, incluida la copia en la nube</li></ul>",
           },
           {
-            title: "10. Cambios en esta Política",
+            title: "10. Menores",
+            content:
+              "<p>La Aplicación no está dirigida a menores de 13 años y no recopilamos a sabiendas datos de menores. Si crees que un menor a tu cargo nos ha facilitado datos, escríbenos a support@davidyero.com y los eliminaremos.</p>",
+          },
+          {
+            title: "11. Cambios en esta Política",
             content:
               "<p>Podemos actualizar esta Política. Los cambios se publicarán en la Aplicación o en la tienda correspondiente, indicando la fecha de última actualización.</p>",
           },
           {
-            title: "11. Contacto",
+            title: "12. Contacto",
             content:
               "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "July 19, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -2556,12 +2601,17 @@ export const appsData: App[] = [
               "<p>You are in control of your data. From within the Application you can:</p><ul><li>Export your training plans to PDF or image</li><li>Delete your plans</li><li>Delete your account and all associated information, including the cloud backup</li></ul>",
           },
           {
-            title: "10. Changes to This Policy",
+            title: "10. Children",
+            content:
+              "<p>The App is not directed to children under 13 and we do not knowingly collect data from children. If you believe a child in your care has given us data, email support@davidyero.com and we will delete it.</p>",
+          },
+          {
+            title: "11. Changes to This Policy",
             content:
               "<p>We may update this Policy. Changes will be published in the Application or the relevant store, indicating the last updated date.</p>",
           },
           {
-            title: "11. Contact",
+            title: "12. Contact",
             content:
               "<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>",
           },
@@ -2682,7 +2732,7 @@ export const appsData: App[] = [
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "20 de julio de 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Resumen",
@@ -2697,12 +2747,12 @@ export const appsData: App[] = [
           {
             title: "3. Datos de tasas",
             content:
-              "<p>Para mostrar las tasas, la Aplicación consulta un proveedor externo (Exchange Rate API, exchangerate-api.com). Esa consulta no incluye información personal tuya.</p>",
+              "<p>Para mostrar las tasas, la Aplicación consulta nuestro servidor (alojado en Render), que obtiene las cotizaciones de proveedores externos. Esa consulta no incluye información personal tuya.</p>",
           },
           {
             title: "4. Publicidad (Google AdMob)",
             content:
-              "<p>La Aplicación muestra anuncios mediante Google AdMob. Para servir anuncios, Google puede recopilar y procesar identificadores del dispositivo (como el identificador de publicidad) conforme a su política de privacidad. En dispositivos compatibles se te pide consentimiento (GDPR) y permiso de seguimiento (App Tracking Transparency en iOS); puedes rechazarlo y la Aplicación sigue funcionando con anuncios no personalizados. Consulta la política de Google en policies.google.com/technologies/ads.</p>",
+              "<p>La Aplicación muestra anuncios mediante Google AdMob. Para servir anuncios, Google puede recopilar y procesar identificadores del dispositivo (como el identificador de publicidad) conforme a su política de privacidad. La Aplicación solo pide anuncios no personalizados: no usa tu actividad para perfilarte y por eso no te pide permiso de seguimiento (App Tracking Transparency en iOS). Consulta la política de Google en policies.google.com/technologies/ads.</p>",
           },
           {
             title: "5. Notificaciones",
@@ -2722,7 +2772,7 @@ export const appsData: App[] = [
         ],
       },
       en: {
-        lastUpdated: "July 20, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Summary",
@@ -2737,12 +2787,12 @@ export const appsData: App[] = [
           {
             title: "3. Rate data",
             content:
-              "<p>To show rates, the App queries a third-party provider (Exchange Rate API, exchangerate-api.com). That request does not include any personal information about you.</p>",
+              "<p>To show rates, the App queries our server (hosted on Render), which gets the quotes from third-party providers. That request does not include any personal information about you.</p>",
           },
           {
             title: "4. Advertising (Google AdMob)",
             content:
-              "<p>The App shows ads via Google AdMob. To serve ads, Google may collect and process device identifiers (such as the advertising identifier) under its privacy policy. On supported devices you are asked for consent (GDPR) and tracking permission (App Tracking Transparency on iOS); you may decline and the App keeps working with non-personalized ads. See Google policy at policies.google.com/technologies/ads.</p>",
+              "<p>The App shows ads via Google AdMob. To serve ads, Google may collect and process device identifiers (such as the advertising identifier) under its privacy policy. The App only requests non-personalized ads: it does not use your activity to profile you, which is why it does not ask for tracking permission (App Tracking Transparency on iOS). See Google policy at policies.google.com/technologies/ads.</p>",
           },
           {
             title: "5. Notifications",
@@ -3068,7 +3118,7 @@ export const appsData: App[] = [
     logo: appIcon("agenda-pilates"),
     termsAndConditions: {
       es: {
-        lastUpdated: "17 de Septiembre, 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -3127,13 +3177,12 @@ export const appsData: App[] = [
           },
           {
             title: "12. Contacto",
-            content:
-              "<p>Dudas sobre estos Términos: soporte@agendapilates.com</p>",
+            content: "<p>Dudas sobre estos Términos: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "September 17, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -3193,14 +3242,14 @@ export const appsData: App[] = [
           {
             title: "12. Contact",
             content:
-              "<p>Questions about these Terms: soporte@agendapilates.com</p>",
+              "<p>Questions about these Terms: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "17 de Septiembre, 2026",
+        lastUpdated: "23 de octubre de 2026",
         sections: [
           {
             title: "1. Responsable del tratamiento",
@@ -3235,7 +3284,7 @@ export const appsData: App[] = [
           {
             title: "7. Tus derechos",
             content:
-              "<p>Puedes acceder a tus datos y corregirlos desde Ajustes, y eliminarlos borrando tu cuenta. También puedes escribirnos para ejercer tus derechos de acceso, rectificación, supresión u oposición: soporte@agendapilates.com</p>",
+              "<p>Puedes acceder a tus datos y corregirlos desde Ajustes, y eliminarlos borrando tu cuenta. También puedes escribirnos para ejercer tus derechos de acceso, rectificación, supresión u oposición: support@davidyero.com</p>",
           },
           {
             title: "8. Seguridad",
@@ -3250,12 +3299,12 @@ export const appsData: App[] = [
           {
             title: "10. Cambios en esta Política",
             content:
-              "<p>Si la actualizamos, lo avisaremos en la Aplicación. Dudas: soporte@agendapilates.com</p>",
+              "<p>Si la actualizamos, lo avisaremos en la Aplicación. Dudas: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "September 17, 2026",
+        lastUpdated: "October 23, 2026",
         sections: [
           {
             title: "1. Data controller",
@@ -3290,7 +3339,7 @@ export const appsData: App[] = [
           {
             title: "7. Your rights",
             content:
-              "<p>You can access and correct your data from Settings, and delete it by deleting your account. You can also write to us to exercise your rights of access, rectification, erasure or objection: soporte@agendapilates.com</p>",
+              "<p>You can access and correct your data from Settings, and delete it by deleting your account. You can also write to us to exercise your rights of access, rectification, erasure or objection: support@davidyero.com</p>",
           },
           {
             title: "8. Security",
@@ -3305,7 +3354,7 @@ export const appsData: App[] = [
           {
             title: "10. Changes to this Policy",
             content:
-              "<p>If we update it, we will announce it in the Application. Questions: soporte@agendapilates.com</p>",
+              "<p>If we update it, we will announce it in the Application. Questions: support@davidyero.com</p>",
           },
         ],
       },

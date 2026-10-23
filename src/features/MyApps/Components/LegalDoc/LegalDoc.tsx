@@ -44,6 +44,9 @@ export const LegalDoc: React.FC<LegalDocProps> = ({
             {t('apps.legal.lastUpdated')}: {lastUpdated}
           </SuperTypography>
         )}
+        <SuperTypography variant="meta" color="muted">
+          {t('apps.legal.controller')}
+        </SuperTypography>
       </header>
 
       <div className="legal__card">
