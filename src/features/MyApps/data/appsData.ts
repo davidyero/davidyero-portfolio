@@ -2376,7 +2376,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "19 de julio de 2026",
+        lastUpdated: "24 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -2426,12 +2426,12 @@ export const appsData: App[] = [
           {
             title: "10. Contacto",
             content:
-              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>",
+              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "July 19, 2026",
+        lastUpdated: "October 24, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -2481,14 +2481,14 @@ export const appsData: App[] = [
           {
             title: "10. Contact",
             content:
-              "<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>",
+              "<p>If you have questions about these Terms, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "23 de octubre de 2026",
+        lastUpdated: "24 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -2523,7 +2523,7 @@ export const appsData: App[] = [
           {
             title: "7. Sugerencias y Soporte",
             content:
-              "<p>Si nos envías una sugerencia o solicitud desde la Aplicación, recibimos tu mensaje y, si has iniciado sesión, tu nombre y correo, en davidyero@davidyero.com para poder responderte.</p>",
+              "<p>Si nos envías una sugerencia o solicitud desde la Aplicación, recibimos tu mensaje y, si has iniciado sesión, tu nombre y correo, para poder responderte.</p>",
           },
           {
             title: "8. No Vendemos tus Datos",
@@ -2548,12 +2548,12 @@ export const appsData: App[] = [
           {
             title: "12. Contacto",
             content:
-              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>",
+              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "October 23, 2026",
+        lastUpdated: "October 24, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -2588,7 +2588,7 @@ export const appsData: App[] = [
           {
             title: "7. Suggestions and Support",
             content:
-              "<p>If you send us a suggestion or request from within the Application, we receive your message and, if you are signed in, your name and email, at davidyero@davidyero.com so we can respond.</p>",
+              "<p>If you send us a suggestion or request from within the Application, we receive your message and, if you are signed in, your name and email so we can respond.</p>",
           },
           {
             title: "8. We Do Not Sell Your Data",
@@ -2613,7 +2613,7 @@ export const appsData: App[] = [
           {
             title: "12. Contact",
             content:
-              "<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>",
+              "<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>",
           },
         ],
       },
@@ -2650,7 +2650,7 @@ export const appsData: App[] = [
     ],
     termsAndConditions: {
       es: {
-        lastUpdated: "20 de julio de 2026",
+        lastUpdated: "24 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -2685,12 +2685,12 @@ export const appsData: App[] = [
           {
             title: "7. Contacto",
             content:
-              "<p>Para dudas sobre estos Términos, escribe a davidyero@davidyero.com.</p>",
+              "<p>Para dudas sobre estos Términos, escribe a support@davidyero.com.</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "July 20, 2026",
+        lastUpdated: "October 24, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -2725,14 +2725,14 @@ export const appsData: App[] = [
           {
             title: "7. Contact",
             content:
-              "<p>For questions about these Terms, email davidyero@davidyero.com.</p>",
+              "<p>For questions about these Terms, email support@davidyero.com.</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "23 de octubre de 2026",
+        lastUpdated: "24 de octubre de 2026",
         sections: [
           {
             title: "1. Resumen",
@@ -2767,12 +2767,12 @@ export const appsData: App[] = [
           {
             title: "7. Cambios y Contacto",
             content:
-              "<p>Podemos actualizar esta política; los cambios se publican aquí. Para dudas, escribe a davidyero@davidyero.com.</p>",
+              "<p>Podemos actualizar esta política; los cambios se publican aquí. Para dudas, escribe a support@davidyero.com.</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "October 23, 2026",
+        lastUpdated: "October 24, 2026",
         sections: [
           {
             title: "1. Summary",
@@ -2807,7 +2807,7 @@ export const appsData: App[] = [
           {
             title: "7. Changes and Contact",
             content:
-              "<p>We may update this policy; changes are posted here. For questions, email davidyero@davidyero.com.</p>",
+              "<p>We may update this policy; changes are posted here. For questions, email support@davidyero.com.</p>",
           },
         ],
       },
@@ -2825,7 +2825,7 @@ export const appsData: App[] = [
     playStoreUrl: "",
     termsAndConditions: {
       es: {
-        lastUpdated: "25 de julio de 2026",
+        lastUpdated: "24 de octubre de 2026",
         sections: [
           {
             title: "1. Aceptación de los Términos",
@@ -2880,12 +2880,12 @@ export const appsData: App[] = [
           {
             title: "11. Contacto",
             content:
-              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: davidyero@davidyero.com</p>",
+              "<p>Si tienes preguntas sobre estos Términos, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "July 25, 2026",
+        lastUpdated: "October 24, 2026",
         sections: [
           {
             title: "1. Acceptance of Terms",
@@ -2940,14 +2940,14 @@ export const appsData: App[] = [
           {
             title: "11. Contact",
             content:
-              "<p>If you have questions about these Terms, contact us at: davidyero@davidyero.com</p>",
+              "<p>If you have questions about these Terms, contact us at: support@davidyero.com</p>",
           },
         ],
       },
     },
     privacyPolicy: {
       es: {
-        lastUpdated: "25 de julio de 2026",
+        lastUpdated: "24 de octubre de 2026",
         sections: [
           {
             title: "1. Introducción",
@@ -3022,12 +3022,12 @@ export const appsData: App[] = [
           {
             title: "15. Contacto",
             content:
-              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: davidyero@davidyero.com</p>",
+              "<p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en: support@davidyero.com</p>",
           },
         ],
       },
       en: {
-        lastUpdated: "July 25, 2026",
+        lastUpdated: "October 24, 2026",
         sections: [
           {
             title: "1. Introduction",
@@ -3102,7 +3102,7 @@ export const appsData: App[] = [
           {
             title: "15. Contact",
             content:
-              "<p>If you have questions about this Privacy Policy, contact us at: davidyero@davidyero.com</p>",
+              "<p>If you have questions about this Privacy Policy, contact us at: support@davidyero.com</p>",
           },
         ],
       },
