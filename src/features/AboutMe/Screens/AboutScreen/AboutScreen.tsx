@@ -7,7 +7,7 @@ import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { BrandGlyph } from '../../../../components/SuperSocialRow/BrandGlyph';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
-import { CAREER, FREELANCE, durationOf } from '../../../../shared/career';
+import { CAREER, FREELANCE, REDACTED, durationOf } from '../../../../shared/career';
 import { AboutScreenProps } from './AboutScreen.types';
 import './AboutScreen.scss';
 
@@ -34,7 +34,19 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
                 <header className="about__entry-head">
                   <h2 className="about__entry-role">{t(entry.roleKey)}</h2>
                   <p className="about__entry-org">
-                    {entry.company}
+                    {entry.company ?? (
+                      // Tachado y no omitido: el puesto cuenta en la trayectoria,
+                      // solo el nombre es privado. Los lectores de pantalla oyen
+                      // la explicación en vez de una fila de bloques.
+                      <span className="about__redacted" title={t('about.confidentialHint')}>
+                        <span className="about__redacted-bar" aria-hidden="true">
+                          {REDACTED}
+                        </span>
+                        <span className="about__entry-client" aria-label={t('about.confidentialHint')}>
+                          {t('about.confidential')}
+                        </span>
+                      </span>
+                    )}
                     {entry.client && (
                       <span className="about__entry-client">
                         {' · '}

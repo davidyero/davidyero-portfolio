@@ -2,24 +2,25 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { appCounts, featuredApps, getAppContent, platformLabels } from '../../../MyApps/data/registry';
 import { useTypewriterCycle } from '../../../../shared/useTypewriterCycle';
+import { REDACTED } from '../../../../shared/career';
 import { heroCountsLine, indexCountsLine } from '../../../../shared/countLines';
 import { EnrichedApp } from '../../../MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
 import { subscribe } from '../../../Writing/api/postsApi';
 
 // Trayectoria: cada paso es un cargo y la empresa donde se ejerció. Las
 // empresas son nombres propios y no pasan por i18n; el cargo sí, por eso viaja
-// como clave. Rappi aparece dos veces, con dos cargos distintos.
-const CAREER: ReadonlyArray<{ roleKey: string; company: string }> = [
+// como clave. `company: null` = el puesto actual, confidencial: se escribe
+// tachado y su nombre no está en el código.
+const CAREER: ReadonlyArray<{ roleKey: string; company: string | null }> = [
   { roleKey: 'home.meta.role.lead', company: 'Scotiabank Colpatria' },
   { roleKey: 'home.meta.role.lead', company: 'Mercado Libre' },
   { roleKey: 'home.meta.role.lead', company: 'Conekta' },
   { roleKey: 'home.meta.role.lead', company: 'VASS' },
   { roleKey: 'home.meta.role.fullstack', company: 'Integra IT' },
-  { roleKey: 'home.meta.role.fullstack', company: 'Rappi' },
   { roleKey: 'home.meta.role.frontend', company: 'Ceiba' },
   { roleKey: 'home.meta.role.frontend', company: 'Qik - Banco República Dominicana' },
   { roleKey: 'home.meta.role.frontend', company: 'Cencosud' },
-  { roleKey: 'home.meta.role.frontend', company: 'Rappi' },
+  { roleKey: 'home.meta.role.frontend', company: null },
 ];
 
 // Tira de tecnologias de la home. Son nombres propios: no pasan por i18n
@@ -76,7 +77,11 @@ export const useHomeScreen = () => {
   // Cargo y empresa se escriben a la vez: son una sola frase partida en dos
   // filas, y verlas aparecer por separado las desconectaria.
   const career = useMemo(
-    () => CAREER.map(({ roleKey, company }) => [t(roleKey), company]),
+    () =>
+      CAREER.map(({ roleKey, company }) => [
+        t(roleKey),
+        company ?? `${REDACTED} ${t('about.confidential')}`,
+      ]),
     [t]
   );
   const { lines: careerLines, isStill } = useTypewriterCycle(career);

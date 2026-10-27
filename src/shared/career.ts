@@ -6,7 +6,11 @@
 export interface CareerEntry {
   id: string;
   roleKey: string;
-  company: string;
+  /**
+   * `null` = empresa confidencial: se pinta tachada. El nombre no se escribe en
+   * ningún sitio del código, porque todo lo de aquí acaba en el bundle público.
+   */
+  company: string | null;
   /** Cliente final cuando el puesto fue a través de una consultora. */
   client?: string;
   from: string;
@@ -18,9 +22,9 @@ export interface CareerEntry {
 
 export const CAREER: readonly CareerEntry[] = [
   {
-    id: 'rappi',
-    roleKey: 'about.role.fullstackSpecialist',
-    company: 'Rappi',
+    id: 'current',
+    roleKey: 'about.role.seniorFrontend',
+    company: null,
     from: '2026-03',
     stack: ['React', 'JS', 'TS', 'Kotlin'],
     taskKeys: ['about.task.payments', 'about.task.unitTests', 'about.task.codeReview', 'about.task.poc'],
@@ -115,11 +119,22 @@ export const FREELANCE: readonly FreelanceEntry[] = [
   { company: 'Gobernación del Meta', roleKey: 'about.role.seniorFrontend' },
 ];
 
-/** Pares cargo + empresa para el rótulo que se escribe solo en la home. */
-export const careerTicker = (): ReadonlyArray<{ roleKey: string; label: string }> => [
+/** Barra que ocupa el sitio del nombre de una empresa confidencial. */
+export const REDACTED = '████████';
+
+/**
+ * Pares cargo + empresa para el rótulo que se escribe solo en la home.
+ * `label: null` = empresa confidencial; quien lo pinta pone el texto traducido.
+ */
+export const careerTicker = (): ReadonlyArray<{ roleKey: string; label: string | null }> => [
   ...CAREER.map((entry) => ({
     roleKey: entry.roleKey,
-    label: entry.client ? `${entry.company} · ${entry.client}` : entry.company,
+    label:
+      entry.company === null
+        ? null
+        : entry.client
+          ? `${entry.company} · ${entry.client}`
+          : entry.company,
   })),
   ...FREELANCE.map(({ company, roleKey }) => ({ roleKey, label: company })),
 ];

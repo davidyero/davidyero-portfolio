@@ -52,6 +52,22 @@
 
   &__entry-client { color: var(--muted); }
 
+  // Empresa confidencial: una barra tachada del color del texto apagado, como
+  // un documento censurado, y la etiqueta al lado.
+  &__redacted {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    cursor: help;
+  }
+
+  &__redacted-bar {
+    color: var(--muted);
+    opacity: 0.55;
+    letter-spacing: -1px;
+    user-select: none;
+  }
+
   // El periodo va en ISO como el resto de fechas del sitio, con la duración
   // calculada al lado: el puesto actual crece solo y nadie tiene que tocarlo.
   &__entry-period {

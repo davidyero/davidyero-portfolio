@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SuperMetaList } from '../SuperMetaList/SuperMetaList';
 import { SuperTypewriter } from '../SuperTypewriter/SuperTypewriter';
 import { useTypewriterCycle } from '../../shared/useTypewriterCycle';
-import { careerTicker } from '../../shared/career';
+import { REDACTED, careerTicker } from '../../shared/career';
 import { CAREER_START_ISO } from '../../shared/appVersion';
 import { useExperience } from '../../shared/useExperience';
 import { SuperProfileMetaProps } from './SuperProfileMeta.types';
@@ -17,7 +17,10 @@ import { SuperProfileMetaProps } from './SuperProfileMeta.types';
 export const SuperProfileMeta: React.FC<SuperProfileMetaProps> = () => {
   const { t } = useTranslation();
   const steps = React.useMemo(
-    () => careerTicker().map(({ roleKey, label }) => [t(roleKey), label]),
+    () => careerTicker().map(({ roleKey, label }) => [
+        t(roleKey),
+        label ?? `${REDACTED} ${t('about.confidential')}`,
+      ]),
     [t]
   );
   const { lines, isStill } = useTypewriterCycle(steps);

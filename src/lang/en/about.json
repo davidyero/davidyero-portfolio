@@ -23,5 +23,7 @@
   "about.freelance.eyebrow": "// freelance",
   "about.freelance.text": "Clients I have worked with on my own.",
   "about.role.seniorFrontend": "Senior Frontend Developer",
-  "about.role.seniorFullstack": "Senior Full Stack Developer"
+  "about.role.seniorFullstack": "Senior Full Stack Developer",
+  "about.confidential": "[confidential]",
+  "about.confidentialHint": "Current company, kept private"
 }
