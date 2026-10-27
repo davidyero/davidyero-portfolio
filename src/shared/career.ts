@@ -23,7 +23,7 @@ export interface CareerEntry {
 export const CAREER: readonly CareerEntry[] = [
   {
     id: 'current',
-    roleKey: 'about.role.seniorFrontend',
+    roleKey: 'about.role.fullstackSpecialist',
     company: null,
     from: '2026-03',
     stack: ['React', 'JS', 'TS', 'Kotlin'],
@@ -123,18 +123,19 @@ export const FREELANCE: readonly FreelanceEntry[] = [
 export const REDACTED = '████████';
 
 /**
- * Pares cargo + empresa para el rótulo que se escribe solo en la home.
- * `label: null` = empresa confidencial; quien lo pinta pone el texto traducido.
+ * Pares cargo + empresa para el rótulo que se escribe solo en la home. Las
+ * empresas confidenciales no entran: tachadas solo tienen sentido en la lista.
  */
-export const careerTicker = (): ReadonlyArray<{ roleKey: string; label: string | null }> => [
-  ...CAREER.map((entry) => ({
-    roleKey: entry.roleKey,
-    label:
-      entry.company === null
-        ? null
-        : entry.client
-          ? `${entry.company} · ${entry.client}`
-          : entry.company,
-  })),
+export const careerTicker = (): ReadonlyArray<{ roleKey: string; label: string }> => [
+  ...CAREER.flatMap((entry) =>
+    entry.company === null
+      ? []
+      : [
+          {
+            roleKey: entry.roleKey,
+            label: entry.client ? `${entry.company} · ${entry.client}` : entry.company,
+          },
+        ]
+  ),
   ...FREELANCE.map(({ company, roleKey }) => ({ roleKey, label: company })),
 ];
