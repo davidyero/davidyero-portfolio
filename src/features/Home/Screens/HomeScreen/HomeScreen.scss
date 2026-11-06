@@ -123,7 +123,7 @@
     outline: none;
 
     &::placeholder { color: var(--muted); }
-    &:focus { border-color: var(--accent); }
+    &:focus { border-color: var(--highlight); }
 
     @include mobile {
       flex-basis: 100%;

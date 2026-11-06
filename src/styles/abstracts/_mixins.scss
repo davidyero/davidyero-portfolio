@@ -55,6 +55,7 @@
     --red:       #{$dark-red};
 
     --accent:    #{$dark-accent};
+    --highlight: #{$dark-highlight};
     // Hover del unico boton solido del sitio. En oscuro aclara; en claro
     // oscurece: en ambos casos el contraste con --on-accent se mantiene.
     --accent-hover: #{$brand-olive-glow};
@@ -110,6 +111,7 @@
     --red:       #{$light-red};
 
     --accent:    #{$light-accent};
+    --highlight: #{$light-highlight};
     --accent-hover: #{darken($light-accent, 6%)};
     --field:     #{$brand-white};
     --scanline:  #{rgba(32, 30, 29, 0.05)};

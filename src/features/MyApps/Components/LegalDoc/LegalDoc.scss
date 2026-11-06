@@ -16,7 +16,7 @@
     color: var(--muted);
     transition: color $transition-fast;
 
-    &:hover { color: var(--accent); }
+    &:hover { color: var(--highlight); }
   }
 
   &__header {

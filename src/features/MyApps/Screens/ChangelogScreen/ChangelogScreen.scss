@@ -13,7 +13,7 @@
     color: var(--muted);
     transition: color $transition-fast;
 
-    &:hover { color: var(--accent); }
+    &:hover { color: var(--highlight); }
   }
 
   &__header {
@@ -43,7 +43,7 @@
     outline: none;
 
     &::placeholder { color: var(--muted); }
-    &:focus { border-color: var(--accent); }
+    &:focus { border-color: var(--highlight); }
   }
 
   &__list {

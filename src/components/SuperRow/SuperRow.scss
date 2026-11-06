@@ -15,9 +15,9 @@
   transition: border-color $transition-fast;
 
   &:hover {
-    border-color: var(--accent);
+    border-color: var(--highlight);
 
-    .super-row__chevron { color: var(--accent); }
+    .super-row__chevron { color: var(--highlight); }
   }
 
   &__image {
@@ -79,7 +79,7 @@
 
   // La cifra es el dato; el resto de la frase solo la explica.
   strong {
-    color: var(--accent);
+    color: var(--highlight);
     font-weight: 600;
   }
 }

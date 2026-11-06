@@ -14,8 +14,8 @@
   transition: border-color $transition-fast;
 
   &:hover {
-    border-color: var(--accent);
-    .post-row__title { color: var(--accent); }
+    border-color: var(--highlight);
+    .post-row__title { color: var(--highlight); }
   }
 
   &__meta {
