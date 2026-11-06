@@ -25,7 +25,7 @@
     transition: color $transition-fast;
 
     &:hover { color: var(--subtext); }
-    &--active { color: var(--accent); }
+    &--active { color: var(--highlight); }
   }
 
   &__scroll {
@@ -64,7 +64,7 @@
     &:hover {
       background: var(--surface);
 
-      .catalog__name { color: var(--accent); }
+      .catalog__name { color: var(--highlight); }
     }
   }
 

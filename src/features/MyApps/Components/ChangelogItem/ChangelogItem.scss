@@ -32,7 +32,7 @@
     letter-spacing: $tracking-label;
     text-transform: uppercase;
 
-    &--new { color: var(--accent); }
+    &--new { color: var(--highlight); }
     &--improvement { color: var(--subtext); }
     &--fix { color: var(--yellow); }
   }
