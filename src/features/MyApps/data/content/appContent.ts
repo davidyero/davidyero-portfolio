@@ -15,45 +15,36 @@ export type AppContentMap = Record<string, AppLocalizedContent>;
 
 export const appContentEs: AppContentMap = {
   gazella: {
-    tagline: 'Eventos deportivos locales y del mundo en tu bolsillo.',
+    tagline: 'Encuentra tu próxima línea de salida.',
     description:
-      'Con Gazella, explorar e inscribirte en eventos deportivos locales, nacionales e internacionales es más fácil que nunca. Descubre carreras, maratones y competencias cerca de ti.',
+      'Gazella reúne competencias deportivas de todo el mundo —running, trail, ciclismo, patinaje, triatlón y aguas abiertas— para que encuentres tu próxima línea de salida, sigas las que te interesan con tus amigos y llegues preparado con el Coach IA.',
     features: [
-      'Explora eventos deportivos de todo el mundo',
-      'Inscríbete fácilmente a carreras y competencias',
-      'Recibe notificaciones de eventos cercanos',
-      'Consulta el calendario de eventos por categoría',
-      'Guarda tus eventos favoritos',
+      'Explora competencias de running, trail, ciclismo, patinaje, triatlón y aguas abiertas, de hoy en adelante',
+      'Filtra por deporte, país, distancia, desnivel, dificultad, precio e inscripciones abiertas',
+      'Cuenta regresiva, distancias con cupo y perfil de elevación en cada competencia',
+      'Favoritos y "Voy", con quién más va y en qué distancia',
+      'Recordatorios y calendario (.ics y Google Calendar)',
+      'Invita a tus amigos con un link personal',
+      'Directorio de especialistas: fisioterapia, nutrición, medicina y entrenadores',
+      'Coach IA (Pro): un plan de entrenamiento semana a semana para tu carrera',
     ],
     changelog: [
       {
-        version: '2.1.0',
-        date: '15 de octubre de 2023',
-        type: 'new',
-        changes: [
-          'Se agregó un nuevo dashboard personalizable.',
-          'El rendimiento de carga se optimizó en un 30%.',
-          'Integración con calendarios externos (Google Calendar, Outlook).',
-        ],
-      },
-      {
         version: '2.0.0',
-        date: '1 de agosto de 2023',
-        type: 'fix',
+        date: '7 de noviembre de 2026',
+        type: 'new',
         changes: [
-          'Reescritura completa del motor principal para mejorar la estabilidad y corregir errores críticos reportados por la comunidad.',
-          'Corregido un error que provocaba cierres inesperados al exportar datos.',
-          'Solucionado un problema de sincronización entre dispositivos.',
-          'Mejora de la seguridad en la autenticación de usuarios.',
+          'Nueva web en gazella.davidyero.com con todas las competencias de hoy en adelante.',
+          'Running, trail, ciclismo, patinaje, triatlón y aguas abiertas, con filtros, favoritos, Voy, recordatorios e invitaciones.',
+          'Directorio de especialistas y Coach IA para Pro.',
+          'La app móvil se está rehaciendo y llegará como actualización en las tiendas.',
         ],
       },
       {
-        version: '1.0.0',
-        date: '15 de enero de 2023',
+        version: '1.4.2',
+        date: '31 de mayo de 2024',
         type: 'new',
-        changes: [
-          'Lanzamiento inicial de Gazella. Incluye las funcionalidades básicas de gestión de eventos deportivos y exploración en tiempo real.',
-        ],
+        changes: ['Versión publicada en App Store y Google Play (1.4.0 en Android).'],
       },
     ],
   },
@@ -432,45 +423,36 @@ export const appContentEs: AppContentMap = {
 
 export const appContentEn: AppContentMap = {
   gazella: {
-    tagline: 'Local and worldwide sports events in your pocket.',
+    tagline: 'Find your next start line.',
     description:
-      'With Gazella, exploring and signing up for local, national and international sports events is easier than ever. Discover races, marathons and competitions near you.',
+      'Gazella gathers sports races from all over the world —running, trail, cycling, skating, triathlon and open water— so you can find your next start line, follow the ones you care about with your friends and get ready with the AI Coach.',
     features: [
-      'Explore sports events from all over the world',
-      'Easily sign up for races and competitions',
-      'Get notifications about nearby events',
-      'Browse the event calendar by category',
-      'Save your favorite events',
+      'Explore running, trail, cycling, skating, triathlon and open water races, from today onwards',
+      'Filter by sport, country, distance, elevation, difficulty, price and open registration',
+      'Countdown, distances with capacity and elevation profile for every race',
+      'Favorites and "Going", with who else is going and on which distance',
+      'Reminders and calendar (.ics and Google Calendar)',
+      'Invite your friends with a personal link',
+      'Specialist directory: physiotherapy, nutrition, medicine and coaches',
+      'AI Coach (Pro): a week-by-week training plan for your race',
     ],
     changelog: [
       {
-        version: '2.1.0',
-        date: 'October 15, 2023',
-        type: 'new',
-        changes: [
-          'Added a new customizable dashboard.',
-          'Loading performance improved by 30%.',
-          'Integration with external calendars (Google Calendar, Outlook).',
-        ],
-      },
-      {
         version: '2.0.0',
-        date: 'August 1, 2023',
-        type: 'fix',
+        date: 'November 7, 2026',
+        type: 'new',
         changes: [
-          'Complete rewrite of the core engine to improve stability and fix critical bugs reported by the community.',
-          'Fixed a bug that caused unexpected crashes when exporting data.',
-          'Fixed a sync issue between devices.',
-          'Improved security in user authentication.',
+          'New website at gazella.davidyero.com with every race from today onwards.',
+          'Running, trail, cycling, skating, triathlon and open water, with filters, favorites, Going, reminders and invitations.',
+          'Specialist directory and AI Coach for Pro.',
+          'The mobile app is being rebuilt and will ship as a store update.',
         ],
       },
       {
-        version: '1.0.0',
-        date: 'January 15, 2023',
+        version: '1.4.2',
+        date: 'May 31, 2024',
         type: 'new',
-        changes: [
-          'Initial release of Gazella. Includes the basic features for managing sports events and real-time exploration.',
-        ],
+        changes: ['Version published on the App Store and Google Play (1.4.0 on Android).'],
       },
     ],
   },
