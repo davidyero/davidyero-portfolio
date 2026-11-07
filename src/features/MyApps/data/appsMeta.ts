@@ -4,12 +4,15 @@ import { AppMeta } from '../Screens/MyAppsScreen/MyAppsScreen.types';
 // Adding a new app = add its entry here + its object in appsData.ts.
 export const appsMeta: Record<string, AppMeta> = {
   gazella: {
-    platforms: ['ios', 'android'],
-    status: 'offline',
+    // La web v2 está en vivo; la app móvil se está rehaciendo (la publicada en
+    // las tiendas apunta a un backend que ya no existe), por eso aún sin tiendas.
+    platforms: ['web'],
+    status: 'live',
     category: 'sports',
-    tech: ['React Native', 'Expo', 'TypeScript'],
-    version: '2.1.0',
-    accent: 'linear-gradient(135deg, #f5c2a7 0%, #f38ba8 100%)',
+    tech: ['React', 'React Native', 'TypeScript', 'Node'],
+    version: '2.0',
+    webUrl: 'https://gazella.davidyero.com',
+    accent: 'linear-gradient(135deg, #ffd8bd 0%, #ff6f4a 100%)',
   },
   youtime: {
     platforms: ['android', 'ios'],
