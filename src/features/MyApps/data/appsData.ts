@@ -6,6 +6,9 @@ import { App } from "../Screens/MyAppsScreen/MyAppsScreen.types";
 // que cambia en cada build y nadie más podría usarlos.
 const appIcon = (slug: string): string => `/app-icons/${slug}.png`;
 
+// La descripción larga, las features y el changelog de cada app NO van aquí:
+// viven solo en content/appContent.ts (EN/ES), que es lo que pintan las vistas.
+
 export const appsData: App[] = [
   {
     id: "1",
@@ -16,8 +19,6 @@ export const appsData: App[] = [
     icon: "🏃",
     logo: appIcon("gazella"),
     iconBgColor: "#ff6f4a",
-    // Descripción larga, features y changelog de Gazella viven solo en
-    // content/appContent.ts (EN/ES), que es lo que pintan las vistas.
     appStoreUrl: "https://apps.apple.com/us/app/gazella-sports/id6479961490",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.gazellaSports",
@@ -215,36 +216,8 @@ export const appsData: App[] = [
     icon: "⏰",
     logo: appIcon("youtime"),
     iconBgColor: "#a5b4fc",
-    fullDescription:
-      'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
-    features: [
-      "Comparte videos desde un timestamp específico",
-      "Interfaz simple e intuitiva",
-      "Genera enlaces limpios y cortos",
-      "Sin anuncios ni distracciones",
-    ],
     appStoreUrl: "",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.youtime",
-    changelog: [
-      {
-        version: "1.2.0",
-        date: "20 de Septiembre, 2023",
-        type: "improvement",
-        changes: [
-          "Mejora en la detección automática de timestamps",
-          "Interfaz rediseñada más moderna",
-          "Soporte para copiar enlace automáticamente",
-        ],
-      },
-      {
-        version: "1.0.0",
-        date: "5 de Marzo, 2023",
-        type: "new",
-        changes: [
-          "Lanzamiento inicial de Youtime con funcionalidad básica de timestamps.",
-        ],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "23 de octubre de 2026",
@@ -409,31 +382,10 @@ export const appsData: App[] = [
     icon: "🌍",
     logo: appIcon("festivos-del-mundo"),
     iconBgColor: "#bfdbfe",
-    fullDescription:
-      "Explora y celebra los feriados de todo el mundo. Una guía completa con información detallada de festividades, días festivos y celebraciones de diferentes países y culturas.",
-    features: [
-      "Base de datos completa de feriados mundiales",
-      "Información detallada de cada festividad",
-      "Filtrado por país y tipo de celebración",
-      "Notificaciones de próximos feriados",
-      "Calendario sincronizable",
-    ],
     appStoreUrl:
       "https://apps.apple.com/us/app/festivos-del-mundo/id6475969475",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.holidayslatamapp",
-    changelog: [
-      {
-        version: "1.5.0",
-        date: "10 de Noviembre, 2023",
-        type: "new",
-        changes: [
-          "Agregados feriados de 50 países nuevos",
-          "Nueva función de compartir festividades",
-          "Widget para pantalla de inicio",
-        ],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "23 de octubre de 2026",
@@ -618,53 +570,10 @@ export const appsData: App[] = [
     icon: "✅",
     logo: appIcon("taskmaster"),
     iconBgColor: "#fcd34d",
-    fullDescription:
-      "TaskMaster es la solución definitiva para gestionar tu productividad. Con funciones avanzadas de organización, recordatorios inteligentes y análisis de rendimiento, podrás alcanzar tus objetivos de manera eficiente.",
-    features: [
-      "Gestión de tareas con prioridades y etiquetas",
-      "Proyectos colaborativos en equipo",
-      "Recordatorios inteligentes personalizables",
-      "Estadísticas y análisis de productividad",
-      "Sincronización en la nube entre dispositivos",
-      "Modo enfoque para eliminar distracciones",
-    ],
     appStoreUrl:
       "https://apps.apple.com/us/app/taskmasterpro-plus/id6741769410",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.taskmasterpro",
-    changelog: [
-      {
-        version: "3.5.0",
-        date: "5 de Diciembre, 2023",
-        type: "new",
-        changes: [
-          "Nuevo modo de vista Kanban para proyectos",
-          "Integración con herramientas de comunicación (Slack, Teams)",
-          "Plantillas predefinidas para diferentes tipos de proyectos",
-          "Widget mejorado para pantalla de inicio",
-        ],
-      },
-      {
-        version: "3.0.0",
-        date: "20 de Agosto, 2023",
-        type: "new",
-        changes: [
-          "Rediseño completo de la interfaz",
-          "Colaboración en tiempo real",
-          "Modo oscuro mejorado",
-        ],
-      },
-      {
-        version: "2.8.0",
-        date: "10 de Mayo, 2023",
-        type: "improvement",
-        changes: [
-          "Optimización del rendimiento en dispositivos de gama baja",
-          "Corrección de errores en sincronización",
-          "Mejoras en la búsqueda de tareas",
-        ],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "23 de octubre de 2026",
@@ -869,52 +778,9 @@ export const appsData: App[] = [
     icon: "🎯",
     logo: appIcon("pronostigol"),
     iconBgColor: "#86efac",
-    fullDescription:
-      "Pronostigol te permite crear y participar en quinielas de fútbol de manera fácil y divertida. Compite con amigos, colegas o únete a ligas públicas. Sistema de puntos, rankings en tiempo real y premios virtuales te esperan.",
-    features: [
-      "Crea quinielas personalizadas para cualquier torneo",
-      "Participa en ligas públicas y privadas",
-      "Sistema de puntuación personalizable",
-      "Rankings y estadísticas detalladas",
-      "Notificaciones de partidos próximos",
-      "Chat integrado con otros participantes",
-    ],
     appStoreUrl: "https://apps.apple.com/us/app/pronostigol/id6550892183",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.pronostigolapp",
-    changelog: [
-      {
-        version: "2.8.0",
-        date: "28 de Noviembre, 2023",
-        type: "new",
-        changes: [
-          "Soporte para Copa América 2024",
-          "Nueva función de predicciones especiales (goleador, tarjetas, etc.)",
-          "Modo competitivo con premios virtuales",
-          "Integración con estadísticas en vivo",
-        ],
-      },
-      {
-        version: "2.5.0",
-        date: "15 de Septiembre, 2023",
-        type: "improvement",
-        changes: [
-          "Mejoras en el sistema de notificaciones",
-          "Optimización de la velocidad de carga",
-          "Corrección de errores en el cálculo de puntos",
-        ],
-      },
-      {
-        version: "2.0.0",
-        date: "1 de Junio, 2023",
-        type: "new",
-        changes: [
-          "Rediseño completo de la interfaz",
-          "Sistema de chat entre participantes",
-          "Nuevos modos de juego",
-        ],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "23 de octubre de 2026",
@@ -1129,35 +995,9 @@ export const appsData: App[] = [
     icon: "⚽",
     logo: appIcon("superlineup"),
     iconBgColor: "#86efac",
-    fullDescription:
-      "¡Bienvenido a SuperLineUp! Crea alineaciones de fútbol increíbles en segundos: equipo (11) o partido completo (22), más de 7 formaciones clásicas, drag & drop fluido, camisetas, césped y estadio personalizables, guarda y comparte como imagen, 100% sin conexión. Arma tu alineación, muestra tu táctica y comparte tu pasión.",
-    features: [
-      "Diseña alineaciones de un equipo (11) o de un partido completo (22)",
-      "Elige entre múltiples formaciones tácticas (4-4-2, 4-3-3, 3-5-2 y más)",
-      "Personaliza camisetas, césped, estadio y tribunas",
-      "Mueve jugadores con drag & drop fluido",
-      "Exporta la alineación como imagen lista para redes sociales",
-      "Funciona 100% sin conexión",
-    ],
     appStoreUrl: "https://apps.apple.com/us/app/superlineup-11/id6764713164",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.davidyero.superlineup",
-    changelog: [
-      {
-        version: "1.0.0",
-        date: "6 de Mayo, 2026",
-        type: "new",
-        changes: [
-          "Lanzamiento inicial de SuperLineUp.",
-          "Diseño de alineaciones para equipo (11) y partido completo (22).",
-          "Más de 7 formaciones clásicas disponibles (4-4-2, 4-3-3, 3-5-2 y más).",
-          "Personalización de camisetas, césped, estadio y tribunas.",
-          "Drag & drop fluido para reposicionar jugadores.",
-          "Exportación de la alineación como imagen para compartir.",
-          "Funcionamiento 100% sin conexión.",
-        ],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "23 de octubre de 2026",
@@ -2033,26 +1873,8 @@ export const appsData: App[] = [
       "Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones. Local-first, con sincronización opcional en la nube para Lite y Pro.",
     icon: "",
     logo: appIcon("habitflow"),
-    fullDescription:
-      "HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Puedes usarlo como invitado con todos tus datos en el dispositivo, o crear una cuenta con correo y contraseña. Con los planes Lite y Pro, tus hábitos, check-ins y estados de ánimo se sincronizan en la nube entre tus dispositivos; en el plan gratuito tus datos permanecen 100% en el dispositivo.",
-    features: [
-      "Rastrea hábitos binarios, de cantidad o de abandono",
-      "Rachas visuales estilo grilla de contribuciones",
-      "Recordatorios con notificaciones locales",
-      "Tema oscuro y claro con acentos de color por hábito",
-      "Sincronización opcional en la nube con Lite o Pro",
-      "Exporta, importa o elimina todos tus datos cuando quieras",
-    ],
     appStoreUrl: "",
     playStoreUrl: "",
-    changelog: [
-      {
-        version: "1.0.0",
-        date: "8 de julio de 2026",
-        type: "new",
-        changes: ["Lanzamiento inicial de HabitFlow."],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "19 de julio de 2026",
@@ -2316,26 +2138,8 @@ export const appsData: App[] = [
       "Convierte los planes de entrenamiento que genera la IA en una app clara y legible. Tus planes viven en tu dispositivo.",
     icon: "",
     logo: appIcon("trainflow-ai"),
-    fullDescription:
-      "TrainFlow AI es la capa de presentación para planes de entrenamiento generados por inteligencia artificial (ChatGPT, Claude, Gemini…). Pides un plan en JSON o CSV, lo importas, y la app lo muestra con una interfaz editorial clara. Tus planes se guardan en tu dispositivo; con Lite o Pro se respaldan en la nube. Inicia sesión con Google o entra como invitado.",
-    features: [
-      "Importa planes de IA en JSON o CSV con parsing tolerante",
-      "Interfaz editorial clara para seguir tu rutina día a día",
-      "Planes ilimitados y copia en la nube con Lite/Pro",
-      "Exporta a PDF o imagen y compártelos",
-      "Inicia sesión con Google o entra como invitado",
-      "Tema oscuro y claro · Español e inglés",
-    ],
     appStoreUrl: "",
     playStoreUrl: "",
-    changelog: [
-      {
-        version: "1.0.0",
-        date: "19 de julio de 2026",
-        type: "new",
-        changes: ["Lanzamiento inicial de TrainFlow AI."],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "24 de octubre de 2026",
@@ -2589,27 +2393,8 @@ export const appsData: App[] = [
       "Tasas de cambio de todas las monedas del mundo frente al peso colombiano, actualizadas cada día. Con conversor, favoritas y detalle por moneda.",
     icon: "",
     logo: appIcon("cop-moneda-colombiana"),
-    fullDescription:
-      "COP Moneda Colombiana muestra el valor de más de 160 monedas del mundo frente al peso colombiano, con datos que se actualizan una vez al día. Busca y filtra por región, marca tus monedas favoritas, convierte cualquier monto con la calculadora y abre cada moneda para ver su detalle y su histórico. Funciona sin conexión con los últimos datos guardados. No necesita cuenta: todo vive en tu dispositivo. Gratis, con publicidad.",
-    features: [
-      "Más de 160 monedas frente al peso colombiano (COP)",
-      "Buscador y filtros por región; favoritas guardadas en el dispositivo",
-      "Conversor de cualquier monto entre dos monedas",
-      "Detalle por moneda con histórico y variación diaria",
-      "Recordatorio diario cuando llegan las tasas del día",
-      "Funciona sin conexión con los últimos datos guardados",
-      "Tema oscuro y claro · Español e inglés",
-    ],
     appStoreUrl: "",
     playStoreUrl: "",
-    changelog: [
-      {
-        version: "0.1.0",
-        date: "20 de julio de 2026",
-        type: "new",
-        changes: ["Lanzamiento inicial de COP Moneda Colombiana."],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "24 de octubre de 2026",

@@ -1,6 +1,4 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { FileText, ShieldCheck } from 'lucide-react';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
@@ -9,8 +7,8 @@ import { SuperTypography } from '../../../../components/SuperTypography/SuperTyp
 import { Badge } from '../../../../components/Badge/Badge';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
+import { useAppFromRoute } from '../../hooks/useAppFromRoute';
 import {
-  getAppBySlug,
   getAppContent,
   getAppKind,
   kindI18nKey,
@@ -18,10 +16,6 @@ import {
 } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
 import { AppShowcaseScreenProps } from './AppShowcaseScreen.types';
-import appStoreEN from '../../../../assets/images/stores/appStoreEN.svg';
-import appStoreES from '../../../../assets/images/stores/appStoreES.svg';
-import googlePlayEN from '../../../../assets/images/stores/googlePlayIconEN.png';
-import googlePlayES from '../../../../assets/images/stores/googleplayIconES.png';
 import './AppShowcaseScreen.scss';
 
 
@@ -29,14 +23,7 @@ import './AppShowcaseScreen.scss';
 // maqueta de telefono ni ventana de navegador falsa — el sistema las prohibe:
 // no aportan un dato y envejecen peor que la propia app.
 export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
-
-  const app = getAppBySlug(slug);
-  const isEs = i18n.language?.startsWith('es');
-  const appStoreImg = isEs ? appStoreES : appStoreEN;
-  const googlePlayImg = isEs ? googlePlayES : googlePlayEN;
+  const { app, navigate, t, i18n, appStoreImg, googlePlayImg } = useAppFromRoute();
 
   if (!app) {
     return (
