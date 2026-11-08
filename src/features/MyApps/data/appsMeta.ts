@@ -10,7 +10,7 @@ export const appsMeta: Record<string, AppMeta> = {
     status: 'live',
     category: 'sports',
     tech: ['React', 'React Native', 'TypeScript', 'Node'],
-    version: '2.0',
+    version: '2.0.0',
     webUrl: 'https://gazella.davidyero.com',
     accent: 'linear-gradient(135deg, #ffd8bd 0%, #ff6f4a 100%)',
   },
