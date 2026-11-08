@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperRowProps } from './SuperRow.types';
+import { type SuperRowProps } from './SuperRow.types';
 import './SuperRow.scss';
 
 // Fila de destino: el unico patron de navegacion del sitio. Icono, titulo,

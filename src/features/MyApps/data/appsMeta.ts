@@ -1,4 +1,4 @@
-import { AppMeta } from '../Screens/MyAppsScreen/MyAppsScreen.types';
+import { type AppMeta } from '../Screens/MyAppsScreen/MyAppsScreen.types';
 
 // Hub metadata per app (non-text where possible). Keyed by slug.
 // Adding a new app = add its entry here + its object in appsData.ts.

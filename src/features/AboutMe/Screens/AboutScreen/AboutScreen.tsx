@@ -8,7 +8,7 @@ import { BrandGlyph } from '../../../../components/SuperSocialRow/BrandGlyph';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
 import { SOCIAL_LINKS } from '../../../../shared/contact';
 import { CAREER, FREELANCE, REDACTED, durationOf } from '../../../../shared/career';
-import { AboutScreenProps } from './AboutScreen.types';
+import { type AboutScreenProps } from './AboutScreen.types';
 import './AboutScreen.scss';
 
 export const AboutScreen: React.FC<AboutScreenProps> = () => {

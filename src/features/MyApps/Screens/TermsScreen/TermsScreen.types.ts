@@ -1,3 +1,1 @@
-export interface TermsScreenProps {
-  // Add props here as needed
-}
+export type TermsScreenProps = Record<string, never>;

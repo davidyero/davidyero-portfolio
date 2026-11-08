@@ -5,7 +5,7 @@ import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/Supe
 import { ChangelogItem } from '../../Components/ChangelogItem/ChangelogItem';
 import { getAppBySlug, getAppContent } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
-import { ChangelogScreenProps } from './ChangelogScreen.types';
+import { type ChangelogScreenProps } from './ChangelogScreen.types';
 import './ChangelogScreen.scss';
 
 // Historial de versiones leido como un `git log`: la version es el ancla y

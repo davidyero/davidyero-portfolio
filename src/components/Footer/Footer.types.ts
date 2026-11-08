@@ -1,3 +1,1 @@
-export interface FooterProps {
-  // Add props here as needed
-}
+export type FooterProps = Record<string, never>;

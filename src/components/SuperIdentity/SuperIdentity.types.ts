@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 export interface SuperIdentityProps {
   /** Línea corta bajo el nombre, en acento. */

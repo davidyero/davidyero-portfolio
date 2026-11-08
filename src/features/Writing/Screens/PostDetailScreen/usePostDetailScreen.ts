@@ -1,38 +1,46 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Post, fetchPost } from '../../api/postsApi';
+import { type Post, fetchPost } from '../../api/postsApi';
+
+interface DetailResult {
+  key: string;
+  post: Post | null;
+  isError: boolean;
+}
 
 export const usePostDetailScreen = (slug: string | undefined) => {
   const { t, i18n } = useTranslation();
-  const [post, setPost] = useState<Post | null>(null);
-  const [isLoading, setLoading] = useState(true);
-  const [isError, setError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  const [result, setResult] = useState<DetailResult | null>(null);
 
-  const load = useCallback(() => {
-    if (!slug) {
-      setLoading(false);
-      setError(true);
-      return () => undefined;
-    }
+  // Cada petición tiene su clave: mientras la respuesta guardada no sea la de
+  // la clave vigente, la pantalla está cargando.
+  const language = i18n.language;
+  const key = `${slug ?? ''}|${language}|${attempt}`;
+
+  useEffect(() => {
+    if (!slug) return undefined;
     let cancelled = false;
-    setLoading(true);
-    setError(false);
-    fetchPost(slug, i18n.language)
+    fetchPost(slug, language)
       .then((data) => {
-        if (!cancelled) setPost(data);
+        if (!cancelled) setResult({ key, post: data, isError: false });
       })
       .catch(() => {
-        if (!cancelled) setError(true);
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) {
+          setResult((previous) => ({ key, post: previous?.post ?? null, isError: true }));
+        }
       });
     return () => {
       cancelled = true;
     };
-  }, [slug, i18n.language]);
+  }, [key, slug, language]);
 
-  useEffect(() => load(), [load]);
+  const retry = useCallback(() => setAttempt((current) => current + 1), []);
 
-  return { t, post, isLoading, isError, retry: load };
+  // Sin slug no hay nada que pedir: es un error directo, sin carga.
+  const isLoading = Boolean(slug) && result?.key !== key;
+  const isError = !slug || (!isLoading && Boolean(result?.isError));
+  const post = result?.post ?? null;
+
+  return { t, post, isLoading, isError, retry };
 };

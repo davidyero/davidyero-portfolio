@@ -1,4 +1,4 @@
-import { AppStatus } from '../../features/MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
+import { type AppStatus } from '../../features/MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
 
 export interface SuperStatusBadgeProps {
   status: AppStatus;

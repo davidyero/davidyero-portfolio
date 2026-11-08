@@ -1,4 +1,4 @@
-import { App } from "../Screens/MyAppsScreen/MyAppsScreen.types";
+import { type App } from "../Screens/MyAppsScreen/MyAppsScreen.types";
 
 // Los iconos viven en public/app-icons/<slug>.png con URL FIJA
 // (https://davidyero.com/app-icons/<slug>.png): el backoffice y el resto del
@@ -225,7 +225,7 @@ export const appsData: App[] = [
           {
             title: "1. Aceptación de los Términos",
             content:
-              '<p>Al usar Youtime (\"la Aplicación\"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
+              '<p>Al usar Youtime ("la Aplicación"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
           },
           {
             title: "2. Uso del Servicio",
@@ -260,7 +260,7 @@ export const appsData: App[] = [
           {
             title: "1. Acceptance of Terms",
             content:
-              '<p>By using Youtime (\"the Application\"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
+              '<p>By using Youtime ("the Application"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
           },
           {
             title: "2. Use of Service",
@@ -393,7 +393,7 @@ export const appsData: App[] = [
           {
             title: "1. Aceptación de los Términos",
             content:
-              '<p>Al usar Festivos del mundo (\"la Aplicación\"), aceptas estar sujeto a estos Términos y Condiciones.</p>',
+              '<p>Al usar Festivos del mundo ("la Aplicación"), aceptas estar sujeto a estos Términos y Condiciones.</p>',
           },
           {
             title: "2. Uso de la Información",
@@ -433,7 +433,7 @@ export const appsData: App[] = [
           {
             title: "1. Acceptance of Terms",
             content:
-              '<p>By using Festivos del mundo (\"the Application\"), you agree to be bound by these Terms and Conditions.</p>',
+              '<p>By using Festivos del mundo ("the Application"), you agree to be bound by these Terms and Conditions.</p>',
           },
           {
             title: "2. Use of Information",
@@ -581,7 +581,7 @@ export const appsData: App[] = [
           {
             title: "1. Aceptación de los Términos",
             content:
-              '<p>Al usar TaskMaster (\"la Aplicación\"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
+              '<p>Al usar TaskMaster ("la Aplicación"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la Aplicación.</p>',
           },
           {
             title: "2. Cuenta de Usuario",
@@ -631,7 +631,7 @@ export const appsData: App[] = [
           {
             title: "1. Acceptance of Terms",
             content:
-              '<p>By using TaskMaster (\"the Application\"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
+              '<p>By using TaskMaster ("the Application"), you agree to these Terms and Conditions. If you do not agree, do not use the Application.</p>',
           },
           {
             title: "2. User Account",
@@ -788,7 +788,7 @@ export const appsData: App[] = [
           {
             title: "1. Aceptación de los Términos",
             content:
-              '<p>Al usar Pronostigol (\"la Aplicación\"), aceptas estos Términos y Condiciones en su totalidad.</p>',
+              '<p>Al usar Pronostigol ("la Aplicación"), aceptas estos Términos y Condiciones en su totalidad.</p>',
           },
           {
             title: "2. Naturaleza del Servicio",
@@ -843,7 +843,7 @@ export const appsData: App[] = [
           {
             title: "1. Acceptance of Terms",
             content:
-              '<p>By using Pronostigol (\"the Application\"), you fully accept these Terms and Conditions.</p>',
+              '<p>By using Pronostigol ("the Application"), you fully accept these Terms and Conditions.</p>',
           },
           {
             title: "2. Nature of Service",

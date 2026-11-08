@@ -1,4 +1,4 @@
-import { AppCounts } from '../features/MyApps/data/registry';
+import { type AppCounts } from '../features/MyApps/data/registry';
 
 type Translate = (key: string, options?: Record<string, unknown>) => string;
 

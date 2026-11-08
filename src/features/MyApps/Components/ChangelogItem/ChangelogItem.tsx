@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChangelogItemProps } from './ChangelogItem.types';
+import { type ChangelogItemProps } from './ChangelogItem.types';
 import './ChangelogItem.scss';
 
 // Una entrada = una version. Sin iconos ni puntos de linea de tiempo: la

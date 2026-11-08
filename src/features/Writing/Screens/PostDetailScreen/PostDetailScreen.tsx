@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { usePostDetailScreen } from './usePostDetailScreen';
-import { PostDetailScreenProps } from './PostDetailScreen.types';
+import { type PostDetailScreenProps } from './PostDetailScreen.types';
 import { paths } from '../../../../shared/paths';
 import './PostDetailScreen.scss';
 

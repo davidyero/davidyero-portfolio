@@ -6,7 +6,7 @@ import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
 import { getAppBySlug } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
-import { DeleteAccountScreenProps } from './DeleteAccountScreen.types';
+import { type DeleteAccountScreenProps } from './DeleteAccountScreen.types';
 
 // Google Play requires a public URL where users can request account deletion
 // WITHOUT installing the app, and it must state what is erased and what is kept.

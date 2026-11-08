@@ -1,17 +1,8 @@
 {
   "name": "davidyero",
-  "version": "0.31.3",
+  "version": "0.32.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "@types/react-router-dom": "^5.3.3",
     "i18next": "^25.7.2",
     "lucide-react": "^1.23.0",
     "react": "^19.2.1",
@@ -19,46 +10,36 @@
     "react-i18next": "^16.4.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.18.5",
-    "react-scripts": "5.0.1",
-    "sass": "^1.95.0",
-    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "REACT_APP_VERSION=$npm_package_version react-scripts start",
-    "build": "REACT_APP_VERSION=$npm_package_version react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0"
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^16.18.126",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^10.14.0",
+    "eslint-config-davidyero": "github:davidyero/eslint-config-davidyero#v0.1.0",
+    "jsdom": "^29.1.1",
+    "sass": "^1.108.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
   },
-  "overrides": {
-    "typescript": "^4.9.5"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^react-router-dom$": "<rootDir>/node_modules/react-router-dom/dist/index.js",
-      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js",
-      "^react-router$": "<rootDir>/node_modules/react-router/dist/development/index.js"
-    }
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
   }
 }

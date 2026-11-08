@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperTypographyProps } from './SuperTypography.types';
+import { type SuperTypographyProps } from './SuperTypography.types';
 import './SuperTypography.scss';
 
 // Todo el texto del sitio pasa por aquí. El componente no decide la etiqueta

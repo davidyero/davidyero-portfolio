@@ -1,4 +1,4 @@
-import { PostSummary } from '../../api/postsApi';
+import { type PostSummary } from '../../api/postsApi';
 
 export interface PostRowProps {
   post: PostSummary;

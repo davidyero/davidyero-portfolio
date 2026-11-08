@@ -1,4 +1,4 @@
-import { ElementType, ReactNode } from 'react';
+import { type ElementType, type ReactNode } from 'react';
 
 /**
  * Cada variante es un PAPEL, no un tamaño: se elige por lo que el texto es en

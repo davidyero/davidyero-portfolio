@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageLayout } from '../PageLayout/PageLayout';
 import { SuperListHeader } from '../SuperListHeader/SuperListHeader';
-import { SuperPageTemplateProps } from './SuperPageTemplate.types';
+import { type SuperPageTemplateProps } from './SuperPageTemplate.types';
 import './SuperPageTemplate.scss';
 
 // Template base de TODA vista del sitio. Decide el ancho por `variant` y, si se

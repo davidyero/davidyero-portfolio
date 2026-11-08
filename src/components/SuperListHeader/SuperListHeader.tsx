@@ -1,6 +1,6 @@
 import React from 'react';
 import { SuperTypography } from '../SuperTypography/SuperTypography';
-import { SuperListHeaderProps } from './SuperListHeader.types';
+import { type SuperListHeaderProps } from './SuperListHeader.types';
 import './SuperListHeader.scss';
 
 // Cabecera de las tres vistas de listado: apps, blog y build-in-public.

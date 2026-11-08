@@ -1,16 +1,16 @@
 import {
-  App,
-  AppCategory,
-  AppKind,
-  AppMeta,
-  AppPlatform,
-  AppStatus,
-  EnrichedApp,
+  type App,
+  type AppCategory,
+  type AppKind,
+  type AppMeta,
+  type AppPlatform,
+  type AppStatus,
+  type EnrichedApp,
 } from '../Screens/MyAppsScreen/MyAppsScreen.types';
-import { BadgeTone } from '../../../components/Badge/Badge.types';
+import { type BadgeTone } from '../../../components/Badge/Badge.types';
 import { appsData } from './appsData';
 import { appsMeta } from './appsMeta';
-import { AppLocalizedContent, appContentEn, appContentEs } from './content/appContent';
+import { type AppLocalizedContent, appContentEn, appContentEs } from './content/appContent';
 
 const FALLBACK_META: AppMeta = {
   platforms: ['ios', 'android'],

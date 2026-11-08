@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Clock, CircleDot, LoaderCircle, PowerOff } from 'lucide-react';
 import { Badge } from '../Badge/Badge';
-import { AppStatus } from '../../features/MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
-import { SuperStatusBadgeProps } from './SuperStatusBadge.types';
+import { type AppStatus } from '../../features/MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
+import { type SuperStatusBadgeProps } from './SuperStatusBadge.types';
 import './SuperStatusBadge.scss';
 
 // Un icono por estado, leído de un vistazo sin llegar a la palabra: punto vivo,

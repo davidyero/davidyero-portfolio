@@ -1,7 +1,7 @@
 import React from 'react';
-import { SOCIAL_LINKS, SocialNetwork } from '../../shared/contact';
+import { SOCIAL_LINKS, type SocialNetwork } from '../../shared/contact';
 import { BrandGlyph } from './BrandGlyph';
-import { SuperSocialRowProps } from './SuperSocialRow.types';
+import { type SuperSocialRowProps } from './SuperSocialRow.types';
 import './SuperSocialRow.scss';
 
 const LABELS: Record<SocialNetwork, string> = {

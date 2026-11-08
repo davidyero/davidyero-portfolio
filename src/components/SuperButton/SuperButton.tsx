@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperButtonProps } from './SuperButton.types';
+import { type SuperButtonProps } from './SuperButton.types';
 import './SuperButton.scss';
 
 export const SuperButton: React.FC<SuperButtonProps> = ({

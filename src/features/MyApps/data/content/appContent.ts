@@ -1,4 +1,4 @@
-import { ChangelogEntry } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
+import { type ChangelogEntry } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
 
 // Localized, human-facing app content. Non-text metadata lives in appsMeta.ts;
 // terms/privacy already ship per-language inside appsData.ts. Everything else

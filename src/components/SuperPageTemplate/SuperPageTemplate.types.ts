@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 /**
  * Ancho de la pantalla. No es una escala libre: cada variante existe porque un

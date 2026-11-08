@@ -1,6 +1,4 @@
-export interface AboutScreenProps {
-  // Add props here as needed
-}
+export type AboutScreenProps = Record<string, never>;
 
 export interface ExperienceItem {
   id: string;
