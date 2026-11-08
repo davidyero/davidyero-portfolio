@@ -1,6 +1,6 @@
 {
   "name": "davidyero",
-  "version": "0.31.0",
+  "version": "0.31.1",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -53,5 +53,12 @@
   },
   "overrides": {
     "typescript": "^4.9.5"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^react-router-dom$": "<rootDir>/node_modules/react-router-dom/dist/index.js",
+      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js",
+      "^react-router$": "<rootDir>/node_modules/react-router/dist/development/index.js"
+    }
   }
 }
