@@ -16,42 +16,11 @@ export const appsData: App[] = [
     icon: "🏃",
     logo: appIcon("gazella"),
     iconBgColor: "#ff6f4a",
-    fullDescription:
-      "Gazella reúne competencias deportivas de todo el mundo —running, trail, ciclismo, patinaje, triatlón y aguas abiertas— para que encuentres tu próxima línea de salida, sigas las que te interesan con tus amigos y llegues preparado con el Coach IA.",
-    features: [
-      "Explora competencias de running, trail, ciclismo, patinaje, triatlón y aguas abiertas, de hoy en adelante",
-      "Filtra por deporte, país, distancia, desnivel, dificultad, precio e inscripciones abiertas",
-      "Cuenta regresiva, distancias con cupo y perfil de elevación en cada competencia",
-      "Favoritos y \"Voy\", con quién más va y en qué distancia",
-      "Recordatorios y calendario (.ics y Google Calendar)",
-      "Invita a tus amigos con un link personal",
-      "Directorio de especialistas: fisioterapia, nutrición, medicina y entrenadores",
-      "Coach IA (Pro): un plan de entrenamiento semana a semana para tu carrera",
-    ],
+    // Descripción larga, features y changelog de Gazella viven solo en
+    // content/appContent.ts (EN/ES), que es lo que pintan las vistas.
     appStoreUrl: "https://apps.apple.com/us/app/gazella-sports/id6479961490",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.gazellaSports",
-    changelog: [
-      {
-        version: "2.0.0",
-        date: "7 de noviembre de 2026",
-        type: "new",
-        changes: [
-          "Nueva web en gazella.davidyero.com con todas las competencias de hoy en adelante.",
-          "Running, trail, ciclismo, patinaje, triatlón y aguas abiertas, con filtros, favoritos, Voy, recordatorios e invitaciones.",
-          "Directorio de especialistas y Coach IA para Pro.",
-          "La app móvil se está rehaciendo y llegará como actualización en las tiendas.",
-        ],
-      },
-      {
-        version: "1.4.2",
-        date: "31 de mayo de 2024",
-        type: "new",
-        changes: [
-          "Versión publicada en App Store y Google Play (1.4.0 en Android).",
-        ],
-      },
-    ],
     termsAndConditions: {
       es: {
         lastUpdated: "23 de octubre de 2026",
