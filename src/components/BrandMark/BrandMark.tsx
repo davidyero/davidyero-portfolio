@@ -1,6 +1,6 @@
 import React from 'react';
 import brandMark from '../../assets/brand/BrandMark.png';
-import { BrandMarkProps } from './BrandMark.types';
+import { type BrandMarkProps } from './BrandMark.types';
 import './BrandMark.scss';
 
 // The <dy> monogram. Sizes match where it is used: footer (small),

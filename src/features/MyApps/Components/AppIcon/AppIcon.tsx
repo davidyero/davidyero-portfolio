@@ -1,5 +1,5 @@
 import React from 'react';
-import { EnrichedApp } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
+import { type EnrichedApp } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
 import './AppIcon.scss';
 
 interface AppIconProps {

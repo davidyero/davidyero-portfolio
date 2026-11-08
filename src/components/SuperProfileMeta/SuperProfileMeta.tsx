@@ -6,7 +6,7 @@ import { useTypewriterCycle } from '../../shared/useTypewriterCycle';
 import { careerTicker } from '../../shared/career';
 import { CAREER_START_ISO } from '../../shared/appVersion';
 import { useExperience } from '../../shared/useExperience';
-import { SuperProfileMetaProps } from './SuperProfileMeta.types';
+import { type SuperProfileMetaProps } from './SuperProfileMeta.types';
 
 // Metadatos del perfil: desde cuándo, cargo y dónde. Cargo y empresa se
 // escriben a la vez y en bucle.

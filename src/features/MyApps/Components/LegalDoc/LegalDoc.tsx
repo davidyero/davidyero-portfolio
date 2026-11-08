@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SuperTypography } from '../../../../components/SuperTypography/SuperTypography';
-import { TermsSection } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
+import { type TermsSection } from '../../Screens/MyAppsScreen/MyAppsScreen.types';
 import './LegalDoc.scss';
 
 interface LegalDocProps {

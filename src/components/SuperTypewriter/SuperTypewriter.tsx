@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperTypewriterProps } from './SuperTypewriter.types';
+import { type SuperTypewriterProps } from './SuperTypewriter.types';
 import './SuperTypewriter.scss';
 
 // Un texto que se está escribiendo, con su cursor. No decide qué escribir ni

@@ -14,7 +14,7 @@ import { SOCIAL_LINKS } from '../../../../shared/contact';
 import { withEmphasis } from '../../../../shared/emphasis';
 import { paths } from '../../../../shared/paths';
 import { useHomeScreen } from './useHomeScreen';
-import { HomeScreenProps } from './HomeScreen.types';
+import { type HomeScreenProps } from './HomeScreen.types';
 import './HomeScreen.scss';
 
 // La home es un indice, no un escaparate: quien soy, los hechos, a donde ir y

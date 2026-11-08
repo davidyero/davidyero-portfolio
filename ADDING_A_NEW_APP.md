@@ -19,7 +19,7 @@ datos** (+ opcionalmente subir un icono) y desplegar.
 | 2 | `src/features/MyApps/data/appsData.ts` | Datos base: `name`, `slug`, `icon`, `logo`, links de tienda, y (opcional) términos/privacidad |
 | 3 | `src/features/MyApps/data/appsMeta.ts` | Metadatos: `platforms`, `status`, `category`, `tech`, `version`, `featured`, `webUrl`, `repoUrl`, `accent` |
 | 4 | `src/features/MyApps/data/content/appContent.ts` | Texto bilingüe: `tagline`, `description`, `features[]`, `changelog[]` en **EN y ES** |
-| 5 | `package.json` (+ `src/shared/appVersion.ts`) | Sube la versión (semver) — se muestra en el footer |
+| 5 | `package.json` | Sube la versión (semver) — se muestra en el footer |
 
 Luego: `npm run build` → commit → push. Amplify redespliega solo.
 
@@ -240,10 +240,9 @@ Si usas una categoría existente, **no toques nada de esto**.
 Regla del proyecto: **cada cambio sube la versión** (se muestra en el footer).
 
 - `package.json` → `"version"` (semver: patch para arreglos, minor para apps nuevas).
-- `src/shared/appVersion.ts` → actualiza el fallback para que coincida.
 
-(En build, `REACT_APP_VERSION` se toma de `package.json` automáticamente; el
-fallback es solo para tests/local.)
+(`vite.config.ts` inyecta la versión de `package.json` como `VITE_APP_VERSION`;
+no hay nada más que tocar.)
 
 ---
 
@@ -271,7 +270,7 @@ Comprueba en el sitio:
 - [ ] Entrada en `appsMeta.ts` (misma clave `slug`; `platforms`, `status`, `category`, `accent`)
 - [ ] Entrada en **ambos** mapas de `appContent.ts` con las **mismas keys** (EN + ES)
 - [ ] (Solo si categoría nueva) tipo + `registry` + `apps.json` EN/ES
-- [ ] Versión subida en `package.json` y `appVersion.ts`
+- [ ] Versión subida en `package.json`
 - [ ] `npm run build` limpio
 - [ ] Idioma EN/ES sin texto mezclado
 - [ ] Commit + push

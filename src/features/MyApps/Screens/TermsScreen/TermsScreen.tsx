@@ -6,7 +6,7 @@ import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
 import { getAppBySlug } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
-import { TermsScreenProps } from './TermsScreen.types';
+import { type TermsScreenProps } from './TermsScreen.types';
 
 export const TermsScreen: React.FC<TermsScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();

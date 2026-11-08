@@ -10,7 +10,7 @@ import {
   platformLabels,
 } from '../../data/registry';
 import { catalogSubtitle } from '../../../../shared/countLines';
-import { AppCategory, EnrichedApp } from './MyAppsScreen.types';
+import { type AppCategory, type EnrichedApp } from './MyAppsScreen.types';
 
 export type CatalogFilter = 'all' | 'mobile' | 'web' | AppCategory;
 

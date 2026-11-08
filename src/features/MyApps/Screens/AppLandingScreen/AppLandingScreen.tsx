@@ -19,7 +19,7 @@ import {
 } from '../../data/registry';
 import { withEmphasis } from '../../../../shared/emphasis';
 import { paths } from '../../../../shared/paths';
-import { AppLandingScreenProps } from './AppLandingScreen.types';
+import { type AppLandingScreenProps } from './AppLandingScreen.types';
 import './AppLandingScreen.scss';
 
 

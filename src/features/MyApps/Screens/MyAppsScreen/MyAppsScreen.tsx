@@ -4,7 +4,7 @@ import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/Supe
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { paths } from '../../../../shared/paths';
 import { useMyAppsScreen } from './useMyAppsScreen';
-import { MyAppsScreenProps } from './MyAppsScreen.types';
+import { type MyAppsScreenProps } from './MyAppsScreen.types';
 import './MyAppsScreen.scss';
 
 

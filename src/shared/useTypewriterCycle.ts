@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Escribe varias cadenas A LA VEZ, las mantiene, las borra y pasa al siguiente
@@ -32,34 +32,32 @@ export const useTypewriterCycle = (
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isDeleting, setDeleting] = useState(false);
-  const still = useRef(prefersReducedMotion());
+  const [still] = useState(prefersReducedMotion);
 
   const step = steps[index] ?? [];
 
   useEffect(() => {
-    if (still.current || steps.length === 0) return undefined;
+    if (still || steps.length === 0) return undefined;
 
     if (!isDeleting && progress >= 1) {
       const timer = window.setTimeout(() => setDeleting(true), holdMs);
       return () => window.clearTimeout(timer);
     }
 
-    if (isDeleting && progress <= 0) {
-      setDeleting(false);
-      setIndex((current) => (current + 1) % steps.length);
-      return undefined;
-    }
-
     const delta = FRAME_MS / (isDeleting ? deleteMs : typeMs);
     const timer = window.setTimeout(() => {
-      setProgress((current) =>
-        Math.min(1, Math.max(0, current + (isDeleting ? -delta : delta)))
-      );
+      const next = Math.min(1, Math.max(0, progress + (isDeleting ? -delta : delta)));
+      setProgress(next);
+      // Borrado del todo: en el mismo fotograma se pasa al siguiente paso.
+      if (isDeleting && next <= 0) {
+        setDeleting(false);
+        setIndex((current) => (current + 1) % steps.length);
+      }
     }, FRAME_MS);
     return () => window.clearTimeout(timer);
-  }, [progress, isDeleting, index, steps.length, typeMs, deleteMs, holdMs]);
+  }, [still, progress, isDeleting, index, steps.length, typeMs, deleteMs, holdMs]);
 
-  if (still.current) {
+  if (still) {
     return { lines: steps[0] ?? [], isStill: true };
   }
 

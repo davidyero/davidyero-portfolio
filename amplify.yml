@@ -3,6 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
+        # Vite 8, Vitest 5 y jsdom piden Node 22 (Amplify trae uno más viejo).
+        - nvm use 22 || nvm install 22
         - npm ci --legacy-peer-deps
     build:
       commands:

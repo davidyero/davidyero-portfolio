@@ -1,3 +1,1 @@
-export interface HomeScreenProps {
-  // Add props here as needed
-}
+export type HomeScreenProps = Record<string, never>;

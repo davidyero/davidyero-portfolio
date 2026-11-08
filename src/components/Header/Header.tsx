@@ -8,7 +8,7 @@ import { BrandMark } from '../BrandMark/BrandMark';
 import { SuperTypewriter } from '../SuperTypewriter/SuperTypewriter';
 import { useTypewriterCycle } from '../../shared/useTypewriterCycle';
 import { paths } from '../../shared/paths';
-import { HeaderProps } from './Header.types';
+import { type HeaderProps } from './Header.types';
 import './Header.scss';
 
 interface NavItem {

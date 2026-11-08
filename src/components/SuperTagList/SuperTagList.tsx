@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperTagListProps } from './SuperTagList.types';
+import { type SuperTagListProps } from './SuperTagList.types';
 import './SuperTagList.scss';
 
 // Tira de etiquetas en mono mayusculas: el unico adorno de la home. Se pinta

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FooterProps } from './Footer.types';
+import { type FooterProps } from './Footer.types';
 import { APP_VERSION } from '../../shared/appVersion';
 import './Footer.scss';
 

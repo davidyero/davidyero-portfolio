@@ -6,7 +6,7 @@ import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { LegalDoc } from '../../Components/LegalDoc/LegalDoc';
 import { getAppBySlug } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
-import { PrivacyScreenProps } from './PrivacyScreen.types';
+import { type PrivacyScreenProps } from './PrivacyScreen.types';
 
 export const PrivacyScreen: React.FC<PrivacyScreenProps> = () => {
   const { slug } = useParams<{ slug: string }>();

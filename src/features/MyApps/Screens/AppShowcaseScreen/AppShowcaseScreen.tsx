@@ -15,7 +15,7 @@ import {
   resolveAppCtas,
 } from '../../data/registry';
 import { paths } from '../../../../shared/paths';
-import { AppShowcaseScreenProps } from './AppShowcaseScreen.types';
+import { type AppShowcaseScreenProps } from './AppShowcaseScreen.types';
 import './AppShowcaseScreen.scss';
 
 

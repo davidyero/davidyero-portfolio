@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { appCounts, featuredApps, getAppContent, platformLabels } from '../../../MyApps/data/registry';
 import { useTypewriterCycle } from '../../../../shared/useTypewriterCycle';
 import { heroCountsLine, indexCountsLine } from '../../../../shared/countLines';
-import { EnrichedApp } from '../../../MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
+import { type EnrichedApp } from '../../../MyApps/Screens/MyAppsScreen/MyAppsScreen.types';
 import { subscribe } from '../../../Writing/api/postsApi';
 
 // Trayectoria: cada paso es un cargo y la empresa donde se ejerció. Las

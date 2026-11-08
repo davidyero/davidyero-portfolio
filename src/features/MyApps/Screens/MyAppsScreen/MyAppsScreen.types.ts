@@ -1,6 +1,4 @@
-export interface MyAppsScreenProps {
-  // Add props here as needed
-}
+export type MyAppsScreenProps = Record<string, never>;
 
 export interface ChangelogEntry {
   version: string;

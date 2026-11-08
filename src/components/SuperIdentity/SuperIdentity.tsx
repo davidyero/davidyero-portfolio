@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrandMark } from '../BrandMark/BrandMark';
 import { SuperTypography } from '../SuperTypography/SuperTypography';
-import { SuperIdentityProps } from './SuperIdentity.types';
+import { type SuperIdentityProps } from './SuperIdentity.types';
 import './SuperIdentity.scss';
 
 // Cabecera de identidad: avatar, nombre, una línea y el párrafo.

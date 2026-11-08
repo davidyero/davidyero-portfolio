@@ -1,3 +1,1 @@
-export interface ChangelogScreenProps {
-  // Add props here as needed
-}
+export type ChangelogScreenProps = Record<string, never>;

@@ -1,3 +1,1 @@
-export interface AppLandingScreenProps {
-  // Add props here as needed
-}
+export type AppLandingScreenProps = Record<string, never>;

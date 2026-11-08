@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { PostRowProps } from './PostRow.types';
+import { type PostRowProps } from './PostRow.types';
 import './PostRow.scss';
 
 // Fecha en ISO corta: es la que usa todo el sitio y no depende del idioma.

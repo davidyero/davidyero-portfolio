@@ -1,6 +1,7 @@
-import { AppCounts } from '../features/MyApps/data/registry';
+import type { TFunction } from 'i18next';
+import { type AppCounts } from '../features/MyApps/data/registry';
 
-type Translate = (key: string, options?: Record<string, unknown>) => string;
+type Translate = TFunction;
 
 /**
  * Las lineas de cifras se arman por segmentos y se descartan los que valen

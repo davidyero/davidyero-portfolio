@@ -1,3 +1,1 @@
-export interface HeaderProps {
-  // Add props here as needed
-}
+export type HeaderProps = Record<string, never>;

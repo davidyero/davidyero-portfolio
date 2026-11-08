@@ -1,6 +1,6 @@
 import React from 'react';
 import { BRAND_PATHS } from './brandPaths';
-import { SocialNetwork } from '../../shared/contact';
+import { type SocialNetwork } from '../../shared/contact';
 
 // Logo de marca como SVG. LinkedIn no tiene path (simple-icons lo retiró por
 // una petición legal de la marca), así que se dibuja con su glifo de texto.

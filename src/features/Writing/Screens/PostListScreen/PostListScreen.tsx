@@ -4,7 +4,7 @@ import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { PostRow } from '../../Components/PostRow/PostRow';
 import { usePostListScreen } from './usePostListScreen';
-import { PostListScreenProps } from './PostListScreen.types';
+import { type PostListScreenProps } from './PostListScreen.types';
 import { paths } from '../../../../shared/paths';
 import './PostListScreen.scss';
 

@@ -1,3 +1,1 @@
-export interface DeleteAccountScreenProps {
-  // Add props here as needed
-}
+export type DeleteAccountScreenProps = Record<string, never>;

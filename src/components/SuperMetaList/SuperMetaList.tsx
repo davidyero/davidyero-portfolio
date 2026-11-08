@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperMetaListProps } from './SuperMetaList.types';
+import { type SuperMetaListProps } from './SuperMetaList.types';
 import './SuperMetaList.scss';
 
 // Metadatos en filas `clave: valor` alineadas. Es lo que sustituye al contador
