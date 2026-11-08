@@ -300,7 +300,7 @@ export const appContentEs: AppContentMap = {
   habitflow: {
     tagline: 'Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones.',
     description:
-      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Úsalo como invitado con tus datos en el dispositivo, o crea una cuenta; con Lite o Pro tus hábitos se sincronizan en la nube.',
+      'HabitFlow es un rastreador de hábitos minimalista y local-first. Crea hábitos, registra tus check-ins diarios y visualiza tus rachas con grillas de intensidad estilo contribuciones. Úsalo como invitado o crea una cuenta con correo y contraseña. En el plan gratuito tus datos se quedan 100 % en el dispositivo; con Lite o Pro tus hábitos se sincronizan en la nube entre tus dispositivos.',
     features: [
       'Rastrea hábitos binarios, de cantidad o de abandono',
       'Rachas visuales estilo grilla de contribuciones',
@@ -342,13 +342,15 @@ export const appContentEs: AppContentMap = {
   'cop-moneda-colombiana': {
     tagline: 'El dólar y todas las monedas del mundo, en pesos.',
     description:
-      'Consulta las tasas de cambio de más de 160 monedas frente al peso colombiano, actualizadas cada día. Busca, filtra por región, guarda favoritas y convierte cualquier monto. Sin cuenta y con datos que funcionan sin conexión.',
+      'Consulta las tasas de cambio de más de 160 monedas frente al peso colombiano, actualizadas cada día. Busca, filtra por región, guarda favoritas, convierte cualquier monto con la calculadora y abre cada moneda para ver su detalle y su histórico. Sin cuenta y con datos que funcionan sin conexión. Gratis, con publicidad.',
     features: [
       'Más de 160 monedas frente al peso colombiano',
+      'Buscador y filtros por región; favoritas guardadas en el dispositivo',
       'Conversor rápido entre dos monedas',
-      'Favoritas y filtros por región',
-      'Detalle e histórico por moneda',
-      'Recordatorio diario y modo sin conexión',
+      'Detalle por moneda con histórico y variación diaria',
+      'Recordatorio diario cuando llegan las tasas del día',
+      'Funciona sin conexión con los últimos datos guardados',
+      'Tema oscuro y claro · Español e inglés',
     ],
     changelog: [
       {
@@ -708,7 +710,7 @@ export const appContentEn: AppContentMap = {
   habitflow: {
     tagline: 'Minimalist habit tracker with contribution-style streak grids.',
     description:
-      'HabitFlow is a minimalist, local-first habit tracker. Create habits, log your daily check-ins, and watch your streaks build up on contribution-style intensity grids. Use it as a guest with your data on-device, or create an account; with Lite or Pro your habits sync to the cloud.',
+      'HabitFlow is a minimalist, local-first habit tracker. Create habits, log your daily check-ins, and watch your streaks build up on contribution-style intensity grids. Use it as a guest or create an account with email and password. On the free plan your data stays 100% on your device; with Lite or Pro your habits sync to the cloud across your devices.',
     features: [
       'Track binary, quantity, or quit habits',
       'Visual contribution-style streak grids',
@@ -750,13 +752,15 @@ export const appContentEn: AppContentMap = {
   'cop-moneda-colombiana': {
     tagline: 'The dollar and every world currency, in pesos.',
     description:
-      'Check exchange rates for 160+ currencies against the Colombian peso, updated daily. Search, filter by region, save favorites and convert any amount. No account, and data that works offline.',
+      'Check exchange rates for 160+ currencies against the Colombian peso, updated daily. Search, filter by region, save favorites, convert any amount with the calculator and open each currency to see its details and history. No account, and data that works offline. Free, with ads.',
     features: [
       '160+ currencies against the Colombian peso',
+      'Search and filters by region; favorites saved on your device',
       'Quick converter between two currencies',
-      'Favorites and filters by region',
-      'Detail and history per currency',
-      'Daily reminder and offline mode',
+      'Per-currency detail with history and daily change',
+      'Daily reminder when the day’s rates arrive',
+      'Works offline with the last saved data',
+      'Dark and light theme · Spanish and English',
     ],
     changelog: [
       {
