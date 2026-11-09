@@ -1,6 +1,6 @@
 {
   "name": "davidyero",
-  "version": "0.33.0",
+  "version": "0.34.0",
   "private": true,
   "dependencies": {
     "i18next": "^27.0.1",
@@ -9,8 +9,7 @@
     "react-dom": "^19.2.1",
     "react-i18next": "^18.0.0",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.18.5",
-    "web-vitals": "^6.2.3"
+    "react-router-dom": "^7.18.5"
   },
   "scripts": {
     "dev": "vite",

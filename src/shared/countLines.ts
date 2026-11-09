@@ -25,12 +25,12 @@ export const heroCountsLine = (counts: AppCounts, t: Translate): string =>
 export const indexCountsLine = (counts: AppCounts, t: Translate): string =>
   `${t('home.index.apps', { count: counts.total })}: ${join(statusParts(counts, t, 'apps.catalog.count'))}`;
 
-/** Catálogo: "16 live — 11 Android · 7 iOS · 6 web". */
+/** Catálogo: "16 live · 11 Android · 7 iOS · 6 web". */
 export const catalogSubtitle = (counts: AppCounts, t: Translate): string => {
   const platforms = join([
     counts.android ? t('apps.catalog.count.android', { count: counts.android }) : null,
     counts.ios ? t('apps.catalog.count.ios', { count: counts.ios }) : null,
     counts.web ? t('apps.catalog.count.web', { count: counts.web }) : null,
   ]);
-  return [join(statusParts(counts, t, 'apps.catalog.count')), platforms].filter(Boolean).join(' — ');
+  return [join(statusParts(counts, t, 'apps.catalog.count')), platforms].filter(Boolean).join(' · ');
 };

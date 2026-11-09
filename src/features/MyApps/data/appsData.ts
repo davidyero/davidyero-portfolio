@@ -16,7 +16,6 @@ export const appsData: App[] = [
     slug: "gazella",
     description:
       "Encuentra tu próxima línea de salida: competencias de running, trail, ciclismo, patinaje, triatlón y aguas abiertas.",
-    icon: "🏃",
     logo: appIcon("gazella"),
     iconBgColor: "#ff6f4a",
     appStoreUrl: "https://apps.apple.com/us/app/gazella-sports/id6479961490",
@@ -213,7 +212,6 @@ export const appsData: App[] = [
     slug: "youtime",
     description:
       'Youtime te permite compartir un video de YouTube comenzando exactamente en el segundo que tú eliges. Olvídate de decir "avanza al 2:15": pega el enlace, selecciona el tiempo y comparte un enlace limpio con inicio preciso.',
-    icon: "⏰",
     logo: appIcon("youtime"),
     iconBgColor: "#a5b4fc",
     appStoreUrl: "",
@@ -379,7 +377,6 @@ export const appsData: App[] = [
     slug: "festivos-del-mundo",
     description:
       "Explora y celebra con los feriados mundiales: tu guía completa para los feriados globales",
-    icon: "🌍",
     logo: appIcon("festivos-del-mundo"),
     iconBgColor: "#bfdbfe",
     appStoreUrl:
@@ -567,7 +564,6 @@ export const appsData: App[] = [
     slug: "taskmaster",
     description:
       "TaskMaster es tu asistente personal de productividad. Organiza tus tareas, proyectos y objetivos en un solo lugar con una interfaz intuitiva y poderosas funciones de gestión.",
-    icon: "✅",
     logo: appIcon("taskmaster"),
     iconBgColor: "#fcd34d",
     appStoreUrl:
@@ -775,7 +771,6 @@ export const appsData: App[] = [
     slug: "pronostigol",
     description:
       "Pronostigol es la app definitiva para los amantes del fútbol. Crea quinielas, compite con amigos y demuestra tus conocimientos prediciendo resultados de ligas y torneos internacionales.",
-    icon: "🎯",
     logo: appIcon("pronostigol"),
     iconBgColor: "#86efac",
     appStoreUrl: "https://apps.apple.com/us/app/pronostigol/id6550892183",
@@ -992,7 +987,6 @@ export const appsData: App[] = [
     slug: "superlineup",
     description:
       "Crea alineaciones de fútbol increíbles en segundos. Equipo (11) o partido completo (22), formaciones clásicas, drag & drop y personalización total.",
-    icon: "⚽",
     logo: appIcon("superlineup"),
     iconBgColor: "#86efac",
     appStoreUrl: "https://apps.apple.com/us/app/superlineup-11/id6764713164",
@@ -1199,7 +1193,6 @@ export const appsData: App[] = [
     slug: "football-cup-simulator",
     description:
       "Simula torneos de copa de fútbol y vive cada ronda hasta la final.",
-    icon: "",
     logo: appIcon("football-cup-simulator"),
     appStoreUrl:
       "https://apps.apple.com/us/app/football-tournament-simulator/id6756631490",
@@ -1446,7 +1439,7 @@ export const appsData: App[] = [
           {
             title: "7. Proveedores que Tratan tus Datos",
             content:
-              "<p>Trabajamos con los siguientes proveedores, cada uno con su propia politica de privacidad:</p><ul><li><strong>Render</strong> — alojamiento de nuestro servidor y de la base de datos.</li><li><strong>Google Firebase</strong> — notificaciones push (Cloud Messaging) y medicion de uso (Analytics).</li><li><strong>Google AdMob</strong> — publicidad.</li><li><strong>RevenueCat</strong> — validacion de las suscripciones.</li><li><strong>Resend</strong> — envio de los correos de verificacion, cambio de correo y recuperacion de contrasena.</li></ul><p>Ademas, la compra en si la procesan <strong>Google Play</strong> o la <strong>App Store</strong>. Nosotros no vemos ni almacenamos los datos de tu tarjeta en ningun momento.</p>",
+              "<p>Trabajamos con los siguientes proveedores, cada uno con su propia politica de privacidad:</p><ul><li><strong>Render</strong>: alojamiento de nuestro servidor y de la base de datos.</li><li><strong>Google Firebase</strong>: notificaciones push (Cloud Messaging) y medicion de uso (Analytics).</li><li><strong>Google AdMob</strong>: publicidad.</li><li><strong>RevenueCat</strong>: validacion de las suscripciones.</li><li><strong>Resend</strong>: envio de los correos de verificacion, cambio de correo y recuperacion de contrasena.</li></ul><p>Ademas, la compra en si la procesan <strong>Google Play</strong> o la <strong>App Store</strong>. Nosotros no vemos ni almacenamos los datos de tu tarjeta en ningun momento.</p>",
           },
           {
             title: "8. No Vendemos tus Datos",
@@ -1512,7 +1505,7 @@ export const appsData: App[] = [
           {
             title: "7. Providers That Handle Your Data",
             content:
-              "<p>We work with the following providers, each with its own privacy policy:</p><ul><li><strong>Render</strong> — hosting for our server and database.</li><li><strong>Google Firebase</strong> — push notifications (Cloud Messaging) and usage measurement (Analytics).</li><li><strong>Google AdMob</strong> — advertising.</li><li><strong>RevenueCat</strong> — subscription validation.</li><li><strong>Resend</strong> — sending verification, email-change and password-reset messages.</li></ul><p>The purchase itself is processed by <strong>Google Play</strong> or the <strong>App Store</strong>. We never see or store your card details at any point.</p>",
+              "<p>We work with the following providers, each with its own privacy policy:</p><ul><li><strong>Render</strong>: hosting for our server and database.</li><li><strong>Google Firebase</strong>: push notifications (Cloud Messaging) and usage measurement (Analytics).</li><li><strong>Google AdMob</strong>: advertising.</li><li><strong>RevenueCat</strong>: subscription validation.</li><li><strong>Resend</strong>: sending verification, email-change and password-reset messages.</li></ul><p>The purchase itself is processed by <strong>Google Play</strong> or the <strong>App Store</strong>. We never see or store your card details at any point.</p>",
           },
           {
             title: "8. We Do Not Sell Your Data",
@@ -1549,7 +1542,6 @@ export const appsData: App[] = [
     slug: "encuentra-tu-mascota",
     description:
       "Reportes de mascotas perdidas y encontradas en Colombia. Gratis, sin publicidad.",
-    icon: "",
     logo: appIcon("encuentra-tu-mascota"),
   },
   {
@@ -1558,7 +1550,6 @@ export const appsData: App[] = [
     slug: "my-link-hub",
     description:
       "Tu portafolio profesional y todos tus enlaces en un solo link.",
-    icon: "",
     logo: appIcon("my-link-hub"),
   },
   {
@@ -1567,7 +1558,6 @@ export const appsData: App[] = [
     slug: "splitio",
     description:
       "Gastos compartidos por grupo: reparte cada gasto y calcula quién debe cuánto a quién, mes a mes.",
-    icon: "",
     logo: appIcon("splitio"),
     accountDeletion: {
       es: {
@@ -1862,7 +1852,6 @@ export const appsData: App[] = [
     slug: "mis-pagos",
     description:
       "Todos tus medios de cobro digitales de Colombia y tus redes, en un solo link.",
-    icon: "",
     logo: appIcon("mis-pagos"),
   },
   {
@@ -1871,7 +1860,6 @@ export const appsData: App[] = [
     slug: "habitflow",
     description:
       "Rastreador de hábitos minimalista con rachas estilo grilla de contribuciones. Local-first, con sincronización opcional en la nube para Lite y Pro.",
-    icon: "",
     logo: appIcon("habitflow"),
     appStoreUrl: "",
     playStoreUrl: "",
@@ -2136,7 +2124,6 @@ export const appsData: App[] = [
     slug: "trainflow-ai",
     description:
       "Convierte los planes de entrenamiento que genera la IA en una app clara y legible. Tus planes viven en tu dispositivo.",
-    icon: "",
     logo: appIcon("trainflow-ai"),
     appStoreUrl: "",
     playStoreUrl: "",
@@ -2217,7 +2204,7 @@ export const appsData: App[] = [
           {
             title: "4. Accounts",
             content:
-              "<p>You can use the Application as a guest or sign in with Google. The account is used to identify you, manage your plan, and — on paid plans — back up your plans to the cloud. You are responsible for the security of your Google account. You can delete your account and its data at any time from within the Application.</p>",
+              "<p>You can use the Application as a guest or sign in with Google. The account is used to identify you, manage your plan and, on paid plans, back up your plans to the cloud. You are responsible for the security of your Google account. You can delete your account and its data at any time from within the Application.</p>",
           },
           {
             title: "5. Subscriptions and Paid Plans",
@@ -2391,7 +2378,6 @@ export const appsData: App[] = [
     slug: "cop-moneda-colombiana",
     description:
       "Tasas de cambio de todas las monedas del mundo frente al peso colombiano, actualizadas cada día. Con conversor, favoritas y detalle por moneda.",
-    icon: "",
     logo: appIcon("cop-moneda-colombiana"),
     appStoreUrl: "",
     playStoreUrl: "",
@@ -2566,7 +2552,6 @@ export const appsData: App[] = [
     slug: "player-radar",
     description:
       "Sigue a tus jugadores de fútbol favoritos: partidos de hoy, ficha completa (club, selección y carrera) y datos al instante.",
-    icon: "",
     logo: appIcon("player-radar"),
     appStoreUrl: "",
     playStoreUrl: "",
@@ -2652,7 +2637,7 @@ export const appsData: App[] = [
           {
             title: "4. Accounts",
             content:
-              "<p>You can use the Application as a guest or create an account with your email or by signing in with Google or Apple. The account is used to identify you, save your followed players and selection, and — on the Pro plan — sync them to the cloud. You are responsible for keeping your credentials confidential. You can delete your account and its data at any time from the Application’s Settings.</p>",
+              "<p>You can use the Application as a guest or create an account with your email or by signing in with Google or Apple. The account is used to identify you, save your followed players and selection and, on the Pro plan, sync them to the cloud. You are responsible for keeping your credentials confidential. You can delete your account and its data at any time from the Application’s Settings.</p>",
           },
           {
             title: "5. Subscriptions and Pro Plan",
@@ -2861,7 +2846,6 @@ export const appsData: App[] = [
     slug: "agenda-pilates",
     description:
       "Los estudios de pilates gestionan sus clases y planes, y sus miembros reservan desde la web o el móvil.",
-    icon: "",
     logo: appIcon("agenda-pilates"),
     termsAndConditions: {
       es: {
@@ -3113,6 +3097,5 @@ export const appsData: App[] = [
     slug: "presidente-simulator",
     description:
       "Gobierna 48 meses: cada decisión repercute en nueve sistemas conectados y muchas consecuencias llegan meses después.",
-    icon: "🏛️",
   },
 ];

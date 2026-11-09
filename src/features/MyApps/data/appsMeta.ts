@@ -12,7 +12,6 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['React', 'React Native', 'TypeScript', 'Node'],
     version: '2.0.0',
     webUrl: 'https://gazella.davidyero.com',
-    accent: 'linear-gradient(135deg, #ffd8bd 0%, #ff6f4a 100%)',
   },
   youtime: {
     platforms: ['android', 'ios'],
@@ -20,7 +19,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'utility',
     tech: ['React Native', 'TypeScript'],
     version: '1.2.0',
-    accent: 'linear-gradient(135deg, #89b4fa 0%, #94e2d5 100%)',
   },
   'festivos-del-mundo': {
     platforms: ['ios', 'android'],
@@ -28,7 +26,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'utility',
     tech: ['React Native', 'Expo', 'TypeScript'],
     version: '1.5.0',
-    accent: 'linear-gradient(135deg, #a6e3a1 0%, #94e2d5 100%)',
   },
   taskmaster: {
     platforms: ['ios', 'android'],
@@ -36,7 +33,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'productivity',
     tech: ['React Native', 'Expo', 'TypeScript', 'Node'],
     version: '3.5.0',
-    accent: 'linear-gradient(135deg, #f9e2af 0%, #f5c2a7 100%)',
   },
   pronostigol: {
     platforms: ['ios', 'android'],
@@ -44,14 +40,12 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Node'],
     version: '1.0.0',
-    accent: 'linear-gradient(135deg, #cba6f7 0%, #b4befe 100%)',
   },
   superlineup: {
     platforms: ['android', 'ios'],
     status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript'],
-    accent: 'linear-gradient(135deg, #89b4fa 0%, #74c7ec 100%)',
   },
   'football-cup-simulator': {
     platforms: ['android', 'ios'],
@@ -59,7 +53,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Zustand'],
     version: '4.0.1',
-    accent: 'linear-gradient(135deg, #a6e3a1 0%, #89b4fa 100%)',
     featured: true,
     // Las cifras van en la ficha de la app de la que salen, no en el hero:
     // sueltas arriba parecian del portfolio entero.
@@ -72,7 +65,6 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['React', 'TypeScript', 'Vite', 'Node'],
     version: '0.7.0',
     webUrl: 'https://www.encuentra-tu-mascota.com/',
-    accent: 'linear-gradient(135deg, #a6e3a1 0%, #f9e2af 100%)',
     featured: true,
   },
   'my-link-hub': {
@@ -81,7 +73,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'productivity',
     tech: ['React', 'TypeScript'],
     webUrl: 'https://www.my-link-hub.com',
-    accent: 'linear-gradient(135deg, #89b4fa 0%, #b4befe 100%)',
   },
   splitio: {
     platforms: ['web'],
@@ -90,7 +81,6 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['React', 'TypeScript', 'Vite', 'Node'],
     version: '0.10.2',
     webUrl: 'https://www.splitio.net/',
-    accent: 'linear-gradient(135deg, #8b7cf6 0%, #74c7ec 100%)',
   },
   'mis-pagos': {
     platforms: ['web'],
@@ -99,7 +89,6 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['Next.js', 'React', 'TypeScript', 'Node'],
     version: '0.1.50',
     webUrl: 'https://www.mispagos.co/',
-    accent: 'linear-gradient(135deg, #cba6f7 0%, #f38ba8 100%)',
     featured: true,
   },
   habitflow: {
@@ -108,7 +97,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'productivity',
     tech: ['React Native', 'TypeScript'],
     version: '1.0.0',
-    accent: 'linear-gradient(135deg, #f5c2a7 0%, #fab387 100%)',
   },
   'trainflow-ai': {
     platforms: ['ios', 'android'],
@@ -116,7 +104,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'RevenueCat'],
     version: '1.0.0',
-    accent: 'linear-gradient(135deg, #e07a5f 0%, #f2a488 100%)',
   },
   'cop-moneda-colombiana': {
     platforms: ['android', 'ios'],
@@ -124,7 +111,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'utility',
     tech: ['React Native', 'TypeScript', 'AdMob'],
     version: '0.1.0',
-    accent: 'linear-gradient(135deg, #f9e2af 0%, #89b4fa 100%)',
   },
   'player-radar': {
     platforms: ['android'],
@@ -132,7 +118,6 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'RevenueCat'],
     version: '1.0.0',
-    accent: 'linear-gradient(135deg, #a6e3a1 0%, #74c7ec 100%)',
   },
   'agenda-pilates': {
     platforms: ['web'],
@@ -141,7 +126,6 @@ export const appsMeta: Record<string, AppMeta> = {
     tech: ['React', 'TypeScript', 'Vite', 'React Native', 'Node'],
     version: '0.99.35',
     webUrl: 'https://www.agendapilates.com/landing',
-    accent: 'linear-gradient(135deg, #a6e3a1 0%, #f5c2a7 100%)',
   },
   'presidente-simulator': {
     // Sin webUrl todavia: el repo esta publicado pero la app de Amplify aun no
@@ -151,6 +135,5 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'entertainment',
     tech: ['React', 'TypeScript', 'Vite', 'Zustand'],
     version: '0.2.0',
-    accent: 'linear-gradient(135deg, #f9e2af 0%, #fab387 100%)',
   },
 };

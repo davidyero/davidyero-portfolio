@@ -17,7 +17,7 @@ export const appContentEs: AppContentMap = {
   gazella: {
     tagline: 'Encuentra tu próxima línea de salida.',
     description:
-      'Gazella reúne competencias deportivas de todo el mundo —running, trail, ciclismo, patinaje, triatlón y aguas abiertas— para que encuentres tu próxima línea de salida, sigas las que te interesan con tus amigos y llegues preparado con el Coach IA.',
+      'Gazella reúne competencias deportivas de todo el mundo (running, trail, ciclismo, patinaje, triatlón y aguas abiertas) para que encuentres tu próxima línea de salida, sigas las que te interesan con tus amigos y llegues preparado con el Coach IA.',
     features: [
       'Explora competencias de running, trail, ciclismo, patinaje, triatlón y aguas abiertas, de hoy en adelante',
       'Filtra por deporte, país, distancia, desnivel, dificultad, precio e inscripciones abiertas',
@@ -401,7 +401,7 @@ export const appContentEs: AppContentMap = {
   'presidente-simulator': {
     tagline: 'Gobierna cuatro años. Cada decisión pasa factura.',
     description:
-      'Presidente Simulator es un juego de estrategia por decisiones: asumes el gobierno de un país y tienes 48 meses por delante. Cada mes eliges entre varias opciones y el motor propaga el efecto por nueve sistemas conectados —economía, seguridad, salud, educación, corrupción, popularidad...—, de modo que una medida cómoda hoy puede reventarte el presupuesto dentro de un año. Sin conexión y sin cuenta: la partida se guarda en tu propio navegador.',
+      'Presidente Simulator es un juego de estrategia por decisiones: asumes el gobierno de un país y tienes 48 meses por delante. Cada mes eliges entre varias opciones y el motor propaga el efecto por nueve sistemas conectados (economía, seguridad, salud, educación, corrupción, popularidad...), de modo que una medida cómoda hoy puede reventarte el presupuesto dentro de un año. Sin conexión y sin cuenta: la partida se guarda en tu propio navegador.',
     features: [
       'Nueve sistemas interconectados que reaccionan entre ellos',
       'Consecuencias diferidas: lo que decides hoy llega meses después',
@@ -427,7 +427,7 @@ export const appContentEn: AppContentMap = {
   gazella: {
     tagline: 'Find your next start line.',
     description:
-      'Gazella gathers sports races from all over the world —running, trail, cycling, skating, triathlon and open water— so you can find your next start line, follow the ones you care about with your friends and get ready with the AI Coach.',
+      'Gazella gathers sports races from all over the world (running, trail, cycling, skating, triathlon and open water) so you can find your next start line, follow the ones you care about with your friends and get ready with the AI Coach.',
     features: [
       'Explore running, trail, cycling, skating, triathlon and open water races, from today onwards',
       'Filter by sport, country, distance, elevation, difficulty, price and open registration',
@@ -811,7 +811,7 @@ export const appContentEn: AppContentMap = {
   'presidente-simulator': {
     tagline: 'Govern for four years. Every decision comes back to you.',
     description:
-      'Presidente Simulator is a decision-driven strategy game: you take office and have 48 months ahead of you. Each month you pick between several options and the engine propagates the effect across nine connected systems —economy, security, health, education, corruption, approval...—, so a comfortable move today can blow up your budget a year from now. Offline and account-free: the run is saved in your own browser.',
+      'Presidente Simulator is a decision-driven strategy game: you take office and have 48 months ahead of you. Each month you pick between several options and the engine propagates the effect across nine connected systems (economy, security, health, education, corruption, approval...), so a comfortable move today can blow up your budget a year from now. Offline and account-free: the run is saved in your own browser.',
     features: [
       'Nine interconnected systems that feed back into each other',
       'Delayed consequences: what you decide today lands months later',

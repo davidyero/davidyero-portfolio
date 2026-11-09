@@ -1,7 +1,7 @@
 # David Yepes · Portfolio & App Hub
 
 Portfolio personal + hub de lanzamiento de apps (mobile y web) de David Yepes
-(@Davidyero). React + TypeScript, SCSS con tokens Catppuccin (dark/light),
+(@Davidyero). React + TypeScript, SCSS con tokens del kit verde militar (dark/light),
 i18n EN/ES y arquitectura data-driven para publicar apps sin tocar UI.
 
 ## 📱 ¿Quieres agregar una app?

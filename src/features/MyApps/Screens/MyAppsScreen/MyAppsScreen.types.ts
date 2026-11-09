@@ -27,7 +27,6 @@ export interface App {
   name: string;
   slug: string;
   description: string;
-  icon: string;
   logo?: string;
   iconBgColor?: string;
   fullDescription?: string;
@@ -60,7 +59,6 @@ export interface AppMeta {
   reachKey?: string;
   webUrl?: string;
   repoUrl?: string;
-  accent?: string; // CSS gradient used behind the app icon
 }
 
 // An app enriched with its hub metadata. Screens consume this shape.

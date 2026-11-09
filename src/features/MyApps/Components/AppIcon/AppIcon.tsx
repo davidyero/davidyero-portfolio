@@ -20,7 +20,7 @@ export const AppIcon: React.FC<AppIconProps> = ({ app, size = 'md' }) => {
   return (
     <div
       className={`app-icon app-icon--${size}`}
-      style={{ background: app.accent ?? app.iconBgColor ?? 'var(--surface-0)' }}
+      style={{ background: app.iconBgColor ?? 'var(--surface-0)' }}
     >
       {app.logo ? (
         <img src={app.logo} alt={`${app.name}`} className="app-icon__img" />
