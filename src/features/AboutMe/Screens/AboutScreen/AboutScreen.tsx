@@ -6,7 +6,7 @@ import { SuperProfileMeta } from '../../../../components/SuperProfileMeta/SuperP
 import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { BrandGlyph } from '../../../../components/SuperSocialRow/BrandGlyph';
 import { SuperTagList } from '../../../../components/SuperTagList/SuperTagList';
-import { SOCIAL_LINKS } from '../../../../shared/contact';
+import { CONTACT_DETAILS, SOCIAL_LINKS } from '../../../../shared/contact';
 import { CAREER, FREELANCE, REDACTED, durationOf } from '../../../../shared/career';
 import { type AboutScreenProps } from './AboutScreen.types';
 import './AboutScreen.scss';
@@ -93,7 +93,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
             <SuperRow
               icon={<BrandGlyph network="linkedin" size={16} />}
               title="LinkedIn"
-              subtitle="in/davidyepesro"
+              subtitle={CONTACT_DETAILS.linkedinDisplay}
               href={SOCIAL_LINKS.linkedin}
             />
           </div>
