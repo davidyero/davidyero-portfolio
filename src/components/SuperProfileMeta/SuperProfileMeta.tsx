@@ -6,6 +6,7 @@ import { useTypewriterCycle } from '../../shared/useTypewriterCycle';
 import { careerTicker } from '../../shared/career';
 import { CAREER_START_ISO } from '../../shared/appVersion';
 import { useExperience } from '../../shared/useExperience';
+import { withEmphasis } from '../../shared/emphasis';
 import { type SuperProfileMetaProps } from './SuperProfileMeta.types';
 
 // Metadatos del perfil: desde cuándo, cargo y dónde. Cargo y empresa se
@@ -29,16 +30,17 @@ export const SuperProfileMeta: React.FC<SuperProfileMetaProps> = () => {
   const unit = (value: number, singular: string, plural: string): string =>
     `${value} ${t(value === 1 ? singular : plural)}`;
 
-  const sinceValue = `${CAREER_START_ISO} [${[
+  // El tiempo transcurrido va resaltado (corchetes incluidos); la fecha no.
+  const sinceValue = `${CAREER_START_ISO} **[${[
     unit(experience.years, 'profile.meta.year', 'profile.meta.years'),
     unit(experience.months, 'profile.meta.month', 'profile.meta.months'),
     unit(experience.days, 'profile.meta.day', 'profile.meta.days'),
-  ].join(', ')}]`;
+  ].join(', ')}]**`;
 
   return (
     <SuperMetaList
       entries={[
-        { label: t('profile.meta.since'), value: sinceValue },
+        { label: t('profile.meta.since'), value: withEmphasis(sinceValue) },
         {
           label: t('profile.meta.role'),
           value: <SuperTypewriter text={lines[0] ?? ''} showCaret={!isStill} />,
