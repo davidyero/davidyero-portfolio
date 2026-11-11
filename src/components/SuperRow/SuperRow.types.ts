@@ -12,7 +12,7 @@ export interface SuperRowProps {
   subtitle?: string;
   /** Navegacion interna. Excluyente con `href`. */
   onClick?: () => void;
-  /** Enlace externo; se abre en pestaña nueva. */
+  /** Enlace externo; se abre en pestaña nueva (mailto: y tel: en la misma). */
   href?: string;
   /** Línea extra bajo el subtítulo: cifras de la app, por ejemplo. */
   /** Línea de cifras bajo el subtítulo. Nodo, no texto: lleva resaltes. */

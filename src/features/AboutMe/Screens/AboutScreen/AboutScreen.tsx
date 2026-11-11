@@ -93,7 +93,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = () => {
             <SuperRow
               icon={<BrandGlyph network="linkedin" size={16} />}
               title="LinkedIn"
-              subtitle="in/davidyero"
+              subtitle="in/davidyepesro"
               href={SOCIAL_LINKS.linkedin}
             />
           </div>

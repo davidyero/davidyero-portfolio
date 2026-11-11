@@ -11,6 +11,7 @@ const LABELS: Record<SocialNetwork, string> = {
   youtube: 'YouTube',
   twitter: 'X',
   linkedin: 'LinkedIn',
+  whatsapp: 'WhatsApp',
 };
 
 const DEFAULT_ORDER: SocialNetwork[] = [

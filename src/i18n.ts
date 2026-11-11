@@ -7,6 +7,7 @@ import aboutEn from './lang/en/about.json';
 import appsEn from './lang/en/apps.json';
 import commonEn from './lang/en/common.json';
 import writingEn from './lang/en/writing.json';
+import contactEn from './lang/en/contact.json';
 
 // Spanish translations
 import homeEs from './lang/es/home.json';
@@ -14,6 +15,7 @@ import aboutEs from './lang/es/about.json';
 import appsEs from './lang/es/apps.json';
 import commonEs from './lang/es/common.json';
 import writingEs from './lang/es/writing.json';
+import contactEs from './lang/es/contact.json';
 
 const LANGUAGE_STORAGE_KEY = 'portfolio-language';
 
@@ -38,6 +40,7 @@ i18n
           ...appsEn,
           ...commonEn,
           ...writingEn,
+          ...contactEn,
         }
       },
       es: {
@@ -47,6 +50,7 @@ i18n
           ...appsEs,
           ...commonEs,
           ...writingEs,
+          ...contactEs,
         }
       },
     },

@@ -1,0 +1,8 @@
+// Filas de contacto: mismo ritmo que los enlaces de Acerca de mí.
+.contact {
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -3,6 +3,7 @@
 export const paths = {
   home: '/',
   aboutMe: '/about-me',
+  contact: '/contact',
   blog: '/blog',
   blogPost: (slug: string) => `/blog/${slug}`,
   log: '/build-in-public',

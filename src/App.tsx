@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { HomeScreen } from './features/Home/Screens/HomeScreen/HomeScreen';
 import { AboutScreen } from './features/AboutMe/Screens/AboutScreen/AboutScreen';
+import { ContactScreen } from './features/Contact/Screens/ContactScreen/ContactScreen';
 import { MyAppsScreen } from './features/MyApps/Screens/MyAppsScreen/MyAppsScreen';
 import { AppLandingScreen } from './features/MyApps/Screens/AppLandingScreen/AppLandingScreen';
 import { AppShowcaseScreen } from './features/MyApps/Screens/AppShowcaseScreen/AppShowcaseScreen';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/app/:slug/privacy" element={<PrivacyScreen />} />
         <Route path="/app/:slug/delete-account" element={<DeleteAccountScreen />} />
         <Route path="/about-me" element={<AboutScreen />} />
+        <Route path="/contact" element={<ContactScreen />} />
 
         {/* Blog y build-in-public comparten pantalla: solo cambia `kind`. */}
         <Route path="/blog" element={<PostListScreen kind="BLOG" />} />
