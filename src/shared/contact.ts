@@ -14,7 +14,8 @@ export const SOCIAL_LINKS = {
   tiktok: 'https://www.tiktok.com/@davidyerodev',
   youtube: 'https://www.youtube.com/@davidyero',
   twitter: 'https://x.com/davidyeroDev',
-  linkedin: 'https://www.linkedin.com/in/davidyero',
+  linkedin: 'https://www.linkedin.com/in/davidyepesro/',
+  whatsapp: 'https://wa.me/573112222657',
 } as const;
 
 export type SocialNetwork = keyof typeof SOCIAL_LINKS;
@@ -28,3 +29,13 @@ export const buildContactMailto = (visitorEmail: string, subject: string): strin
   const body = visitorEmail.trim() ? `\n\n---\n${visitorEmail.trim()}` : '';
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 };
+
+/**
+ * Datos de la sección Contacto. El correo de aquí es el que David pidió para esta
+ * sección; CONTACT_EMAIL sigue siendo el de los documentos legales de las apps.
+ */
+export const CONTACT_DETAILS = {
+  whatsappDisplay: '+57 311 222 2657',
+  email: 'David@davidyero.com',
+  linkedinDisplay: 'in/davidyepesro',
+} as const;

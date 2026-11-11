@@ -1,7 +1,8 @@
 {
   "common.nav.home": "inicio",
   "common.nav.apps": "apps",
-  "common.nav.about": "sobre-mí",
+  "common.nav.about": "acerca-de-mí",
+  "common.nav.contact": "contacto",
   "common.footer.line": "Bogotá, Colombia",
   "common.footer.version": "Versión de la app",
   "common.nav.blog": "blog",

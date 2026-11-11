@@ -4,7 +4,7 @@ import { type SocialNetwork } from '../../shared/contact';
 
 // Logo de marca como SVG. LinkedIn no tiene path (simple-icons lo retiró por
 // una petición legal de la marca), así que se dibuja con su glifo de texto.
-export const BrandGlyph: React.FC<{ network: SocialNetwork; size?: number }> = ({
+export const BrandGlyph: React.FC<{ network: SocialNetwork | 'email'; size?: number }> = ({
   network,
   size = 18,
 }) => {

@@ -24,6 +24,7 @@ const navItems: NavItem[] = [
   { key: 'common.nav.blog', path: paths.blog, flag: 'blog' },
   { key: 'common.nav.log', path: paths.log, flag: 'logs' },
   { key: 'common.nav.about', path: paths.aboutMe },
+  { key: 'common.nav.contact', path: paths.contact },
 ];
 
 // Rótulos que se turnan en la marca. El nombre es un nombre propio y no pasa

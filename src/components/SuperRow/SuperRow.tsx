@@ -33,8 +33,14 @@ export const SuperRow: React.FC<SuperRowProps> = ({
   );
 
   if (href) {
+    // mailto: y tel: abren una app, no una página: en pestaña nueva dejarían una vacía.
+    const opensApp = /^(mailto|tel):/.test(href);
     return (
-      <a className="super-row" href={href} target="_blank" rel="noopener noreferrer">
+      <a
+        className="super-row"
+        href={href}
+        {...(opensApp ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+      >
         {inner}
       </a>
     );
