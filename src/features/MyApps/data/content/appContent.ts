@@ -34,7 +34,7 @@ export const appContentEs: AppContentMap = {
         date: '7 de noviembre de 2026',
         type: 'new',
         changes: [
-          'Nueva web en gazella.davidyero.com con todas las competencias de hoy en adelante.',
+          'Nueva web en gazella.run con todas las competencias de hoy en adelante.',
           'Running, trail, ciclismo, patinaje, triatlón y aguas abiertas, con filtros, favoritos, Voy, recordatorios e invitaciones.',
           'Directorio de especialistas y Coach IA para Pro.',
           'La app móvil se está rehaciendo y llegará como actualización en las tiendas.',
@@ -444,7 +444,7 @@ export const appContentEn: AppContentMap = {
         date: 'November 7, 2026',
         type: 'new',
         changes: [
-          'New website at gazella.davidyero.com with every race from today onwards.',
+          'New website at gazella.run with every race from today onwards.',
           'Running, trail, cycling, skating, triathlon and open water, with filters, favorites, Going, reminders and invitations.',
           'Specialist directory and AI Coach for Pro.',
           'The mobile app is being rebuilt and will ship as a store update.',

@@ -11,7 +11,7 @@ export const appsMeta: Record<string, AppMeta> = {
     category: 'sports',
     tech: ['React', 'React Native', 'TypeScript', 'Node'],
     version: '2.0.0',
-    webUrl: 'https://gazella.davidyero.com',
+    webUrl: 'https://gazella.run',
   },
   youtime: {
     platforms: ['android', 'ios'],
