@@ -41,6 +41,7 @@ Vite 8 + React. La salida va a `build/`, que es lo que publica `amplify.yml`.
 Variables de entorno (opcionales, con prefijo `VITE_`):
 
 - `VITE_API_BASE_URL`: base de la API del monolito; por defecto
-  `https://super-davidyero-backend.onrender.com/api`.
+  `https://super-davidyero-backend.onrender.com/api`. Ejemplo en `.env.example`.
+  Su host tiene que estar en el `connect-src` de `customHttp.yml`, o el build falla.
 - La versión que se pinta en el footer sale de `package.json` (la inyecta
   `vite.config.ts` como `VITE_APP_VERSION`); no hay que definirla.

@@ -1,6 +1,6 @@
 {
   "name": "davidyero",
-  "version": "0.35.3",
+  "version": "0.35.4",
   "private": true,
   "dependencies": {
     "i18next": "^27.0.1",
