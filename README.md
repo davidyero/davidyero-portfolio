@@ -12,9 +12,9 @@ el router.
 
 | Archivo | Qué pones |
 |---------|-----------|
-| `src/features/MyApps/data/appsData.ts` | Datos base: nombre, slug, icono, links de tienda, legales |
+| `src/features/MyApps/data/apps/<slug>.ts` + su línea en `appsData.ts` | Datos base: nombre, slug, icono, links de tienda, legales |
 | `src/features/MyApps/data/appsMeta.ts` | Metadatos: plataformas, estado, categoría, stack, links web |
-| `src/features/MyApps/data/content/appContent.ts` | Texto bilingüe EN+ES: tagline, descripción, features, changelog |
+| `src/features/MyApps/data/content/appContent.es.ts` y `appContent.en.ts` | Texto bilingüe EN+ES: tagline, descripción, features, changelog |
 
 ## 🚀 ¿Vas a publicar una app en las tiendas?
 

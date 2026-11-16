@@ -16,9 +16,9 @@ datos** (+ opcionalmente subir un icono) y desplegar.
 | # | Archivo | Qué pones |
 |---|---------|-----------|
 | 1 | `src/assets/icons/apps/<Nombre>Icon.png` | El icono (opcional; si no hay, se muestran iniciales) |
-| 2 | `src/features/MyApps/data/appsData.ts` | Datos base: `name`, `slug`, `icon`, `logo`, links de tienda, y (opcional) términos/privacidad |
+| 2 | `src/features/MyApps/data/apps/<slug>.ts` + su línea en `appsData.ts` | Datos base: `name`, `slug`, `icon`, `logo`, links de tienda, y (opcional) términos/privacidad |
 | 3 | `src/features/MyApps/data/appsMeta.ts` | Metadatos: `platforms`, `status`, `category`, `tech`, `version`, `featured`, `webUrl`, `repoUrl`, `accent` |
-| 4 | `src/features/MyApps/data/content/appContent.ts` | Texto bilingüe: `tagline`, `description`, `features[]`, `changelog[]` en **EN y ES** |
+| 4 | `src/features/MyApps/data/content/appContent.es.ts` y `appContent.en.ts` | Texto bilingüe: `tagline`, `description`, `features[]`, `changelog[]` en **EN y ES** |
 | 5 | `package.json` | Sube la versión (semver) — se muestra en el footer |
 
 Luego: `npm run build` → commit → push. Amplify redespliega solo.
@@ -65,7 +65,10 @@ Si **no** subes icono, la app muestra sus **iniciales** sobre el gradiente
 
 ---
 
-## Paso 2 · `appsData.ts` (datos base)
+## Paso 2 · `apps/<slug>.ts` (datos base)
+
+Crea `src/features/MyApps/data/apps/<slug>.ts` con `export const <slugEnCamel>App: App = { ... }`
+y añádelo a la lista de `appsData.ts` (ese orden es el del hub).
 
 Importa el icono arriba (si lo subiste) y agrega un objeto al array `appsData`.
 Solo `id`, `name`, `slug`, `description`, `icon` son obligatorios.
@@ -173,10 +176,10 @@ existentes están en las otras entradas de `appsMeta.ts`.
 
 ---
 
-## Paso 4 · `appContent.ts` (texto bilingüe EN + ES)
+## Paso 4 · `appContent.es.ts` / `appContent.en.ts` (texto bilingüe EN + ES)
 
-Agrega la **misma clave (`slug`)** en **los dos** mapas: `appContentEs` y
-`appContentEn`, con **las mismas keys**. Aquí vive todo el texto mostrado.
+Agrega la **misma clave (`slug`)** en **los dos** mapas: `appContentEs` (`appContent.es.ts`) y
+`appContentEn` (`appContent.en.ts`), con **las mismas keys**. Aquí vive todo el texto mostrado.
 
 ```ts
 // en appContentEs:
@@ -266,9 +269,9 @@ Comprueba en el sitio:
 ## Checklist
 
 - [ ] Icono cuadrado en `assets/icons/apps/` (o aceptas iniciales)
-- [ ] Entrada en `appsData.ts` (`slug` en kebab-case, links **reales**)
+- [ ] Archivo `apps/<slug>.ts` y su línea en `appsData.ts` (`slug` en kebab-case, links **reales**)
 - [ ] Entrada en `appsMeta.ts` (misma clave `slug`; `platforms`, `status`, `category`, `accent`)
-- [ ] Entrada en **ambos** mapas de `appContent.ts` con las **mismas keys** (EN + ES)
+- [ ] Entrada en **ambos** mapas (`appContent.es.ts` y `appContent.en.ts`) con las **mismas keys** (EN + ES)
 - [ ] (Solo si categoría nueva) tipo + `registry` + `apps.json` EN/ES
 - [ ] Versión subida en `package.json`
 - [ ] `npm run build` limpio
@@ -279,7 +282,7 @@ Comprueba en el sitio:
 
 ## Ejemplo completo (app web ficticia "Notas")
 
-**`appsData.ts`**
+**`apps/<slug>.ts`**
 ```ts
 {
   id: '14',
@@ -304,7 +307,7 @@ notas: {
 },
 ```
 
-**`appContent.ts`** (en ES y en EN)
+**`appContent.es.ts` / `appContent.en.ts`**
 ```ts
 // appContentEs
 notas: {

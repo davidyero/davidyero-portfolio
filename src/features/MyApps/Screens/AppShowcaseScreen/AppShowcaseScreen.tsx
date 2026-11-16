@@ -1,12 +1,11 @@
 import React from 'react';
-import { FileText, ShieldCheck } from 'lucide-react';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
-import { SuperRow } from '../../../../components/SuperRow/SuperRow';
 import { SuperTypography } from '../../../../components/SuperTypography/SuperTypography';
 import { Badge } from '../../../../components/Badge/Badge';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
+import { AppLegalRows } from '../../Components/AppLegalRows/AppLegalRows';
 import { useAppFromRoute } from '../../hooks/useAppFromRoute';
 import {
   getAppContent,
@@ -142,22 +141,7 @@ export const AppShowcaseScreen: React.FC<AppShowcaseScreenProps> = () => {
         <section className="showcase__block">
           <span className="mono-eyebrow mono-eyebrow--section">{t('apps.showcase.legal')}</span>
           <div className="showcase__rows">
-            {app.termsAndConditions && (
-              <SuperRow
-                icon={<FileText size={16} />}
-                title={t('apps.detail.terms')}
-                subtitle={paths.appTerms(app.slug)}
-                onClick={() => navigate(paths.appTerms(app.slug))}
-              />
-            )}
-            {app.privacyPolicy && (
-              <SuperRow
-                icon={<ShieldCheck size={16} />}
-                title={t('apps.detail.privacy')}
-                subtitle={paths.appPrivacy(app.slug)}
-                onClick={() => navigate(paths.appPrivacy(app.slug))}
-              />
-            )}
+            <AppLegalRows app={app} onNavigate={navigate} />
           </div>
         </section>
       </div>

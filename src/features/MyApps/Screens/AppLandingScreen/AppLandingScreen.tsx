@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, History, MonitorSmartphone, ShieldCheck, UserMinus } from 'lucide-react';
+import { History, MonitorSmartphone, UserMinus } from 'lucide-react';
 import { SuperPageTemplate } from '../../../../components/SuperPageTemplate/SuperPageTemplate';
 import { SuperButton } from '../../../../components/SuperButton/SuperButton';
 import { SuperMetaList } from '../../../../components/SuperMetaList/SuperMetaList';
@@ -9,6 +9,7 @@ import { SuperTypography } from '../../../../components/SuperTypography/SuperTyp
 import { Badge } from '../../../../components/Badge/Badge';
 import { SuperStatusBadge } from '../../../../components/SuperStatusBadge/SuperStatusBadge';
 import { AppIcon } from '../../Components/AppIcon/AppIcon';
+import { AppLegalRows } from '../../Components/AppLegalRows/AppLegalRows';
 import { useAppFromRoute } from '../../hooks/useAppFromRoute';
 import {
   getAppContent,
@@ -184,22 +185,7 @@ export const AppLandingScreen: React.FC<AppLandingScreenProps> = () => {
                 onClick={() => navigate(paths.appChangelog(app.slug))}
               />
             )}
-            {app.termsAndConditions && (
-              <SuperRow
-                icon={<FileText size={16} />}
-                title={t('apps.detail.terms')}
-                subtitle={paths.appTerms(app.slug)}
-                onClick={() => navigate(paths.appTerms(app.slug))}
-              />
-            )}
-            {app.privacyPolicy && (
-              <SuperRow
-                icon={<ShieldCheck size={16} />}
-                title={t('apps.detail.privacy')}
-                subtitle={paths.appPrivacy(app.slug)}
-                onClick={() => navigate(paths.appPrivacy(app.slug))}
-              />
-            )}
+            <AppLegalRows app={app} onNavigate={navigate} />
             {app.accountDeletion && (
               <SuperRow
                 icon={<UserMinus size={16} />}
