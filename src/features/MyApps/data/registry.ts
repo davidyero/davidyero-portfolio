@@ -10,7 +10,9 @@ import {
 import { type BadgeTone } from '../../../components/Badge/Badge.types';
 import { appsData } from './appsData';
 import { appsMeta } from './appsMeta';
-import { type AppLocalizedContent, appContentEn, appContentEs } from './content/appContent';
+import { type AppLocalizedContent } from './content/appContent';
+import { appContentEn } from './content/appContent.en';
+import { appContentEs } from './content/appContent.es';
 
 const FALLBACK_META: AppMeta = {
   platforms: ['ios', 'android'],
