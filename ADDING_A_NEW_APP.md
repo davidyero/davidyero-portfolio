@@ -15,7 +15,7 @@ datos** (+ opcionalmente subir un icono) y desplegar.
 
 | # | Archivo | Qué pones |
 |---|---------|-----------|
-| 1 | `src/assets/icons/apps/<Nombre>Icon.png` | El icono (opcional; si no hay, se muestran iniciales) |
+| 1 | `public/app-icons/<slug>.png` | El icono (opcional; si no hay, se muestran iniciales) |
 | 2 | `src/features/MyApps/data/apps/<slug>.ts` + su línea en `appsData.ts` | Datos base: `name`, `slug`, `icon`, `logo`, links de tienda, y (opcional) términos/privacidad |
 | 3 | `src/features/MyApps/data/appsMeta.ts` | Metadatos: `platforms`, `status`, `category`, `tech`, `version`, `featured`, `webUrl`, `repoUrl`, `accent` |
 | 4 | `src/features/MyApps/data/content/appContent.es.ts` y `appContent.en.ts` | Texto bilingüe: `tagline`, `description`, `features[]`, `changelog[]` en **EN y ES** |
@@ -47,11 +47,16 @@ Luego: `npm run build` → commit → push. Amplify redespliega solo.
 
 ## Paso 1 · Icono (opcional pero recomendado)
 
-Sube un PNG **cuadrado** (ideal ≥512×512) a:
+Sube un PNG **cuadrado** (ideal ≥512×512) con el nombre del `slug` a:
 
 ```
-src/assets/icons/apps/<Nombre>Icon.png
+public/app-icons/<slug>.png
 ```
+
+Va en `public/` y no en `src/assets/` porque su URL tiene que ser **fija**
+(`https://davidyero.com/app-icons/<slug>.png`): el backoffice y el resto del
+ecosistema la enlazan. Importado en el bundle llevaría un hash que cambia en
+cada build.
 
 De dónde sacarlo:
 - **App mobile**: `android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png` o
@@ -70,12 +75,13 @@ Si **no** subes icono, la app muestra sus **iniciales** sobre el gradiente
 Crea `src/features/MyApps/data/apps/<slug>.ts` con `export const <slugEnCamel>App: App = { ... }`
 y añádelo a la lista de `appsData.ts` (ese orden es el del hub).
 
-Importa el icono arriba (si lo subiste) y agrega un objeto al array `appsData`.
+Si subiste icono, usa el helper `appIcon(slug)` (no importes el PNG) y agrega
+el objeto a la lista de `appsData.ts`.
 Solo `id`, `name`, `slug`, `description`, `icon` son obligatorios.
 
 ```ts
-// arriba, junto a los demás imports de iconos:
-import MiAppIcon from '../../../assets/icons/apps/MiAppIcon.png';
+// arriba:
+import { appIcon } from './appIcon';
 
 // dentro del array appsData:
 {
@@ -84,7 +90,7 @@ import MiAppIcon from '../../../assets/icons/apps/MiAppIcon.png';
   slug: 'mi-app',                   // kebab-case; define /app/mi-app
   description: 'Descripción corta.', // fallback ES; el texto real va en appContent
   icon: '',                         // deja '' si usas logo o iniciales
-  logo: MiAppIcon,                  // omite si no hay icono → iniciales
+  logo: appIcon('mi-app'),          // → /app-icons/mi-app.png; omite si no hay icono → iniciales
   appStoreUrl: 'https://apps.apple.com/...',   // solo si está en iOS
   playStoreUrl: 'https://play.google.com/...', // solo si está en Android
   // termsAndConditions y privacyPolicy: ver más abajo (opcionales)
@@ -100,7 +106,7 @@ import MiAppIcon from '../../../assets/icons/apps/MiAppIcon.png';
 | `slug` | ✅ | `kebab-case`. Es la URL `/app/<slug>` |
 | `description` | ✅ | Fallback en ES; el texto mostrado viene de `appContent` |
 | `icon` | ✅ | Déjalo `''` (usa `logo` o iniciales) |
-| `logo` | — | `import` del PNG. Si falta → iniciales |
+| `logo` | — | `appIcon('<slug>')` → `/app-icons/<slug>.png`. Si falta → iniciales |
 | `appStoreUrl` | — | URL **real** (no `''` ni `#`) para que aparezca el badge iOS |
 | `playStoreUrl` | — | URL **real** para que aparezca el badge Android |
 | `screenshots` | — | `string[]` de imports/URLs; se muestran en detalle y landing |
@@ -268,7 +274,7 @@ Comprueba en el sitio:
 
 ## Checklist
 
-- [ ] Icono cuadrado en `assets/icons/apps/` (o aceptas iniciales)
+- [ ] Icono cuadrado en `public/app-icons/<slug>.png` (o aceptas iniciales)
 - [ ] Archivo `apps/<slug>.ts` y su línea en `appsData.ts` (`slug` en kebab-case, links **reales**)
 - [ ] Entrada en `appsMeta.ts` (misma clave `slug`; `platforms`, `status`, `category`, `accent`)
 - [ ] Entrada en **ambos** mapas (`appContent.es.ts` y `appContent.en.ts`) con las **mismas keys** (EN + ES)
