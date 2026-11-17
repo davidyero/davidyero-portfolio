@@ -1,6 +1,6 @@
 {
   "name": "davidyero",
-  "version": "0.35.8",
+  "version": "0.36.0",
   "private": true,
   "dependencies": {
     "i18next": "^27.0.1",
@@ -15,6 +15,7 @@
     "dev": "vite",
     "start": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:develop": "tsc --noEmit && vite build --mode develop",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",

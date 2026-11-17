@@ -8,7 +8,8 @@ frontend:
         - npm ci --legacy-peer-deps
     build:
       commands:
-        - npm run build
+        # develop → dev.davidyero.com (`vite build --mode develop`); el resto, producción.
+        - if [ "$AWS_BRANCH" = "develop" ]; then npm run build:develop; else npm run build; fi
   artifacts:
     baseDirectory: build
     files:
