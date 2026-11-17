@@ -40,8 +40,23 @@ const cspApiHostGuard = (mode: string): Plugin => ({
   },
 });
 
+/**
+ * dev.davidyero.com (rama develop, `--mode develop`) no debe indexarse: duplicaría el
+ * contenido de producción en los buscadores. Solo en ese modo se añade `noindex`.
+ */
+const noindexInDevelop = (mode: string): Plugin => ({
+  name: "noindex-in-develop",
+  transformIndexHtml: (html) =>
+    mode === "develop"
+      ? html.replace(
+          "</head>",
+          '  <meta name="robots" content="noindex, nofollow" />\n  </head>',
+        )
+      : html,
+});
+
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), cspApiHostGuard(mode)],
+  plugins: [react(), cspApiHostGuard(mode), noindexInDevelop(mode)],
   // La versión sale de package.json (antes la inyectaba el script de CRA).
   define: {
     "import.meta.env.VITE_APP_VERSION": JSON.stringify(pkg.version),

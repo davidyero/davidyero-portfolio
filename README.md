@@ -25,6 +25,26 @@ monetización.
 
 ---
 
+## Ambientes: primero dev, luego prod
+
+| Ambiente | URL | Rama | Build |
+|----------|-----|------|-------|
+| Dev | https://dev.davidyero.com | `develop` | `npm run build:develop` (`vite build --mode develop`) |
+| Prod | https://davidyero.com | `main` | `npm run build` |
+
+**Flujo obligatorio:** `feat/*` sale de `develop` → se mezcla a `develop` y se
+prueba en dev → **solo cuando David lo confirma** se mezcla `develop` a `main`
+(producción). Nada va directo a `main`. `amplify.yml` elige el build según
+`$AWS_BRANCH`.
+
+- Dev lleva `<meta name="robots" content="noindex, nofollow">` (lo añade
+  `vite.config.ts` en modo `develop`) para no duplicar el portfolio en buscadores.
+- El portfolio no carga analítica ni Sentry en ningún ambiente, así que no hay
+  nada que apagar en dev. Si algún día se añade, va solo en producción.
+- Dev usa **la misma API que producción** (no hay backend de pruebas).
+
+---
+
 ## Scripts
 
 Vite 8 + React. La salida va a `build/`, que es lo que publica `amplify.yml`.
@@ -33,6 +53,7 @@ Vite 8 + React. La salida va a `build/`, que es lo que publica `amplify.yml`.
 |--------|----------|
 | `npm run dev` (o `npm start`) | Servidor de desarrollo en http://localhost:3000 |
 | `npm run build` | Typecheck + build de producción en `build/` |
+| `npm run build:develop` | Lo mismo en modo `develop` (dev.davidyero.com, con `noindex`) |
 | `npm run preview` | Sirve `build/` en http://localhost:4173 |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run lint` | ESLint con `eslint-config-davidyero/web` |
