@@ -52,7 +52,8 @@ export const appsMeta: Record<string, AppMeta> = {
     status: 'live',
     category: 'sports',
     tech: ['React Native', 'TypeScript', 'Zustand'],
-    version: '4.0.1',
+    // La publicada en App Store y Google Play (5.1.0 desde el 2026-09-09).
+    version: '5.1.0',
     featured: true,
     // Las cifras van en la ficha de la app de la que salen, no en el hero:
     // sueltas arriba parecian del portfolio entero.

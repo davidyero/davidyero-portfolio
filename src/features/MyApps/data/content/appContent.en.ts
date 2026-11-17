@@ -212,15 +212,26 @@ export const appContentEn: AppContentMap = {
   'football-cup-simulator': {
     tagline: 'Your predictions, round by round, all the way to the title.',
     description:
-      'Football Cup Simulator is a football league and cup simulator where every result is yours to call. Fill in the group stage, work through the knockouts and crown your champion across real competitions such as the 2026 World Cup, the Copa América, the Champions League, the Copa Libertadores, LaLiga, the Premier League, Liga MX and the Brasileirão. You can also build custom tournaments with your own teams, compare predictions and share them.',
+      'Football Cup Simulator is a football league and cup simulator where every result is yours to call. Fill in the group stage, work through the knockouts and crown your champion across real competitions such as the 2026 World Cup, the Copa América, the Champions League, the Copa Libertadores, LaLiga, the Premier League, Liga MX and the Brasileirão. You can also build custom tournaments with your own teams, pick your podium and see what everyone else picks.',
     features: [
       'Predict real competitions: 2026 World Cup, Copa América, Champions League, Libertadores and more',
       'Full leagues: LaLiga, Premier League, Liga MX, Brasileirão and others',
       'Progress round by round: groups, knockouts and the final',
       'Build custom tournaments with your own teams',
-      'Compare your predictions and share them with anyone',
+      'Pick your podium and compare it with what everyone else votes',
     ],
     changelog: [
+      {
+        version: '5.1.0',
+        date: 'September 9, 2026',
+        type: 'new',
+        changes: [
+          'New profile with your plan, your predictions and your favorite competitions.',
+          'Pick your podium for each competition and see stats on what people choose.',
+          'Start any cup from the round you prefer and change the participating teams.',
+          'New competitions with real fixtures and news alerts in your language.',
+        ],
+      },
       {
         version: '4.0.1',
         date: 'July 19, 2026',

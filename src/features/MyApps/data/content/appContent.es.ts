@@ -212,15 +212,26 @@ export const appContentEs: AppContentMap = {
   'football-cup-simulator': {
     tagline: 'Tus pronósticos, fase por fase, hasta el campeón.',
     description:
-      'Football Cup Simulator es un simulador de ligas y copas de fútbol donde tú decides cada resultado. Rellena la fase de grupos, avanza por las eliminatorias y corona a tu campeón en competencias reales como el Mundial 2026, la Copa América, la Champions League, la Libertadores, LaLiga, la Premier League, la Liga MX o el Brasileirão. También puedes montar torneos a medida con tus propios equipos, comparar predicciones y compartirlas.',
+      'Football Cup Simulator es un simulador de ligas y copas de fútbol donde tú decides cada resultado. Rellena la fase de grupos, avanza por las eliminatorias y corona a tu campeón en competencias reales como el Mundial 2026, la Copa América, la Champions League, la Libertadores, LaLiga, la Premier League, la Liga MX o el Brasileirão. También puedes montar torneos a medida con tus propios equipos, elegir tu podio y ver qué elige el resto de la gente.',
     features: [
       'Pronostica competencias reales: Mundial 2026, Copa América, Champions, Libertadores y más',
       'Ligas completas: LaLiga, Premier League, Liga MX, Brasileirão y otras',
       'Avanza fase por fase: grupos, eliminatorias y final',
       'Crea torneos personalizados con tus propios equipos',
-      'Compara tus predicciones y compártelas con quien quieras',
+      'Elige tu podio y compáralo con lo que vota el resto de la gente',
     ],
     changelog: [
+      {
+        version: '5.1.0',
+        date: '9 de septiembre de 2026',
+        type: 'new',
+        changes: [
+          'Perfil nuevo con tu plan, tus predicciones y tus competencias favoritas.',
+          'Elige tu podio de cada competencia y mira las estadísticas de lo que elige la gente.',
+          'Empieza cualquier copa desde la fase que prefieras y cambia los equipos participantes.',
+          'Competencias nuevas con calendario real y avisos de novedades en tu idioma.',
+        ],
+      },
       {
         version: '4.0.1',
         date: '19 de julio de 2026',
